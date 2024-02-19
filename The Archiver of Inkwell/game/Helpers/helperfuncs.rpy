@@ -11,3 +11,4 @@ init python:
 
         format_time = local_time.strftime('%I:%M %p').lstrip("0")
         return format_time
+

@@ -1,9 +1,13 @@
 $ renpy.include("Helpers/trackers.rpy")
+$ renpy.include("Helpers/helperfuncs.rpy")
 
 label ch_1:
     "this is chapter 1."
     ## show shiori stoic
     shi "Here is my first line"
+
+    $ time = show_time(1708311600)
+    "it says [time]"
 
     menu:
         "Tell her she's pretty.":
