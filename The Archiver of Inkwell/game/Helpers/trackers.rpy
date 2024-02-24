@@ -1,4 +1,9 @@
-default flag_testadorable = False
-default flag_testpretty = False
+# Prologue
 
-default counter_testsilence = 0
+default greentea = False
+default americano = False
+default cocoa = False
+default sniff = False
+default booklove = False
+default bookneutral = False
+default bookhate = False

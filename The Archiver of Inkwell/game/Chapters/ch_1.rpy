@@ -1,4 +1,3 @@
-$ renpy.include("Helpers/trackers.rpy")
 $ renpy.include("Helpers/helperfuncs.rpy")
 
 label ch_1:

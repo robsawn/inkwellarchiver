@@ -20,20 +20,20 @@ init:
 
     image eileen_glitched:
         animation
-        At("eileen happy", glitch)
-        #glitch("eileen happy",randkey=None)
+        #At("eileen happy", glitch)
+        glitch("eileen happy",randkey=None)
         pause 0.2
-        At("eileen happy", glitch)
-        #glitch("eileen happy",randkey=None)
+        #At("eileen happy", glitch)
+        glitch("eileen happy",randkey=None)
         pause 0.1
-        At("eileen happy",square_glitch)
-        #square_glitch("eileen happy",randkey=None)
+        #At("eileen happy",square_glitch)
+        square_glitch("eileen happy",randkey=None)
         pause 0.2
-        At("eileen happy",animated_glitch)
-        #animated_glitch("eileen happy")
+        #At("eileen happy",animated_glitch)
+        animated_glitch("eileen happy")
         pause 0.3
-        At("eileen happy",square_glitch)
-        #square_glitch("eileen happy",randkey=None)
+        #At("eileen happy",square_glitch)
+        square_glitch("eileen happy",randkey=None)
         pause 0.1
         At("eileen happy")
         pause 2.5
@@ -52,8 +52,6 @@ label start:
         
     "start of visual novel"
 
-    $ Chapter(1).start()
-
-    $ Chapter(2).start()
+    $ Chapter(0).start()
 
     return
