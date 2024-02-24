@@ -3,7 +3,7 @@ $ renpy.include("Helpers/trackers.rpy")
 
 label ch_0:
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
-    "The echoing bells once again resonate throughout the building, signaling the end of today’s classes. Typical chatter can be heard all around as I leave the premises, but it is soon replaced by the familiar pitter-patter of rainfall. As children play in the puddles and adults line up to buy from roadside stalls, A small childish part of your brain almost wants to join in, jump in the puddles to relive your childhood, those moments that seemed all too far yet close to you…"
+    "The echoing bells once again resonate throughout the building, signaling the end of today’s classes. Typical chatter can be heard all around as I leave the premises, but it is soon replaced by the familiar pitter-patter of rainfall. As children play in the puddles and adults line up to buy from roadside stalls, a small childish part of your brain almost wants to join in and jump in the puddles to relive your childhood, those moments that seemed all too far yet close to you…"
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "The walk home feels more alive, contrasting with the scenery’s muted tone. I take my time walking, drinking in the quiet atmosphere that we call home, but it is periodically interrupted by my phone."
@@ -20,7 +20,7 @@ label ch_0:
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     #tapping sounds play
-    "As I type out a quick response, telling my friends that I’m passing this time, a couple of jokes come in about me holing up in my cave, and, chuckling a little, I mute the phone and put it back in my pocket. Even if they’re my friends, it gets a bit exhausting being surrounded by people all day, pretty much every day, so it’s nice to have some alone time."
+    "As I type out a quick response, telling my friends that I’m passing this time, a couple of jokes come in about me holing up in my cave, and, after chuckling a little, I mute the phone and put it back in my pocket. Even if they’re my friends, it gets a bit exhausting being surrounded by people all day, pretty much every day, so it’s nice to have some time for myself."
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "As I walk, it’s easy to appreciate how the quiet rain around me creates a calm vibe. I turn down a walking path, continuing on my way home for the evening. The warm glow of the storefronts on either side tempts me to stop and take a load off."
@@ -28,12 +28,12 @@ label ch_0:
     p "{i}Do I want to stop in somewhere…?{/i}"
 
     #heavier rain effects fade in, and at peak, fade lighter effects down 50% maybe?
-    "Suddenly, the pattering on my umbrella intensifies, and the wind picks up. Hearing the creak of the umbrella straining, I realize the weather made the decision for me and duck into the nearest open storefront."
+    "Suddenly, the pattering on my umbrella intensifies, and the wind picks up. Hearing the creak of the umbrella straining, I realize the weather is making the decision for me, and I duck into the nearest open storefront."
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
-    "Opening the door, I’m warmly welcomed by the twin aromas of brewed coffee and tea, the soft chattering of the store’s guests providing a pleasant backdrop. Inside a warm, dark wood-filled cafe, you see a couple of faces that you might have recognized from school mixed in with the crowd. All of them are a varied level of soaked; some alone with headphones, a couple talking about the sudden storm, and a group of students congregating around a couple of the big round tables in the center, some on their phones, others on laptops."
+    "Opening the door, I’m warmly welcomed by the twin aromas of brewed coffee and tea, with the soft chattering of the store’s guests providing a pleasant backdrop. Inside a warm, dark wood-filled cafe, you see a couple of faces that you might have recognized from school mixed in with the crowd. All of them are soaked to various degrees; there are people alone with headphones, a couple talking about the sudden storm, and a group of students congregating around a couple of the big round tables in the center, working or playing on their phones and laptops."
 
-    "Up at the counter, a barista asks for my order, and I look up at the options."
+    "At the counter, a barista asks for my order, and I look up at the options."
 
     menu:
         "I’ll have green tea with added honey. Hot, please.":
@@ -54,10 +54,10 @@ label ch_0:
 
     "Her black hair shines in the warm light, but her jacket hangs down revealing a little of her shoulders, the fur collar flayed out on the sides, the back of it brushing her hair."
 
-    "As I wind my way over between the tables, I notice she’s totally focused on a book. I don’t really want to disturb her, but I should still ask if it’s okay to sit there out of courtesy."
+    "As I wind my way over between the tables, I see that she’s totally focused on a book. I don’t really want to disturb her, but I should still ask if it’s okay to sit there out of courtesy."
 
     #subtly fade up rain effects to signify approaching windows
-    "As I walk up, I notice she’s totally focused on a book, and try to get her attention."
+    "As I walk up, I notice she’s totally focused on a book, so I try to get her attention."
 
     p "Excuse me?"
 
@@ -94,7 +94,7 @@ label ch_0:
     shi "Mhm."
 
     #chair sliding sfx or something, lower camera angle to be at level with Shiori (if i’m doing that), slightly fade up the rain effects since closer to the window
-    "Without another word, she turns back to her book, pulling the oversized jacket she’s wearing together a little more. The fur collar brushes the bottom of her hair, and the purple down interior is hidden from view again."
+    "Without another word, she turns back to her book, pulling the oversized jacket she’s wearing together a little. The fur collar brushes the bottom of her hair, and the purple down interior is hidden from view again."
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "Catching myself staring again, I turn to look out the window, watching the rain beat against the window, the wind battering the trees lining the path outside. I lift the cup to my lips, taking a moment to enjoy my drink. And to try to ignore the somewhat awkward silence between myself and this woman next to me."
@@ -204,7 +204,7 @@ label ch_0:
 
         shi "I... ahem... Me too, I just love getting lost in them. It's like you jump into a whole new world, you know? All the different perspectives and everything..."
 
-        "She keeps talking on and on for a moment, almost more to herself then you, you nod as she mumbles for a moment."
+        "She keeps talking on and on for a moment, almost more to herself than to you, you nod as she mumbles for a moment."
     
     if bookneutral:
         p "They’re alright. I wouldn’t say I love them, but I do read just for fun every now and then."
@@ -230,11 +230,11 @@ label ch_0:
     "The two of us continue talking about books for a while, but while we’re talking, I get the sense that there’s more than just love for books behind her passion. Eventually, we reach a lull in the conversation, but it’s not uncomfortable this time. Rather, it’s a comfortable silence, accented by the tranquility of the rain lightly tapping on the glass."
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
-    "The time passes slowly, but comfortably as you almost don’t notice the storm letting up. With groups of people quickly rushing out back into town to salvage what was left of their plans, the store was nearly empty. Shiori obviously hadn’t taken notice, not much more than when you first approached. I drink the last bit of my drink and stand."
+    "The time passes slowly but comfortably, so much so you almost don’t notice the storm letting up. With groups of people quickly rushing out back into town to salvage what's left of their plans, the store was nearly empty. Shiori obviously didn't notice, not much more than when you first approached. I drink the last bit of my drink and stand."
 
     p "Well, I should get going, too. This has been a lot more fun than just sitting on my own. I have to get some books tomorrow, so I’ll see if I find anything interesting to read for myself, too. Thanks for the recommendations!"
 
-    "She smiles and nods, not making any kind of move to leave herself. I turn to leave."
+    "She smiles and nods, not making any kind of move to leave herself. The, as I turn to leave..."
 
     shi "Oh, hey! I have a question, if that’s ok?"
 
