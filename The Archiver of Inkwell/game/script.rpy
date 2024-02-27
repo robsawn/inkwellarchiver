@@ -1,7 +1,4 @@
-﻿$ renpy.include("Helpers/transforms.rpy")
-$ renpy.include("Helpers/helperfuncs.rpy")
-$ renpy.include("Helpers/deltatime.rpy")
-$ renpy.include("Helpers.particles.rpy")
+﻿$ renpy.include("characters.rpy")
 
 init python:
     class Chapter:
@@ -12,45 +9,16 @@ init python:
         def start(self):
             renpy.call(f"ch_{self.ch_number}")
 
-init:
-    define config.layers = ['master','transient','screens','front','overlay']
-
-    image snow = Snow("Helpers/effects/snow2.png")
-    image snowback = Snow("Helpers/effects/snow1.png")
-
-    image eileen_glitched:
-        animation
-        #At("eileen happy", glitch)
-        glitch("eileen happy",randkey=None)
-        pause 0.2
-        #At("eileen happy", glitch)
-        glitch("eileen happy",randkey=None)
-        pause 0.1
-        #At("eileen happy",square_glitch)
-        square_glitch("eileen happy",randkey=None)
-        pause 0.2
-        #At("eileen happy",animated_glitch)
-        animated_glitch("eileen happy")
-        pause 0.3
-        #At("eileen happy",square_glitch)
-        square_glitch("eileen happy",randkey=None)
-        pause 0.1
-        At("eileen happy")
-        pause 2.5
-        repeat
-
 label start:
 
-    scene bg whitehouse:
-        zoom 1.5
+    $ player_name = renpy.input("What's my name, again?")
+
+    $ player_name = player_name.strip()
+
+    if player_name == "":
+        $ player_name = "Yorick"
     
-    show eileen_glitched at center zorder 10
-    
-    show snow zorder 15
-    show snowback zorder 5
-    show snow onlayer front
-        
-    "start of visual novel"
+    $ p.name = player_name
 
     $ Chapter(0).start()
 
