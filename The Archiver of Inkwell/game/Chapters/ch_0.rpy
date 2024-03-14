@@ -131,13 +131,13 @@ label ch_0:
 
     p "Excuse me?"
 
-    show shiori surprise with dissolve_fast
+    #show shiori surprise with dissolve_fast
 
     shi "Hwah?! Oh! Can I... help you?"
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     "As she turns to look at me, I notice her hair is split between a pitch black and a stark white, right down the middle."
     
@@ -149,11 +149,11 @@ label ch_0:
 
     p "{i}She can probably tell how nervous I am. Never been good at talking to strangers, for better or worse...{/i}"
 
-    show shiori happy with dissolve_fast
+    #show shiori happy with dissolve_fast
 
     shi "Nope, it's free."
 
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     p "Um! Can I sit here, then?"
 
@@ -166,7 +166,7 @@ label ch_0:
     #chair sliding sfx or something, lower camera angle to be at level with Shiori (if i’m doing that), slightly fade up the rain effects since closer to the window
     "Without another word, she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
 
-    hide shiori neutral with dissolve_fast
+    #hide shiori neutral with dissolve_fast
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "Catching myself staring again, I turn to look out the window, watching the rain beat against the glass, the wind battering the trees lining the path outside." 
@@ -175,14 +175,14 @@ label ch_0:
 
     p "{i}Nope… Still awkward…{/i}"
 
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     shi "Hey, um... What did you get to drink?"
 
     if greentea:
         p "I just got some tea. Thought it would be nice considering outside."
 
-        show shiori happy with dissolve_fast
+        #show shiori happy with dissolve_fast
 
         shi "Oh, is that green tea? You got my other favorite!"
 
@@ -190,11 +190,11 @@ label ch_0:
 
         shi "This! It’s Earl Grey."
         
-        show shiori tease with dissolve_fast
+        #show shiori tease with dissolve_fast
 
         "The girl picks up her mug and brings it next to mine. I don’t know if she is trying to make a toast or just showing me her tea, but her enthusiasm is kinda cute."
         
-        show shiori neutral with dissolve_fast
+        #show shiori neutral with dissolve_fast
     
     if americano:
         p "Oh, I just went with an Americano."
@@ -216,29 +216,29 @@ label ch_0:
         if sniff:
             p "Well, sure... I guess..."
 
-            show shiori happy with dissolve_fast
+            #show shiori happy with dissolve_fast
 
             shi "Eh? Really? Wasn’t expecting that, but thanks!"
 
             "Popping the lid off, I bring my cup closer to her side of the counter and lift it up a bit. The girl lowers her head and draws a long, gentle breath."
 
-            show shiori neutral with dissolve_fast
+            #show shiori neutral with dissolve_fast
 
             #animate to soft satisfied smile Shiori
             "After a second or two, she sits back upright with a soft smile creeping across her face."
 
             p "Hey, if you don’t mind me asking, why did you ask?"
             
-            show shiori tease with dissolve_fast
+            #show shiori tease with dissolve_fast
 
             shi "Well... I like the smell of coffee, but I just can’t drink it. So the scent’s the only way I can enjoy it."
 
-            show shiori neutral with dissolve_fast
+            #show shiori neutral with dissolve_fast
 
         else:
             p "Uhhh... Do you ask everyone that?"
 
-            show shiori pout with dissolve_fast
+            #show shiori pout with dissolve_fast
 
             shi "You're not gonna let me smell it?"
 
@@ -246,7 +246,7 @@ label ch_0:
 
             "The girl sulks and pouts, but doesn’t say anything more about it."
 
-            show shiori angry with dissolve_fast
+            #show shiori angry with dissolve_fast
 
     if cocoa:
         p "I got this; it’s cocoa with caramel. Not something I would drink everyday, but I think I deserve a sweet treat on a day like this."
@@ -255,19 +255,19 @@ label ch_0:
 
         p "I move around a lot so it’s fine, plus you’re one to talk with a plate full of cake."
 
-        show shiori surprise with dissolve_fast
+        #show shiori surprise with dissolve_fast
 
         shi "It’s an off-day, so a little cake is fine, meanie!"
 
-        show shiori pout with dissolve_fast
+        #show shiori pout with dissolve_fast
 
         "{i}And now she’s pouting at me. I thought that was something only anime girls do, but here we are...{/i}"
 
-        show shiori neutral with dissolve_fast
+        #show shiori neutral with dissolve_fast
     
     p "So, uh... What’re you reading? Seems pretty good, just going off how immersed you are."
 
-    show shiori happy with dissolve_fast
+    #show shiori happy with dissolve_fast
 
     shi "Oh, a book. I like it, yeah!"
 
@@ -275,17 +275,17 @@ label ch_0:
 
     p "So... What book are you reading?"
 
-    show shiori pout with dissolve_fast
+    #show shiori pout with dissolve_fast
 
     #animate to sad Shiori
     shi "Ah, it’s a story that… A friend helped with. Sorry, it’s kind of personal..."
 
-    hide shiori pout with dissolve_fast
+    #hide shiori pout with dissolve_fast
 
     #would be better as a camera pan/zoom
     "I glance at the book in her hands, but can only see two pages: one blank and another with strange symbols on it."
 
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     #would be better as a camera pan/zoom
     "Looking back up at her, I see her watching me, studying me."
@@ -307,7 +307,7 @@ label ch_0:
     if booklove:
         p "Honestly? I love them. The smell of the ink and the paper, the feel of the pages in your hands, the lives and worlds they all contain... It’s just... the best."
 
-        show shiori happy with dissolve_fast
+        #show shiori happy with dissolve_fast
 
         #animate to show her face lighting up
         shi "ME TOO!"
@@ -326,7 +326,7 @@ label ch_0:
         
         shi "They can take you to places you might never have even dreamed of and can teach you all kinds of things." 
 
-        show shiori happy with dissolve_fast
+        #show shiori happy with dissolve_fast
         
         shi "I might be a bit biased though... *giggle*"
 
@@ -337,12 +337,12 @@ label ch_0:
     if bookhate:
         p "Not really. I read them if I have to for class, but I don’t really enjoy it. I’d rather play games or watch TV."
 
-        show shiori pout with dissolve_fast
+        #show shiori pout with dissolve_fast
 
         #animate to show a little pout
         shi "Aw... Really? They can take you to brand new places, help you relax, teach you all kinds of lessons... And they smell great!" 
 
-        show shiori neutral with dissolve_fast
+        #show shiori neutral with dissolve_fast
         
         shi "I like how they feel as I flip through them, too."
 
@@ -353,7 +353,7 @@ label ch_0:
         
         p "{i}I have to get some reference books from the library soon, so maybe I’ll pick something up to see how it feels to read for fun again.{/i}"
     
-    show shiori neutral
+    #show shiori neutral
 
     #fade out the heavy rain effects, fade in the lighter rain effects (still muffled because inside)
     "The two of us continue talking about books for a while, but as we’re talking, I get the sense that there’s more than just love for books behind her passion." 
@@ -371,11 +371,11 @@ label ch_0:
     
     p "Oh, and thanks for the recommendations!"
 
-    show shiori happy with dissolve_fast
+    #show shiori happy with dissolve_fast
 
     "She smiles and nods, not making any kind of move to leave herself. Then, as I turn to leave..."
 
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     shi "Oh, hey! I have a question, if that’s ok?"
 
@@ -388,21 +388,21 @@ label ch_0:
     #this would be better as an animation
     "Seeing my confusion, she shakes her head, dismissing her own question."
 
-    show shiori tease with dissolve_fast
+    #show shiori tease with dissolve_fast
 
     shi "Never mind, forget it. It’s not important right now."
 
     p "Right... Well, maybe I’ll see you around."
 
-    show shiori happy with dissolve_fast
+    #show shiori happy with dissolve_fast
 
     shi "Sorry for the weird question. Anyway, have a safe trip home, and make sure not to get struck by lightning!"
 
-    show shiori neutral with dissolve_fast
+    #show shiori neutral with dissolve_fast
 
     "Grabbing my umbrella on the way out, I sneak a glance back at her. The sight of her reading under the warm lights makes my lips curl into a soft smile."
 
-    hide shiori neutral with dissolve_fast
+    #hide shiori neutral with dissolve_fast
 
     show bg street with dissolve_fast
 

@@ -21,5 +21,13 @@ label start:
     $ p.name = player_name
 
     $ Chapter(0).start()
+    $ Chapter(1).start()
+
+    if route_slice:
+        $ Chapter(12).start()
+    if route_lc:
+        $ Chapter(22).start()
+    if route_fantasy:
+        $ Chapter(32).start()
 
     return
