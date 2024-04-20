@@ -35,7 +35,7 @@ label ch_0:
     show rainmidlight zorder 15
     show rainfront onlayer front
 
-    play music "OutsideStreet.wav" loop fadein 0.5
+    play music "Library.wav" loop fadein 0.5
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "As I leave my last lecture for the day, I follow the stream of other students out of the building." 
