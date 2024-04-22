@@ -305,28 +305,38 @@ screen navigation():
                 ypos -61
                 action Start()
 
+            imagebutton:
+                    idle "gui/mainmenu/load-idle.png"
+                    #hover "[hover goes here.png]"
+                    xpos -60
+                    ypos -60
+                    action ShowMenu("load")
+            
+            imagebutton:
+                    idle "gui/mainmenu/preferences-idle.png"
+                    #hover "[hover goes here.png]"
+                    xpos -60
+                    ypos -57
+                    action ShowMenu("preferences")
+            
+            imagebutton:
+                    idle "gui/mainmenu/about-idle.png"
+                    #hover "[hover goes here.png]"
+                    xpos -60
+                    ypos -65
+                    action ShowMenu("about")
         else:
 
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
-        #textbutton _("Load") action ShowMenu("load")
-        imagebutton:
-                idle "gui/mainmenu/load-idle.png"
-                #hover "[hover goes here.png]"
-                xpos -60
-                ypos -60
-                action ShowMenu("load")
+            textbutton _("Load") action ShowMenu("load")
 
-        #textbutton _("Preferences") action ShowMenu("preferences")
-        imagebutton:
-                idle "gui/mainmenu/preferences-idle.png"
-                #hover "[hover goes here.png]"
-                xpos -60
-                ypos -57
-                action ShowMenu("preferences")
+            textbutton _("Preferences") action ShowMenu("preferences")
 
+            textbutton _("About") action ShowMenu("about")
+            
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -335,24 +345,19 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        #textbutton _("About") action ShowMenu("about")
-        imagebutton:
-                idle "gui/mainmenu/about-idle.png"
-                #hover "[hover goes here.png]"
-                xpos -60
-                ypos -65
-                action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Help") action ShowMenu("help")
-            imagebutton:
-                idle "gui/mainmenu/help-idle.png"
-                #hover "[hover goes here.png]"
-                xpos -60
-                ypos -60
-                action ShowMenu("help")
+            if main_menu:
+                imagebutton:
+                    idle "gui/mainmenu/help-idle.png"
+                    #hover "[hover goes here.png]"
+                    xpos -60
+                    ypos -60
+                    action ShowMenu("help")
+            else:
+                textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 

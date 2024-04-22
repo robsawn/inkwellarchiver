@@ -29,7 +29,7 @@ label ch_0:
     show rainmidlight zorder 15
     show rainfront onlayer front
 
-    play music "game/audio/0 Prologue/Outside Music.ogg" loop fadein 0.5
+    play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5
 
     #extend the textbox upward to cover more, so all of the text can be seen, centered, maybe?
     "As I leave my last lecture for the day, I follow the stream of other students out of the building." 
@@ -76,7 +76,7 @@ label ch_0:
     scene bg cafe with slideleft
     
     stop music fadeout 0.5
-    define cafetracks=["game/audio/0 Prologue/cafe1.ogg","game/audio/0 Prologue/cafe2.ogg","game/audio/0 Prologue/cafe3.ogg"]
+    define cafetracks=["audio/0 Prologue/cafe1.ogg","audio/0 Prologue/cafe2.ogg","audio/0 Prologue/cafe3.ogg"]
     # this needs testing
     $ renpy.random.shuffle(cafetracks)
     $ renpy.music.queue(cafetracks,channel='music',loop=True,clear_queue=False,fadein=1.5,tight=True)
@@ -404,7 +404,7 @@ label ch_0:
 
     #hide shiori neutral with dissolve_fast
     stop music fadeout 0.5
-    play music "game/audio/0 Prologue/Outside Music.ogg" loop fadein 0.5
+    play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5
 
     show bg street with dissolve_fast
 
