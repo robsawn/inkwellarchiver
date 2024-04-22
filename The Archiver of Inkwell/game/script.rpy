@@ -23,11 +23,29 @@ label start:
     $ Chapter(0).start()
     $ Chapter(1).start()
 
-    if route_slice:
-        $ Chapter(12).start()
     if route_lc:
-        $ Chapter(22).start()
+        $ Chapter(12).start()
+        $ Chapter(13).start()
+        $ Chapter(14).start()
+        if ending >= 2:
+            $ Chapter(151).start()
+        else:
+            $ Chapter(152).start()
     if route_fantasy:
-        $ Chapter(32).start()
+        $ Chapter(22).start()
+        $ Chapter(23).start()
+        $ Chapter(24).start()
+        if mistakes >= 2:
+            $ Chapter(252).start()
+        else:
+            $ Chapter(251).start()
+    # if route_slice:
+    #     $ Chapter(32).start()
+    #     $ Chapter(33).start()
+    #     $ Chapter(34).start()
+    #     if ending > 2:
+    #         $ Chapter(351).start()
+    #     else:
+    #         $ Chapter(352).start()
 
     return

@@ -32,6 +32,9 @@ define config.version = "1.0"
 define gui.about = _p("""
 """)
 
+define config.mouse={}
+define config.mouse['default']=[("gui/cursors/cursor2.png",0,0)]
+
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
@@ -143,7 +146,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TheArchiverofInkwell-1706404155"
+define config.save_directory = "TheArchiverofInkwell-Saves"
 
 
 ## Icon ########################################################################

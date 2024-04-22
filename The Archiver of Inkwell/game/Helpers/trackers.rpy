@@ -13,3 +13,15 @@ default bookhate = False
 default route_slice = False
 default route_lc = False
 default route_fantasy = False
+
+# Lovecraft Globals
+
+default counter_ending = 0
+
+# Fantasy Globals
+
+default counter_mistakes = 0
+
+# Slice of Life Globals
+
+# variables here

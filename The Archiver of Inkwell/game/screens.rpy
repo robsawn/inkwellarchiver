@@ -297,7 +297,13 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            #textbutton _("Start") action Start()
+            imagebutton:
+                idle "gui/mainmenu/start-idle.png"
+                #hover "[hover goes here.png]"
+                xpos -60
+                ypos -61
+                action Start()
 
         else:
 
@@ -305,9 +311,21 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        #textbutton _("Load") action ShowMenu("load")
+        imagebutton:
+                idle "gui/mainmenu/load-idle.png"
+                #hover "[hover goes here.png]"
+                xpos -60
+                ypos -60
+                action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        #textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton:
+                idle "gui/mainmenu/preferences-idle.png"
+                #hover "[hover goes here.png]"
+                xpos -60
+                ypos -57
+                action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,18 +335,31 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")
+        imagebutton:
+                idle "gui/mainmenu/about-idle.png"
+                #hover "[hover goes here.png]"
+                xpos -60
+                ypos -65
+                action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            #textbutton _("Help") action ShowMenu("help")
+            imagebutton:
+                idle "gui/mainmenu/help-idle.png"
+                #hover "[hover goes here.png]"
+                xpos -60
+                ypos -60
+                action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            #textbutton _("Quit") action Quit(confirm=not main_menu)
+            pass
 
 
 style navigation_button is gui_button
@@ -385,7 +416,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -560,6 +591,18 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("\nThis game contains third-party sounds and uses third-party programs to assist with filtering of scenes.")
+            text _("\nThis game is a product of 'The Novelites' Workspace'.")
+            text _("\n~~~~~")
+            text _("\nServer Admin:\n    Shiori's Jacket")
+            text _("\nDirector:\n    robsawn")
+            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Simp Kronosok\n    Synergy\n    Wax\n    Zero Zeta")
+            text _("\nEditors:\n    Ingram\n    robsawn\n    Thadd\n    Wax")
+            text _("\nSprite Artists:\n    Ichira (Rook, Knight, Dream Monster)\n    Jermy (Shiori)\n    Nobu (outlines, Yellow Stranger)")
+            text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)")
+            text _("\nAnimators: \n    Jusagi-chan (main menu)")
+            text _("\nComposers & Musicians:\n    Nokutaan\n    Sinnoh")
+            text _("\nProgrammers:\n    robsawn")
 
 
 style about_label is gui_label
