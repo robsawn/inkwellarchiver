@@ -397,7 +397,7 @@ label ch_1:
         #if we get like a big grin and eye effect, this is a good spot for it
         "Her eyes gleam as a grin stretches across her face."
         
-        shi "Who knows. It could be a bit fun."
+        shi "Who knows? It could be a bit fun."
         
         p "Y-Yeah, I guess."
         
@@ -417,7 +417,7 @@ label ch_1:
 
         shi "Anyways, enough of that. You said you needed some books, right?"
         
-        p_i "I'm glad she changed the subject. She was starting to sound a bit too enthusiastic about those kinds of stories. Of course, there's nothing wrong with that, but... Her words just felt off to me." 
+        p_i "I'm glad she changed the subject. She was starting to sound a bit too enthusiastic about Lovecraft. Of course, there's nothing wrong with that, but.... Her words just felt off to me." 
 
         p_i "It's probably nothing."
         
@@ -427,13 +427,13 @@ label ch_1:
         
         p_i "She listed every book I needed... I didn't even pull my phone out yet..." 
 
-        "Just to double check, I check my list, and find she's named the books I noted before, and the one I'd forgotten to note."
+        "Just to double check, I look through my list, and find she's named the books I noted before, and the one I'd forgotten to note."
         
-        p "Yeah...how did you...?"
+        p "Yeah... how did you...?"
         
-        shi "Oh, you know..."
+        shi "Oh, you know."
         
-        shi "...I just happen to have eyes everywhere."
+        shi "I just happen to have eyes everywhere."
         
         "I let out a small chuckle at her weird joke."
         
@@ -441,26 +441,26 @@ label ch_1:
         
         shi "Heh, I'm glad it worked then."
         
-        p_i "That still doesn't explain how or why she knows what books I need though... And the more time I spend with her, the more unnerving she gets."
+        p_i "That still doesn't explain how or why she knows what books I need though... And the more time I spend with her, the more things feel off. She’s more unsettling? No, unnerving? I don’t know."
 
         p "Well, thanks for helping me."
         
         shi "... I figured as much."
         
-        "I barely caught Shiori's muttering."
+        "I barely caught Shiori's whisper."
 
         p "What do you mean?"
         
         shi "Ah, don't worry about it."
         
-        p "Well, considering you know what I'm looking for, would you still help find those books?"
+        p "Well, considering you know what I'm looking for, would you still help me find those books?"
         
         #shio-giggle sfx
         shi "Hmm? What makes you think I would help you out? *giggle*"
         
         p_i "She's got a point. She has no reason to help me out when it's not her responsibility to find these books."
         
-        p "Ah...sorry. You're right."
+        p "Ah... sorry. You're right."
         
         shi "Don't be like that. I didn't say I wouldn't help you."
         
@@ -469,11 +469,11 @@ label ch_1:
 
         shi "I just have to ask, if you're interested, why haven't you read any Lovecraft stories?"
 
-        p_i "She seems really fixated on that. Weird, but what's the harm in talking about it anyway? She is helping me, after all."
+        p_i "She's really fixated on that. Weird, but what's the harm in indulging anyway? She is helping me, after all."
 
         p "No particular reason, I just never got around to it. Besides, don't they all have rough endings, partially because of the lack of control...?"
 
-        shi "Aww, but who said all stories need a happy ending? Sometimes, things just don't go as planned no matter how hard somebody tries."
+        shi "Aww, but who said all stories need a happy ending? Sometimes, things  don't go as planned no matter how hard somebody tries."
 
         p "I do."
         
@@ -481,13 +481,13 @@ label ch_1:
         
         p "I say all stories should have a happy ending. The world's depressing enough, don't you think?"
         
-        p_i "Sure, I say that, but what am I even talking about? Maybe I'm just in a mood?"
+        p_i "Sure, I say that, but what am I even talking about? Maybe I'm just in a mood."
         
-        shi "The world, huh...?"
+        shi "The world, huh?"
         
         "Shiori reaches out and pulls a book off a shelf to her right, her hand hesitating, as if she's expecting something more."
 
-        "Handing the book to me, it's ‘Le Morte D'Arthur', but it's oddly dusty, as if it hadn't been touched in years. I look back up to see her smiling softly."
+        "She hands the book to me. It's ‘Le Morte D'Arthur', but it's oddly dusty, as if it hadn't been touched in years. I look back up to see her smiling softly."
 
         shi "Maybe... maybe the world could use more happy endings."
         
@@ -500,13 +500,13 @@ label ch_1:
         shi "... the ones who can't escape their own fate?"
         
         #fade in heavy rainfall sfx
-        "I struggle to find an answer to that as the rain fills the void of silence between us as it batters against the window as we walk by."
+        "I struggle to find an answer to that as the rain fills the void of silence between us, battering against the window as we walk by."
         
-        p_i "It's a really heavy question to answer, especially to someone I don't really know well yet. I can't tell if she wants a serious or lighthearted answer."
+        p_i "It's a really heavy question to answer, especially to someone I don't  know at all. I can't tell if she wants a serious or lighthearted answer."
 
-        p "If that's the case, then they just need someone to come along and help them out."
+        p "If that's the case, then they  need someone to come along and help them out."
         
-        "She just looks at me and stops while turning into the next aisle of books, before she blinks a few times."
+        "She stops right before turning into the next aisle of books, and just looks at me and blinks a few times."
 
         #shio-giggle sfx
         shi "*giggle* If only it was so simple..."
@@ -517,7 +517,7 @@ label ch_1:
         
         p "It really can be as simple as someone just reaching a hand out sometimes."
         
-        "She wipes a single tear from her eye as she sniffles. Taking a deep breath to compose herself, she darts her hand to the left without looking and withdraws it, book in hand. I look down to see a golden cover, with the title of ‘Arrival' embossed on the front."
+        "She pauses in front of the shelf, and for a brief second her smile falters, her eyes blinking rapidly. Taking a deep breath to compose herself, she darts her hand to the left without looking and withdraws it, book in hand. I look down to see a golden cover, with the title of ‘Arrival' embossed on the front."
         
         shi "Oh, you're serious?"
         
@@ -533,9 +533,9 @@ label ch_1:
         
         shi "You still need a book, now that I think about it."
         
-        "Smiling, she hops up and tries to grab a book off the top shelf, her finger pulling on the spine just enough to make the book fall toward her. Before I can think, I quickly reach up and catch the book before it drops onto her."
+        "Smiling, she hops up and tries to grab a book off the top shelf, her finger pulling on the spine just enough to make the book fall toward her. Before I can think, I quickly reach up and catch the book before it drops on her."
 
-        "I look down at her to see a sheepish grin, and glance at the book to see the last title I needed."
+        "I look down at her and am met with a sheepish grin, and glance at the book to see the last title I needed."
 
         p "I'm guessing that didn't go the way you wanted?"
         
@@ -545,17 +545,17 @@ label ch_1:
         
         p "Huh?"
         
-        "As I set the third book down, there's a fourth book that we didn't talk about." 
+        "As I place the third book down, there's a fourth book that we didn't talk about." 
 
         "It's Shiori's book from earlier. Just as I reach for it, Shiori slams her hand down onto it, making me jump."
         
-        shi "Don't look at it!"
+        shi "Don't look!"
         
         "She slides it off the table and hides it behind her back."
         
         p "O...kay then."
         
-        p_i "That was weird..."
+        p_i "That was weird."
 
         shi "Anyways! It wasn't that hard to find your books. I think you should be fine now."
         
@@ -574,9 +574,9 @@ label ch_1:
         #heavy rainfall louder than ever
         shi "It's going to be raining for a while."
         
-        p "Ah... yeah. Good thing I still have my umbr—"
+        p "Ah yeah. Good thing I still have my umbr—"
         
-        "When I turn back to look at her over my shoulder, I don't see anyone."
+        "When I look over my shoulder, I don't see anyone."
         
         p_i "Huh? Wait. But she was just..."
         
@@ -584,7 +584,7 @@ label ch_1:
 
         "Nobody. It's as if she simply vanished without a trace."
         
-        p "What the...?"
+        p "What the?"
         
         "The longer I stand there, the more uneasy I feel. Shrugging, I check out the books at the front desk and grab my umbrella on the way out."
         
@@ -592,13 +592,13 @@ label ch_1:
         
         "Before I can fully open my umbrella, a strong gust of wind knocks it out of my hand. It lands in a puddle on the sidewalk, handle down."
         
-        "I sigh and step out into the pouring rain grabbing my umbrella. Right as I bend over, I notice somebody in a yellow raincoat walking toward me in the reflection of the puddle. I quickly pick up my umbrella and turn around. Once again, there is nobody there."
+        "I sigh and step out into the pouring rain, grabbing my umbrella. Right as I bend over, I notice somebody in a yellow raincoat walking toward me in the reflection of the puddle. I quickly pick up my umbrella and turn around. Once again, there's nobody there."
         
-        p_i "I guess I'm just tired already..."
+        p_i "I guess I'm just tired."
         
-        "As I walk home listening to the rain drum on the umbrella above me, my skin crawls as I go over my conversation with Shiori in my head. As I round a corner on the final stretch before reaching home, I feel eyes boring into my back and I whip around. I stand stock still, looking around. However, the feeling is gone, and there's no one around."
+        "As I walk home, listening to the rain drumming on the umbrella, a knot forms in my stomach as I go over my conversation with Shiori in my head. As I round a corner on the final stretch before reaching home, I feel eyes boring into my back and I whip around. I stand stock still, looking around. However, the feeling is gone, and there's no one around."
         
-        "I try to calm my breathing and just focus on taking one step at a time away from this place."
+        "I try to calm my breathing and focus on taking one step at a time away from this place."
         
         p_i "Why do I feel like I'm being watched?"
 

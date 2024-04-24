@@ -1,0 +1,406 @@
+gui.rpy
+gui.rpyc
+options.rpy
+options.rpyc
+screens.rpy
+screens.rpyc
+script.rpy
+script.rpyc
+audio\shioris_story.ogg
+audio\0 Prologue\Outside Music.ogg
+audio\0 Prologue\cafe1.ogg
+audio\0 Prologue\cafe2.ogg
+audio\0 Prologue\cafe3.ogg
+audio\1 Act 1\Library.ogg
+audio\3 Fantasy\1 Relaxed Exposition Track L 2.ogg
+audio\3 Fantasy\2 Hunter L.ogg
+audio\3 Fantasy\3 Gatherer L.ogg
+audio\3 Fantasy\3b Gatherer piano L.ogg
+audio\3 Fantasy\4 Cursed Forest L.ogg
+audio\3 Fantasy\5 Combat L.ogg
+audio\4 Lovecraftian\2B\1 Normal Life L.ogg
+audio\4 Lovecraftian\2B\2 Getting Stalked By Hooded Figures L.ogg
+audio\4 Lovecraftian\2B\3 Study Room Conversation With Shiori L.ogg
+audio\4 Lovecraftian\3B\2 Cult Lore Dump, Unveiling Mystery Track L.ogg
+audio\4 Lovecraftian\3B\3 Shiori Missing Track L.ogg
+audio\4 Lovecraftian\4B\1 When The City-Story Is Unraveling L.ogg
+audio\4 Lovecraftian\4B\2 For Wandering The Desolate Streets L.ogg
+audio\4 Lovecraftian\4B\3 At The Cultists_ Hideaway L.ogg
+audio\4 Lovecraftian\5A (Good End)\1 Ritual Site L.ogg
+audio\4 Lovecraftian\5A (Good End)\2 After Escape L.ogg
+audio\4 Lovecraftian\5A (Good End)\3 Prologue L.ogg
+audio\4 Lovecraftian\5B (Bad End)\1 Getting Caught At Ritual Site L.ogg
+audio\4 Lovecraftian\5B (Bad End)\2 Ritual Sacrifice Scene L.ogg
+audio\4 Lovecraftian\5B (Bad End)\3 For The Mercy Kill Ending.ogg
+audio\Ambient\1 Subtrack L.ogg
+audio\Ambient\rain1.wav
+audio\Ambient\rain2.wav
+audio\Ambient\rain3.wav
+audio\Ambient\rain4.wav
+audio\From SoL route\1 Hallway + Lecture Hall L.ogg
+audio\From SoL route\2 Study Session L.ogg
+audio\From SoL route\3 Cat Feeding L no initial drop.ogg
+audio\From SoL route\6 Good End L.ogg
+cache\bytecode-39.rpyb
+cache\py3analysis.rpyb
+cache\screens.rpyb
+cache\shaders.txt
+Chapters\ch_0.rpy
+Chapters\ch_0.rpyc
+Chapters\ch_1.rpy
+Chapters\ch_1.rpyc
+Chapters\ch_12.rpy
+Chapters\ch_12.rpyc
+Chapters\ch_13.rpy
+Chapters\ch_13.rpyc
+Chapters\ch_14.rpy
+Chapters\ch_14.rpyc
+Chapters\ch_151.rpy
+Chapters\ch_151.rpyc
+Chapters\ch_152.rpy
+Chapters\ch_152.rpyc
+Chapters\ch_22.rpy
+Chapters\ch_22.rpyc
+Chapters\ch_23.rpy
+Chapters\ch_23.rpyc
+Chapters\ch_24.rpy
+Chapters\ch_24.rpyc
+Chapters\ch_251.rpy
+Chapters\ch_251.rpyc
+Chapters\ch_252.rpy
+Chapters\ch_252.rpyc
+Chapters\ch_32.rpy
+Chapters\ch_32.rpyc
+Chapters\ch_33.rpy
+Chapters\ch_33.rpyc
+Chapters\ch_34.rpy
+Chapters\ch_34.rpyc
+Chapters\ch_351.rpy
+Chapters\ch_351.rpyc
+Chapters\ch_352.rpy
+Chapters\ch_352.rpyc
+Chapters\ch_999.rpy
+Chapters\ch_999.rpyc
+gui\bubble.png
+gui\design1_v4_grey.png~
+gui\frame.png
+gui\game_menu.png
+gui\main_menu.png
+gui\namebox.png
+gui\notify.png
+gui\nvl.png
+gui\skip.png
+gui\textbox.png
+gui\textbox1_grey.png
+gui\textbox1_purple.png
+gui\textbox2.png
+gui\thoughtbubble.png
+gui\window_icon.png
+gui\bar\bottom.png
+gui\bar\left.png
+gui\bar\right.png
+gui\bar\top.png
+gui\button\check_foreground.png
+gui\button\check_selected_foreground.png
+gui\button\choice_hover_background.png
+gui\button\choice_idle_background.png
+gui\button\hover_background.png
+gui\button\idle_background.png
+gui\button\quick_hover_background.png
+gui\button\quick_idle_background.png
+gui\button\radio_foreground.png
+gui\button\radio_selected_foreground.png
+gui\button\slot_hover_background.png
+gui\button\slot_idle_background.png
+gui\cursors\cursor1.png
+gui\cursors\cursor2.png
+gui\cursors\cursor3.png
+gui\cursors\cursor4.png
+gui\mainmenu\about-idle.png
+gui\mainmenu\help-idle.png
+gui\mainmenu\load-idle.png
+gui\mainmenu\menu.png
+gui\mainmenu\menubg.png
+gui\mainmenu\preferences-idle.png
+gui\mainmenu\start-idle.png
+gui\overlay\confirm.png
+gui\overlay\game_menu.png
+gui\overlay\main_menu.png
+gui\phone\nvl.png
+gui\phone\textbox.png
+gui\phone\bar\bottom.png
+gui\phone\bar\left.png
+gui\phone\bar\right.png
+gui\phone\bar\top.png
+gui\phone\button\check_foreground.png
+gui\phone\button\check_selected_foreground.png
+gui\phone\button\choice_hover_background.png
+gui\phone\button\choice_idle_background.png
+gui\phone\button\hover_background.png
+gui\phone\button\idle_background.png
+gui\phone\button\radio_foreground.png
+gui\phone\button\radio_selected_foreground.png
+gui\phone\button\slot_hover_background.png
+gui\phone\button\slot_idle_background.png
+gui\phone\overlay\game_menu.png
+gui\phone\overlay\main_menu.png
+gui\phone\scrollbar\horizontal_hover_bar.png
+gui\phone\scrollbar\horizontal_hover_thumb.png
+gui\phone\scrollbar\horizontal_idle_bar.png
+gui\phone\scrollbar\horizontal_idle_thumb.png
+gui\phone\scrollbar\vertical_hover_bar.png
+gui\phone\scrollbar\vertical_hover_thumb.png
+gui\phone\scrollbar\vertical_idle_bar.png
+gui\phone\scrollbar\vertical_idle_thumb.png
+gui\phone\slider\horizontal_hover_bar.png
+gui\phone\slider\horizontal_hover_thumb.png
+gui\phone\slider\horizontal_idle_bar.png
+gui\phone\slider\horizontal_idle_thumb.png
+gui\phone\slider\vertical_hover_bar.png
+gui\phone\slider\vertical_hover_thumb.png
+gui\phone\slider\vertical_idle_bar.png
+gui\phone\slider\vertical_idle_thumb.png
+gui\scrollbar\horizontal_hover_bar.png
+gui\scrollbar\horizontal_hover_thumb.png
+gui\scrollbar\horizontal_idle_bar.png
+gui\scrollbar\horizontal_idle_thumb.png
+gui\scrollbar\vertical_hover_bar.png
+gui\scrollbar\vertical_hover_thumb.png
+gui\scrollbar\vertical_idle_bar.png
+gui\scrollbar\vertical_idle_thumb.png
+gui\slider\horizontal_hover_bar.png
+gui\slider\horizontal_hover_thumb.png
+gui\slider\horizontal_idle_bar.png
+gui\slider\horizontal_idle_thumb.png
+gui\slider\vertical_hover_bar.png
+gui\slider\vertical_hover_thumb.png
+gui\slider\vertical_idle_bar.png
+gui\slider\vertical_idle_thumb.png
+Helpers\characters.rpy
+Helpers\characters.rpyc
+Helpers\deltatime.rpy
+Helpers\deltatime.rpyc
+Helpers\glitch.rpy
+Helpers\glitch.rpyc
+Helpers\helperfuncs.rpy
+Helpers\helperfuncs.rpyc
+Helpers\particle_factory.rpyc.bak
+Helpers\particles.rpy
+Helpers\particles.rpyc
+Helpers\trackers.rpy
+Helpers\trackers.rpyc
+Helpers\transforms.rpy
+Helpers\transforms.rpyc
+Helpers\transitions.rpy
+Helpers\transitions.rpyc
+Helpers\effects\rain1.png
+Helpers\effects\rain2.png
+Helpers\effects\rain3.png
+Helpers\effects\rain4.png
+Helpers\wipes\001.jpg
+Helpers\wipes\002.jpg
+Helpers\wipes\003.jpg
+Helpers\wipes\004.png
+Helpers\wipes\005.jpg
+Helpers\wipes\006.jpg
+Helpers\wipes\007.png
+Helpers\wipes\008.jpg
+Helpers\wipes\009.jpg
+Helpers\wipes\010.png
+Helpers\wipes\011.jpg
+Helpers\wipes\012.jpg
+Helpers\wipes\013.png
+Helpers\wipes\014.jpg
+Helpers\wipes\015.jpg
+Helpers\wipes\016.jpg
+Helpers\wipes\017.png
+Helpers\wipes\018.jpg
+Helpers\wipes\019.png
+Helpers\wipes\020.jpg
+Helpers\wipes\021.png
+Helpers\wipes\022.jpg
+Helpers\wipes\023.png
+Helpers\wipes\024.jpg
+Helpers\wipes\025.jpg
+Helpers\wipes\026.png
+Helpers\wipes\027.jpg
+Helpers\wipes\028.jpg
+Helpers\wipes\029.png
+Helpers\wipes\030.jpg
+Helpers\wipes\031.jpg
+Helpers\wipes\032.png
+Helpers\wipes\033.jpg
+Helpers\wipes\034.png
+Helpers\wipes\035.jpg
+Helpers\wipes\036.jpg
+Helpers\wipes\037.png
+Helpers\wipes\038.jpg
+Helpers\wipes\039.jpg
+Helpers\wipes\040.jpg
+Helpers\wipes\rain1.jpg
+Helpers\wipes\rain2.jpg
+Helpers\wipes\snow1.png
+images\prologueact1\bg cafe.jpg
+images\prologueact1\bg college.jpg
+images\prologueact1\bg street.jpg
+images\prologueact1\library.png
+images\prologueact1\library_night.png
+images\prologueact1\library_overcast.png
+images\shiori\base.PNG
+images\shiori\yorick.PNG
+images\shiori\Eyebrows\eyebrows1.PNG
+images\shiori\Eyebrows\eyebrows2.PNG
+images\shiori\Eyebrows\eyebrows3.PNG
+images\shiori\Eyes\eyes_closed.PNG
+images\shiori\Eyes\eyes_open.PNG
+images\shiori\Mouths\mouth_closed.png
+images\shiori\Mouths\mouth_open1.PNG
+images\shiori\Mouths\mouth_open2.PNG
+images\shiori\Mouths\mouth_open3.PNG
+images\silhouettes\parts\backpack.png
+images\silhouettes\parts\briefcase.png
+images\silhouettes\parts\briefcase2.png
+images\silhouettes\parts\coffee.png
+images\silhouettes\parts\girl1 - base.png
+images\silhouettes\parts\girl2 - base.png
+images\silhouettes\parts\girl3 - base.png
+images\silhouettes\parts\girl4 - base.png
+images\silhouettes\parts\girl5 - base.png
+images\silhouettes\parts\groceries bag.png
+images\silhouettes\parts\guy1 - base.png
+images\silhouettes\parts\guy2 - base.png
+images\silhouettes\parts\guy3 - base.png
+images\silhouettes\parts\guy4 - base.png
+images\silhouettes\parts\guy5 - base.png
+images\silhouettes\parts\hat1.png
+images\silhouettes\parts\hat2.png
+images\silhouettes\parts\hood.png
+images\silhouettes\parts\purse.png
+images\silhouettes\parts\soda.png
+images\silhouettes\parts\umbrella.png
+images\silhouettes\parts\umbrella2.png
+images\silhouettes\prebuilds\girl1 - base + briefcase.png
+images\silhouettes\prebuilds\girl1 - base + groceries.png
+images\silhouettes\prebuilds\girl1 - base + hat + briefcase.png
+images\silhouettes\prebuilds\girl1 - base + hat + groceries.png
+images\silhouettes\prebuilds\girl1 - base + hat + purse.png
+images\silhouettes\prebuilds\girl1 - base + hat.png
+images\silhouettes\prebuilds\girl1 - base + purse.png
+images\silhouettes\prebuilds\girl1 - base + umbrella + briefcase.png
+images\silhouettes\prebuilds\girl1 - base + umbrella + groceries.png
+images\silhouettes\prebuilds\girl1 - base + umbrella + purse.png
+images\silhouettes\prebuilds\girl1 - base + umbrella.png
+images\silhouettes\prebuilds\girl1 - base + umbrella2 + groceries.png
+images\silhouettes\prebuilds\girl1 - base + umbrella2 + purse.png
+images\silhouettes\prebuilds\girl1 - base + umbrella2.png
+images\silhouettes\prebuilds\girl1 - base.png
+images\silhouettes\prebuilds\girl2 - base + briefcase.png
+images\silhouettes\prebuilds\girl2 - base + groceries.png
+images\silhouettes\prebuilds\girl2 - base + hat + groceries.png
+images\silhouettes\prebuilds\girl2 - base + hat + purse.png
+images\silhouettes\prebuilds\girl2 - base + hat.png
+images\silhouettes\prebuilds\girl2 - base + hood + groceries.png
+images\silhouettes\prebuilds\girl2 - base + hood + purse.png
+images\silhouettes\prebuilds\girl2 - base + hood.png
+images\silhouettes\prebuilds\girl2 - base + purse.png
+images\silhouettes\prebuilds\girl2 - base + umbrella + briefcase.png
+images\silhouettes\prebuilds\girl2 - base + umbrella + groceries.png
+images\silhouettes\prebuilds\girl2 - base + umbrella + purse.png
+images\silhouettes\prebuilds\girl2 - base + umbrella.png
+images\silhouettes\prebuilds\girl2 - base + umbrella2 + groceries.png
+images\silhouettes\prebuilds\girl2 - base + umbrella2 + purse.png
+images\silhouettes\prebuilds\girl2 - base + umbrella2.png
+images\silhouettes\prebuilds\girl2 - base.png
+images\silhouettes\prebuilds\girl3 - base + hood.png
+images\silhouettes\prebuilds\girl3 - base.png
+images\silhouettes\prebuilds\girl4 - base + groceries.png
+images\silhouettes\prebuilds\girl4 - base + hat + groceries.png
+images\silhouettes\prebuilds\girl4 - base + hat + purse.png
+images\silhouettes\prebuilds\girl4 - base + hat.png
+images\silhouettes\prebuilds\girl4 - base + purse.png
+images\silhouettes\prebuilds\girl4 - base + umbrella + groceries.png
+images\silhouettes\prebuilds\girl4 - base + umbrella + purse.png
+images\silhouettes\prebuilds\girl4 - base + umbrella.png
+images\silhouettes\prebuilds\girl4 - base + umbrella2 + groceries.png
+images\silhouettes\prebuilds\girl4 - base + umbrella2 + purse.png
+images\silhouettes\prebuilds\girl4 - base + umbrella2.png
+images\silhouettes\prebuilds\girl4 - base.png
+images\silhouettes\prebuilds\girl5 - base + coffee + briefcase + hat.png
+images\silhouettes\prebuilds\girl5 - base + coffee + briefcase.png
+images\silhouettes\prebuilds\girl5 - base + hat + coffee.png
+images\silhouettes\prebuilds\girl5 - base + hat + purse + soda.png
+images\silhouettes\prebuilds\girl5 - base + hat + soda.png
+images\silhouettes\prebuilds\girl5 - base + purse + soda.png
+images\silhouettes\prebuilds\girl5 - base + soda.png
+images\silhouettes\prebuilds\girl5 - base + umbrella2 + briefcase.png
+images\silhouettes\prebuilds\girl5 - base + umbrella2 + purse.png
+images\silhouettes\prebuilds\girl5 - base + umbrella2.png
+images\silhouettes\prebuilds\girl5 - base.png
+images\silhouettes\prebuilds\guy1 - base + backpack + groceries.png
+images\silhouettes\prebuilds\guy1 - base + backpack + umbrella + groceries.png
+images\silhouettes\prebuilds\guy1 - base + backpack + umbrella.png
+images\silhouettes\prebuilds\guy1 - base + backpack.png
+images\silhouettes\prebuilds\guy1 - base + briefcase.png
+images\silhouettes\prebuilds\guy1 - base + groceries.png
+images\silhouettes\prebuilds\guy1 - base + hat + backpack.png
+images\silhouettes\prebuilds\guy1 - base + hat + briefcase.png
+images\silhouettes\prebuilds\guy1 - base + hat + groceries.png
+images\silhouettes\prebuilds\guy1 - base + hat.png
+images\silhouettes\prebuilds\guy1 - base + umbrella + briefcase.png
+images\silhouettes\prebuilds\guy1 - base + umbrella + groceries.png
+images\silhouettes\prebuilds\guy1 - base + umbrella.png
+images\silhouettes\prebuilds\guy1 - base + umbrella2 + briefcase.png
+images\silhouettes\prebuilds\guy1 - base + umbrella2 + groceries.png
+images\silhouettes\prebuilds\guy1 - base + umbrella2.png
+images\silhouettes\prebuilds\guy1 - base.png
+images\silhouettes\prebuilds\guy2 - base + hood.png
+images\silhouettes\prebuilds\guy2 - base.png
+images\silhouettes\prebuilds\guy3 - base + double groceries.png
+images\silhouettes\prebuilds\guy3 - base + hood + double groceries.png
+images\silhouettes\prebuilds\guy3 - base + hood + left briefcase.png
+images\silhouettes\prebuilds\guy3 - base + hood + left groceries.png
+images\silhouettes\prebuilds\guy3 - base + hood + right briefcase.png
+images\silhouettes\prebuilds\guy3 - base + hood + right groceries.png
+images\silhouettes\prebuilds\guy3 - base + hood.png
+images\silhouettes\prebuilds\guy3 - base + left briefcase.png
+images\silhouettes\prebuilds\guy3 - base + left groceries.png
+images\silhouettes\prebuilds\guy3 - base + right briefcase.png
+images\silhouettes\prebuilds\guy3 - base + right groceries.png
+images\silhouettes\prebuilds\guy3 - base.png
+images\silhouettes\prebuilds\guy4 - base + hat.png
+images\silhouettes\prebuilds\guy4 - base + hood.png
+images\silhouettes\prebuilds\guy4 - base + umbrella1.png
+images\silhouettes\prebuilds\guy4 - base + umbrella2.png
+images\silhouettes\prebuilds\guy4 - base.png
+images\silhouettes\prebuilds\guy5 - base + coffee + backpack.png
+images\silhouettes\prebuilds\guy5 - base + coffee + briefcase.png
+images\silhouettes\prebuilds\guy5 - base + coffee + groceries + backpack.png
+images\silhouettes\prebuilds\guy5 - base + coffee + hat + briefcase.png
+images\silhouettes\prebuilds\guy5 - base + coffee + hat.png
+images\silhouettes\prebuilds\guy5 - base + coffee.png
+images\silhouettes\prebuilds\guy5 - base + soda + backpack.png
+images\silhouettes\prebuilds\guy5 - base + soda + groceries + backpack.png
+images\silhouettes\prebuilds\guy5 - base + soda + groceries.png
+images\silhouettes\prebuilds\guy5 - base + soda + hat + groceries.png
+images\silhouettes\prebuilds\guy5 - base + umbrella + backpack.png
+images\silhouettes\prebuilds\guy5 - base + umbrella + briefcase.png
+images\silhouettes\prebuilds\guy5 - base + umbrella + groceries + backpack.png
+images\silhouettes\prebuilds\guy5 - base + umbrella + groceries.png
+images\silhouettes\prebuilds\guy5 - base + umbrella.png
+images\silhouettes\prebuilds\guy5 - base.png
+saves\_reload-1-LT1.save
+saves\_reload-2-LT1.save
+saves\auto-1-LT1.save
+saves\auto-10-LT1.save
+saves\auto-2-LT1.save
+saves\auto-3-LT1.save
+saves\auto-4-LT1.save
+saves\auto-5-LT1.save
+saves\auto-6-LT1.save
+saves\auto-7-LT1.save
+saves\auto-8-LT1.save
+saves\auto-9-LT1.save
+saves\navigation.json
+saves\persistent
+tl\None\common.rpym
+tl\None\common.rpymc
