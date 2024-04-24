@@ -6,6 +6,7 @@ screens.rpy
 screens.rpyc
 script.rpy
 script.rpyc
+audio\shioris_story.ogg
 audio\0 Prologue\Outside Music.ogg
 audio\0 Prologue\cafe1.ogg
 audio\0 Prologue\cafe2.ogg
@@ -81,11 +82,7 @@ Chapters\ch_352.rpyc
 Chapters\ch_999.rpy
 Chapters\ch_999.rpyc
 gui\bubble.png
-gui\design1_v4_grey.png
 gui\design1_v4_grey.png~
-gui\design1_v4_purple.png
-gui\design1_v5_grey.png
-gui\design2_v2.png
 gui\frame.png
 gui\game_menu.png
 gui\main_menu.png
@@ -94,6 +91,9 @@ gui\notify.png
 gui\nvl.png
 gui\skip.png
 gui\textbox.png
+gui\textbox1_grey.png
+gui\textbox1_purple.png
+gui\textbox2.png
 gui\thoughtbubble.png
 gui\window_icon.png
 gui\bar\bottom.png
@@ -117,14 +117,12 @@ gui\cursors\cursor2.png
 gui\cursors\cursor3.png
 gui\cursors\cursor4.png
 gui\mainmenu\about-idle.png
-gui\mainmenu\about-idle.png~
 gui\mainmenu\help-idle.png
 gui\mainmenu\load-idle.png
+gui\mainmenu\menu.png
+gui\mainmenu\menubg.png
 gui\mainmenu\preferences-idle.png
-gui\mainmenu\preferences-idle.png~
 gui\mainmenu\start-idle.png
-gui\mainmenu\start-menu_vfinal_.png
-gui\mainmenu\start-menu_vfinal_.png~
 gui\overlay\confirm.png
 gui\overlay\game_menu.png
 gui\overlay\main_menu.png
