@@ -1,21 +1,23 @@
+$ renpy.include("Helpers/characters.rpy")
+
 label ch_12:
-    "Looking outside from my seat, I continue to think about the rain. Well, lack of it. It's almost stopped, turning into more of a mist, making it difficult to see very far. I can see the building across the field, but that's about it."
+    "Looking outside from my seat, I continue to think about the rain. Well, the lack of it. I can't even remember the last time it wasn't raining. Instead, everything's turned hazy, making it difficult to see very far. I can see the building across the field, but that's about it."
 
-    p_i "Mist, huh? When was the last time it wasn't raining...? I don't even remember."
+    p_i "Mist, huh?"
 
-    "It's still a bit of time before class starts. I let my gaze wander across the view outside. Several students huddle together, moving in close-knit groups so as to not lose each other; others, moving alone, stay close to the buildings, the familiar landmarks offering some small comfort in the strange mist."
+    "There's still a bit of time before class starts. I let my gaze wander across the view outside. Several students huddle together, moving in close-knit groups, chatting and seemingly not bothered by the lack of rain; others, moving alone, stay close to the buildings, the familiar landmarks offering some small comfort in the strange mist."
 
-    "I catch myself spacing out and staring at a person standing outside a building. I blink and finally notice the bright yellow raincoat they're wearing. As I watch, I notice that they're not moving, and are just standing there."
+    "I catch myself spacing out and staring at a person standing outside. I blink and finally notice the bright yellow raincoat they're wearing. It seems familiar, but I can't quite put my finger on where I've seen it before. As I watch, I notice that they're not moving, and are just standing there."
 
     p_i "Interesting fashion choice..."
 
     s "Hey, mind if I sit here?"
 
-    "I jump a little and I look over to my other side. Seeing my classmate, I just nod and look back out the window."
+    "I jump a little and I look over toward the voice. Seeing my classmate, I just nod and look back out the window."
 
     p "What the...?"
 
-    "I notice a second person in a yellow coat, this time between the two buildings across from me."
+    "I notice a second person in a yellow coat, this time in between the buildings."
 
     "I hear a scraping from my side as my classmate leans forward to look out the window as well. I lean back in my chair and stretch, my back popping as it arches."
 
@@ -23,9 +25,9 @@ label ch_12:
 
     p "Oh, is it some fashion thing, then?"
 
-    s "I'm not sure, maybe?"
+    s "I'm not sure. Maybe?"
 
-    "I shrug and look back outside, but the people are gone. Glancing around, I can't see any trace of them."
+    "I shrug and look back outside, but those two are gone. Glancing around, I can't see any trace of them."
 
     p_i "Guess they left."
 
@@ -35,65 +37,61 @@ label ch_12:
 
     s "That's fair, I guess. We do have the report due soon."
 
-    "The professor walks in, and the conversations quiet down throughout the room as they get ready. As they move to their podium, the conversations stop completely and the professor starts teaching."
+    "The professor walks in, and the conversations quiet down throughout the room as they get ready. As they move to their podium, the conversations stop completely and the professor starts."
 
     #fade out/fade in
 
-    "Class is finally over. No matter how hard I tried to listen to the lessons, I couldn't stop yawning. I started my report, but didn't get very far. The books Shiori helped me find were really useful, but I just couldn't focus... So, I tried going to bed a little earlier than normal, but couldn't sleep well either..."
+    "Class is finally over. No matter how hard I tried to listen to the lecture, my eyes kept drooping. Makes sense seeing as how I couldn't sleep at all." 
 
-    "Yawning again, I head to my next class in another building. As I exit, I notice the heavier mist outside, like a fog. I can't help but feel isolated as I carefully do my best to stay on the path."
+    "I tried getting up and working on the report, and the books Shiori helped me find were really useful, but I couldn't get anything done. No rest and wasted effort."
 
-    "As I continue moving, I spy a figure emerge from the mist, standing to the side. Upon getting closer, I see that it's someone in a yellow raincoat. Facing me."
+    "Yawning, I head to my next class in another building. On exiting, I notice the mist is heavier, like a fog. It's clinging to me and weighing me down. Feeling isolated and exposed, I carefully walk ahead, doing my best to stay on the path."
 
-    "I do my best to ignore them and I continue to class."
+    "As I continue moving, a figure emerge from the mist, standing to the side. Closing in, I see that it's someone in a yellow raincoat. Facing me."
+
+    "I don't have time to deal with this new fad, or these weirdos, or whatever. I need to get to class."
 
     "Thankfully, the rest of my day is as normal as can be."
 
-    "But my seat neighbor was gone..."
+    "The only thing that was strange was my classmate who usually sits next to me was absent for the day..."
 
     p_i "Didn't they have perfect attendance?"
 
     #fade out/fade in
 
-    "I go into class the next day, but the talkative seat classmate who usually sits next to me isn't here yet."
+    "I go into class the next day, but the talkative classmate who usually sits next to me isn't here yet."
 
-    "Waiting for what feels like a while, the room is still empty. I pull out my phone to check the time, and the first thing I notice is my low battery. 1%."
+    "By now there should be people filing in, but the room is still empty. I pull out my phone to check the time."
 
-    p_i "Woops. Forgot to charge it, I guess..."
+    p_i "Tch. 1%." 
 
-    "I finally check the time, and realize that class was supposed to start fifteen minutes ago. Just as I do, the phone shuts down, the battery depleted."
+    p_i "Forgot to charge it, I guess."
 
-    p "I guess I'll leave?"
+    "I finally actually check the time: 3:45... Class was supposed to start fifteen minutes ago. And the phone shuts down, the battery depleted."
 
-    p "I mean... No one's here, after all."
+    p "I guess I'll leave? No one's here, after all."
 
-    "Standing up, I look around again and the room is still empty."
+    "Standing up, I look around again and the room is still empty. Suddenly, my back twitches as a chill runs down my spine. After it passes, I shoulder my bag and start heading home."
 
-    "Suddenly, my back twitches as a chill runs down my spine."
+    p "Maybe I'll stop by the library to try to get some of the report done."
 
-    "After it passes, I shoulder my bag and start heading home."
-
-    p "I guess I'll stop by the library to try to get some of the report done, since I couldn't last night."
-
-    "As I walk down the eerily empty halls, I glance out the window and see a familiar head of black and white hair."
+    "Walking down the eerily empty halls, I glance out the window and see a familiar head of black and white hair."
 
     p "Isn't that...?"
 
     p_i "I should say hi, it'll be nice to walk with someone anyway."
 
-    "I push open the door to exit the building, hurrying a little more."
+    "I push open the door to exit the building, picking up the pace."
 
     #show coat man
 
     p "Oh, shi-! Sorry!"
 
-    "I duck around the person, realizing I was more excited to talk to Shiori, or anyone, than I thought, given I almost ran into someone."
+    "I barely duck around the person. I must be more excited to talk to Shiori, or anyone for that matter, than I thought." 
 
-    "Not even waiting for a reply, I continue toward Shiori."
+    "Not even waiting for a reply, I continue toward Shiori. But, rounding the corner to where she should be, she's gone."
 
-    "But, rounding the corner to where she should be, she's gone."
-
-    p "Where'd she go...? Wasn't she right here?"
+    p "Where'd she go? Wasn't she right here?"
 
     #show shio-eyes up close
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
@@ -101,116 +99,116 @@ label ch_12:
     shi "Boo!"
 
     #slight screen shake
-    "I feel my heels leave the ground as I jump, my heart thumping in my chest, a low drumbeat to underscore my surprise."
+    "My heels leave the ground as I jump, my heart thumping in my chest, a low drumbeat to underscore my surprise."
 
     p "Jeez... You scared me!"
 
     #shio-giggle
-    "Shiori just giggles in reply and grins."
+    "Shiori giggles in reply and grins."
 
     shi "Gotcha!"
 
-    "I just smile at her, composing myself as a moment passes."
+    "I smile at her, composing myself as the moment passes."
 
-    p_i "I feel like I should be annoyed but I can't bring myself to be upset at her."
+    p_i "I should be annoyed but I can't bring myself to be upset at her."
 
     p "You really did, good job."
 
-    shi "Yay! Anyway, I'm surprised to see you here, usually all the classes in this building are running now. Was yours canceled or something?"
+    shi "Yay! Anyway, I'm surprised to see you here, usually all the classes in this building are in session now. Was yours canceled or something?"
 
     p "Honestly? Not sure. No one showed up, so I suppose so."
 
-    "Shiori just tilts her head and frowns a little."
+    "Shiori tilts her head and frowns a little."
 
     p "You wouldn't happen to have a friend in one of those classes who might know, would you?"
 
-    shi "No, sorry. I don't really tend to get out much, so..."
+    shi "No, sorry. I don't get out much, so..."
 
     p "Ah, no, it's ok, I get it. I like staying in too."
 
-    "As the chat falls into a comfortable lull, I notice footsteps behind me and turn to see a figure in the mist approaching. Once they're closer, the yellow jacket becomes more noticeable."
+    "As our chat drifts into a comfortable lull and we turn to walk down the path, I notice footsteps behind me. Looking back, I see a figure in the mist approaching. A few steps and a yellow jacket becomes more noticeable."
 
-    p_i "Oh, did I actually hit them with the door? I should apologize."
+    p_i "Oh, did they have a class canceled too?"
 
-    "I turn back toward Shiori, and see her watching the person with a frown and narrowed eyes."
+    "I turn back toward Shiori. She's watching the person with a frown and narrowed eyes."
 
-    p "What? I probably just hit them with the door on my way out by accident."
+    p "What? Their class was probably canceled."
 
-    "Shiori just shakes her head and grabs my wrist, walking away at a quick pace. Nearly tripping over my feet at being pulled so suddenly."
+    "Shiori shakes her head and grabs my wrist, walking away at a quick pace. I nearly trip over my feet being pulled away so suddenly."
 
     p "W-What? Where are we-"
 
     shi "Just come on!"
 
-    "As Shiori pulls me along, I notice several people in the same yellow rain jackets watching from windows and from between buildings."
+    "As Shiori pulls me along, I notice several people in the same yellow rain jackets peering through windows and doors."
 
-    p "I guess they were right, it is popular, huh?"
+    p "I guess it is popular, huh?"
 
     shi "What? No, it's not that, I mean, yes, but no! Just come on!"
 
-    "We approach a building I recognize as the library, but it seems like we're going in a side entrance I've never used."
+    "We approach the library, but we're entering a side entrance I've never used."
 
-    "Pulling me inside, Shiori closes the door behind us and continues pulling me along. Soon, we duck into one of the side rooms and she closes that door behind us too, locking it with the deadbolt."
+    "Pulling me inside, Shiori closes the door behind us and continues dragging me along. Soon, we duck into one of the side rooms and she slams that door too, locking it with the deadbolt."
 
-    p "So, why did you pull me like that?"
+    p "What's going on? Why did you pull me like that? Why are we-"
 
     shi "... thought ... time..."
 
-    "I only catch part of what she said, but she shakes her head and moves to sit down."
+    "I only catch part of what she said as she shakes her head and moves to sit down."
 
-    p "Sorry, I didn't catch that, what?"
+    p "What?"
 
     shi "Oh, don't worry about it..." 
 
-    "She pulls out the same book she had before from... somewhere."
+    "She pulls out the same book I saw the other day. Where did she even fit that?"
 
-    shi "Is what I'd like to say, but it seems like they're looking at you, too, now..."
+    shi "Is what I'd like to say, but it seems like they're looking at you, too, now."
 
     p "Huh? What do you mean?"
 
-    "Shiori just sighs in response and looks at me apologetically."
+    "Shiori sighs in response and looks at me apologetically."
 
-    shi "Well, where to start... Um... Hm. Now that I think about it, I don't really know much yet myself."
+    shi "Well, where to start... Um... Hm. Now that I think about it, I don't really know much myself."
 
-    p "Well, what do you know? I'm pretty sure that guy just wanted to talk to me. After all, I might've hit him with the door on my way out."
+    p "Well, what do you know? Besides, I'm pretty sure that guy just had a canceled class and was heading somewhere else."
 
     shi "Wait, what? That's it?"
 
     "A look of confusion, shock, and guilt washes over her face for a moment, before passing the next."
 
-    shi "Um... Ok. Well, I know enough to know that there's a problem here."
+    shi "Hm. Ok. Well, I know enough to know that there's a problem here."
 
     p "Uh, yeah, you just kind of pulled me with no explanation. It's not a big deal, I just don't know why..."
 
-    shi "No, I mean... Those people in the yellow coats? They're weird, right?"
+    shi "No, not that. I mean... Those people in the yellow coats? They're weird, right?"
 
-    p "It's just a weird fad or something, isn't it?"
+    p "It's just a strange fad or something."
 
     shi "Not quite. I think this book has something to do with it."
 
     "She holds the book up for me to see."
 
-    p "That's the one you were reading before, right?"
+    p "The book you've been reading?"
 
     "Shiori nods."
 
-    shi "Trying, anyway."
+    shi "Trying to, anyway."
 
-    shi "I've seen the coat people gathering around seemingly random people, who then disappear pretty soon after. It's like they're looking for something..."
+    shi "I've seen the coat people gathering around seemingly random strangers, who then disappear pretty soon after. It's like they're looking for something."
 
-    p "This is mostly a college town, Shiori. People come and go all the time, right? So, it just sounds like a bunch of coincidences."
+    p "This is mostly a college town, Shiori. People come and go all the time. Sounds like a bunch of coincidences."
 
-    shi "But all those gathering people had the same yellow raincoat!"
+    shi "But everyone gathered had the same yellow raincoat!"
 
-    "Shiori's voice raises a little, but she clasps a hand over her mouth, as if to quiet herself."
+    "Shiori raises her voice as she continues, but clasps a hand over her mouth, as if to quiet herself."
 
     shi "That doesn't strike you as weird?"
 
-    p "People like to be trendy, so it's probably just a new style or something. Maybe some show or something?"
+    p "People like to be trendy, so it's probably just a new style or something. Maybe from some show or game?"
 
     "Shiori sighs in apparent exasperation."
 
-    p_i "I guess I'll play along. At least, it should help her feel better, and feel heard."
+    p_i "I guess I shouldn't be so dismissive. I'll hear her out at least."
 
     p "Ok, let's say it isn't a fashion thing. What do you think it is?"
 
@@ -220,41 +218,41 @@ label ch_12:
 
     shi "I see them a lot, but doing something about it... I'd like to."
 
-    "Shiori watches me expectantly, and it makes me want to meet her expectations."
+    "Shiori watches me expectantly. That look. How can I say no?"
 
     p "Alright, so what do we do?"
 
     "Shiori puts a finger to her chin in thought."
 
-    shi "Uh... We could get them to back off? It'd give us a chance to maybe try to figure stuff out?"
+    shi "We could get them to back off? It'd give us a chance to maybe try to figure stuff out."
 
-    p "Ok, we get them to back off, but how?"
+    p "Sure, we get them to back off, but how?"
 
     shi "I'll be ok, but..."
 
     "Shiori reaches into her coat and slowly withdraws a small ink bottle, setting it on the table."
 
-    "It's a small bottle, but as I look at it, I see faint purple and gold hues slowly swirling, catching the light."
+    "It's a small bottle, the size of one of those cups used for taking cough medicine, but as I look at it, I see faint purple and gold hues swirling, catching the light."
 
-    p "So... That's interesting looking. What is it?"
+    p "So... That looks interesting. What is it?"
 
     shi "Do you remember when I asked if you wanted to be a Novelite?"
 
-    "It takes me a moment to remember, but I do remember her asking me that on our first meeting, as I was leaving."
+    "It takes me a moment to rack through my head, but I do remember her asking me that on our first meeting as I was leaving."
 
-    p "Yeah..."
+    p "Yeah, and?"
 
-    shi "Well, you'll need to be one. Let's say this is in-... a juice. Juice. An... admittedly bad-tasting juice. But you'll be ok, you'll be fine!"
+    shi "Well, you'll need to be one. Let's say this is in- a juice. Juice. Admittedly, a bad-tasting juice. But you'll be ok, you'll be fine!"
 
-    p "Seems like you were saying something else?"
+    p "Seems like you were saying something else."
 
     shi "Nope! It's juice. Just juice. You'll be fine."
 
-    "I look back at the small bottle, and take into my grip, surprised at the weight of it. It's much heavier than I expected. I hesitate for a moment, before removing the cork."
+    "I look back at the small bottle and grab it. For something so minute, there's a surprising weight to it. It's much heavier than I expected. I hesitate for a moment, and then remove the cork."
 
     p "I just need to drink this?"
 
-    "Shiori looks around for a moment, and her eyes light up as she stands up and walks to one of the shelves."
+    "Shiori looks around for a moment,her eyes lighting up as she stands and walks over to one of the shelves."
 
     "She turns around, cup in hand."
 
@@ -272,36 +270,32 @@ label ch_12:
 
     "I look at the bottle in my hand and take a deep breath."
 
-    p "Like a shot of something... Got it."
+    p "Like a shot of something. Got it."
 
     shi "I don't drink, but sure."
 
-    "You bring the bottle to your lips, and immediately gag at the smell. It's like a mix of gasoline, rotting meat, and sewage."
+    "I bring the bottle to my lips, and immediately gag at the smell. It's like a mix of gasoline, rotting meat, and sewage."
 
-    p "That smells... awful. K. Down the hatch..."
+    p "That smells... awful. Ok. Down the hatch."
 
-    "Shiori eyes me warily, her body tensing. Her eyes watch mine, seemingly watching for the smallest change."
+    "Shiori eyes me warily, her body tensing. Our gazes lock, hers scrutinizing for the smallest change"
 
-    "The ‘juice' passes my lips and feels like my tongue is on fire as it chunkily slides down my throat. I barely manage to suppress coughing it all back up."
+    "The ‘juice' passes my lips. My tongue feels like it is on fire as the weird substance chunkily slides down my throat. I barely manage to suppress coughing it all back up. Slowly, the bottle empties into my mouth." 
 
-    "Slowly, the bottle empties into my mouth. I let the bottle fall to the floor as I loosen my grip on it."
+    "The bottle falls to the floor as my grip loosens. My vision wavers, blurring and darkening around the edges. I have to lean on the table to keep myself upright. Shiori rushes over."
 
-    "My vision wavers for a moment, blurring and darkening around the edges, and I have to lean on the table to keep myself upright. Shiori hurriedly stands up and comes closer."
+    p "Wh... What was that... No way that juice was safe... What did you do?"
 
-    p "Wh... What was that... No way that juice was safe..."
-
-    "Shiori just smiles at me. At least it looks like she does. It's getting harder to tell as my vision darkens more."
-
-    "I crumple onto a chair, but then fall sideways out of it onto the floor."
+    "Shiori just smiles at me. Or at least it looks like she is. It's getting harder to tell as my vision fails me and I crumple onto a chair, but then fall sideways out of it onto the floor."
 
     "Shiori kneels and gently rests a hand on my shoulder."
 
-    shi "It's not really safe, now that I think about it. But, you'll be ok. You'll get through this. I believe in you..."
+    shi "It's not really safe, now that I think about it. But, you'll be ok. You'll get through this. I believe-"
 
-    "I can't see or hear clearly, everything sounds muffled and dull."
+    "Everything's fading. I can barely make out Shiori or her voice."
 
-    "Except one word."
+    "Except one last word."
 
-    shi "... Novelite."
+    shi "-Novelite."
 
     #fade to black

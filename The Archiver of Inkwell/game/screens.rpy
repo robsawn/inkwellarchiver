@@ -294,48 +294,47 @@ screen navigation():
         yalign 0.5
 
         spacing gui.navigation_spacing
+    
+        if main_menu and not renpy.get_screen("submenunavigation"):
+                imagebutton:
+                    idle "gui/mainmenu/start-idle.png"
+                    #hover "[hover goes here.png]"
+                    xpos -60
+                    ypos -61
+                    action Start()
 
-        if main_menu:
-
-            #textbutton _("Start") action Start()
-            imagebutton:
-                idle "gui/mainmenu/start-idle.png"
-                #hover "[hover goes here.png]"
-                xpos -60
-                ypos -61
-                action Start()
-
-            imagebutton:
+                imagebutton:
                     idle "gui/mainmenu/load-idle.png"
                     #hover "[hover goes here.png]"
                     xpos -60
                     ypos -60
-                    action ShowMenu("load")
-            
-            imagebutton:
+                    action [ShowMenu("load"), Show("submenunavigation"), Hide("navigation")]
+                
+                imagebutton:
                     idle "gui/mainmenu/preferences-idle.png"
                     #hover "[hover goes here.png]"
                     xpos -60
                     ypos -57
-                    action ShowMenu("preferences")
-            
-            imagebutton:
+                    action [ShowMenu("preferences"), Show("submenunavigation"), Hide("navigation")]
+                
+                imagebutton:
                     idle "gui/mainmenu/about-idle.png"
                     #hover "[hover goes here.png]"
                     xpos -60
                     ypos -65
-                    action ShowMenu("about")
-        else:
+                    action [ShowMenu("about"), Show("submenunavigation"), Hide("navigation")]
+                    
+        # else:
 
-            textbutton _("History") action ShowMenu("history")
+        #     textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+        #     textbutton _("Save") action ShowMenu("save")
 
-            textbutton _("Load") action ShowMenu("load")
+        #     textbutton _("Load") action ShowMenu("load")
 
-            textbutton _("Preferences") action ShowMenu("preferences")
+        #     textbutton _("Preferences") action ShowMenu("preferences")
 
-            textbutton _("About") action ShowMenu("about")
+        #     textbutton _("About") action ShowMenu("about")
             
         if _in_replay:
 
@@ -349,23 +348,53 @@ screen navigation():
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            if main_menu:
+            if main_menu and not renpy.get_screen("submenunavigation"):
                 imagebutton:
                     idle "gui/mainmenu/help-idle.png"
                     #hover "[hover goes here.png]"
                     xpos -60
                     ypos -60
-                    action ShowMenu("help")
+                    action [ShowMenu("help"), Show("submenunavigation"), Hide("navigation")]
             else:
-                textbutton _("Help") action ShowMenu("help")
+                #textbutton _("Help") action ShowMenu("help")
+                pass
 
-        if renpy.variant("pc"):
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            #textbutton _("Quit") action Quit(confirm=not main_menu)
-            pass
+style navigation_button is gui_button
+style navigation_button_text is gui_button_text
 
+style navigation_button:
+    size_group "navigation"
+    properties gui.button_properties("navigation_button")
+
+style navigation_button_text:
+    properties gui.button_text_properties("navigation_button")
+
+## Navigation screen ###########################################################
+##
+## This screen is included in the main and game menus, and provides navigation
+## to other menus, and to start the game.
+
+screen submenunavigation():
+
+    vbox:
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        textbutton _("Load") action ShowMenu("load")
+
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        textbutton _("About") action ShowMenu("about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action ShowMenu("help")
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -389,7 +418,9 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
+    #add gui.main_menu_background
     add gui.main_menu_background
+    add gui.game_menu_background
 
     ## This empty frame darkens the main menu.
     frame:
@@ -409,7 +440,6 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
-
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -438,6 +468,7 @@ style main_menu_title:
 
 style main_menu_version:
     properties gui.text_properties("version")
+
 
 
 ## Game Menu screen ############################################################
@@ -504,11 +535,11 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                     transclude
 
     use navigation
+    if renpy.get_screen("submenunavigation"):
+        textbutton _("Return"):
+            style "return_button"
 
-    textbutton _("Return"):
-        style "return_button"
-
-        action Return()
+            action [Return(),Hide("submenunavigation"),Show("navigation")]
 
     label title
 
@@ -601,10 +632,10 @@ screen about():
             text _("\n~~~~~")
             text _("\nServer Admin:\n    Shiori's Jacket")
             text _("\nDirector:\n    robsawn")
-            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Simp Kronosok\n    Synergy\n    Wax\n    Zero Zeta")
+            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Kronosok Kusok\n    Synergy\n    Wax\n    Zero Zeta")
             text _("\nEditors:\n    Ingram\n    robsawn\n    Thadd\n    Wax")
             text _("\nSprite Artists:\n    Ichira (Rook, Knight, Dream Monster)\n    Jermy (Shiori)\n    Nobu (outlines, Yellow Stranger)")
-            text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)")
+            text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)\n    P!ckleMan (cafe)")
             text _("\nAnimators: \n    Jusagi-chan (main menu)")
             text _("\nComposers & Musicians:\n    Nokutaan\n    Sinnoh")
             text _("\nProgrammers:\n    robsawn")

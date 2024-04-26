@@ -4,7 +4,7 @@ $ renpy.include("Helpers/particles.rpy")
 
 label ch_1:
     #fade in from black
-    "It's finally the weekend, but I don't really get to relax this week. I have to go to the library and try to find books for that research report."
+    "It's finally the weekend, but I don't really get to relax this week. I have to go to the library and try to find books for that research report." 
 
     "I double check what books my professor recommended and make a note of them in my phone."
 
@@ -17,7 +17,7 @@ label ch_1:
 
     "I can't help but remember the woman I met in the cafe the other day. Despite the cloudy skies, she was as blindingly bright as the sun."
 
-    p_i "I should see if I can find some of those recommendations she had for me, too..."
+    p_i "I should see if I can find some of those recommendations she had for me, too…"
 
     "Luckily, it doesn't take long to get to the library and I step inside right as the rain starts coming down harder."
 
@@ -27,13 +27,13 @@ label ch_1:
 
     "As I move through the library, I appreciate the smells of the books, and the sounds of pages being turned."
 
-    "Finally reaching the section for the references I need, I start searching for the first book on my list."
+    "Finally reaching the section for the references I need, I start searching for the first book on my list." 
 
     "I search for a while without any luck, and give up for now, moving on to the next book on my list."
 
     "This cycle ends up repeating for what feels like hours. But, checking my phone, I see I've only been here for about an hour and a half."
 
-    p_i "Still... I can't believe I can't find any of these books..."
+    p_i "Still… I can't believe I can't find any of these books..." 
 
     "I sigh to myself, look around for a table to sit down at, and see if I can find where they are on the library's website on my phone."
 
@@ -45,7 +45,7 @@ label ch_1:
 
     "I stand there a little awkwardly, just now noticing that she's focusing on the same book as she was before."
 
-    p "Uh... Hello?"
+    p "Uh… Hello?"
 
     shi "Hm? Oh! It's you! Hi!"
 
@@ -53,7 +53,7 @@ label ch_1:
 
     "She nods, and I let myself fall into the seat with a deep exhale. All the wandering in this part of the library has been exhausting, and the dust from the shelves makes my nose itch." 
 
-    p_i "Seems this place isn't very popular..."
+    p_i "Seems this place isn't very popular..." 
 
     p_i "But wouldn't the people working here usually at least dust the shelves?"
 
@@ -74,7 +74,7 @@ label ch_1:
 
     "After a few minutes of checking the library catalog on my phone, I get up with a light sigh."
 
-    p_i "Guess I'll start searching again..."
+    p_i "Guess I'll start searching again…"
 
     #fade in heavy rain sfx
     "It seems the weather is getting worse. Outside, I can see more of the automatic lights turning on."
@@ -96,14 +96,17 @@ label ch_1:
     p "Oh, I'm just trying to find some books for a report. But I have no idea where they are."
 
     if bookhate:
+
         #smug shiori
         shi "I see. Well, no wonder you look like a child lost in a store."
 
     if booklove: 
+
         #teasing shiori
         shi "Really? And I thought someone who loves books so much would take to libraries like a fish takes to water."
 
     if bookneutral:
+
         #shiori nod?
         shi "So, is this your first time here? Well, this is a pretty big library. It's easy to get turned around here."
 
@@ -121,7 +124,7 @@ label ch_1:
     shi "Shiori Novella at your service. Nice to officially meet you."
 
     #shiori giggle
-    shi "*giggle* ‘Officially', ‘fish'."
+    shi "*giggle* 'Officially', 'fish'."
 
     "She giggles to herself for a moment, before looking at you again."
 
@@ -150,20 +153,20 @@ label ch_1:
 
     #Flash of lightning & eye on book blinks
     #thunder sfx
-    p_i "What? What was that?"
+    p_i "What? What was that?" 
 
-    "I shake my head and rub my eyes and look at the book again."
+    "I shake my head and rub my eyes and look at the book again." 
 
-    p_i "Was it just my imagination? I could've sworn that book... blinked..."
+    p_i "Was it just my imagination?"
 
-    p "Hey, what did you say this book was about again?"
+    p "Hey, what did you say this book was about again?" 
 
     shi "Just a story I love, what about it?"
 
     p "If you don't mind, could I take a peek? I'm curious about it."
 
     #shiori complicated expression (whichever fits best)
-    "Shiori turns and watches me, her gaze alternating between me and the book after a moment."
+    "Shiori turns and watches me, her gaze alternating between me and the book after a moment." 
 
     p_i "Maybe I shouldn't have asked..."
 
@@ -193,7 +196,7 @@ label ch_1:
 
             "I can't help but notice the hesitation before she answers, but drop it for now."
 
-            p_i "Didn't she say her friend helped with it, though...?"
+            p_i "Didn't she say her friend helped with it, though…?"
 
     shi "Well, enough about the book, we can discuss my hobbies at another time. Let's go. You still don't have any of the books you're looking for."
 
@@ -223,166 +226,170 @@ label ch_1:
 
     # if route_slice:
 
-    #     shi "Couple? *giggle* What?"
+        # shi "Couple? *giggle* What?"
         
-    #     p "Ah, no, I just mean..."
+        # p "Ah, no, I just mean..."
         
-    #     "I feel my face heat up as I realize what I said."
+        # "I feel my face heat up as I realize what I said."
 
-    #     #shiori giggle
-    #     shi "I'm kidding! I'm curious why that's your answer though. You've got a whole library here, but you're more interested in the stories we can create off the page, huh?"
+        # #shiori giggle
+        # shi "I'm kidding! I'm curious why that's your answer though. You've got a whole library here, but you're more interested in the stories we can create off the page, huh?"
         
-    #     p_i "It's a bit embarrassing to hear it pointed out like that. But, stories have to come from somewhere after all."
+        # p_i "It's a bit embarrassing to hear it pointed out like that. But, stories have to come from somewhere after all."
         
-    #     p "Well, I just thought that life could have some pretty interesting moments. Don't you think so?"
+        # p "Well, I just thought that life could have some pretty interesting moments. Don't you think so?"
         
-    #     "She pauses, looking upwards, as if searching for an answer. Then, she smiles and gives a small chuckle."
+        # "She pauses, looking upwards, as if searching for an answer. Then, she smiles and gives a small chuckle."
         
-    #     shi "You're certainly not wrong there."
+        # shi "You're certainly not wrong there."
         
-    #     "She opens her mouth again as if she were going to say something, but she decides not to."
+        # "She opens her mouth again as if she were going to say something, but she decides not to."
         
-    #     shi "Anyways, speaking of stories and libraries, what books did you need again? We'll be here all day if you have to listen to more of my tangents."
+        # shi "Anyways, speaking of stories and libraries, what books did you need again? We'll be here all day if you have to listen to more of my tangents."
         
-    #     p_i "Right, that was the whole point of why I came here in the first place. Although, I wouldn't have minded listening to her tangent all day. It would probably be much more fun than having to search for those books in this maze."
+        # p_i "Right, that was the whole point of why I came here in the first place. Although, I wouldn't have minded listening to her tangent all day. It would probably be much more fun than having to search for those books in this maze."
         
-    #     p "Oh, uh..."
+        # p "Oh, uh..."
         
-    #     "I check the note on my phone, and reading the two titles, I realize I forgot to write down the last of the three books I need."
+        # "I check the note on my phone, and reading the two titles, I realize I forgot to write down the last of the three books I need."
 
-    #     p "Let's see... There's ‘Le Morte D'Arthur', Pollard's ‘Warwick the Kingmaker', and uh..."
+        # p "Let's see... There's 'Le Morte d'Arthur', Pollard's 'Warwick the Kingmaker', and uh..."
         
-    #     p_i "Shoot. What was the last one?"
+        # p_i "Shoot. What was the last one?"
         
-    #     shi "‘History of the Arrival of Edward IV. in England and the Final Recovery of His Kingdoms from Henry VI.', right?"
+        # shi "'Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI.', right?"
         
-    #     p "Yeah! That's... How'd you know that?"
+        # p "Yeah! That's... How'd you know that?"
 
-    #     #shiori giggle sfx
-    #     shi "*giggle* Lucky guess?"
+        # #shiori giggle sfx
+        # shi "*giggle* Lucky guess?"
         
-    #     "I think for a couple seconds, but considering the other books I need, it makes sense she'd guess correctly. Especially since she comes to the library a lot."
+        # "I think for a couple seconds, but considering the other books I need, it makes sense she'd guess correctly. Especially since she comes to the library a lot."
             
-    #     p "Well, thanks, you saved me. I couldn't remember it... at all."
+        # p "Well, thanks, you saved me. I couldn't remember it... at all"
         
-    #     shi "Really? That's interesting."
+        # shi "Really? That's interesting."
         
-    #     p "How so?"
+        # p "How so?"
         
-    #     shi "Oh, nevermind. I was just thinking of something. But you might be right, life definitely has some nice moments."
+        # shi "Oh, nevermind. I was just thinking of something. But you might be right, life definitely has some nice moments."
         
-    #     p_i "I'm not sure what she means by that, but she seems proud of herself, considering her beaming face."
+        # p_i "I'm not sure what she means by that, but she seems proud of herself, considering her beaming face."
         
-    #     p "Alright then. Well, can you help me find those books? You already know I'm not the best at navigating."
+        # p "Alright then. Well, can you help me find those books? You already know I'm not the best at navigating."
 
-    #     shi "Hmm... On one condition."
-    #     #animate to sly shiori face
-    #     p_i "Oh no, what have I just gotten myself into..."
-        
-    #     "I sigh and slump my shoulders, ready to accept whatever this woman asks of me. It's either that, or I fail this report."
-        
-    #     p "Uh... Fine. Not like I have much of an option."
-        
-    #     #animate to smiling Shiori
-    #     shi "Tell me what you think of slice of life stories?"
-        
-    #     "She steps closer, and I instinctively take a step back."
-        
-    #     "She stares at me for a moment, then turns around and marches off."
-        
-    #     shi "C'mon! You can answer me while we look for your books."
-        
-    #     "I quickly follow after her so I don't lose sight of her."
-        
-    #     p "Why slice of life?"
-        
-    #     shi "Oh, I was just thinking about what you said, and it got me thinking about slice of life stories. It's like cake. Cake slices. Hopefully you get a good piece, or else the entire thing is ruined."
-        
-    #     p "I... don't know if the genre is named after cake slices."
-        
-    #     shi "What if it was? Think about it! There are layers to a slice of life; there are layers to a cake. Slice of life usually starts off sweet at the top, like frosting on a cake."
-        
-    #     "She stops suddenly, turning to her left and kneels down to pull a red-spined book from the bottom shelf."
-        
-    #     shi "Then, as you get deeper in, there is less frosting and more of that fluff that can be any flavor. Sure, it can be bland..."
-        
-    #     "She hands me a book titled ‘Warwick the Kingmaker'."
-        
-    #     shi "... But sometimes you get that really good slice with ice cream in the middle. Just like with slice of life stories that really hit close to home."
-        
-    #     p_i "Now that she explains it like that, I guess slice of life could be like cake then. Although, that still doesn't really answer why she's interested in them, nor why she asked me what I thought about them."
-        
-    #     p "Ah, thanks! Alright, let's say slice of life is like slices of a cake. I'm not sure I've ever given it that much thought."
-        
-    #     shi "I'm sure there's something you like about it!"
+        # shi "Hmm... On one condition."
 
-    #     "She whirls around, guiding us around a corner and up a staircase."
-        
-    #     p "It's just... All the cheesy romance and chance encounters don't really appeal to me, you know?"
-        
-    #     shi "I can agree with you on the romance part. It's not really my thing either. But the stories are still comfy, since they don't have any world ending stakes or political drama."
-        
-    #     "We stop at another shelf and she stands on her tiptoes, trying to reach a thick slate-gray book, and eventually resorting to hopping up to grab at it. She manages to knock it down with her finger, and it tumbles off the shelf. I dart forward and catch it right before it drops onto her head. I look down at it and see that I'm holding a copy of ‘Le Morte D'Arthur'."
+        # #animate to sly shiori face
 
-    #     p "Phew... That was close. Are you okay?"
+        # p_i "Oh no, what have I just gotten myself into..."
         
-    #     shi "I'm fine. Happens more often to me than you'd think."
+        # "I sigh and slump my shoulders, ready to accept whatever this woman asks of me. It's either that, or I fail this report." 
         
-    #     p_i "Hold on, how many books have fallen onto her then?"
+        # p "Uh... Fine. Not like I have much of an option."
         
-    #     shi "Anyways! Pure romance is just boring and too restrictive. I prefer the ones where I can ship myself with the characters. Oh! But sometimes I like to ship characters together, too."
+        # #animate to smiling Shiori
+        # shi "Tell me what you think of slice of life stories?"
         
-    #     p "Is... that really your reason for liking slice of life?"
+        # "She steps closer, and I instinctively take a step back."
         
-    #     p_i "This girl is something else..."
+        # "She stares at me for a moment, then turns around and marches off."
         
-    #     shi "Part of it, at least."
+        # shi "C'mon! You can answer me while we look for your books."
         
-    #     "She walks over to the stairway, looks around for a moment, then goes downstairs, turning left at the last bookshelf."
+        # "I quickly follow after her so I don't lose sight of her."
         
-    #     shi "Another thing is that a slice of life story would be nice to experience. You know, just being able to spend time with someone without anything threatening daily life."
+        # p "Why slice of life?"
         
-    #     "We make our third stop at a shelf at the very back of the first floor. This time, the book is within reach, easily letting her grab the golden chronicle and hand it to me."
+        # shi "Oh, I was just thinking about what you said, and it got me thinking about slice of life stories. It's like cake. Cake slices. Hopefully you get a good piece, or else the entire thing is ruined."
         
-    #     shi "And well... sometimes, it would be nice to just be able to have a relaxing, memorable day with people I'm fond of."
+        # p "I... don't know if the genre is named after cake slices."
         
-    #     "With ‘Arrival' joining the other two books in my hands, I am now set for the all-nighter later on. However, what Shiori said caught more of my attention."
+        # shi "What if it was? Think about it! There are layers to a slice of life; there are layers to a cake. Slice of life usually starts off sweet at the top, like frosting on a cake."
         
-    #     p_i "Isn't she already living a normal life?"
+        # "She stops suddenly, turning to her left and kneels down to pull a red-spined book from the bottom shelf."
         
-    #     p "Well, at least it won't be too difficult to get something like that. I doubt college life is that different from any slice of life scenario."
+        # shi "Then, as you get deeper in, there is less frosting and more of that fluff that can be any flavor. Sure, it can be bland..."
         
-    #     "Shiori looks as if she was going to say something like before, but then stops and looks away. She mutters something under her breath, but I can barely make out what she's saying."
+        # "She hands me a book titled 'Warwick the Kingmaker'."
         
-    #     shi "If... things... easy..."
+        # shi "... But sometimes you get that really good slice with ice cream in the middle. Just like with slice of life stories that really hit close to home."
         
-    #     p "Hmm? What was that?"
+        # p_i "Now that she explains it like that, I guess slice of life could be like cake then. Although, that still doesn't really answer why she's interested in them, nor why she asked me what I thought about them."
         
-    #     shi "Ah! Nothing. Well, we got your books. Job well done, right?"
+        # p "Ah, thanks! Alright, let's say slice of life is like slices of a cake. I'm not sure I've ever given it that much thought."
         
-    #     p_i "I guess I'll move on from that then if she didn't want to dwell on it."
+        # shi "I'm sure there's something you like about it!"
+
+        # "She whirls around, guiding us around a corner and up a staircase."
         
-    #     p "Yeah, thank you so much. Couldn't have done it without you."
+        # p "It's just... All the cheesy romance and chance encounters don't really appeal to me, you know?"
         
-    #     shi "Heh, don't mention it. I practically live here, so finding stuff like this is pretty easy."
+        # shi "I can agree with you on the romance part. It's not really my thing either. But the stories are still comfy, since they don't have any world ending stakes or political drama."
         
-    #     "We walk back over to the front counter where I check out my books and then turn to Shiori."
+        # "We stop at another shelf and she stands on her tiptoes, trying to reach a thick slate-gray book, and eventually resorting to hopping up to grab at it." 
         
-    #     p "Well, thanks again. Maybe I'll see you around whenever I visit that café or the library again."
+        # "She manages to knock it down with her finger, and it tumbles off the shelf. I dart forward and catch it right before it drops onto her head. I look down at it and see that I'm holding a copy of 'Le Morte d'Arthur'." 
+
+        # p "Phew... That was close. Are you okay?"
         
-    #     shi "Looking forward to it. Maybe you'll be able to tell me more about ‘Our Story' next time."
+        # shi "I'm fine. Happens more often to me than you'd think."
         
-    #     p "Ah, that... I didn't really..."
+        # p_i "Hold on, how many books have fallen onto her then?"
         
-    #     p_i "It's not like I was serious with that answer in the first place. But she seems so interested in that concept I pulled out of thin air. She really was something else."
+        # shi "Anyways! Pure romance is just boring and too restrictive. I prefer the ones where I can ship myself with the characters. Oh! But sometimes I like to ship characters together, too"
         
-    #     p "You know what? Yeah, maybe next time, then."
+        # p "Is... that really your reason for liking slice of life?"
         
-    #     "She smiles and waves."
+        # p_i "This girl is something else…"
         
-    #     shi "See ya later then!"
+        # shi "Part of it, at least."
         
-    #     "I wave back and walk out. After being in that labyrinth of books, it feels nice to be outside again, and the rain has even lightened up. I walk back home, already dreading the amount of caffeine I'm going to need to drink to stay awake through tomorrow."
+        # "She walks over to the stairway, looks around for a moment, then goes downstairs, turning left at the last bookshelf."
+        
+        # shi "Another thing is that a slice of life story would be nice to experience. You know, just being able to spend time with someone without anything threatening daily life."
+        
+        # "We make our third stop at a shelf at the very back of the first floor. This time, the book is within reach, easily letting her grab the golden chronicle and hand it to me."
+        
+        # shi "And well... sometimes, it would be nice to just be able to have a relaxing, memorable day with people I'm fond of."
+        
+        # "With 'Arrival' joining the other two books in my hands, I am now set for the all-nighter later on. However, what Shiori said caught more of my attention."
+        
+        # p_i "Isn't she already living a normal life?"
+        
+        # p "Well, at least it won't be too difficult to get something like that. I doubt college life is that different from any slice of life scenario."
+        
+        # "Shiori looks as if she was going to say something like before, but then stops and looks away. She mutters something under her breath, but I can barely make out what she's saying."
+        
+        # shi "If... things... easy..."
+        
+        # p "Hmm? What was that?"
+        
+        # shi "Ah! Nothing. Well, we got your books. Job well done, right?"
+        
+        # p_i "I guess I'll move on from that then if she doesn't want to dwell on it."
+        
+        # p "Yeah, thank you so much. Couldn't have done it without you."
+        
+        # shi "Heh, don't mention it. I practically live here, so finding stuff like this is pretty easy."
+        
+        # "We walk back over to the front counter where I check out my books and then turn to Shiori."
+        
+        # p "Well, thanks again. Maybe I'll see you around whenever I visit that café or the library again."
+        
+        # shi "Looking forward to it. Maybe you'll be able to tell me more about 'Our Story' next time."
+        
+        # p "Ah, that... I didn't really..."
+        
+        # p_i "It's not like I was serious with that answer in the first place. But she seems so interested in that concept I pulled out of thin air. She really was something else."
+        
+        # p "You know what? Yeah, maybe next time, then."
+        
+        # "She smiles and waves."
+        
+        # shi "See ya later then!"
+        
+        # "I wave back and walk out. After being in that labyrinth of books, it feels nice to be outside again, and the rain has even lightened up. I walk back home, already dreading the amount of caffeine I'm going to need to drink to stay awake through tomorrow."
 
     if route_lc:
 
@@ -392,7 +399,7 @@ label ch_1:
         
         p "I've never read them, but I've heard how weird, creepy, and crazy they can get. I can't imagine being a character in one of those stories."
         
-        shi "Being in that kind of story huh..."
+        shi "Being in that kind of story, huh…"
 
         #if we get like a big grin and eye effect, this is a good spot for it
         "Her eyes gleam as a grin stretches across her face."
@@ -421,15 +428,15 @@ label ch_1:
 
         p_i "It's probably nothing."
         
-        p "Right! I wrote them down. Let's see..."
+        p "Right! I wrote them down. Let's see…"
         
-        shi "It's ‘Le Morte D'Arthur', Pollard's ‘Warwick the Kingmaker', and History of the Arrival of Edward IV. in England and the Final Recovery of His Kingdoms from Henry VI..'"
+        shi "It's 'Le Morte d'Arthur', Pollard's 'Warwick the Kingmaker', and Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI.'"
         
         p_i "She listed every book I needed... I didn't even pull my phone out yet..." 
 
         "Just to double check, I look through my list, and find she's named the books I noted before, and the one I'd forgotten to note."
         
-        p "Yeah... how did you...?"
+        p "Yeah… how did you…?"
         
         shi "Oh, you know."
         
@@ -441,7 +448,7 @@ label ch_1:
         
         shi "Heh, I'm glad it worked then."
         
-        p_i "That still doesn't explain how or why she knows what books I need though... And the more time I spend with her, the more things feel off. She’s more unsettling? No, unnerving? I don’t know."
+        p_i "That still doesn't explain how or why she knows what books I need though... And the more time I spend with her, the more things feel off. She's more unsettling? No, unnerving? I don't know."
 
         p "Well, thanks for helping me."
         
@@ -460,7 +467,7 @@ label ch_1:
         
         p_i "She's got a point. She has no reason to help me out when it's not her responsibility to find these books."
         
-        p "Ah... sorry. You're right."
+        p "Ah… sorry. You're right."
         
         shi "Don't be like that. I didn't say I wouldn't help you."
         
@@ -469,11 +476,11 @@ label ch_1:
 
         shi "I just have to ask, if you're interested, why haven't you read any Lovecraft stories?"
 
-        p_i "She's really fixated on that. Weird, but what's the harm in indulging anyway? She is helping me, after all."
+        p_i "She's really fixated on that. Weird, but what's the harm in indulging her anyway? She is helping me, after all."
 
-        p "No particular reason, I just never got around to it. Besides, don't they all have rough endings, partially because of the lack of control...?"
+        p "No particular reason, I just never got around to it. Besides, don't they all have rough endings, partially because no one really has any control...?"
 
-        shi "Aww, but who said all stories need a happy ending? Sometimes, things  don't go as planned no matter how hard somebody tries."
+        shi "Aww, but who said all stories need a happy ending? Sometimes, things don't go as planned no matter how hard somebody tries."
 
         p "I do."
         
@@ -487,7 +494,7 @@ label ch_1:
         
         "Shiori reaches out and pulls a book off a shelf to her right, her hand hesitating, as if she's expecting something more."
 
-        "She hands the book to me. It's ‘Le Morte D'Arthur', but it's oddly dusty, as if it hadn't been touched in years. I look back up to see her smiling softly."
+        "She hands the book to me. It's 'Le Morte d'Arthur', but it's oddly dusty, as if it hadn't been touched in years. I look back up to see her smiling softly."
 
         shi "Maybe... maybe the world could use more happy endings."
         
@@ -504,7 +511,7 @@ label ch_1:
         
         p_i "It's a really heavy question to answer, especially to someone I don't  know at all. I can't tell if she wants a serious or lighthearted answer."
 
-        p "If that's the case, then they  need someone to come along and help them out."
+        p "If that's the case, then they need someone to come along and help them out."
         
         "She stops right before turning into the next aisle of books, and just looks at me and blinks a few times."
 
@@ -517,7 +524,7 @@ label ch_1:
         
         p "It really can be as simple as someone just reaching a hand out sometimes."
         
-        "She pauses in front of the shelf, and for a brief second her smile falters, her eyes blinking rapidly. Taking a deep breath to compose herself, she darts her hand to the left without looking and withdraws it, book in hand. I look down to see a golden cover, with the title of ‘Arrival' embossed on the front."
+        "She pauses in front of the shelf, and for a brief second her smile falters, her eyes blinking rapidly. Taking a deep breath to compose herself, she darts her hand to the left without looking and withdraws it, book in hand. I look down to see a golden cover, with the title of 'Arrival' embossed on the front."
         
         shi "Oh, you're serious?"
         
@@ -535,7 +542,7 @@ label ch_1:
         
         "Smiling, she hops up and tries to grab a book off the top shelf, her finger pulling on the spine just enough to make the book fall toward her. Before I can think, I quickly reach up and catch the book before it drops on her."
 
-        "I look down at her and am met with a sheepish grin, and glance at the book to see the last title I needed."
+        "I look down at her and am met with sheepish grin, and glance at the book to see the last title I needed."
 
         p "I'm guessing that didn't go the way you wanted?"
         
@@ -594,17 +601,181 @@ label ch_1:
         
         "I sigh and step out into the pouring rain, grabbing my umbrella. Right as I bend over, I notice somebody in a yellow raincoat walking toward me in the reflection of the puddle. I quickly pick up my umbrella and turn around. Once again, there's nobody there."
         
-        p_i "I guess I'm just tired."
+        p_i "I guess I'm just tired. "
         
-        "As I walk home, listening to the rain drumming on the umbrella, a knot forms in my stomach as I go over my conversation with Shiori in my head. As I round a corner on the final stretch before reaching home, I feel eyes boring into my back and I whip around. I stand stock still, looking around. However, the feeling is gone, and there's no one around."
+        "As I walk home, listening to the rain drumming on the umbrella, my skin crawls as I go over my conversation with Shiori in my head. As I round a corner on the final stretch before reaching home, I feel eyes boring into my back and I whip around. I stand stock still, looking around. However, the feeling is gone, and there's no one around."
         
         "I try to calm my breathing and focus on taking one step at a time away from this place."
         
         p_i "Why do I feel like I'm being watched?"
 
-    
     if route_fantasy:
-        #fantasy content goes here
-        pass
+    
+        p "I love fantasy, with magic, knights and adventures! I think it would be cool if we had spells in real life, or even dragons flying around."
+        
+        p "I often let my mind escape from this gray and rainy city  into the green hills of an imaginary world, full of things you would never see here."
+        
+        shi "You're quite enthusiastic about this, huh? No worries, I get it.  A lot of people love this genre. I wish I could share your enthusiasm, though."
+        
+        #Shiori frown
+        
+        p "What's wrong? You're not a fan of fantasy? ? I thought you'd be interested in it too, since you're always carrying that book around with you."
+        
+        "Shiori shakes her head."
+        
+        shi "No no, I don't hate it. In fact, I love a lot of fantasy games."
+        
+        "Shiori looks at me with a conflicted face, thinking of what to say."
+        
+        shi "Let's just say sometimes reality isn't as good and happy as stories portray it."
+        
+        "With these words, she quickened her pace, leaving me to catch up with her. What an odd reaction."
+        
+        p "True, still I can't help but wonder how it would feel to be in the shoes of the great heroes from those books."
+        
+        "We continue to chat about more tropes and tales while passing through the aisles  of the library. As we approach the stairs to the second floor, she turns to me."
+        
+        shi "Could you remind me what books you needed again? Otherwise we'll be spending the rest of the day talking about unrelated topics, and your project will never get started."
+        
+        p_i "Ah true, almost forgot about that. But talking about anything other than studying is much more fun."
+        
+        "I check the note on my phone, and reading the two titles, I realize I forgot to write down the last of the three books I need."
+        
+        p "Let's see... There's 'Le Morte d'Arthur', Pollard's 'Warwick the Kingmaker', and uh..."
+        
+        p "I don't remember the last name. Uh, well, it doesn't matter. I can search for it later."
+        
+        shi "Oh, let me help you."
+        
+        #Shiori closes  her eyes
+        
+        "She closes  her eyes and puts her fingers to her temples, murmuring something under her breath."
+        
+        "After a moment, she opens her eyes again."
+        
+        shi "Your third book is 'Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI.'"
+        
+        p "Huh? You're right, but how did you know?"
+        
+        Shi "Magic! How else?"
+        
+        #shiori giggle sfx
+        
+        shi "I'm actually a fairy that can read minds and travel through dreams."
+        
+        "She makes a proud face and puffs out her chest as if she was bragging."
+        
+        p "Magic it is."
+        
+        "I'll humour her. She probably guessed the third book based on the previous two I mentioned. Probably..."
+        
+        p "In any case, yes, these three books are the ones I am looking for. The professor said we should be able to find copies of all of them in this library."
+        
+        shi "Yep, I checked earlier.  I know where they are. I don't mind showing you... if you answer my questions."
+        
+        "What is she, a sphinx or something? Well, no harm in it. I nod to her."
+        
+        "She looks around cautiously as if checking for listening ears.."
+        
+        shi "So, if you could, would you go on an adventure like in those fantasy stories?"
+        
+        "She looks into my eyes with anticipation."
+        
+        menu:
+        
+            "Of course!":
+        
+                p "Of course! Who wouldn't want to experience a fantasy world for themselves? It's a dream come true!"
+                
+                shi "Oh? And so, hypothetically speaking, if some princess were to require your assistance, would you help her?"
+                
+                p "A damsel in distress? Classic. Sure, I'd probably try to help her if I could."
+                
+                "Shiori makes a light smile."
+                
+                shi "Well that's reassuring to hear. Good to know you are willing to help."
+                
+                p "I'm not sure why you ask such strange questions."
+        
+            "Probably not.":
+        
+                p "Hmm… Probably not. I'd love to go on adventures myself, but I wouldn't be brave enough to face any dangers out there."
+                
+                shi "Even if there was a princess in need of rescue?"
+                
+                p "A damsel in distress? I guess I could try helping, but wouldn't she have knights of her own? I wouldn't stack up to any of them."
+                
+                shi "Oh, I see. Well, that's a shame. Sorry in advance then."
+                
+                p "Sorry for what?"
+        
+        "But she doesn't respond, just gives me a wink  and starts up the stairs."
+        
+        shi "Don't worry about it. Come on, catch up."
+        
+        "We stop at another shelf and she stands on her tiptoes, trying to reach a thick slate-gray book, and eventually resorting to hopping up to grab at it." 
+        
+        "She manages to knock it down with her finger, and it tumbles off the shelf. I dart forward and catch it right before it drops onto her head. I look down at it and see that I'm holding a copy of 'Le Morte d'Arthur'." 
+        
+        p "Better be careful, you won't be able to read if you hit your head too often."
+        
+        shi "Oh I know, my knights tell me that all the time. It happens pretty often but they always catch the books that fall on me, but I guess I got too complacent."
+        
+        "She seemed to realize something and clapped her hands over her mouth."
+        
+        p "Your knights?"
+        
+        shi "Friends! I meant friends, he he."
+        
+        "Is she into roleplaying? Maybe she's secretly an even bigger fantasy nerd than I am and just shy about it. All these questions and slip-ups. And the book that keeps coming to mind."
+        
+        "You walk to another shelf where she reaches for another book from the list and gives it to you."
+        
+        #flash of lightning
+        
+        "The abrupt crack of thunder almost made us jump. The weather was getting worse."
+        
+        p "Ugh, I hope it's not still stormy tonight. How will I fall asleep when it's so loud?"
+        
+        "I complained mostly to myself, but it made Shiori side-eye me."
+        
+        shi "It should get better soon. If we succeed, that is."
+        
+        "No telling what that meant, but she seemed to be talking to herself either way."
+        
+        "We reach our last stop and she drops another pair of books onto the two I already have in hand. 'Arrivall' and another I don't recognise."
+        
+        "It has a green cover, featuring some knights fighting a flaming monster, and was titled 'Hunter of Nightmare'. It looked like a storybook."
+        
+        P "What's this one? Did you just pull it out of your bag?"
+        
+        shi "This is one of my favorite books. Since you love fantasies so much, I decided to recommend it to you. All these boring history books about British people must wait, read it as soon as possible, it is very interesting."
+        
+        "She says it in a joking manner, but there is a slight seriousness in her tone."
+        
+        "I opened the book and glanced quickly for the context. It was a story about a fantasy world, as expected. The story is about a group of knights and a princess who hunt for a monster in a cursed forest."
+        
+        p "Sure, it looks like something I would enjoy. But how do I return it to you?"
+        
+        shi "There is a number on the bookmark. Just contact me when you finish it or look for me here. We'll meet again soon, so be sure to read it all. If you want to survive, that is."
+        
+        "She giggles, enjoying her joke."
+        
+        p "O-ok, I will, but I should start heading home. The weather is getting worse and I don't want to be stuck here for the night."
+        
+        shi "Ok, bye-bye then, and save travels."
+        
+        "She waves at me as I go toward the exit."
 
-    return
+        p_i "What a strange person. Not that I mind, though."
+
+        "I turn around at the exit to look at her as I leave. She was reading that strange book again."
+        #Lightning flash, thunder sfx
+
+        "Another lightning strike, much closer this time, makes me jump as a gust of wind hits the door, nearly knocking me to the ground. I look back up sheepishly, hoping that went unnoticed, only to see that Shiori was gone."
+
+        p_i "I guess she moved deeper back into the library."
+
+        "With that thought, I grab my umbrella and get ready to run back through the storm." 
+
+return
