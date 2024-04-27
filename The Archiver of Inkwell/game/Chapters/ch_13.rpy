@@ -20,8 +20,7 @@ label ch_13:
 
     p_i "I don't remember turning it toward the bed. It was turned toward my desk before… How'd that happen?"
 
-    "The time says [show_time(1714654800)]
-    ."
+    "The time says [show_time(1714654800)]."
 
     p_i "It's still really early.Explains why it's dark, I'm not usually up this early anymore."
 
@@ -136,7 +135,7 @@ label ch_13:
 
         p "I'll just check the next one, I suppose."
 
-    if studycheck == 5:
+    elif studycheck == 5:
         p "I don't feel great about this, but it's the best guess I have right now. No idea what those numbers were for, though."
 
         "On checking the fifth study room, I see that it's dark, and nothing to indicate that it's the right or wrong room."
@@ -185,7 +184,7 @@ label ch_13:
 
         p_i "Even though it's my third time reading 'The Devil Aspect', it's still interesting. I know what'll happen, but still. There's something comforting about just enjoying the ride."
 
-    if studycheck == 5:
+    elif studycheck == 5:
         "Thankfully, it seems like this is the right room. I just wish it hadn't taken me so long to get here."
 
         p_i "I only have a couple hours, so I guess I'll just read some of the fanfictions I follow. I won't get far, but some progress is better than none."
