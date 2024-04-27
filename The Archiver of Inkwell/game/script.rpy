@@ -19,6 +19,7 @@ label start:
         $ player_name = "Yorick"
     
     $ p.name = player_name
+    $ p_i.name = player_name
 
     $ Chapter(0).start()
     $ Chapter(1).start()

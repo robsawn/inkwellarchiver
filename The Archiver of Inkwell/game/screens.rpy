@@ -700,6 +700,15 @@ screen bonuscontent():
             text _("All the Headpats and cuddles from us to you. Your Midnight Wolf Novelite.\n\n")
             text _("Love, Blackwolf24\n~~~~~\n\n\n")
 
+            #Forgotten Skinner
+            text _("Forgotten Skinner\n~~~~~\n")
+            text _("Dear Archiver,")
+            text _("Good golly, what a ride it was. To see how much you’ve grown since debut, and all those wonderful things you’ve achieved… It’s not going to be easy to express how much this day means to us, but I can say, it all started with a tangent...\n\n")
+            text _("It’s been a long time since you joined Hololive and made this wonderful community, full of artists, writers and probably the most creative minds I’ve ever seen.. And now, that we are all here celebrating your birthday, I must say with all my heart… Thank you, Shiori. For igniting the dreams and inspirations of so many aspiring artists, writers and storytellers around the world. For all the good memories and smiles you brought to this community; and especially for always encouraging us novelites to be glad to be ourselves. When days become too dark to handle, your advice feels like a hopeful breeze, bringing back a smile I thought was a goner long ago. For being related to the abyss, you really made this place a brighter one for sure.\n\n")
+            text _("Anyway, I hope you have a wonderful birthday and that you spend time with all the people you love and care for. Never forget how much us novelites appreciate and are grateful to you. Inkwell will be always there for you, as you did for all of us. And as for me, I can’t help but wonder what story is waiting to be unfolded by you next. Whenever that time comes, I’ll be there to follow your journey. Happy Birthday, Archiver… You deserve the happiest of them all!\n\n")
+            text _("Last eternal, Shiori Novella\n")
+            text _("Sincerely,\nForgotten Skinner\n~~~~~\n\n\n")
+
             #General Scraggy
             text _("General Scraggy\n~~~~~\n")
             text _("Shiori~n!!!\n\n")
