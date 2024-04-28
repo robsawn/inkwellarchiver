@@ -88,8 +88,6 @@ image shiori giggle = Composite(
     (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
     (0,0), "images/shiori/Eyebrows/eyebrows4.png")
 
-image shiori giggle = "images/shiori/expressions/shiori giggle.png"
-
 image shio eyes:
     "images/shiori/Eyes/eyes_open.png"
     choice:

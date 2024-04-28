@@ -680,7 +680,7 @@ label ch_1:
         
         "The longer I stand there, the more uneasy I feel. Shrugging, I check out the books at the front desk and grab my umbrella on the way out."
 
-        stop music with fadeout 0.5
+        stop music fadeout 0.5
         stop sound 
         scene bg college with slideright
         play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.25 volume 0.65
