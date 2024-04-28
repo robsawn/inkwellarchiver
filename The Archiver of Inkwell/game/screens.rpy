@@ -330,17 +330,17 @@ screen navigation():
                     ypos -68
                     action [ShowMenu("bonuscontent"), Show("submenunavigation"), Hide("navigation")]
                     
-        # else:
+        else:
 
-        #     textbutton _("History") action ShowMenu("history")
+            textbutton _("History") action ShowMenu("history")
 
-        #     textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save")
 
-        #     textbutton _("Load") action ShowMenu("load")
+            textbutton _("Load") action ShowMenu("load")
 
-        #     textbutton _("Preferences") action ShowMenu("preferences")
+            textbutton _("Preferences") action ShowMenu("preferences")
 
-        #     textbutton _("About") action ShowMenu("about")
+            textbutton _("About") action ShowMenu("about")
             
         if _in_replay:
 

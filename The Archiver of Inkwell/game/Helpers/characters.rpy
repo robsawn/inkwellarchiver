@@ -1,4 +1,4 @@
-define shi = Character("Strange Woman",color='#c213e5',window_background="gui/textbox1_purple.png",callback=speaker("Shiori"))
+define shi = Character("Strange Woman",color='#c213e5',window_background="gui/textbox1_purple.png",callback=speaker("shi"))
 define p = Character("",color='#ffffff',window_background="gui/textbox1_grey.png")
 define p_i = Character("",color='#ffffff',window_background="gui/textbox1_grey.png",what_prefix="{i}",what_suffix="{/i}")
 define s = Character("Classmate",window_background="gui/textbox1_grey.png")
@@ -43,22 +43,52 @@ image shiori normal = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
     (0,0), "shio eyes",
-    (0,0), "images/shiori/Eyebrows/eyebrows1.png",
-    (0,0), WhileSpeaking("shi", "shio mouth", "images/shiori/Mouths/mouth_closed.png"))
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows1.png")
 
-image shiori concern = Composite(
+image shiori normalclosed = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "images/shiori/Eyes/eyes_closed.png",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows2.png")
+
+image shiori frown = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
     (0,0), "shio eyes",
-    (0,0), "images/shiori/Eyebrows/eyebrows2.png",
-    (0,0), WhileSpeaking("shi", "shio mouth", "images/shiori/Mouths/mouth_closed.png"))
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_frown.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows2.png")
 
-image shiori sad = Composite(
+image shiori surprise = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
     (0,0), "shio eyes",
-    (0,0), "images/shiori/Eyebrows/eyebrows3.png",
-    (0,0), WhileSpeaking("shi", "shio mouth", "images/shiori/Mouths/mouth_closed.png"))
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_frown.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows4.png")
+
+image shiori happy = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyes",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_open2.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows3.png")
+
+image shiori happy2 = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "images/shiori/eyes_closed.png",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_open3.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows2.png")
+
+image shiori giggle = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "images/shiori/eyes_closed.png",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows4.png")
+
+image shiori giggle = "images/shiori/expressions/shiori giggle.png"
 
 image shio eyes:
     "images/shiori/Eyes/eyes_open.png"
@@ -73,11 +103,32 @@ image shio eyes:
     .25
     repeat
 
-image shio mouth:
+image shio mouth normal:
+    "images/shiori/Mouths/mouth_closed.png"
+    .1
     "images/shiori/Mouths/mouth_open1.png"
     .2
+    "images/shiori/Mouths/mouth_closed.png"
+    .15
     "images/shiori/Mouths/mouth_open2.png"
     .2
+    "images/shiori/Mouths/mouth_closed.png"
+    .17
     "images/shiori/Mouths/mouth_open3.png"
+    .1
+    repeat
+
+image shio mouth frown:
+    "images/shiori/Mouths/mouth_frown.png"
+    .1
+    "images/shiori/Mouths/mouth_open4.png"
     .2
+    "images/shiori/Mouths/mouth_frown.png"
+    .15
+    "images/shiori/Mouths/mouth_open4.png"
+    .2
+    "images/shiori/Mouths/mouth_frown.png"
+    .17
+    "images/shiori/Mouths/mouth_open4.png"
+    .1
     repeat
