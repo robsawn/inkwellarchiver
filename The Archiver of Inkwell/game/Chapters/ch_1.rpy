@@ -1,11 +1,4 @@
-$ renpy.include("Helpers/characters.rpy")
-$ renpy.include("Helpers/trackers.rpy")
-$ renpy.include("Helpers/particles.rpy")
-$ renpy.include("Helpers/transforms.rpy")
-
 init:
-    define config.layers = ['master','transient','screens','front','overlay']
-
     image rainbacklight:
         Snow("Helpers/effects/rain2.png",750,800,0)
     
@@ -51,7 +44,7 @@ label ch_1:
     stop music fadeout 0.25
     define librarytracks = ['audio/1 Act 1/Library.ogg','audio/From SoL route/1 Hallway + Lecture Hall L.ogg','audio/From SoL route/2 Study Session L.ogg']
     $ renpy.random.shuffle(librarytracks)
-    $ renpy.music.queue(cafetracks,channel='music',loop=True,clear_queue=False,fadein=0.5,tight=True)
+    $ renpy.music.queue(librarytracks,channel='music',loop=True,clear_queue=False,fadein=0.5,tight=True)
 
     "Briefly waving at the front desk worker as I step inside, I shake out my umbrella and set it in the umbrella rack by the door. I wipe my shoes and walk further in."
 
@@ -81,7 +74,7 @@ label ch_1:
 
     p "Uh... Hello?"
 
-    show shiori surprise
+    show shiori mildsurprise
 
     shi "Hm? Oh! It's you! Hi!"
 
@@ -113,8 +106,10 @@ label ch_1:
 
     p_i "Guess I'll start searching again..."
 
+    hide shiori giggle
+
     stop sound
-    show bg libraryovercast with dissolve_fast
+    show bg libraryovercast with dissolve_slow
     play sound "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.35
 
     "It seems the weather is getting worse. Outside, I can see more of the automatic lights turning on."
@@ -129,6 +124,8 @@ label ch_1:
 
     "I see the girl again and sigh, a little frustrated. Maybe I could ask the library workers for advice? But, other than the front desk worker, there are no signs of them anywhere."
 
+    show shiori normal
+    
     "I sit back down, and the girl glances back up at me over the edge of her book."
 
     show shiori frown
@@ -148,7 +145,8 @@ label ch_1:
 
     if bookneutral:
 
-        show shiori smile
+        show shiori normal
+
         shi "So, is this your first time here? Well, this is a pretty big library. It's easy to get turned around here."
 
     p "So you do remember me!"
@@ -160,7 +158,9 @@ label ch_1:
 
     "She tilts her head and then closes her book after a moment."
 
-    $ shi.name = "Shiori"
+    $ persistent.shiori_name = "Shiori"
+    $ renpy.save_persistent()
+
     show shiori normal
 
     shi "Shiori Novella at your service. Nice to officially meet you."
@@ -177,11 +177,12 @@ label ch_1:
 
     p "N-no... I couldn't find an employee, and you're the only person I know at least a little bit here right now."
 
-    "I watch her expression go from curious to a more smug one"
+    show shiori tease
+    "I watch her expression go from curious to a more smug one."
 
-    show shiori happy2
     shi "Suuure... In that case, you can ask me. I'm here pretty often, so I know this place like the back of my hand." 
 
+    show shiori normal
     shi "But first, I need to know what books you're looking for, and what your report's on."
 
     "I explain my project to her, as she listens carefully and nods to herself."
@@ -189,14 +190,16 @@ label ch_1:
     shi "I researched it for fun once. Maybe I can help!"
 
     hide shiori normal fadeout 1.0
+
     "She leaves her book on the table and walks to a library computer to look for something."
 
     "While she types away, I sneak a peek at the unusual book. Just like before, it keeps drawing my attention. The black clover, purple spikes, and a large eye logo in the middle of the cover."
 
     "The longer I look at it, the more I feel pulled to it."
 
-    show flash_white
+    show bg libraryovercast with flash_white
     #thunder sfx
+
     p_i "What? What was that?" 
 
     "I shake my head and rub my eyes and look at the book again." 
@@ -206,10 +209,13 @@ label ch_1:
     p "Hey, what did you say this book was about again?" 
 
     show shiori frown with dissolve_fast
+
     shi "Just a story I love, what about it?"
 
     p "If you don't mind, could I take a peek? I'm curious about it."
+
     #shiori complicated expression (whichever fits best)
+
     "Shiori turns and watches me, her gaze alternating between me and the book after a moment." 
 
     p_i "Maybe I shouldn't have asked..."
@@ -224,7 +230,9 @@ label ch_1:
     menu: 
         "You know what, maybe later...":
             p "You know what, maybe later..."
+
             show shiori normal
+
             "Shiori's face relaxes, but she seems a little disappointed, too."
 
         "Open the book.":
@@ -233,10 +241,13 @@ label ch_1:
             p "What language is that? Latin? Sanskrit? Or something else entirely?"
 
             show shiori surprise
+
             shi "So, how is it? Can you read any of it?" 
 
             p "Nope, not at all. What language is that?"
+
             show shiori normal
+
             shi "Oh... I don't know myself. That's why I've been trying to decipher it."
 
             "I can't help but notice the hesitation before she answers, but drop it for now."
@@ -252,11 +263,13 @@ label ch_1:
     p "Honestly, no. I've never seen anything like it, but it makes my brain feel... itchy, I guess? That's not quite it, but it feels like I should recognize it, or... Actually, you know what? Nevermind."
 
     show shiori frown
+
     shi "Really? Interesting."
 
-
     "She hums quietly, bringing a forefinger to her chin in apparent thought, before shaking her head."
+
     show shiori normal
+
     shi "Well, we can worry about that later."
 
     shi "Anyway, once we find those reference books for you, what kind of story do you want to read for fun?"
@@ -267,9 +280,11 @@ label ch_1:
         # "Sweet stories about a couple people.":
         #     $ route_slice = True
         "I've always been interested in Lovecraft stories.":
-            $ route_lc = True
+            $ persistent.route_lc = True
+            $ renpy.save_persistent()
         "Magic is pretty cool.":
-            $ route_fantasy = True
+            $ persistent.route_fantasy = True
+            $ renpy.save_persistent
 
 #region slice of life
     # if route_slice:
@@ -443,14 +458,19 @@ label ch_1:
     if route_lc:
 
         p "I've always been interested in Lovecraft stories." 
+
         show shiori surprise
+
         shi "Oh? Lovecraft mysteries? Well, I'm certainly a fan of those works."
         
         p "I've never read them, but I've heard how weird, creepy, and crazy they can get. I can't imagine being a character in one of those stories."
+        
         show shiori frown
+
         shi "Being in that kind of story, huh..."
 
         show shiori happy2
+
         "Her eyes gleam as a grin stretches across her face."
 
         shi "Who knows? It could be a bit fun."
@@ -468,6 +488,7 @@ label ch_1:
         p "It just... seems scary to deal with all of that."
 
         show shiori normal
+
         "Her smile fades, and she sighs. Then, she puts on the same soft smile from before."
 
         shi "When you put it that way, I guess it can be a bit much for some people who aren't ready for those kinds of stories."
@@ -482,7 +503,7 @@ label ch_1:
         
         p "Right! I wrote them down. Let's see..."
         
-        shi "It's 'Le Morte d'Arthur', Pollard's 'Warwick the Kingmaker', and Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI.'"
+        shi "It's 'Le Morte d'Arthur', Pollard's 'Warwick the Kingmaker', and 'Historie of the Arrivall of Edward IV in England and the Finall Recouerye of His Kingdomes from Henry VI.'"
         
         p_i "She listed every book I needed... I didn't even pull my phone out yet..." 
 
@@ -515,19 +536,22 @@ label ch_1:
         "I barely caught Shiori's whisper."
 
         p "What do you mean?"
+
         show shiori normal
+
         shi "Ah, don't worry about it."
         
         p "Well, considering you know what I'm looking for, would you still help me find those books?"
         
         show shiori giggle
+
         shi "Hmm? What makes you think I would help you out? *giggle*"
         
         p_i "She's got a point. She has no reason to help me out when it's not her responsibility to find these books."
         
         p "Ah... sorry. You're right."
 
-        show shiori normal
+        show shiori tease
 
         shi "Don't be like that. I didn't say I wouldn't help you."
         
@@ -554,13 +578,14 @@ label ch_1:
         p_i "Sure, I say that, but what am I even talking about? Maybe I'm just in a mood."
         
         show shiori frown
+
         shi "The world, huh?"
 
         "Shiori reaches out and pulls a book off a shelf to her right, her hand hesitating, as if she's expecting something more."
 
         "She hands the book to me. It's 'Le Morte d'Arthur', but it's oddly dusty, as if it hadn't been touched in years. I look back up to see her smiling softly."
 
-        show shiori normal
+        show shiori happy
 
         shi "Maybe... maybe the world could use more happy endings."
         
@@ -576,6 +601,7 @@ label ch_1:
         
         stop sound
         play sound "audio/Ambient/rain4.ogg" loop volume 0.5
+
         "I struggle to find an answer to that as the rain fills the void of silence between us, battering against the window as we walk by."
         
         p_i "It's a really heavy question to answer, especially to someone I don't  know at all. I can't tell if she wants a serious or lighthearted answer."
@@ -585,6 +611,7 @@ label ch_1:
         "She stops right before turning into the next aisle of books, and just looks at me and blinks a few times."
 
         show shiori giggle
+
         shi "*giggle* If only it was so simple..."
         
         p "Hey, you asked."
@@ -617,6 +644,8 @@ label ch_1:
         
         "Smiling, she hops up and tries to grab a book off the top shelf, her finger pulling on the spine just enough to make the book fall toward her. Before I can think, I quickly reach up and catch the book before it drops on her."
 
+        show shiori giggle
+
         "I look down at her and am met with sheepish grin, and glance at the book to see the last title I needed."
 
         p "I'm guessing that didn't go the way you wanted?"
@@ -625,6 +654,8 @@ label ch_1:
         
         shi "It's fiiiiiiiiiiiiiine."
 
+        show shiori normal
+        
         "We walk back over to the table with the books, Shiori trailing behind me. I set them down one at a time."
         
         p "Huh?"
@@ -653,7 +684,7 @@ label ch_1:
         
         p "I'll be around on campus, so we'll probably run into each other at some point."
         
-        hide shiori normal with dissolve_slow
+        hide shiori normal with dissolve_fast
         
         "She smiles and waves at me as I prepare to leave. I wave back and turn toward the exit."
         
@@ -710,9 +741,11 @@ label ch_1:
         
         shi "You're quite enthusiastic about this, huh? No worries, I get it.  A lot of people love this genre. I wish I could share your enthusiasm, though."
         
-        p "What's wrong? You're not a fan of fantasy? ? I thought you'd be interested in it too, since you're always carrying that book around with you."
+        p "What's wrong? You're not a fan of fantasy? I thought you'd be interested in it too, since you're always carrying that book around with you."
         
         "Shiori shakes her head."
+
+        show shiori normalclosed
         
         shi "No no, I don't hate it. In fact, I love a lot of fantasy games."
         
@@ -726,9 +759,9 @@ label ch_1:
         
         "We continue to chat about more tropes and tales while passing through the aisles  of the library. As we approach the stairs to the second floor, she turns to me."
 
-        show shiori normal
+        show shiori smile
         
-        shi "Could you remind me what books you needed again? Otherwise we'll be spending the rest of the day talking about unrelated topics, and your project will never get started."
+        shi "Could you remind me what books you needed again? Otherwise, we'll be spending the rest of the day talking about unrelated topics, and your project will never get started."
         
         p_i "Ah true, almost forgot about that. But talking about anything other than studying is much more fun."
         
@@ -744,7 +777,7 @@ label ch_1:
         
         "She closes  her eyes and puts her fingers to her temples, murmuring something under her breath."
 
-        show shoiri normal
+        show shiori normal
         
         "After a moment, she opens her eyes again."
         
@@ -752,9 +785,12 @@ label ch_1:
         
         p "Huh? You're right, but how did you know?"
         
-        show shiori giggle
+        show shiori happy
 
         shi "Magic! How else?"
+        
+        show shiori giggle
+        #shio giggle sfx
         
         shi "I'm actually a fairy that can read minds and travel through dreams."
 
@@ -798,7 +834,7 @@ label ch_1:
                 
                 shi "Well that's reassuring to hear. Good to know you are willing to help."
                 
-                p "I'm not sure why you ask such strange questions."
+                p "That was a bit of a strange response. What do you mean?"
         
             "Probably not.":
         
@@ -814,45 +850,43 @@ label ch_1:
                 
                 p "Sorry for what?"
         
-        "But she doesn't respond, just gives me a wink  and starts up the stairs."
+        "But she doesn't respond, just winks as she starts up the stairs."
 
         show shiori normal
         
         shi "Don't worry about it. Come on, catch up."
         
-        "We stop at another shelf and she stands on her tiptoes, trying to reach a thick slate-gray book, and eventually resorting to hopping up to grab at it." 
+        "We stop at another shelf and she stands on her tiptoes, trying to reach a thick slate-gray book, eventually resorting to hopping up to grab at it." 
         
         "She manages to knock it down with her finger, and it tumbles off the shelf. I dart forward and catch it right before it drops onto her head. I look down at it and see that I'm holding a copy of 'Le Morte d'Arthur'." 
         
         p "Better be careful, you won't be able to read if you hit your head too often."
 
-        show shiori happy2
+        show shiori smile
         
-        shi "Oh I know, my knights tell me that all the time. It happens pretty often but they always catch the books that fall on me, but I guess I got too complacent."
+        shi "Oh I know. My knights tell me that all the time. It happens pretty often, but they always catch the books that fall on me. I guess I got too complacent."
+
+        show shiori surprise
         
         "She seemed to realize something and clapped her hands over her mouth."
         
         p "Your knights?"
-
-        show shiori surprise
         
         shi "Friends! I meant friends, he he."
+        
+        "Is she into roleplaying? Maybe she's secretly an even bigger fantasy nerd than I am and just shy about it. All these questions and slip-ups. And the book that keeps coming to mind."
 
         show shiori normal
         
-        "Is she into roleplaying? Maybe she's secretly an even bigger fantasy nerd than I am and just shy about it. All these questions and slip-ups. And the book that keeps coming to mind."
-        
         "You walk to another shelf where she reaches for another book from the list and gives it to you."
         
-        show flash_white
+        show bg library with flash_white
         
         "The abrupt crack of thunder almost made us jump. The weather was getting worse."
         
         p "Ugh, I hope it's not still stormy tonight. How will I fall asleep when it's so loud?"
         
         "I complained mostly to myself, but it made Shiori side-eye me."
-        
-        show shiori frown
 
         shi "It should get better soon. If we succeed, that is."
         
@@ -862,17 +896,17 @@ label ch_1:
         
         "It has a green cover, featuring some knights fighting a flaming monster, and was titled 'Hunter of Nightmare'. It looked like a storybook."
         
-        P "What's this one? Did you just pull it out of your bag?"
+        p "What's this one? Did you just pull it out of your bag?"
 
-        show shiori normal
+        show shiori happy
         
-        shi "This is one of my favorite books. Since you love fantasies so much, I decided to recommend it to you. All these boring history books about British people must wait, read it as soon as possible, it is very interesting."
+        shi "This is one of my favorite books. Since you love fantasies so much, I decided to recommend it to you. All these boring history books about British people must wait, read it as soon as you can. It's really quite interesting."
         
-        "She says it in a joking manner, but there is a slight seriousness in her tone."
+        "She says it in a jokingly, but there is a slight seriousness in her tone."
         
-        "I opened the book and glanced quickly for the context. It was a story about a fantasy world, as expected. The story is about a group of knights and a princess who hunt for a monster in a cursed forest."
+        "I opened the book and quickly skimmed the inside front cover for context. It was a story about a fantasy world, as expected, about a group of knights and a princess who hunt for a monster in a cursed forest."
         
-        p "Sure, it looks like something I would enjoy. But how do I return it to you?"
+        p "Sure, it looks like something I would enjoy. But... how do I return it to you?"
         
         shi "My number's on the bookmark. Let me know when you finish it, or just find me here again. We'll meet again soon, so be sure to read it all." 
         
@@ -886,9 +920,7 @@ label ch_1:
 
         p "O-ok, I will, but I should start heading home. The weather is getting worse and I don't want to be stuck here for the night."
         
-        shi "Ok, bye-bye then, and save travels."
-
-        hide shiori normal with dissolve_slow
+        shi "Ok, bye-bye then, and safe travels."
 
         "She waves at me as I go toward the exit."
 
@@ -896,14 +928,15 @@ label ch_1:
 
         "I turn around at the exit to look at her as I leave. She was reading that strange book again."
         
-        show flash_white
+        hide shiori normal with dissolve_fast
+        show bg library with flash_white
         #thunder sfx
 
         "Another lightning strike, much closer this time, makes me jump as a gust of wind hits the door, nearly knocking me to the ground. I look back up sheepishly, hoping that went unnoticed, only to see that Shiori was gone."
 
         p_i "I guess she moved deeper back into the library."
 
-        "With that thought, I grab my umbrella and get ready to run back through the storm." 
+        "With that thought, I grab my umbrella and get ready to run home through the storm." 
 
     stop sound fadeout 1.0
     stop music fadeout 1.0

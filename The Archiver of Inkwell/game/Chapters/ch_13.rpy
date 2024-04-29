@@ -1,6 +1,3 @@
-$ renpy.include("Helpers/characters.rpy")
-$ renpy.include("Helpers/helperfuncs.rpy")
-
 label ch_13:
     "My head's pounding. I can't move or open my eyes, but I can feel it. My surroundings and everything around me. More than anything though, I just want to lie here, in the dark and silence of... wherever I am." 
 
@@ -20,7 +17,9 @@ label ch_13:
 
     p_i "I don't remember turning it toward the bed. It was turned toward my desk before… How'd that happen?"
 
-    "The time says [show_time(1714654800)]."
+    $ clock = show_time(1714654800)
+
+    "The time says [clock]."
 
     p_i "It's still really early.Explains why it's dark, I'm not usually up this early anymore."
 
@@ -56,7 +55,9 @@ label ch_13:
 
     "On the other side, I see what looks like a call number for a book, a date and time, and a couple letters…" 
 
-    p_i "'FIC 65006074'? Huh. And [showtime(1714701600)]? That's this evening. This writing feels familiar, too. Is someone telling me to find this book? But what's with the time?"
+    $ bookmark = showtime(1714701600)
+
+    p_i "'FIC 65006074'? Huh. And [bookmark]? That's this evening. This writing feels familiar, too. Is someone telling me to find this book? But what's with the time?"
 
     p "'Meet me - SN'? Is that supposed to be Shiori? She's the only person I know who has a name starting with 'S'. And 'Meet me'? But why? What happened?"
 
@@ -329,4 +330,6 @@ label ch_13:
 
     p "I'm actually a bit worried, now… She seemed to be a student, so maybe I'll ask around. Someone must've seen her. There's no way anyone can miss her with the way she stands out."
 
-    #fade to black
+    stop sound fadeout 1.0
+    stop music fadeout 1.0
+    scene black with Dissolve(1.0)

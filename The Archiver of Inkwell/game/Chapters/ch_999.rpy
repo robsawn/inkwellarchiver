@@ -1,5 +1,3 @@
-$ renpy.include("Helpers/helperfuncs.rpy")
-
 label ch_999:
     "this is chapter 1."
     ## show shiori stoic

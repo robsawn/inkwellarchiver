@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("The Archiver of Inkwell")
+define config.name = _("Archiver of Inkwell")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -40,7 +40,7 @@ define config.mouse['default']=[("gui/cursors/cursor2.png",0,0)]
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "TheArchiverofInkwell"
+define build.name = "ArchiverofInkwell"
 
 
 ## Sounds and music ############################################################
@@ -146,7 +146,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "TheArchiverofInkwell-Saves"
+define config.save_directory = "ArchiverofInkwell-Saves"
 
 
 ## Icon ########################################################################

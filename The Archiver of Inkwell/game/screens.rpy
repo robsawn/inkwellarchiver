@@ -298,39 +298,39 @@ screen navigation():
         if main_menu and not renpy.get_screen("submenunavigation"):
                 imagebutton:
                     idle "gui/mainmenu/start-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -61
+                    hover "gui/mainmenu/start-hover.png"
+                    xpos -65
+                    ypos 60
                     action Start()
 
                 imagebutton:
                     idle "gui/mainmenu/load-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -60
+                    hover "gui/mainmenu/load-hover.png"
+                    xpos -65
+                    ypos 40
                     action [ShowMenu("load"), Show("submenunavigation"), Hide("navigation")]
                 
                 imagebutton:
-                    idle "gui/mainmenu/preferences-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -57
+                    idle "gui/mainmenu/prefs-idle.png"
+                    hover "gui/mainmenu/prefs-hover.png"
+                    xpos -65
+                    ypos 40
                     action [ShowMenu("preferences"), Show("submenunavigation"), Hide("navigation")]
                 
                 imagebutton:
                     idle "gui/mainmenu/about-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -65
+                    hover "gui/mainmenu/about-hover.png"
+                    xpos -65
+                    ypos 30
                     action [ShowMenu("about"), Show("submenunavigation"), Hide("navigation")]
                 imagebutton:
-                    idle "gui/mainmenu/bonuscontent-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -68
-                    action [ShowMenu("bonuscontent"), Show("submenunavigation"), Hide("navigation")]
+                    idle "gui/mainmenu/extras-idle.png"
+                    hover "gui/mainmenu/extras-hover.png"
+                    xpos -65
+                    ypos 20
+                    action [ShowMenu("extras"), Show("submenunavigation"), Hide("navigation")]
                     
-        else:
+        elif not renpy.get_screen("submenunavigation"):
 
             textbutton _("History") action ShowMenu("history")
 
@@ -357,9 +357,9 @@ screen navigation():
             if main_menu and not renpy.get_screen("submenunavigation"):
                 imagebutton:
                     idle "gui/mainmenu/help-idle.png"
-                    #hover "[hover goes here.png]"
-                    xpos -60
-                    ypos -60
+                    hover "gui/mainmenu/help-hover.png"
+                    xpos -65
+                    ypos 10
                     action [ShowMenu("help"), Show("submenunavigation"), Hide("navigation")]
             else:
                 #textbutton _("Help") action ShowMenu("help")
@@ -397,7 +397,7 @@ screen submenunavigation():
 
         textbutton _("About") action ShowMenu("about")
 
-        textbutton _("Bonus Content") action ShowMenu("bonuscontent")
+        textbutton _("Extras") action ShowMenu("extras")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -547,7 +547,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         textbutton _("Return"):
             style "return_button"
 
-            action [Return(),Hide("submenunavigation"),Show("navigation")]
+            action [Return(),Hide("submenunavigation")]
 
     label title
 
@@ -640,10 +640,10 @@ screen about():
             text _("\n~~~~~")
             text _("\nServer Admin:\n    Shiori's Jacket")
             text _("\nDirector:\n    robsawn")
-            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Kronosok Kusok\n    Synergy\n    Wax\n    Zero Zeta")
+            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Kronosok Kusok\n    SynergyREEE\n    Wax\n    Zero Zeta")
             text _("\nEditors:\n    Ingram\n    robsawn\n    Thadd\n    Wax")
-            text _("\nSprite Artists:\n    Ichira (Rook, Knight, Dream Monster)\n    Jermy (Shiori)\n    Nobu (outlines, Yellow Stranger)")
-            text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)\n    P!ckleMan (cafe)")
+            text _("\nSprite Artists:\n    Ichira (Fantasy Characters)\n    Jermy (Shiori, Yellow Stranger)\n    Nobu (outlines, Fantasy Characters)")
+            text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)\n    P!ckleMan (cafe)\n    Phosphophyllite Boss")
             text _("\nAnimators: \n    Jusagi-chan (main menu)")
             text _("\nComposers & Musicians:\n    Nokutaan\n    Sinnoh")
             text _("\nProgrammers:\n    robsawn")
@@ -656,14 +656,14 @@ style about_text is gui_text
 style about_label_text:
     size gui.label_text_size
 
-screen bonuscontent():
+screen extras():
 
     tag menu
 
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("Bonus Content"), scroll="viewport"):
+    use game_menu(_("Extras"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -675,6 +675,7 @@ screen bonuscontent():
             text _("\nAudio Engineering and Music:\n    Sinnoh")
             text _("\nCast in order of appearance:\n    Party Planner Novelite - Real_\n    Helpful Novelite - Alice\n    Neko Nya-velite/Considerate Novelite - Neon\n    Chef Novelite - NostalgiaDrive\n    Wizard Novelite - Smilely\n    'You Dirty Novelite' - TD\n    'Stealthy' Novelite - Redbricked\n    Earnest Novelite - Siren\n    'Came back with the Milk' Novelite aka Dad - Mizu\n    Awestruck Novelite - TripleD\n    Timid Novelite - Wax\n    Tattoo Novelite - Kracken")
             text _("Special Thanks:\n    Shiori's Jacket")
+            text _("\n~~~~~\n\n\n\n\n")
 
 
             label "Fan Letters\n\n"
@@ -803,6 +804,15 @@ screen bonuscontent():
             text _("I hope you have a lovely and fantastic birthday!\n\n")
             text _("From, Project Organizer: Shiori's Jacket.\n~~~~~\n\n\n")
 
+            #Smilely
+            text _("Smilely\n~~~~~\n")
+            text _("Happy birthday Shiori!\n\n")
+            text _("I can’t believe it has been 8 months since your debut. I remember watching your debut stream and thinking “yeah, she’s cool”. From then on, I continued to watch your streams, and realized you have become my oshi.\n\n")
+            text _("You have this natural charisma that just draws people to you. You are so creative with the projects that you do like the Unity streams. Your tangents are quite entertaining and make me laugh all the time. Most importantly, you are just super genuine and kind.\n\n")
+            text _("I also wanted to thank you for liking my little choreographies for both Advent’s cover of Halloween Night, Tonight and your cover of Whisper Whisper Whisper. Truth be told, I have only danced seriously for a year now, but seeing your comments of encouragement gives me motivation to keep on improving. So if you ever decide to release another song in the future, I will be ready to work on a choreo for said song.\n\n")
+            text _("The last thing I want to say before wrapping everything up is thank you for fostering such an amazing community. The Novelites have been so kind to me ever since I decided to get out of my comfort zone and actually interact with the community. There are so many talented artists, writers, musicians, voice actors, editors in Inkwell, and it’s all thanks to you. So many people have continued their passion because of you. So no matter what, us Novelites will always support you with whatever talent we have to make you happy. Thank you for being our Archiver, and once again happy birthday Shiori!\n\n")
+            text _("From Inkwell’s Resident Dancer,\nSmilely\n~~~~~\n\n\n")
+
             #Viratasya
             text _("Viratasya\n~~~~~\n")
             text _("Dear Shiori,\n\n")
@@ -813,11 +823,24 @@ screen bonuscontent():
             text _("Okay, gotta stop this now or I'll never end writing (or suddenly start crying). Have a beautiful day and keep being you, gorgeous, dorky Queen of Inkwell.\n\n")
             text _("Your,\nViratasya\n~~~~~\n\n\n")
 
-style bonuscontent_label is gui_label
-style bonuscontent_label_text is gui_label_text
-style bonuscontent_text is gui_text
+            #fdvcx
+            text _("Void Wyrm\n~~~~~\n")
+            text _("Dear Shiori Novella, our precious Queen.\n\n")
+            text _("This letter from me is made to commemorate your birthday, a special day for all of Inkwell. It is of great joy for me to be here to celebrate your first birthday with us in this wonderful community of ours.\n\n")
+            text _("Ever since joining Inkwell last December, my life has changed greatly for the better. I became social over the internet again, I've met and learned about a lot of great people and I have gotten to understand and truly appreciate you over time.  Understanding how and why you are the way are, as well as all you do has helped me learn more about the special kinds of people out there and about myself and my special habits. All the while, I've experienced great joy seeing you grow and learn over your time with us.\n\n")
+            text _("You've truly gotten accustomed to being here with us and all the friends you've made here. Along the way, we've laughed, we cried, we cringed, we smiled, we embrace your quirkiness and quiet self. You've achieved a great balance between your quiet self and your excitable self. Your streams are very entertaining, you get along with everyone and have lots of fun with them. You regularly engage with chat, asking us questions when needed and commenting on our posts.\n\n")
+            text _("Its very fun watching your streams or seeing your twitter/youtube posts for what fun thing you'll say or post next. Your keen interest in anime and visual novels, along with the games you like has allowed me to hear and watch a lot of new content I would have never known existed otherwise. Its very interesting hearing your hobbies and interests such as your cute dolls or your cute fashion sense. Your very kind and sweet to us and animals. Salt and Pepper are very lucky to have you as their owner.\n\n")
+            text _("You're not shy and timid anymore. You're very open with your emotions. You trust us and aren't afraid to tell us sensitive things now and show us your vulnerable side if you're feeling down. We and all your friends are always here to support you, whenever you need us. You make incredibly fun projects and show us the behind the scenes work put into those projects. I really love the unity scenes, the membership adventure stories and that snowed-in visual novel you made. Those are some great projects you made. Accomopolishing and growing so much, reaching 500K novelites in Inkwell. This place is truly shaping into a true kingdom over time. I'm proud of you for what you've achieved so far in hololive. You will be able to achieve more great things over time in hololive.\n\n")
+            text _("I hope all your dreams come true over time. May this dream continue to be a splendid one for you. It's done wonders for your life, and will continue to do so for many years I believe. Your videos and shorts pick out and edit very funny moments from your streams. The other videos and shorts you make that aren't stream moments are very special too. The audio dramas are wonderful to listen to and I really loved the vlogging gear video. The educational stuff you make is very interesting to listen to. You have a lot of experience in youtube content and it shows. Lots of interesting facts and educational information can be learnt from your content. You make it very entertaining too.\n\n")
+            text _("Some streams I really loved where the lord of the rings watchalongs, the membership zatsudans and the unity streams. Some games I loved watching you play were Sonic Frontiers, Ender Lilies and Slay the Princess. The handcam streams have been fun too. Those handcam streams have had their challenges and mishaps over time, but you've made some fun stuff out of them. As long as you had fun in those streams, we are happy. You've been very kind and nice to me when you respond to my comments in the streams. Gotten some fun responses from time to time. Finally, I love, love, love your piano playing and singing. It's so pleasant and fun to listen to. I think you will become great at those things someday. You put great effort into those things and it shows. We all love hearing you play and sing in the streams. I can see a great future where you and your friends jam it out greatly on the big stage with your 3d models in front of the loving fans. Your going to go far and do very well in hololive. I know it.\n\n")
+            text _("This has been a long letter, so I will finish it here. Keep doing well Shiori, our dear Queen. We all love you. Thank you for being here with all of us and this great community you've made with us. From us to you Shiori, have a great day and an amazing birthday.\n\n")
+            text _("With everlasting love from one of your many faithful caretakers,\nThe Void Wyrm.\n~~~~~\n\n\n")
 
-style bonuscontent_label_text:
+style extras_label is gui_label
+style extras_label_text is gui_label_text
+style extras_text is gui_text
+
+style extras_label_text:
     size gui.label_text_size
 
 

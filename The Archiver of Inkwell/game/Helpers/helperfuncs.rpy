@@ -1,6 +1,7 @@
 init python:
     from datetime import datetime, timedelta, timezone
     import time
+    import json
 
     def show_time(timestamp):
         local_offset_seconds = -time.timezone if (time.localtime().tm_isdst == 0) else -time.altzone
@@ -29,3 +30,40 @@ init python:
             renpy.music.stop(channel=oldChannel,fadeout=fadeTime)
         if newChannel is not None:
             renpy.music.play(music,channel=newChannel,loop=None,fadein=fadeTime)
+    
+    # def save_game_data(slot=0):
+    #     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    #     save_data = {
+    #         "player_name": player_name,
+    #         "shiori_name": shiori_name,
+    #         "greentea": greentea,
+    #         "americano": americano,
+    #         "cocoa": cocoa,
+    #         "sniff": sniff,
+    #         "booklove": booklove,
+    #         "bookneutral": bookneutral,
+    #         "bookhate": bookhate,
+    #         "route_slice": route_slice,
+    #         "route_lc": route_lc,
+    #         "route_fantasy": route_fantasy,
+    #         "correctstudy": correctstudy,
+    #         "studycheck": studycheck,
+    #         "getrest": getrest,
+    #         "exhaustion": exhaustion,
+    #         "followcultists": followcultists,
+    #         "followcats": followcats,
+    #         "grabcoat": grabcoat,
+    #         "callpolice": callpolice,
+    #         "ending": ending,
+    #         "wep_1_dc": wep_1_dc,
+    #         "blunder": blunder,
+    #         "wep_2": wep_2,
+    #     }
+    #     json_data = json.dumps(save_data)
+    #     filename = f"save_{player_name}_{slot}_{now}"
+    #     renpy.save(filename,json_data)
+
+
+
+init -5:
+    define config.layers = ['master','transient','screens','front','overlay']

@@ -1,5 +1,3 @@
-$ renpy.include("Helpers/characters.rpy")
-
 label ch_12:
     "Looking outside from my seat, I continue to think about the rain. Well, the lack of it. I can't even remember the last time it wasn't raining. Instead, everything's turned hazy, making it difficult to see very far. I can see the building across the field, but that's about it."
 
@@ -63,7 +61,7 @@ label ch_12:
 
     "By now there should be people filing in, but the room is still empty. I pull out my phone to check the time."
 
-    p_i "Tch. 1%." 
+    p_i "Tch. 1%%." 
 
     p_i "Forgot to charge it, I guess."
 
@@ -94,16 +92,19 @@ label ch_12:
     p "Where'd she go? Wasn't she right here?"
 
     #show shio-eyes up close
+
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
+
+    #slight screen shake
 
     shi "Boo!"
 
-    #slight screen shake
     "My heels leave the ground as I jump, my heart thumping in my chest, a low drumbeat to underscore my surprise."
 
     p "Jeez... You scared me!"
 
     #shio-giggle
+
     "Shiori giggles in reply and grins."
 
     shi "Gotcha!"
@@ -280,7 +281,7 @@ label ch_12:
 
     "Shiori eyes me warily, her body tensing. Our gazes lock, hers scrutinizing for the smallest change"
 
-    "The ‘juice' passes my lips. My tongue feels like it is on fire as the weird substance chunkily slides down my throat. I barely manage to suppress coughing it all back up. Slowly, the bottle empties into my mouth." 
+    "The 'juice' passes my lips. My tongue feels like it is on fire as the weird substance chunkily slides down my throat. I barely manage to suppress coughing it all back up. Slowly, the bottle empties into my mouth." 
 
     "The bottle falls to the floor as my grip loosens. My vision wavers, blurring and darkening around the edges. I have to lean on the table to keep myself upright. Shiori rushes over."
 
@@ -298,4 +299,6 @@ label ch_12:
 
     shi "-Novelite."
 
-    #fade to black
+    stop sound fadeout 1.0
+    stop music fadeout 1.0
+    scene black with Dissolve(1.0)

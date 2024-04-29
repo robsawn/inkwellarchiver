@@ -1,5 +1,7 @@
 # region Prologue
 
+default player_name = ""
+default shiori_name = "Strange Woman"
 default greentea = False
 default americano = False
 default cocoa = False
@@ -20,15 +22,23 @@ default route_fantasy = False
 
 # region Lovecraft Globals
 
-default counter_ending = 0
 default correctstudy = False
 default studycheck = 0
+default getrest = False
+default exhaustion = False
+default followcultists = False
+default followcats = False
+default grabcoat = False
+default callpolice = False
+default ending = 0
 
 #endregion
 
 # region Fantasy Globals
 
-# variables
+default wep_1_dc = False
+default blunder = False
+default wep_2 = 0
 
 #endregion
 

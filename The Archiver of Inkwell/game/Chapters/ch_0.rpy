@@ -1,12 +1,4 @@
-$ renpy.include("Helpers/characters.rpy")
-$ renpy.include("Helpers/trackers.rpy")
-$ renpy.include("Helpers/particles.rpy")
-$ renpy.include("Helpers/helperfuncs.rpy")
-$ renpy.include("Helpers/transforms.rpy")
-
 init:
-    define config.layers = ['master','transient','screens','front','overlay']
-
     image rainbacklight:
         Snow("Helpers/effects/rain2.png",750,800,0)
     
@@ -31,7 +23,7 @@ label ch_0:
     show rainfront onlayer front
 
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.75
+    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.65
 
     scene bg college with dissolve_fast
 
@@ -75,7 +67,6 @@ label ch_0:
     stop sound
     stop music fadeout 0.5
     scene bg cafe with slideleft
-    #doube check this does what's expected
     define cafetracks = ['audio/0 Prologue/cafe1.ogg','audio/0 Prologue/cafe2.ogg','audio/0 Prologue/cafe3.ogg']
     $ renpy.random.shuffle(cafetracks)
     $ renpy.music.queue(cafetracks,channel='music',loop=True,clear_queue=False,fadein=0.5,tight=True)
@@ -91,14 +82,17 @@ label ch_0:
     menu:
         "I'll have green tea with added honey. Hot, please.":
             $ greentea = True
+            $ renpy.save_persistent()
             p "I'll have green tea with added honey. Hot, please."
             "The storm is making it feel colder, so a nice, hot cup of tea seems perfect right now."
         "Hmm, one Americano, please.":
             $ americano = True
+            $ renpy.save_persistent()
             p "Hmm, one Americano, please."
             "With it dark relatively soon, I didn't want to add too much caffeine to my system, but how can I resist a cup of coffee in a place like this?"
         "Hm… Can I get a cocoa? Large? With added caramel?":
             $ cocoa = True
+            $ renpy.save_persistent()
             p "Hm… Can I get a cocoa? Large? With added caramel?"
             "The day has been feeling a bit long, to say the least. I deserve a little treat so let's cut loose with something sweet."
     
@@ -110,7 +104,8 @@ label ch_0:
 
     "As I wind my way over between the tables, I notice that she's absorbed in a book. I don't really want to disturb her, but I should still be polite and ask if it's okay to sit next to her."
 
-    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.25
+    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.2
+
     "As I walk up, I try to get her attention."
 
     p "Excuse me?"
@@ -131,6 +126,8 @@ label ch_0:
     show shiori surprise with dissolve_fast
 
     shi "Hwah?! Oh! Can I... help you?"
+
+    show shiori normal
 
     "As she turns to look at me, I notice her hair is split between a pitch black and a stark white, right down the middle."
     
@@ -154,6 +151,7 @@ label ch_0:
 
     stop sound 
     play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.4
+    
     "Without another word, she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
 
     "Catching myself staring again, I turn to look out the window, watching the rain beat against the glass, the wind battering the trees lining the path outside."
@@ -257,10 +255,13 @@ label ch_0:
     menu:
         "Honestly? I love them.":
             $ booklove = True
+            $ renpy.save_persistent()
         "They're alright.":
             $ bookneutral = True
+            $ renpy.save_persistent()
         "Not really.":
             $ bookhate = True
+            $ renpy.save_persistent()
     
     if booklove:
         p "Honestly? I love them. The smell of the ink and the paper, the feel of the pages in your hands, the lives and worlds they all contain... It's just the best."
@@ -312,7 +313,8 @@ label ch_0:
         p_i "I have to get some reference books from the library soon, so maybe I'll pick something up to see how it feels to read for fun again."
 
     stop sound
-    play sound "audio/Ambient/rain1.ogg" loop volume 0.3
+    play sound "audio/Ambient/rain1.ogg" loop volume 0.25
+
     "The two of us continue talking about books for a while, but as we're talking, I get the sense that there's more than just love for books behind her passion."
     
     "Eventually, we reach a lull in the conversation, but it's not uncomfortable this time. Rather, it's a pleasant silence, accented by the light tapping of the rain on the window."
@@ -341,7 +343,6 @@ label ch_0:
 
     p "Uh. What?"
 
-    #this would be better as an animation
     "Seeing my confusion, she shakes her head, dismissing her own question."
 
     shi "Never mind, forget it. It's not important right now."
@@ -350,8 +351,10 @@ label ch_0:
 
     shi "Sorry for the weird question. Anyway, have a safe trip home, and make sure not to get struck by lightning!"
 
-    hide shiori normal with dissolve_slow
+    hide shiori normal with dissolve_fast
+
     "Grabbing my umbrella on the way out, I sneak a glance back at her. The sight of her reading under the warm lights makes my lips curl into a soft smile."
+    
     stop music
     stop sound fadeout 0.5
     scene bg street with dissolve_fast
@@ -363,6 +366,7 @@ label ch_0:
     show rainfront onlayer front
 
     #door entry bell sfx, fade out cafe music, fade in light rain effects
+
     "I came in just to shelter from the storm. Now, I feel excited for some reason, but..."
 
     p_i "Why am I getting the sense that, no matter what, she's gonna be involved in my life...?"
