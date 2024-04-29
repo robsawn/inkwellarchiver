@@ -759,7 +759,7 @@ label ch_1:
         
         "We continue to chat about more tropes and tales while passing through the aisles  of the library. As we approach the stairs to the second floor, she turns to me."
 
-        show shiori smile
+        show shiori normal
         
         shi "Could you remind me what books you needed again? Otherwise, we'll be spending the rest of the day talking about unrelated topics, and your project will never get started."
         
@@ -862,7 +862,7 @@ label ch_1:
         
         p "Better be careful, you won't be able to read if you hit your head too often."
 
-        show shiori smile
+        show shiori happy
         
         shi "Oh I know. My knights tell me that all the time. It happens pretty often, but they always catch the books that fall on me. I guess I got too complacent."
 
