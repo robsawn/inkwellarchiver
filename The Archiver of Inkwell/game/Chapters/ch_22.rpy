@@ -277,7 +277,7 @@ label ch_22:
 
     "When we reach the throne room, the big doors swing openly solemnly on either side, revealing a large chamber that echoes with each step."
 
-    #Shiori sprite appears
+    #Shiori neutral
 
     #play exposition track bgm
 
@@ -305,7 +305,7 @@ label ch_22:
 
     "After that sucker punch to my ego, she walks over to Shiori and whips out a nail file. Clearly, this is all beneath her."
 
-    #Shiori appears
+    #Shiori normal
 
     shi "Aw don't be like that. Anyway, come here. We need to talk."
 
@@ -313,7 +313,7 @@ label ch_22:
 
     p "So, Shiori, can you please tell me what's going on? I think I'm about to lose it. What was that monster? Why is it here? Why did it try to kill me?! What's this about a princess and a queen, and why is everything like that book you gave me???"
 
-    #shiori think
+    #shiori normalclosed
 
     shi "Alright, ok. Lemme explain it step by step."
 
@@ -412,7 +412,6 @@ label ch_22:
     "She tries to look dignified, but the attempt only gets a poorly-stifled giggle out of Knight."
 
     shi "Now then, for the time being, I shall name you Bishop. I am your Queen, and together we shall vanquish this harbinger of calamity!"
-
 
     stop sound fadeout 1.0
     stop music fadeout 1.0

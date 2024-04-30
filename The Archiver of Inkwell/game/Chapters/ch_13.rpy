@@ -1,4 +1,17 @@
+init: 
+    image rainbackheavy:
+        Snow("Helpers/effects/rain3.png",max_particles=5000,speed=1750,wind=0)
+    
+    image rainmidheavy:
+        Snow("Helpers/effects/rain3.png",max_particles=2750,speed=1750,wind=0)
+
+    image rainfront:
+        Snow("Helpers/effects/rain3.png",max_particles=50,speed=800,wind=0)
+
 label ch_13:
+    scene bg bedroomnight with fade
+    #pulse if possible
+    play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
     "My head's pounding. I can't move or open my eyes, but I can feel it. My surroundings and everything around me. More than anything though, I just want to lie here, in the dark and silence of... wherever I am." 
 
     "I have no idea where I am. I don't know what my condition is. I feel like I have no sense of touch. I know I'm on something cushiony, but that's all I can tell."
@@ -63,7 +76,17 @@ label ch_13:
 
     "I put the bookmark in my pocket, and get ready to leave."
 
-    "Slipping on my shoes, I grab my umbrella, and make sure that I have my wallet, keys, and phone. I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
+    "Slipping on my shoes, I grab my umbrella, and make sure that I have my wallet, keys, and phone." 
+    
+    scene bg street with slideleft
+    stop music fadeout 0.75
+    #play music 
+
+    show rainbackheavy
+    show rainmidheavy
+    show rainfront onlayer front
+
+    "I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
 
     "I can feel myself being watched, but it doesn't feel like before, it feels less... creepy. Comforting almost."
 
@@ -300,7 +323,7 @@ label ch_13:
 
     p_i "Yeah, I figured. I just needed some more time to wake up. Was definitely just imagining things."
 
-    #fade to black and back
+    scene bg librarynight with fade
 
     "I swing by the study rooms the next day, but Shiori never shows up."
 
@@ -313,6 +336,8 @@ label ch_13:
     "I leave for the day, an hour after when we were supposed to meet. Strange. On my way out, I notice that the front desk worker's missing. They're usually here. In fact, I haven't seen them miss a day of work. "
 
     p "Off day to study for a test, I suppose."
+
+    scene bg bedroomnight with dissolve_slow
 
     "I make it back to my apartment, and, once again, I don't see a single flower or person in a yellow coat."
 

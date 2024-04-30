@@ -142,8 +142,15 @@ image shiori satisfied = Composite(
 image shiori tease = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
-    (0,0), "images/shiori/Eyes/eyes_wink.png",
+    (0,0), "shio eyestease",
     (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows1.png")
+
+image shiori surpriseextreme = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyesextreme",
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_open5.png"),
     (0,0), "images/shiori/Eyebrows/eyebrows1.png")
 
 image shio eyes:
@@ -161,6 +168,32 @@ image shio eyes:
 
 image shio eyesshock:
     "images/shiori/Eyes/eyes_opensmall.png"
+    choice:
+        1.5
+    choice:
+        2.0
+    choice:
+        1.0
+    # This randomizes the time between blinking.
+    "images/shiori/Eyes/eyes_closed.png"
+    .25
+    repeat
+
+image shio eyestease:
+    "images/shiori/Eyes/eyes_wink.png"
+    choice:
+        1.5
+    choice:
+        2.0
+    choice:
+        1.0
+    # This randomizes the time between blinking.
+    "images/shiori/Eyes/eyes_closed.png"
+    .25
+    repeat
+
+image shio eyesextreme:
+    "images/shiori/Eyes/eyes_open_small_pupils2.png"
     choice:
         1.5
     choice:
@@ -194,7 +227,7 @@ image shio mouth frown:
     .2
     "images/shiori/Mouths/mouth_frown.png"
     .15
-    "images/shiori/Mouths/mouth_open4.png"
+    "images/shiori/Mouths/mouth_open5.png"
     .2
     "images/shiori/Mouths/mouth_frown.png"
     .17

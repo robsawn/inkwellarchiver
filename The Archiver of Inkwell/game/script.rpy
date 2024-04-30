@@ -8,7 +8,10 @@
             renpy.call(f"ch_{self.ch_number}")
 
 label start:
-    $ player_name = renpy.input("What's my name, again?",length=32, default="")
+
+    show shiori frown
+
+    $ player_name = renpy.input("What's my name, again?",length=24, default="")
 
     $ player_name = player_name.strip()
 
@@ -33,9 +36,9 @@ label start:
         $ Chapter(23).start()
         $ Chapter(24).start()
         if mistakes >= 2:
-            $ Chapter(252).start()
-        else:
             $ Chapter(251).start()
+        else:
+            $ Chapter(252).start()
     # if route_slice:
     #     $ Chapter(32).start()
     #     $ Chapter(33).start()

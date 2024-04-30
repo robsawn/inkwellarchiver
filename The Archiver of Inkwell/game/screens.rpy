@@ -684,6 +684,14 @@ screen extras():
             if gui.about:
                 text "[gui.about!t]\n"
 
+            #AlphaCas
+            text _("AlphaCas\n~~~~~\n")
+            text _("Dear Shiorin >////<\n\n")
+            text _("Happy Birthday, Shiorin! Thank you for being our wholesome archiver! I would like to thank you for all your hard work for all novelites. I love how you fostered a large community full of passionate people, who came together and created this wonderful project for you. You have shown me how limitless content creation is via your vlog content, unity streams, and piano recording streams. Thank you for inspiring me with your creativity, and I aspire to have the courage to push the limit of content creation like you.\n")
+            text _("Also, thank you for always supporting your community. I like how you support all the fanworks through twitter and even display fanart in your stream. That means a lot to me as an artist.\n")
+            text _("Keep shining bright as our best archiver. You have my support, Shiorin!\n\n")
+            text _("AlphaCas\n~~~~~\n\n\n")
+            
             #Anastas
             text _("Anastas\n~~~~~\n")
             text _("Happy birthday, Shiori Novella!\n")
@@ -749,6 +757,16 @@ screen extras():
             text _("Happy birthday and see you at the next stream, Shiorin!\n\n")
             text _("Jusagi Chan\n~~~~~\n\n\n")
 
+            #Kianrame
+            text _("Kianrame\n~~~~~\n")
+            text _("Shiori~n!!!\n\n")
+            text _("Hello Shiori!!!!!! I wanted to reach out and wish you a happy birthday!\n\n")
+            text _("I wish you a joyful birthday and a memorable day. I’m happy to one of the Novelites. I really like your streams and speed running stream. You can’t believe how happy I was when you saw my cosplay, such a stupid thing made my cry.\n\n")
+            text _("You helped me go through depressed day and working on my projects for college, watching you made me motivated to finish them.\n\n")
+            text _("You give me courage to try new things and not to give up. And I love how you can drill one topic for infinite time.\n\n")
+            text _("Thank you for everything and sorry if I made mistakes, I’m not good at writing and spilling out my emotions ;;;\n\n")
+            text _("Extra kisses for Pepper (and you Ofc)\nKianrame\n~~~~~\n\n\n")
+
             #MiscDan
             text _("MiscDan\n~~~~~\n")
             text _("Happy birthday wishes to our happy Shiori~n!!\n\n")
@@ -812,6 +830,15 @@ screen extras():
             text _("I also wanted to thank you for liking my little choreographies for both Advent’s cover of Halloween Night, Tonight and your cover of Whisper Whisper Whisper. Truth be told, I have only danced seriously for a year now, but seeing your comments of encouragement gives me motivation to keep on improving. So if you ever decide to release another song in the future, I will be ready to work on a choreo for said song.\n\n")
             text _("The last thing I want to say before wrapping everything up is thank you for fostering such an amazing community. The Novelites have been so kind to me ever since I decided to get out of my comfort zone and actually interact with the community. There are so many talented artists, writers, musicians, voice actors, editors in Inkwell, and it’s all thanks to you. So many people have continued their passion because of you. So no matter what, us Novelites will always support you with whatever talent we have to make you happy. Thank you for being our Archiver, and once again happy birthday Shiori!\n\n")
             text _("From Inkwell’s Resident Dancer,\nSmilely\n~~~~~\n\n\n")
+
+            #SynergyREEE
+            text _("SynergyREEE\n~~~~~\n")
+            text _("Happy birthday! Hope you enjoy your first mortality countdown as part of Hololive Production!\n\n")
+            text _("Hi. It’s me, the guy who made you some weapons and funny(?) memes on the internet. It’s pretty funny, isn’t it, that despite me being in this rabbit hole for 4 years now, it was you who pushed me to start creating something. I don’t even remember how it started, probably from me reading how you encouraged us to make fanfictions of you right from debut. So I did, like everyone else, and the process of writing them pulled me into a new community that I enjoy staying in. I made new friends, I learned MMD animation, I helped make a visual novel about you, and I started to enjoy how it feels to interact with people again. So thanks, Shiori, for creating such a unique place to be in.\n\n")
+            text _("Also, everytime you see and like the stuff I made, it gives me encouragement that what I made is actually enjoyable, and it gives me motivation to make more. For someone who struggles with finding motivation in doing anything, especially my responsibilities, this means a lot to me.\n\n")
+            text _("Entertainment and being able to brighten someone’s day is your goal, and you certainly hit those two marks spectacularly. At the very least, you’ve been shining like a star in these eyes of mine, brightening up my day without fail. And this time, I hope we can do the same for you with this visual novel. I hope you enjoy the stories we weaved, and I hope you enjoy this birthday project as much as we did creating it.\n\n")
+            text _("Once again, happy birthday Shiori! Onwards to archiving these happy moments forever.\n\n")
+            text _("(Also pay your child support)\n-SynergyREEE\n~~~~~\n\n\n")
 
             #Viratasya
             text _("Viratasya\n~~~~~\n")

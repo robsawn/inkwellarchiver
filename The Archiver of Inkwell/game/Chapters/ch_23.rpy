@@ -1,4 +1,5 @@
 label ch_23:
+    #scene bg throneroom
     #Rook arms crossed appears
 
     "Rook sets his equipment aside and steps up to me, extending a hand. I reach back out and he clasps me by the forearm. I try not to wince; the guy has some real grip strength."
@@ -25,7 +26,7 @@ label ch_23:
 
     "Knight intervenes in the conversation."
 
-    #Knight sprite (base pose) appears alongside Shiori
+    #Knight sprite (base pose) appears alongside Shiori (shiori left third, knight right third)
 
     k "Is that all you can think about? Your own survival?"
 
@@ -63,7 +64,7 @@ label ch_23:
 
     r "Aye, that's fine with me. I'll stay back and protect Queen."
 
-    #Rook sprite disappears, Shiori determined appears
+    #Rook sprite disappears, Shiori frown appears
 
     shi "Alright, then it's settled. Knight, Bishop, you two are going to set out tonight into the Dreamscape. Your mission is to find and observe the monster for any information that can prove to be useful to our hunt. Once that's done, come back immediately. And avoid a confrontation until we know what we're dealing with."
 
@@ -131,7 +132,7 @@ label ch_23:
 
     p_i "Why would someone sleep here normally instead of in a bedroom?"
 
-    shi "Anyways, this is where we're entering the Dreamscape from. And by ‘we', I mean you. All you have to do is sleep in the middle of that circle, and I'll take care of the rest."
+    shi "Anyways, this is where we're entering the Dreamscape from. And by 'we', I mean you. All you have to do is sleep in the middle of that circle, and I'll take care of the rest."
 
     p "Wait, that's it?"
 
@@ -487,7 +488,7 @@ label ch_23:
 
     #hide knight, show monster calm
 
-    if wep_1_dc:
+    if wep_1_dc == True:
 
         "And indeed, the monster's body is criss-crossed with scorch marks and lacerations where it was wrapped in the net. Despite lying down with its tail curled around it, the damage is plain to see. Even one of the horns looks like it's been partially sheared through."
 
@@ -639,7 +640,7 @@ label ch_23:
         "As Knight commands, we book it out of the forest while the monster struggles to remove the sword."
         $ blunder = True
 
-    #hide monster & knight
+    #hide monster & knight, hide ember vfx
 
     "As we come out of the forest into a small clearing, we can see the teleportation circle on the ground. It seems that we're back where we started."
 
@@ -647,7 +648,7 @@ label ch_23:
 
     #show knight
 
-    if blunder:
+    if  blunder:
         "Knight lets out a heavy sigh."
 
         k "Just when I thought you were getting the hang of your power as Bishop, you just had to go and prove me wrong, huh? What do you have to say for yourself?"

@@ -1,21 +1,35 @@
 label ch_12:
+    scene bg classroom with fade
+    play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
+
     "Looking outside from my seat, I continue to think about the rain. Well, the lack of it. I can't even remember the last time it wasn't raining. Instead, everything's turned hazy, making it difficult to see very far. I can see the building across the field, but that's about it."
 
     p_i "Mist, huh?"
 
     "There's still a bit of time before class starts. I let my gaze wander across the view outside. Several students huddle together, moving in close-knit groups, chatting and seemingly not bothered by the lack of rain; others, moving alone, stay close to the buildings, the familiar landmarks offering some small comfort in the strange mist."
 
+    stop music
+    play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
+
+    show cultist at center
+
     "I catch myself spacing out and staring at a person standing outside. I blink and finally notice the bright yellow raincoat they're wearing. It seems familiar, but I can't quite put my finger on where I've seen it before. As I watch, I notice that they're not moving, and are just standing there."
 
     p_i "Interesting fashion choice..."
 
-    s "Hey, mind if I sit here?"
+    s "Hey, mind if I sit here?" with vpunch
+
+    hide cultist
 
     "I jump a little and I look over toward the voice. Seeing my classmate, I just nod and look back out the window."
 
     p "What the...?"
 
+    show cultist at center
+
     "I notice a second person in a yellow coat, this time in between the buildings."
+
+    hide cultist
 
     "I hear a scraping from my side as my classmate leans forward to look out the window as well. I lean back in my chair and stretch, my back popping as it arches."
 
@@ -37,7 +51,7 @@ label ch_12:
 
     "The professor walks in, and the conversations quiet down throughout the room as they get ready. As they move to their podium, the conversations stop completely and the professor starts."
 
-    #fade out/fade in
+    scene bg college with fade
 
     "Class is finally over. No matter how hard I tried to listen to the lecture, my eyes kept drooping. Makes sense seeing as how I couldn't sleep at all." 
 
@@ -45,7 +59,11 @@ label ch_12:
 
     "Yawning, I head to my next class in another building. On exiting, I notice the mist is heavier, like a fog. It's clinging to me and weighing me down. Feeling isolated and exposed, I carefully walk ahead, doing my best to stay on the path."
 
-    "As I continue moving, a figure emerge from the mist, standing to the side. Closing in, I see that it's someone in a yellow raincoat. Facing me."
+    show cultist at center with dissolve_slow
+
+    "As I continue moving, a figure emerges from the mist, standing to the side. Closing in, I see that it's someone in a yellow raincoat. Facing me."
+
+    hide cultist
 
     "I don't have time to deal with this new fad, or these weirdos, or whatever. I need to get to class."
 
@@ -55,7 +73,7 @@ label ch_12:
 
     p_i "Didn't they have perfect attendance?"
 
-    #fade out/fade in
+    scene bg classroom with fade
 
     "I go into class the next day, but the talkative classmate who usually sits next to me isn't here yet."
 
@@ -73,31 +91,41 @@ label ch_12:
 
     p "Maybe I'll stop by the library to try to get some of the report done."
 
+    scene bg hallway
+
     "Walking down the eerily empty halls, I glance out the window and see a familiar head of black and white hair."
+
+    show shiori normal
 
     p "Isn't that...?"
 
     p_i "I should say hi, it'll be nice to walk with someone anyway."
 
+    hide shiori normal
+
     "I push open the door to exit the building, picking up the pace."
 
-    #show coat man
+    show cultist
 
     p "Oh, shi-! Sorry!"
 
     "I barely duck around the person. I must be more excited to talk to Shiori, or anyone for that matter, than I thought." 
 
+    hide cultist
+
     "Not even waiting for a reply, I continue toward Shiori. But, rounding the corner to where she should be, she's gone."
 
     p "Where'd she go? Wasn't she right here?"
 
-    #show shio-eyes up close
+    show shiori normal zoom 3.0
 
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
 
-    #slight screen shake
+    shi "Boo!" with vpunch
 
-    shi "Boo!"
+    show shiori normal zoom 1.0
+    stop music 
+    play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
 
     "My heels leave the ground as I jump, my heart thumping in my chest, a low drumbeat to underscore my surprise."
 
@@ -129,23 +157,38 @@ label ch_12:
 
     "As our chat drifts into a comfortable lull and we turn to walk down the path, I notice footsteps behind me. Looking back, I see a figure in the mist approaching. A few steps and a yellow jacket becomes more noticeable."
 
+    show cultist at right_third zorder -1
+    stop music
+    play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
+
     p_i "Oh, did they have a class canceled too?"
+
+    show shiori frown #need to make a suspicious?
 
     "I turn back toward Shiori. She's watching the person with a frown and narrowed eyes."
 
     p "What? Their class was probably canceled."
 
-    "Shiori shakes her head and grabs my wrist, walking away at a quick pace. I nearly trip over my feet being pulled away so suddenly."
+    hide cultist 
+    #footstep sfx
+
+    "Shiori shakes her head and grabs my wrist, walking away at a quick pace. I nearly trip over my feet being pulled away so suddenly." with hpunch
 
     p "W-What? Where are we-"
 
-    shi "Just come on!"
+    show shiori surprise #probably a better choice available or easily makeable
+
+    shi "Just come on!" with hpunch
 
     "As Shiori pulls me along, I notice several people in the same yellow rain jackets peering through windows and doors."
 
     p "I guess it is popular, huh?"
 
     shi "What? No, it's not that, I mean, yes, but no! Just come on!"
+
+    show bg libraryovercast with slideright
+
+    show shiori frown
 
     "We approach the library, but we're entering a side entrance I've never used."
 
@@ -159,13 +202,19 @@ label ch_12:
 
     p "What?"
 
+    show shiori normalclosed
+
     shi "Oh, don't worry about it..." 
 
     "She pulls out the same book I saw the other day. Where did she even fit that?"
 
+    show shiori sad
+
     shi "Is what I'd like to say, but it seems like they're looking at you, too, now."
 
     p "Huh? What do you mean?"
+
+    show shiori sad2
 
     "Shiori sighs in response and looks at me apologetically."
 

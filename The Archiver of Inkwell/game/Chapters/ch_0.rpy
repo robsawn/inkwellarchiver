@@ -16,7 +16,7 @@ init:
     
 label ch_0:
 
-    scene bg college at center with dissolve_fast
+    scene bg college with dissolve_fast
     
     show rainbacklight zorder 5
     show rainmidlight zorder 15
@@ -26,6 +26,8 @@ label ch_0:
     play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.65
 
     scene bg college with dissolve_fast
+
+    show shiori surprise
 
     "As I leave my last lecture for the day, I follow the stream of other students out of the building."
     
@@ -82,17 +84,14 @@ label ch_0:
     menu:
         "I'll have green tea with added honey. Hot, please.":
             $ greentea = True
-            $ renpy.save_persistent()
             p "I'll have green tea with added honey. Hot, please."
             "The storm is making it feel colder, so a nice, hot cup of tea seems perfect right now."
         "Hmm, one Americano, please.":
             $ americano = True
-            $ renpy.save_persistent()
             p "Hmm, one Americano, please."
             "With it dark relatively soon, I didn't want to add too much caffeine to my system, but how can I resist a cup of coffee in a place like this?"
         "Hm… Can I get a cocoa? Large? With added caramel?":
             $ cocoa = True
-            $ renpy.save_persistent()
             p "Hm… Can I get a cocoa? Large? With added caramel?"
             "The day has been feeling a bit long, to say the least. I deserve a little treat so let's cut loose with something sweet."
     
@@ -255,13 +254,10 @@ label ch_0:
     menu:
         "Honestly? I love them.":
             $ booklove = True
-            $ renpy.save_persistent()
         "They're alright.":
             $ bookneutral = True
-            $ renpy.save_persistent()
         "Not really.":
             $ bookhate = True
-            $ renpy.save_persistent()
     
     if booklove:
         p "Honestly? I love them. The smell of the ink and the paper, the feel of the pages in your hands, the lives and worlds they all contain... It's just the best."

@@ -78,6 +78,8 @@ label ch_1:
 
     shi "Hm? Oh! It's you! Hi!"
 
+    show shiori normal
+
     p "Hey, mind if I sit with you?"
 
     "She nods, and I let myself fall into the seat with a deep exhale. All the wandering in this part of the library has been exhausting, and the dust from the shelves makes my nose itch." 
@@ -154,12 +156,11 @@ label ch_1:
     show shiori frown
     shi "Of course I do, it was just recently. It's not like I'm a goldfish, after all." 
 
-    p "In that case, I should introduce myself. I'm [p.name]." 
+    p "In that case, I should introduce myself. I'm [player_name]." 
 
     "She tilts her head and then closes her book after a moment."
 
-    $ persistent.shiori_name = "Shiori"
-    $ renpy.save_persistent()
+    $ shiori_name = "Shiori"
 
     show shiori normal
 
@@ -189,7 +190,7 @@ label ch_1:
 
     shi "I researched it for fun once. Maybe I can help!"
 
-    hide shiori normal fadeout 1.0
+    hide shiori normal with dissolve_fast
 
     "She leaves her book on the table and walks to a library computer to look for something."
 
@@ -201,6 +202,8 @@ label ch_1:
     #thunder sfx
 
     p_i "What? What was that?" 
+
+    p_i "Did the book... blink?"
 
     "I shake my head and rub my eyes and look at the book again." 
 
@@ -280,11 +283,9 @@ label ch_1:
         # "Sweet stories about a couple people.":
         #     $ route_slice = True
         "I've always been interested in Lovecraft stories.":
-            $ persistent.route_lc = True
-            $ renpy.save_persistent()
+            $ route_lc = True
         "Magic is pretty cool.":
-            $ persistent.route_fantasy = True
-            $ renpy.save_persistent
+            $ route_fantasy = True
 
 #region slice of life
     # if route_slice:
