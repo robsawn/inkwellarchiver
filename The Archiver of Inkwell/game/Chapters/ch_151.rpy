@@ -158,7 +158,7 @@ label ch_151:
 
     p "Oh, hey, there's new stuff here."
 
-    Shi "Yippie! Show me."
+    shi "Yippie! Show me."
 
     "I do my best to present the new inscriptions to her. Shiori turns serious again as her eyes quickly scan the pages, murmuring to herself a few times."
 

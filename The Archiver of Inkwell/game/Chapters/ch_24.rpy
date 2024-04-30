@@ -1,26 +1,30 @@
 label ch_24:
-    #scene bg cursedforest
+    show bg cursedforest with dissolve_fast
+
     "As we step inside the magic circle, it begins to glow, and the ground itself starts to break apart."
 
     p "Uh, Knight? What's happening?"
 
     k "It's normal. The circle is rigged to destroy itself after we leave so the monster can't track us back to reality."
 
-    #hide knight, bg quickly fades to white
+    hide knight weapon
+    scene black with flash_white
+    stop music
+    stop sound
+    stop voice
 
     "As Knight finishes explaining, I suddenly feel lightheaded. I'm blinded as everything around us starts to glow with an intense white, and then..."
 
-    #cut to black, kill bgm
-
     "Everything goes black."
 
-    #fade in ritual room bg & Shiori neutral sprite in the middle
+    show bg ritual with dissolve_slow
+    show shiori neutral
 
-    #play exposition bgm
+    play music "audio/3 Fantasy/1 Relaxed Exposition Track L 2.ogg" loop fadein 1.0
 
     "When I come to, I find myself back in the castle. Shiori and Rook are sitting against the wall, with Rook sound asleep. Meanwhile, Knight is nowhere to be seen."
 
-    #shiori smile
+    show shiori smile
 
     shi "Oh hey sleepyhead, you're finally awake."
 
@@ -32,7 +36,7 @@ label ch_24:
 
     p "Anyways, how long have we been out for?"
 
-    #shiori neutral2 (neutral with eyebrow_1 and mouth_4 basically)
+    show shiori neutral
 
     shi "Let's see... It's been around 6 hours since you guys went into the dream, 2 hours since Knight left, and you just woke us. So that's a solid 8 hours right there."
 
@@ -64,7 +68,9 @@ label ch_24:
 
     "Rook yawns loudly."
 
-    #show Rook on the right, slide Shiori to the left
+    show shiori at left_third
+    with move
+    show rook weapon at right_third
 
     r "Hahhh, good morning gentlefolk! You sure took your sweet time, kid. How did the exploration go?"
 
@@ -81,7 +87,7 @@ label ch_24:
 
         shi "Hm... Yup, nothing wrong with that. The first entry into the dream usually leaves someone's memory of their time there scrambled, but yours seem to be completely fine. Your compatibility with the dream really is high, just like I thought!"
 
-        #show happy or smug Shiori, whatever makes her look like a proud parent lmao
+        show shiori satisfied at left_third
 
         "Shiori puffs up her chest with a satisfied, almost smug look on her face."
 
@@ -89,28 +95,31 @@ label ch_24:
 
         p_i "I guess she's proud of me."
 
-        #show Rook arms crossed laugh
+        show rook armslaugh at right_third
 
         r "Aye! You did well for your first time, kid. The title of Bishop is not wasted on ya."
 
-        #hide rook
+        hide rook armslaugh
+        show shiori satisfied at center
+        with move
 
     if blunder:
         p "...and then the ground under the circle shattered and we returned safely... mostly."
 
-        #show normal Shiori? Disappointed? Want her to lose her smile but not frown
+        show shiori neutral
 
         shi "Well, I expected something like this might happen on your first trip. Don't dwell too much on it. We're bound to make mistakes sometimes, but try to not let it happen again, alright? Thankfully it was Knight who went in with you this time. If it was Rook, you would've been dead by now."
 
-        #bg slowly fades to 50% saturation
+        #bg slowly fades to 50% saturation - no. robsawn
 
         p "Wha- what do you mean?"
 
         r "Knight's the best runner we have, kid. If it were me, you would've been gobbled up before I could have gotten back to you."
 
-        #bg brightness drops to 75%
+        #bg brightness drops to 75% - no. robsawn
 
-        #hide rook & Shiori
+        hide rook weapon
+        hide shiori neutral
 
         "My blood runs cold and I shudder at the thought of how close I was to death."
 
@@ -118,15 +127,15 @@ label ch_24:
 
         "Suddenly, I feel something warm on my head."
 
-        #bg turns back to normal
+        #bg turns back to normal - no. robsawn
 
-        #show Shiori normal
+        show shiori smile
 
         shi "There there."
 
         "Shiori pats my head in an attempt to calm me down."
 
-        #show Shiori normalclosed
+        show shiori satisfied
 
         shi "It's still fine. You're still alive, after all. Knight anticipated this possibility beforehand, which must be why she chose to go with you first — to protect you. She's kinder than she looks, so make sure to thank her properly later, ok?"
 
@@ -136,13 +145,13 @@ label ch_24:
 
         "Shiori gives me a soft and warm smile. Her support helps me regain the confidence to keep pushing forward."
 
-    #Shiori normal 
+    show shiori neutral at left_third
 
     shi "Now then, stand still for me, would you? I need to run some checks on you."
 
     "At her request, I stand still as she starts chanting spells. Several glowing lights swirl around me from head to toe before fading away."
 
-    #show surprised Shiori
+    show shiori surprised at left_third
 
     shi "Hm... Oh wow! I was half-expecting this, but you don't show any signs of Dream Fatigue at all! Guess that's high compatibility for you!"
 
@@ -154,15 +163,15 @@ label ch_24:
 
     r "Speaking of which, you should go rest up too, kid. Even if you're not tired, you should spend some time for yourself in the real world. We're going back in tonight after all, hahahaha!"
 
-    #Rook arms crossed laugh
+    show rook armslaugh at right_third
 
     "Rook lets out a hearty laugh. He seems to be eager for his turn to go in."
 
-    #Rook normal
+    show rook arms at right_third
 
-    shi "Yeah, you should do that {p.name}. Since you can't really leave the castle right now, might as well walk around! Who knows, you might find something interesting. Also, here you go!"
+    shi "Yeah, you should do that [player_name]. Since you can't really leave the castle right now, might as well walk around! Who knows, you might find something interesting. Also, here you go!"
 
-    #show normal Shiori
+    show shiori neutral
 
     "Shiori takes out her phone and sends me a file. It is a map of the castle, with all of the important places marked down in different colors."
 
@@ -170,7 +179,7 @@ label ch_24:
 
     p "Shiori, how did you get my contacts?!"
 
-    #show smug Shiori or whichever expression is the smuggest
+    show shiori wink
 
     shi "Secret~ Don't worry about it, tehe~"
 
@@ -178,7 +187,7 @@ label ch_24:
 
     shi "Anyways, go have fun bye!"
 
-    #shiori fades away
+    hide shiori wink with dissolve_fast
 
     "As she says this, she immediately runs off from the ritual room."
 
@@ -188,7 +197,7 @@ label ch_24:
 
     r "Also kid, if you're wanting to go after her, you'll know where she is soon enough. The same for us too!"
 
-    #hide Rook
+    hide rook arms
 
     p_i "'I will know where she is soon enough?' What did he mean by that? Oh well..."
 
@@ -233,11 +242,12 @@ label ch_24:
 
         "Little did I know, this castle would break my understanding of reality yet again."
 
-        #change bgm to library
+        stop music fadeout 0.5
+        play music "audio/1 Act 1/Library.ogg" loop fadein 0.5 volume 0.75
 
         "Opening the door, the sight that greets me is not a small balcony of potted plants and miniature shrubbery, but a large-scale park teeming with plant life and rivers. The paths paved in front of me are lined with colorful flower beds, and a familiar-looking goth girl sits at the end of one of them, playfully inspecting a flower."
 
-        #show happy/satisfied shiori sprite
+        show shiori satisfied
 
         shi "Oh hey, you found me!"
 
@@ -249,7 +259,7 @@ label ch_24:
 
         p "Oh well, it wasn't a virus so it's fine. Anyway, where are we? How does something like this fit in the castle?"
 
-        #shiori smiling
+        show shiori smile
 
         shi "What are you talking about? This place isn't in the castle. Well it isn't, technically speaking. I made it using some silly willy space-time magic, but you don't need to worry about that."
 
@@ -267,7 +277,7 @@ label ch_24:
 
         "Shiori leans backwards and falls onto a flowerbed. Curiously, the flowers seem to be moving themselves up, cushioning her."
 
-        shi "Ah~ It feels so nice to relax... Come on {p.name}, lay down too! It feels great, you know?"
+        shi "Ah~ It feels so nice to relax... Come on [player_name], lay down too! It feels great, you know?"
 
         "Seeing Shiori enjoying herself, I lay down to rest close to her; not touching, but close enough to not feel like strangers."
 
@@ -285,7 +295,7 @@ label ch_24:
 
         shi "Although I can't show you the contents, a lot of info on plants is stored here too. It used to be a hobby of that friend I mentioned before, and sharing her hobby somehow makes me feel at peace."
 
-        #show Shiori calm, eyes closed
+        show shiori satisfied
 
         "She takes a deep breath, appreciating the scent of the flowers she worked hard to cultivate. I do the same, savoring this smell that can't be found anywhere else."
 
@@ -295,7 +305,7 @@ label ch_24:
 
         shi "..."
 
-        #show smiling shiori
+        show shiori smile
 
         shi "Well, should we get going? There are still things to prepare before the next expedition."
 
@@ -307,7 +317,7 @@ label ch_24:
             "Why do those books look so similar?":
                 p "If you don't mind me asking, why are the two books so similar? I thought one of them was written with your friend, and the other popped out of nowhere."
 
-                #show awkward shiori?
+                show shiori frown
 
                 shi "..."
 
@@ -315,7 +325,7 @@ label ch_24:
 
                 shi "...All I can ever tell you is that the author of both of them is the same person."
 
-                #show sad shiori
+                show shiori sad
 
                 shi "Please don't ask anymore about it, okay?"
 
@@ -328,7 +338,7 @@ label ch_24:
 
                 shi "Well, of course I do. Otherwise why would I drag you into all of this?"
 
-                #show smug shiori
+                show shiori wink
 
                 shi "Oh wait, is someone feeling a bit... unmotivated?"
 
@@ -347,20 +357,20 @@ label ch_24:
             "Can I ask about your friend?":
                 p "Who was your friend, anyway? You've mentioned them a couple times already. Why are they no longer here with you?"
 
-                #show sad shiori
+                show shiori sad
 
                 shi "...She- uh..."
 
                 "From the looks of it, Shiori is having a hard time talking about her friend. It takes a while for her to stop being silent."
 
-                #sad shiori with tears
+                show shiori cry
 
                 shi "She was... a great person. One of the few people I could call a true friend. It was her who wrote the story within this book with me, and she was also responsible for warning me about the Dreamscape."
 
 
                 shi "It would've been great if she could see the end of her work herself..."
                 
-                #sad shiori without tears
+                show shiori sad
 
                 "Shiori sniffles a little bit, her face full of melancholy."
 
@@ -368,7 +378,7 @@ label ch_24:
 
                 "Shiori breathes deeply before picking herself up from the ground."
 
-                #show neutral shiori
+                show shiori neutral
 
                 shi "Well, that's enough sunbathing for today. Let's head back. You still have some prep work to do, right?"
 
@@ -376,11 +386,11 @@ label ch_24:
 
                 p "Guess so. I should prepare as much as I can."
 
-                #show smiling shiori
+                show shiori smile
 
                 shi "Well then, I'll head back to the throne room. See ya!"
 
-                #Shiori disappears
+                hide shiori smile
 
     if downtime == 1:
         "From the map, the purple dot is making its way towards what looks to be the lounge."
@@ -405,7 +415,8 @@ label ch_24:
 
         "I chuckle a bit, imagining Shiori with noodles for arms, and make my way into the lounge. The gaudy doors and my imagination did not disappoint me at all... Or at least, it did so in a different way." 
 
-        #change bgm to hallway/lecture hall
+        stop music fadeout 0.5
+        play music "audio/From SoL route/1 Hallway + Lecture Hall L.ogg" loop fadein 0.5
 
         "The image of a cushy room frequented by nobles that I have in my head is blown away by the sight of the real lounge: an unbelievably modern room with an open layout and floor-to-ceiling windows that are welcoming in a healthy amount of sunlight. Square couches are arranged around the room, with several side tables accompanying them. A large television sits on one side of the room, and there seems to be a gaming console attached to it."
 
@@ -415,7 +426,7 @@ label ch_24:
 
         "Suddenly, a noise comes from behind me."
 
-        #show Rook with mug
+        show rook mug
 
         r "Hey there, kid, we meet again. I see you figured out the map system and followed me here."
 
@@ -423,13 +434,13 @@ label ch_24:
 
         p "Oh! Uh- yeah, hi."
 
-        #rook mug 2 (head raised) sprite
+        show rook muglaugh
 
         r "Did I startle you, kid? Focus on your surroundings a bit more, or else the monster will catch you off guard in the dream, hahaha!"
 
         "Rook lets out a hearty laugh. He seems amused to see me startled."
 
-        #back to normal mug Rook sprite
+        show rook mug
 
         r "Anyhow, are you gonna use that thing? If so, we could play together, have a little bonding time before the chaos tonight."
 
@@ -441,19 +452,19 @@ label ch_24:
 
         r "That she did, kid. It has been a wondrous experience, learning all the different things this world has to offer. Like this little slate!"
 
-        #rook phone sprite
+        show rook phone
 
         "Rook pulls out a phone from inside his armor. Do not ask me where he kept it or how. I don't want to know either."
 
         r "What was it called again? A fane? No, a foon! Amazing, this foon is. Such wonders of technological ingenuity! Even the highest grade spells cannot compare to the sheer convenience this affords!"
 
-        #rook phone glowing eyes sprite
+        show rook phoneeyeglow
 
         p_i "He really seems to love his phone, huh? I guess it's pretty amazing in the eyes of someone from a fantasy world."
 
         p "Ahem."
 
-        #show rook neutral
+        show rook arms
 
         r "Oh, whoops. Sorry kid, got carried away there. Anyhow, would you care for a game with this old man?"
 
@@ -479,7 +490,7 @@ label ch_24:
 
         "After a while, we manage to get to the final boss: a devilish witch of the ravens who kidnapped the princess out of one-sided love. We didn't manage to beat her this time, but we had a lot of fun."
 
-        #show Rook happy sprite
+        show rook armslaugh
 
         r "Gotta admit, kid, you really know how to play!"
 
@@ -487,7 +498,7 @@ label ch_24:
 
         "Rook stands up from the couch to turn off the console. Afterwards, he turns to me."
 
-        #show neutral Rook
+        show rook arms
 
         r "Right, kid. Been meaning to ask, but do you have anything you want to ask me?"
 
@@ -523,14 +534,13 @@ label ch_24:
 
         "I'm about to ask another question, but get cut short by the growl of Rook's stomach. He laughs and grabs his mug from the table."
 
-
-        #Rook laugh w/ mug
+        show rook muglaugh
 
         r "Haha! Well, man cannot survive by drink alone, I suppose. I'm going to go grab a bite to eat—have to be full of energy for later, you know. You may join me if you wish, but just be sure to take things easy today, ok kid?"
 
         "He pats my shoulder and sets off from the lounge on his next quest for the day, having successfully turned off the game console while completely forgetting to turn off the television."
 
-        #Rook disappears
+        hide rook muglaugh
 
     if downtime == 2:
         "From the map, the red dot was in one of the rooms in the castle's left wing, but is moving towards the dining room now."
@@ -564,7 +574,7 @@ label ch_24:
 
             "After I mutter those words, Knight turns around to look at me. However, I didn't expect what would come next."
 
-            #show Knight with beer mug
+            show knight beer
 
             k "Look, Bishop."
 
@@ -588,7 +598,7 @@ label ch_24:
 
             "Knight paces her mug down onto a nearby counter and walks up to me before placing a hand on my shoulder."
 
-            #show neutral Knight without beer
+            show knight weapon
 
             k "Have some faith in yourself. You're not that amazing yet, but you have a lot of potential. Even after that mess-up, you're still someone Queen placed her faith in. Reflect on your weakness and make up for it."
 
@@ -637,7 +647,7 @@ label ch_24:
 
             k "Hm? Oh, it's you."
 
-            #show Knight with beer mug
+            show knight beer
 
             "Knight turns around to look at me before leaning against the kegs."
 
@@ -687,7 +697,7 @@ label ch_24:
 
             "After slamming her mug down on a nearby counter, Knight prepares to leave."
 
-            #show Knight neutral sprite without mug
+            show knight weapon
 
             k "I'll be going back to my room now, then. Feeling like sleeping a bit more. Got anything else you wanted to ask?"
 
@@ -719,28 +729,28 @@ label ch_24:
 
                     k "So to sum it up, have some more confidence, I guess. The power's only as strong as the one using it, after all."
 
-        #Knight disappears
+        hide knight weapon
 
         "After answering my question, Knight turns to leave the hall. Once again, I am met with a still silence, alone with my thoughts."
 
-
-        #use this as the end for all the downtime routes
-
     p_i "Well, I suppose I should rest up, too. Might as well spend some time being lazy before going back for yet another exciting and not at all scary dive."
 
-    #cut to black, cut bgm
+    scene black
+    stop music
+    stop sound
+    stop voice
 
     "..."
 
-    #scene ritual room
+    scene bg ritual with dissolve_fast
 
-    #exposition bgm
+    play music "audio/3 Fantasy/1 Relaxed Exposition Track L 2.ogg" loop fadein 0.5
 
     "Some time has passed since the morning conversations. Now, it's time for the next expedition."
 
     "Once again, I find myself standing in the middle of the ritual circle. Rook stands next to me, a pillow in hand. Knight leans against one of the walls with her arms crossed, while Shiori prepares her chants."
 
-    #Rook (weapon out) sprite appears
+    show rook weapon
 
     r "You ready, kid?"
 
@@ -752,9 +762,11 @@ label ch_24:
 
     "Knowing what to do, I lay down in the center and try to fall asleep. It doesn't take long for my consciousness to drift away, and my mind becomes blank once again."
 
-    #Fade from black to void scene
+    show bg void with fade
 
     #play gatherer piano bgm
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 0.5
 
     "..."
 
@@ -766,11 +778,11 @@ label ch_24:
 
     r  "What are you doing? Is this some kind of mental preparation from your world?"
 
-    #Rook (cross-armed) sprite appears
+    show rook arms
 
     "Rook tilts his head in confusion, watching me behave strangely."
 
-    P  "N-nothing, don't mind me. Just trying to put myself together for the mission. Speaking of which, what should we do this time?"
+    p "N-nothing, don't mind me. Just trying to put myself together for the mission. Speaking of which, what should we do this time?"
 
     r  "How responsible of you. Yes, keeping oneself centered is crucial when on a hunt. As for the mission, I will let her majesty explain things."
 
@@ -816,11 +828,11 @@ label ch_24:
 
     p "Oh come on, give me at least something to start with."
 
-    #rook arms crossed laugh
+    show rook armslaugh
 
     "The helmet muffles Rook's chuckle."
 
-    #rook arms crossed normal
+    show rook arms
 
     r "Alright. I think the monster is unable to dispose of the weapons, so they would have been left where their wielders fell. As for the location? I can't say. You can see for yourself that we stand suspended above the infinite abyss."
 
@@ -828,27 +840,25 @@ label ch_24:
 
     r "Make it as real and solid as possible, and maybe then we will be able to find what we need. That's what my intuition tells me."
 
-    #hide rook
+    hide rook arms
 
     "This wasn't very reassuring, but there weren't many alternatives, so I might as well try."
 
     p_i " A place that I know well? Hmm... Maybe my old high school?"
 
-    #black background
+    scene black with fade
 
     "I try to imagine the huge building where I spent several years of my life. I have closed my eyes to help myself picture it, when I hear Rook's voice."
 
     r "Oh? What manner of fortress is this?"
 
-    #fade from black
-
-    #School hallway scene, 85% brightness
+    show bg hallway with fade
 
     "I open my eyes to see what he's talking about. The landscape had completely changed—instead of on a path snaking through the void, we stood in the entry of my old school. It seemed more solid and less hazy than the forest had been."
 
     p "This is my old school."
 
-    #Rook (cross-armed) sprite appears
+    show rook arms
 
     r "A school? So you are nobility then, or perhaps the child of a wealthy merchant?"
 
@@ -856,7 +866,7 @@ label ch_24:
 
     r "Astounding, it is truly a different world. Let us proceed then."
 
-    #Rook (cross-armed) sprite disappears
+    hide rook arms
 
     "Together, we walked down the main hallway. It was eerily silent, the only sound being the muted echoes of our footsteps."
 
@@ -868,19 +878,20 @@ label ch_24:
 
     "I close my eyes again. Maybe I can fix that. I focus on the ceiling and force the hall lights to brighten even more."
 
-    #school hallway, 130% brightness
+    #school hallway, 130% brightness - no. robsawn
 
     r "Much better."
 
     "We then proceed to reach the main hall, from here we could access any part of the school."
 
-    #Rook (cross-armed) sprite appears
+    show rook arms
 
     r "So, do you have any ideas where to look?"
 
     p_i "I honestly have no idea, if only there was something that showed us the way. In games there's always map markers telling you where to go, or at least a compass showing the general direction." 
 
-    #play gatherer bgm
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/3 Gatherer L.ogg" loop fadein 0.5
 
     "I feel a weight in my hand. It was so unexpected I almost dropped it by reflex. I look down to see a compass set in a heavy bronze box. It doesn't have anything to mark the cardinal directions, but it does have three arrows slightly offset from one another."
 
@@ -900,7 +911,7 @@ label ch_24:
 
     p "I hope it will help us. What do we do if the monster shows up? Do we run or keep looking?"
 
-    #switch rook to weapon out
+    show rook weapon
 
     r "Don't worry, if it attacks, I will distract it long enough for you to find the weapons. With this thing that Queen gifted me, I feel as if I could take on three such creatures at once!"
 
@@ -914,7 +925,7 @@ label ch_24:
 
     r "Oh! It stopped. Do you know where it leads?"
 
-    #Rook sprite disappears
+    hide rook weapon
 
     "I choose one of the arrows. If I remember correctly, in this direction, we had..."
 
@@ -935,7 +946,7 @@ label ch_24:
 
         "We reach the door to the classroom and slowly open it."
 
-        #Classroom background
+        show bg classroom with fade
 
         "The room was almost the same as I remember. Multiple tables sitting in line. A big green board.The teacher's table near the window. It almost felt nostalgic, but one small difference bothered me."
 
@@ -947,13 +958,13 @@ label ch_24:
 
         p "What the..."
 
-        #Rook (cross armed) sprite appears
+        show rook arms
 
         r "All who tried to defeat the creature.The Lord of Nightmares has terrorized people for many years."
 
         "Rook kneels to give final honors to the fallen warriors."
 
-        #Rook sprite disappears
+        hide rook arms
 
         "I don't want to interrupt him, so I step gingerly across the bodies up to the sword."
 
@@ -975,7 +986,7 @@ label ch_24:
 
         "Rook finishes paying his respects and joins me."
 
-        #Rook (cross armed) sprite appears
+        show rook arms
 
         r "Having trouble? No wonder, that sword is stuck deep in there."
 
@@ -1008,7 +1019,7 @@ label ch_24:
     elif wep_3 == 1:
         "The pool, yes. The middle arrow shows the way to the school's natatorium. I look over to see Rook inspecting a sign that has just grown from the wall." 
 
-        #Rook (cross-armed) sprite appears
+        show rook arms
 
         r "Natatorium? What is this?"
 
@@ -1020,7 +1031,7 @@ label ch_24:
 
         r "We do. But they're infested with monsters like merrows and sea serpents and the like. Even traveling by ship is risky and done mostly close to shore."
 
-        #Rook sprite disappears
+        hide rook arms
 
         "As we walk through the corridors, Rook tells me more about the fantasy world he came from. I'm thankful for the distraction."
 
@@ -1028,13 +1039,13 @@ label ch_24:
 
         "Finally, we reach the big double door that leads to the natatorium. Rook slowly opens it, looking inside to be sure it is safe and enters, giving me a signal."
 
-        #Pool background
+        show bg pool with fade
 
         "The pool is full of water, and the floor around it is slippery and wet. I look around for any sign of some kind of fantastical object."
 
         "But other than the water, it was an empty natatorium."
 
-        #Rook (cross-armed) sprite appears
+        show rook arms
 
         r "So this is the place you learn how to swim. Too bad we don't have the time for me to try it out."
 
@@ -1048,17 +1059,17 @@ label ch_24:
 
         r "I will stand guard up here. If you stay under for too long though, I will jump in after you."
 
-        #Rook sprite disappears
+        hide rook arms
 
         "I nod. I take off my shoes and outer layer of clothing and, after some hesitation, I jump into the water. It was cold."
 
-        #water splash sfx 
+        play sound "audio/sfx/water splash.ogg"
 
         p_i "Is it really a dream? This feels way too real to me." 
 
         "Taking a breath, I dive."
 
-        #Underwater background
+        show bg underwater with slideup
 
         "I swim toward the light, deeper and deeper down. The pool is deeper than it looked from above, but I think I'll manage."
 
@@ -1076,11 +1087,11 @@ label ch_24:
 
         "I grab it and swim upwards. It takes me way less time to get back to the surface."
 
-        #water splash sfx 
+        play sound "audio/sfx/water splash.ogg"
 
-        #Pool background
+        show bg pool with slidedown
 
-        #Rook (weapon out) sprite appears
+        show rook weapon
 
         r "There you are kid, I saw some movement in the water. You had me worried."
 
@@ -1092,17 +1103,17 @@ label ch_24:
 
         "Rook grabs his weapon and whips around, slicing into the tentacle with the axe bolted to the barrel of the gun. His swing nearly severs it in two, and the tentacle drops me back into the water before sliding back into the depths."
 
-        #water splash sfx
+        play sound "audio/sfx/water splash.ogg"
 
-        #rook normal arms crossed
+        show rook arms
 
         "Rook heaves me out of the water and sets me beside the pool. He retrieves a towel hanging nearby and hands it to me along with my clothes. He picks the trident up from the ground and waits as I dry myself off."
 
-        #rook laugh
+        show rook armslaugh
 
         r "Well now, that was exciting. Maybe your pools do have monsters then, eh?"
 
-        #rook normal
+        show rook arms
 
         "He chuckles, and I can't tell if he's being genuine or if this is sarcasm. He hands the trident back to me after I redress, and we quickly exit the natatorium before the tentacle decides to come back."
 
@@ -1111,7 +1122,7 @@ label ch_24:
 
         "We turn to the right and smell a strange acrid scent coming from the end of the hall."
 
-        #Rook (cross-armed) sprite appears
+        show rook arms
 
         r "This smell reminds me of magic workshops where alchemists combine different ingredients."
 
@@ -1123,19 +1134,19 @@ label ch_24:
 
         r "So this is also an academy of sorcery. Well, considering you studied here I am not surprised."  
 
-        #Rook sprite disappears
+        hide rook arms
 
         "While I was trying to explain that it was not a magic school, we hear a popping sound from the lab, and a strong wind blows the doors open before we can even reach it."
 
         p "What is going on in there?"
 
-        #Chemistry lab background
+        show bg lab with fade
 
         "I look inside to a scene out of a fantasy movie."
 
         "The lab is bigger than I remember it, much bigger. Desks, chairs, beakers, flasks, and a bunch of other lab equipment float around the room. And in the middle of it, a levitating staff glows with a purple light."
 
-        #Rook (weapon out) sprite appears
+        show rook weapon
 
         r "Good find. Unfortunately, it appears to be in defensive mode. Reaching it will not be easy." 
         
@@ -1145,7 +1156,7 @@ label ch_24:
 
         r "Careful!"
 
-        #fireball 2 sfx 
+        play sound "audio/sfx/Fireball 2.ogg"
 
         "Rook yanks me back out of the room and around the corner. I barely clear the doorway before the wall shakes from the three explosive impacts."
 
@@ -1169,23 +1180,23 @@ label ch_24:
 
         "A few tables drift together in front of me to shield me from the flames. Just as before, the fireballs explode violently, but the tables remain unscathed."
 
-        #fireball 2 sfx 
+        play sound "audio/sfx/Fireball 2.ogg"
 
         p  "Just as I thought, if I focus on moving something in the Dreamscape, it actually moves a bit to follow that. Do you think it would work with the staff?"
 
         "I try to imagine the staff falling, but it doesn't happen. As if in chastisement, it shoots another salvo of fireballs at me."
 
-        #fireball 2 sfx 
+        play sound "audio/sfx/Fireball 2.ogg" 
 
         r "That's a good idea, but don't bother to affect it with your powers."
 
         r "Shield me with furniture and I will run to it. You shouldn't risk approaching it. Unlike any old object from the Dreamscape, this can and will hurt you."
 
-        #Rook sprite disappears
+        hide rook weapon
 
         "I watch as Rook jumps from table to chair to table, all the while trying my best to intercept the fire from the staff."
 
-        #fireball 2 sfx 
+        play sound "audio/sfx/Fireball 2.ogg"
 
         "This is nerve wracking. Exposing myself is one thing, but now Rook's life depends on me. I take a deep breath and refocus."
 
@@ -1195,7 +1206,7 @@ label ch_24:
 
         "I try to throw the furniture away from Rook as he tucks into a roll to land. It hits the ground with a loud crash, echoing down the halls."
 
-        #Rook (arm crossed) sprite appears
+        show rook arms
 
         "Rook stands up from the debris and brushes some shattered glass off his armor. He waves with the staff and gives me a thumbs up."
 
@@ -1203,13 +1214,11 @@ label ch_24:
 
         "We have what we came for. It's time to leave."
 
-    #lightened hallway background
+    show bg hallway with fade
 
     "Now that we have one weapon, we could leave now or try to go get another."
 
     "As we walk back through the halls, Rook looks around at the flyers and photos on the walls."
-
-    #Rook (cross armed) sprite appears
 
     r "Oh, what is this? What about that?"
 
@@ -1229,25 +1238,29 @@ label ch_24:
 
     "The lights in the hall suddenly turned off, plunging us into darkness."
 
-    #hallway background to 20% brightness
+    #hallway background to 20% brightness - no. robsawn
 
     p "Uh, w- what was that?"
 
-    #Rook (weapon out) sprite appears
+    show rook weapon at left_third
 
     r "It seems it's finally caught up to us. We need to leave. Follow me, I remember the path back."
 
     "Rook holds his gun up against his shoulder, ready to shoot. I clutch the new artifact, and we slowly and deliberately move toward the exit."
 
-    #monster steppies sfx
+    play sound "audio/sfx/monster steppies.ogg"
 
     "Somewhere in the building we hear heavy steps echo throughout the halls. It was after us, inside the school."
 
     "We're almost at the exit, we just need to pass the last hallway. I turn around and freeze."
 
-    #bg up to 40% brightness, aimless blue ember vfx
+    #bg up to 40% brightness - no. robsawn
 
-    #monster (calm) sprite
+    #aimless blue ember vfx
+    show emberback zorder 5
+    show embermid zorder 15
+
+    show monster calm at right_third
 
     "The monster was standing in the middle of the hall. It was also bigger this time. Did it grow, or did the hallway shrink?"
 
@@ -1256,8 +1269,6 @@ label ch_24:
     "The monster lumbers towards us, its flickering fiery mane casting erratic shadows across the walls and floor."
 
     p_i "We needed to do something."
-
-    #Rook (weapon out) sprite appears left third, monster to right third
 
     r "Listen here, kid. I'll act as a distraction and lure it away from you. You take that weapon and run for it."
 
@@ -1271,15 +1282,15 @@ label ch_24:
 
     "Rook then stands to his full height, aims at the monster, and fires his weapon."
 
-    #rook gunshot sfx
+    play sound "audio/sfx/Rook_s gunshot.ogg"
 
     r "Hey, ugly! Want to have a rematch? I'm right here!"
 
     "His shot clips the monster's chest, but that just seems to enrage it."
 
-    #switch monster to angry sprite
+    show monster angry at right_third
 
-    #monster lunge sfx
+    play sound "audio/sfx/monster lunge.ogg"
 
     "The monster's head erupts in flame and it rushes him with a roar that makes my blood run cold."
 
@@ -1295,109 +1306,6 @@ label ch_24:
         "Help Rook":
             $ rook_inj = False
 
-    if not rook_inj:
-        p_i "No. I can't leave him behind! If Rook falls here, the monster will chase after me anyway. Standing our ground is the only option!"
-
-    if blunder:
-        p_i "I won't run now, not when I have to make up for before. I'm not running from my past mistakes, and I refuse to make more!"
-
-    if not blunder:
-        p_i "I fought this thing before when I was with Knight, I can do it again!"
-
-    "Throwing caution to the wind, I grab my weapon tightly and run into the fray."
-
-    if wep_3 == 0:
-        p "Brace yourself!"
-
-        "Even though the sword felt heavy just minutes ago, I am able to lift it easily into a stance. I run towards the monster's legs and swing my sword into it."
-
-        "The blade easily slashes into the beast's joint, causing a gout of flames to burst from the wound. I leap back to avoid the blast, and the monster whirls on me."
-
-        p "Come and get me!"
-
-        "The monster swings out with a claws hand to try to take off my head. Instead of dodging this one, I brace my blade and parry its hand away."
-
-        p "Rook, hit it!"
-
-        #show Rook with weapon
-
-        r "Got it, kid!"
-
-    elif wep_3 == 1:
-        p "Rook!"
-
-        #show Rook with weapon
-
-        "I call out to Rook, who is blocking lashes of the monster's tail with his weapon."
-
-        p "Push it towards me!"
-
-        r "Kid!"
-
-        "Rook knocks the tail aside again, drops a shoulder down, and bullrushes the monster. As it stumbles backward, I brace my trident and harpoon one of its knees to cripple it."
-
-        p "Say goodbye to your kneecaps! Rook, now!"
-
-        r "Aye! You got it, kid!"
-
-    else:
-        p "Let's see you dodge this!"
-
-        "I aim my staff as if it were a rifle, and flames climb up its length before forming arrows of gleaming light at the end."
-
-        p "Rook, jump back!"
-
-        #show Rook with weapon
-
-        "Hearing my shout, Rook leaps backwards. The monster brings both claws down into the space he had occupied a moment before, and it begins to turn toward the sound of my voice. The spell flies from my staff towards the monster, peppering it with bolts of light."
-
-        "The monster tries to shield itself with its arms and tail, but leaves itself wide open in doing so."
-
-        p "Rook, now!"
-
-        r "Got it, kid!"
-
-    #show Rook with weapon & eyes glowing
-
-    "While the monster is fixated on me, Rook leaps into the air and swings his axe into the beast. The blade carves deep into its shoulder and embeds itself with the barrel of the gun pointing at the monster's face. Then Rook, holding onto his weapon, uses it to swing up onto the monster's body, where grabs the trigger and shoots the monster in the head point-blank."
-
-    #Rook gunshot sfx
-
-    #hide monster sprite, recenter Rook
-
-    "The monster falls to the floor, its flames petering out. The fight is over."
-
-    p "Is it down?"
-
-    #Rook w/ weapon, no glowing eyes
-
-    r "Looks like it, kid. For now, at least."
-
-    #Rook crossed-arms laughing
-
-    r "That was a nice fight. But tell me, kid, why did you run back? I told you to run away, didn't I? Or is this old man too unreliable for you?"
-
-    p "No, Rook, you're one of Shiori's guards. There's no way you're unreliable. It's just, when I was gonna run away, I hesitated. I didn't want to run from the monster. I wanted to run from my cowardice."
-
-    p "The monster will come for us even if we run. I'm done being prey."
-
-    if blunder:
-        p "Plus..."
-
-        p_i "Plus, I can't let Knight down a second time."
-
-        r "Hm? What was that, kid?"
-
-        p "Nothing."
-
-    #Rook cross-arms neutral
-
-    r "Well then, I suppose we should get going."
-
-    p "Right. Shiori and Knight might worry if we take any longer."
-
-    "We walk out of the school's main entrance, leaving the incapacitated monster behind as we head back to our exit portal."
-
     if rook_inj:
         p_i "I need to leave, now! Rook is baiting the monster away, right now is the only chance I'll ever get to run. Even if the worst happens, as long as I can get out of this place, his sacrifice will not be in vain!"
 
@@ -1408,15 +1316,19 @@ label ch_24:
 
         p_i "Come on, don't notice me now!"
 
-        #hide Rook and monster here (to simulate MC looking away)
+        hide rook arms
 
         "The monster is completely preoccupied with Rook behind me. All I can hear are gunshots and the sounds of a struggle. I can only hope Rook comes out on top."
 
         "I don't look back. I can't afford to, not when the exit's right there. With a final sprint for the doors, I make it out of the school, leaving Rook behind."
 
+        hide emberback
+        hide embermid
+        show bg cursedforest with dissolve_fast
+
         "I run through the courtyard as fast as I can, and hide behind the trees outside, waiting for the fighting to stop. With the indistinct sounds as my only guide, I don't know how long it's going to last. But then..."
 
-        #show injured Rook injured (bloody)
+        show rook injuredblood
 
         r "Ugh... Got me pretty good, didn't you?"
 
@@ -1458,33 +1370,144 @@ label ch_24:
 
         r "Now, let's get that weapon out of here!"
 
-        #show Rook with bandages
+        show rook injured
 
         "Spurred on by Rook, I start leading the way back towards the exit portal. Along the way, Rook stumbles as he walks, but manages to stay on his feet. Partway there we stop so I can assist in changing his bandages in hopes that it would help."
+
+    else:
+        p_i "No. I can't leave him behind! If Rook falls here, the monster will chase after me anyway. Standing our ground is the only option!"
+
+        if blunder:
+            p_i "I won't run now, not when I have to make up for before. I'm not running from my past mistakes, and I refuse to make more!"
+
+        if not blunder:
+            p_i "I fought this thing before when I was with Knight, I can do it again!"
+
+        "Throwing caution to the wind, I grab my weapon tightly and run into the fray."
+
+        if wep_3 == 0:
+            p "Brace yourself!"
+
+            "Even though the sword felt heavy just minutes ago, I am able to lift it easily into a stance. I run towards the monster's legs and swing my sword into it."
+
+            "The blade easily slashes into the beast's joint, causing a gout of flames to burst from the wound. I leap back to avoid the blast, and the monster whirls on me."
+
+            p "Come and get me!"
+
+            "The monster swings out with a claws hand to try to take off my head. Instead of dodging this one, I brace my blade and parry its hand away."
+
+            p "Rook, hit it!"
+
+            r "Got it, kid!"
+
+        elif wep_3 == 1:
+            p "Rook!"
+
+            "I call out to Rook, who is blocking lashes of the monster's tail with his weapon."
+
+            p "Push it towards me!"
+
+            r "Kid!"
+
+            "Rook knocks the tail aside again, drops a shoulder down, and bullrushes the monster. As it stumbles backward, I brace my trident and harpoon one of its knees to cripple it."
+
+            p "Say goodbye to your kneecaps! Rook, now!"
+
+            r "Aye! You got it, kid!"
+
+        else:
+            p "Let's see you dodge this!"
+
+            "I aim my staff as if it were a rifle, and flames climb up its length before forming arrows of gleaming light at the end."
+
+            p "Rook, jump back!"
+
+            "Hearing my shout, Rook leaps backwards. The monster brings both claws down into the space he had occupied a moment before, and it begins to turn toward the sound of my voice. The spell flies from my staff towards the monster, peppering it with bolts of light."
+
+            "The monster tries to shield itself with its arms and tail, but leaves itself wide open in doing so."
+
+            p "Rook, now!"
+
+            r "Got it, kid!"
+
+        show rook weaponeyeglow at left_third
+
+        "While the monster is fixated on me, Rook leaps into the air and swings his axe into the beast. The blade carves deep into its shoulder and embeds itself with the barrel of the gun pointing at the monster's face. Then Rook, holding onto his weapon, uses it to swing up onto the monster's body, where grabs the trigger and shoots the monster in the head point-blank."
+
+        play sound "audio/sfx/Rook_s gunshot.ogg"
+
+        hide monster angry
+        show rook weaponeyeglow at center
+        with move
+
+        hide emberback
+        hide embermid
+
+        "The monster falls to the floor, its flames petering out. The fight is over."
+
+        p "Is it down?"
+
+        show rook weapon
+
+        r "Looks like it, kid. For now, at least."
+
+        show rook armslaugh
+
+        r "That was a nice fight. But tell me, kid, why did you run back? I told you to run away, didn't I? Or is this old man too unreliable for you?"
+
+        p "No, Rook, you're one of Shiori's guards. There's no way you're unreliable. It's just, when I was gonna run away, I hesitated. I didn't want to run from the monster. I wanted to run from my cowardice."
+
+        p "The monster will come for us even if we run. I'm done being prey."
+
+        if blunder:
+            p "Plus..."
+
+            p_i "Plus, I can't let Knight down a second time."
+
+            r "Hm? What was that, kid?"
+
+            p "Nothing."
+
+        show rook arms
+
+        r "Well then, I suppose we should get going."
+
+        p "Right. Shiori and Knight might worry if we take any longer."
+
+        show bg cursedforest with dissolve_fast
+
+        "We walk out of the school's main entrance, leaving the incapacitated monster behind as we head back to our exit portal."
 
     "After some time, we manage to make it back to where we entered. Both of us step onto the spell circle, with me holding on tight to my newfound weapon."
 
     "Once more, the circle shines blindingly bright, and the scenery goes black."
 
-    #hide rook, bg quickly fades to white
+    if rook_inj:
+        hide rook injured
+    else:
+        hide rook arms
+
+    show black with flash_white
+    stop music
 
     "As Knight finishes explaining, I suddenly feel lightheaded. I'm blinded as everything around us starts to glow with an intense white, and then..."
-
-    #cut to black, kill bgm
 
     "..."
 
     "Again, it takes a while for us to come back to reality. Like waking up from a dream, I'm inclined to lie still for just a bit more..."
 
-    #fade in ritual room bg & Shiori neutral sprite in the middle
+    scene bg ritual with fade
+    show shiori neutral
 
-    #play exposition bgm
+    play music "audio/3 Fantasy/1 Relaxed Exposition Track L 2.ogg" loop fadein 0.5
 
     shi "... Hey, are you awake?"
 
     "Shiori pokes my face with her finger, trying to wake me up."
 
-    #slide Shiori left third, Knight neutral right third
+    show shiori neutral at left_third
+    with move
+    show knight weapon at right_third
 
     k "Oi, how long are you gonna sleep, Bishop! Rook's already up!"
 
@@ -1494,14 +1517,16 @@ label ch_24:
 
     "I get up from the ritual circle and walk towards Shiori. Rook is already sitting in a chair against the wall, leaning on the table next to him."
 
-    #slide shiori out to left, slide rook injured clean in on left (shiori leaves left side, rook enters left side)
+    show shiori neutral at offscreenleft
+    show rook injured at left_third
+    with moveinleft
 
     r "Oh, that was exhausting. At least these old bones can still keep up with the young'uns."
 
     k "What happened in there, Rook?"
 
     if not rook_inj:
-        #show Rook laughing
+        show rook armslaugh
 
         r "Well, outside of the monster coming to us to get beaten up, it was quite peaceful. Hahaha!"
 
@@ -1519,11 +1544,11 @@ label ch_24:
 
         k "So you got hurt? How bad's the phantom pain this time around?"
 
-        #show rook injured clean eyes
+        show rook injuredeyeglow
 
         r "Gash down my side, but that's about it. It hurts when I move, but at least the wound's not there now. Don't worry much, this old man's still tough!"
 
-        #Rook goes back to no glowing eyes
+        show rook injured
 
         k "Well, at least you can still move around. Since it's your decision, I suppose I won't fault Bishop for it. Anyways, what did you find?"
 
@@ -1532,24 +1557,27 @@ label ch_24:
 
             r "Aye. One of the lost souls who fought against the blasted beast. The sword is ours now, and we have inherited its will to fight. It's our duty to finish the job."
 
-            #hide knight & rook
+            hide knight weapon
+            hide rook injured
 
         if wep_3 == 1:
             p "We took this trident from the bottom of a pool. It stabs good, and that's about it."
 
-            #hide knight & rook, surprised Shiori pops up
+            hide knight weapon
+            hide rook injured
+            show shiori surprised
 
             shi "Hey, give me that! Lemme take a look."
 
             "Shiori takes the trident from my hands."
 
-            #show Shiori neutral2
+            show shiori neutral
 
             shi "Huh, are you sure you didn't steal this from somewhere? Because this looks similar to the trident someone I know owns. It's blue, it's sharp, and it's kinda stinky."
 
             p "... Shiori, the point of your mission was to steal something from the dream."
 
-            #show Shiori smiling
+            show shiori smile
 
             shi "... Oh yeah, I forgot about that. Teehee~"
 
@@ -1558,47 +1586,48 @@ label ch_24:
 
             k "Well would you look at that, we finally have a mage."
 
-            # replace rook w/ mad Shiori
+            hide rook injured
+            show shiori frown
 
             shi "Hey! I cast spells too, y'know?"
 
             k "Queen, you know that's not how I meant it..."
 
-            #hide knight
+            hide knight weapon
 
-    #show Shiori satisfied
+    show shiori satisfied
 
     shi "Well, since we got a new weapon in the end, I'd call this mission a success! Yay!"
 
     "We all give a loud celebratory cheer."
 
-    #Shiori smiling
+    show shiori smile
 
     shi "Alright then, everyone, we've prepared as much as we can. Today's the fourth day of the assault, which means that the night of reckoning will soon be upon us."
 
     shi "Rest up as much as you can. Steel your nerves, grab your weapons tight and your fears even tighter. Everything will be decided tonight."
 
-    #keep Shiori central, show Knight neutral right third
+    show knight weapon at right_third
 
     k "Soon, huh? Good!"
 
-    #show Rook crossed-armed with glowing eyes left third
+    show rook armseyeglow at left_third
 
     r "Yes, soon… At long last!"
 
     "Knight and Rook both express anticipation of the grand finale. Then, Shiori turns towards me."
 
-    #show neutral Shiori
+    show shiori neutral
 
-    shi "How about you, {p.name}? How are you feeling?"
+    shi "How about you, [player_name]? How are you feeling?"
 
     p "I'd be lying if I said I'm not scared, but we've come this far already. I can't give up now!"
 
-    #Shiori satisfied
-
     shi "Nice answer. Well then, let us prepare for the night. I'll see you guys here again at the same time this evening."
 
-    #everyone fade away
+    hide shiori neutral with dissolve_fast
+    hide rook armseyeglow with dissolve_fast
+    hide knight weapon with dissolve_fast
 
     "After saying that, Shiori dismisses us to finish our preparations. Rook, Knight, and Shiori all set out in different directions, leaving me alone in the ritual chamber. An opening of the map tells me that they've retreated to the same places as last time."
 
@@ -1609,7 +1638,6 @@ label ch_24:
     "With that revelation ringing deep in my thoughts, I head towards my room to prepare for the final fight."
 
     "There's no turning back now."
-
 
     stop sound fadeout 1.0
     stop music fadeout 1.0

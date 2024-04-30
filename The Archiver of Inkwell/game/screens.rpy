@@ -709,12 +709,22 @@ screen extras():
             text _("All the Headpats and cuddles from us to you. Your Midnight Wolf Novelite.\n\n")
             text _("Love, Blackwolf24\n~~~~~\n\n\n")
 
+            #Boonster
+            text _("Boonster\n~~~~~\n")
+            text _("Dearest Princess-Nurse-News-Nyan-Cow-Toe-Judge-Rapper-Gamer-Protag-Wolf-Teacher-Chef-Witch-Nun—and so much more—vella,\n\n")
+            text _("Happy birthday! I hope your day is brimming with joyous activities, surrounded by equally fantastic company and sumptuous food that elevates your soul to a blissful realm of euphoria. You deserve all of this and so much more. Please forgive my usual brevity; I tend to embrace a laconic style, but today, I'll make a concerted effort because you truly deserve to know how cherished you are.\n\n")
+            text _("On this special day, I wanted to take a moment to tell you how much you mean to me. As I typed the opening greeting, I was reminded of all the wonderful moments we've shared throughout the year. I'm always amazed by the level of creativity and diversity that bursts from your imagination. Whether you're streaming, crafting stories, developing in Unity, playing piano, or singing, your talent and hard work know no bounds.\n\n")
+            text _("It's a story I've heard retold ad infinitum—your ability to rekindle and ignite the flames of passion never ceases to amaze me. For many years, I've renounced pixel art and video editing, but your infectious enthusiasm and tenacity have breathed new life into passions I had long forgotten. And when you share your passion with us and the world, I'm drawn to your efforts like a moth to a flame. When you cry, I cry; when you laugh, I laugh; when you smile, I smile.\n\n")
+            text _("Thank you for being our precious, charming, and adorkable Archiver. Let's continue to laugh, cry, smile, and embrace the future together. Let's continue to make more treasured memories. Let's continue to find our happily ever after.\n\n")
+            text _("In my usual and true fashion, I leave you with this: I'm proud of you, Shiorin. Now and forever.\n\n")
+            text _("Sincerely, your Novelknight,\nBoon.\n~~~~~\n\n\n")
+
             #Forgotten Skinner
             text _("Forgotten Skinner\n~~~~~\n")
             text _("Dear Archiver,")
-            text _("Good golly, what a ride it was. To see how much you’ve grown since debut, and all those wonderful things you’ve achieved… It’s not going to be easy to express how much this day means to us, but I can say, it all started with a tangent...\n\n")
-            text _("It’s been a long time since you joined Hololive and made this wonderful community, full of artists, writers and probably the most creative minds I’ve ever seen.. And now, that we are all here celebrating your birthday, I must say with all my heart… Thank you, Shiori. For igniting the dreams and inspirations of so many aspiring artists, writers and storytellers around the world. For all the good memories and smiles you brought to this community; and especially for always encouraging us novelites to be glad to be ourselves. When days become too dark to handle, your advice feels like a hopeful breeze, bringing back a smile I thought was a goner long ago. For being related to the abyss, you really made this place a brighter one for sure.\n\n")
-            text _("Anyway, I hope you have a wonderful birthday and that you spend time with all the people you love and care for. Never forget how much us novelites appreciate and are grateful to you. Inkwell will be always there for you, as you did for all of us. And as for me, I can’t help but wonder what story is waiting to be unfolded by you next. Whenever that time comes, I’ll be there to follow your journey. Happy Birthday, Archiver… You deserve the happiest of them all!\n\n")
+            text _("Good golly, what a ride it was. To see how much you've grown since debut, and all those wonderful things you've achieved… It's not going to be easy to express how much this day means to us, but I can say, it all started with a tangent...\n\n")
+            text _("It's been a long time since you joined Hololive and made this wonderful community, full of artists, writers and probably the most creative minds I've ever seen.. And now, that we are all here celebrating your birthday, I must say with all my heart… Thank you, Shiori. For igniting the dreams and inspirations of so many aspiring artists, writers and storytellers around the world. For all the good memories and smiles you brought to this community; and especially for always encouraging us novelites to be glad to be ourselves. When days become too dark to handle, your advice feels like a hopeful breeze, bringing back a smile I thought was a goner long ago. For being related to the abyss, you really made this place a brighter one for sure.\n\n")
+            text _("Anyway, I hope you have a wonderful birthday and that you spend time with all the people you love and care for. Never forget how much us novelites appreciate and are grateful to you. Inkwell will be always there for you, as you did for all of us. And as for me, I can't help but wonder what story is waiting to be unfolded by you next. Whenever that time comes, I'll be there to follow your journey. Happy Birthday, Archiver… You deserve the happiest of them all!\n\n")
             text _("Last eternal, Shiori Novella\n")
             text _("Sincerely,\nForgotten Skinner\n~~~~~\n\n\n")
 
@@ -761,10 +771,10 @@ screen extras():
             text _("Kianrame\n~~~~~\n")
             text _("Shiori~n!!!\n\n")
             text _("Hello Shiori!!!!!! I wanted to reach out and wish you a happy birthday!\n\n")
-            text _("I wish you a joyful birthday and a memorable day. I’m happy to one of the Novelites. I really like your streams and speed running stream. You can’t believe how happy I was when you saw my cosplay, such a stupid thing made my cry.\n\n")
+            text _("I wish you a joyful birthday and a memorable day. I'm happy to one of the Novelites. I really like your streams and speed running stream. You can't believe how happy I was when you saw my cosplay, such a stupid thing made my cry.\n\n")
             text _("You helped me go through depressed day and working on my projects for college, watching you made me motivated to finish them.\n\n")
             text _("You give me courage to try new things and not to give up. And I love how you can drill one topic for infinite time.\n\n")
-            text _("Thank you for everything and sorry if I made mistakes, I’m not good at writing and spilling out my emotions ;;;\n\n")
+            text _("Thank you for everything and sorry if I made mistakes, I'm not good at writing and spilling out my emotions ;;;\n\n")
             text _("Extra kisses for Pepper (and you Ofc)\nKianrame\n~~~~~\n\n\n")
 
             #MiscDan
@@ -807,8 +817,30 @@ screen extras():
             #Real_
             text _("Real_\n~~~~~\n")
             text _("Happy birthday, Shiori!\n\n")
-            text _("I hope that you have an especially great day today, and that you can have some good food and some nice birthday loot! Thank you for all the gifts you've given us Novelites over your time here already, from the only slightly unhinged chats and ramblings to the wonderful community Unity (commUnity?), writing, and artwork projects that you've put together for us to take part in. Your willingness to go above and beyond like that is always touching, and it's what's made me as loyal a Novelite as I am. I've never been as active in a fan community as I have been with yours, so thank you for providing an environment where I can come out of my shell for a bit! Here's to this birthday, and many more yet to come with the Novelites at your side!\n\n")
+            text _("I hope that you have an especially great day today, and that you can have some good food and some nice birthday loot! Thank you for all the gifts you've given us Novelites over your time here already, from the only slightly unhinged chats and ramblings to the wonderful community Unity (commUnity?) projects, writing, and artwork projects that you've put together for us to take part in. Your willingness to go above and beyond like that is always touching, and it's what's made me as loyal a Novelite as I am. I've never been as active in a fan community as I have been with yours, so thank you for providing an environment where I can come out of my shell for a bit! Here's to this birthday, and many more yet to come with the Novelites at your side!\n\n")
             text _("Happy birthday and many well wishes,\nReal_, Novelknight\n~~~~~\n\n\n")
+
+            #Recidivous
+            text _("Dear Shiori,\n\n")
+            text _("Happy birthday! It's the one day of the year you're entitled to spoil yourself. Don't hesitate to relinquish some of your responsibilities and act more selfishly, like eating your favorite foods or buying new dresses!\n\n")
+            text _("You're my muse, Shiori. I have never been more inspired to write since you debuted as your writing prompts have allowed me to take up writing again. I look back at the days before I started writing for the prompts, realizing that I barely indulged in a habit I once loved to do. Now I'm swamped with so many ideas and projects that I have actually to organize and sort them by priority!\n\n")
+            text _("Your encouragement to the Novelites to keep pursuing their passions and to improve themselves is what helps me keep going even in the moments I want to give it all up again.\n\n")
+            text _("I want you to know that the Novelites and myself will always support you as you have always done for us. We know how hard you work, and we see how much love, care, and passion you give to everything you do. If there comes a time you're questioning yourself or are feeling dejected and alone, remember that you will always have us who will cheer you on.\n\n")
+            text _("Once more, happy birthday! I can't wait to watch your next stream, Shiori.\n\n")
+            text _("Recidivous\n~~~~~\n\n\n")
+
+            #Redbrick
+            text _("Redbrick\n~~~~~\n")
+            text _("To Miss Shiori Novella\n\n")
+            text _("No words can describe how greatful I am to know you. The kind heart that you showed, the hard work you do every day to make every streamings better...\n")
+            text _("Your words with generousity made me cry from the inside. Interaction with us was no contest to any other fake smiles and praises that I had for my entire life.\n")
+            text _("Thank you for giving me hope that I can do something to talents that I like. (Of course, it's admire-like, not love-like)\n")
+            text _("Wanna say a lot in this letter, but that'll be boring and I think I enough said those on Twitter.\n")
+            text _("I hope one day you and Advent visit Korea too.\n")
+            text _("I hope one day you and Advent visit Korea too.\n")
+            text _("Until that miraculous day, Advent Advance!\n")
+            text _("Sorry for my non organized thoughts and sayings\n\n")
+            text _("From Korea, Redbrick.\n~~~~~\n\n\n")
 
             #Shiori's Jacket
             text _("Shiori's Jacket\n~~~~~\n")
@@ -825,18 +857,18 @@ screen extras():
             #Smilely
             text _("Smilely\n~~~~~\n")
             text _("Happy birthday Shiori!\n\n")
-            text _("I can’t believe it has been 8 months since your debut. I remember watching your debut stream and thinking “yeah, she’s cool”. From then on, I continued to watch your streams, and realized you have become my oshi.\n\n")
+            text _("I can't believe it has been 8 months since your debut. I remember watching your debut stream and thinking “yeah, she's cool”. From then on, I continued to watch your streams, and realized you have become my oshi.\n\n")
             text _("You have this natural charisma that just draws people to you. You are so creative with the projects that you do like the Unity streams. Your tangents are quite entertaining and make me laugh all the time. Most importantly, you are just super genuine and kind.\n\n")
-            text _("I also wanted to thank you for liking my little choreographies for both Advent’s cover of Halloween Night, Tonight and your cover of Whisper Whisper Whisper. Truth be told, I have only danced seriously for a year now, but seeing your comments of encouragement gives me motivation to keep on improving. So if you ever decide to release another song in the future, I will be ready to work on a choreo for said song.\n\n")
-            text _("The last thing I want to say before wrapping everything up is thank you for fostering such an amazing community. The Novelites have been so kind to me ever since I decided to get out of my comfort zone and actually interact with the community. There are so many talented artists, writers, musicians, voice actors, editors in Inkwell, and it’s all thanks to you. So many people have continued their passion because of you. So no matter what, us Novelites will always support you with whatever talent we have to make you happy. Thank you for being our Archiver, and once again happy birthday Shiori!\n\n")
-            text _("From Inkwell’s Resident Dancer,\nSmilely\n~~~~~\n\n\n")
+            text _("I also wanted to thank you for liking my little choreographies for both Advent's cover of Halloween Night, Tonight and your cover of Whisper Whisper Whisper. Truth be told, I have only danced seriously for a year now, but seeing your comments of encouragement gives me motivation to keep on improving. So if you ever decide to release another song in the future, I will be ready to work on a choreo for said song.\n\n")
+            text _("The last thing I want to say before wrapping everything up is thank you for fostering such an amazing community. The Novelites have been so kind to me ever since I decided to get out of my comfort zone and actually interact with the community. There are so many talented artists, writers, musicians, voice actors, editors in Inkwell, and it's all thanks to you. So many people have continued their passion because of you. So no matter what, us Novelites will always support you with whatever talent we have to make you happy. Thank you for being our Archiver, and once again happy birthday Shiori!\n\n")
+            text _("From Inkwell's Resident Dancer,\nSmilely\n~~~~~\n\n\n")
 
             #SynergyREEE
             text _("SynergyREEE\n~~~~~\n")
             text _("Happy birthday! Hope you enjoy your first mortality countdown as part of Hololive Production!\n\n")
-            text _("Hi. It’s me, the guy who made you some weapons and funny(?) memes on the internet. It’s pretty funny, isn’t it, that despite me being in this rabbit hole for 4 years now, it was you who pushed me to start creating something. I don’t even remember how it started, probably from me reading how you encouraged us to make fanfictions of you right from debut. So I did, like everyone else, and the process of writing them pulled me into a new community that I enjoy staying in. I made new friends, I learned MMD animation, I helped make a visual novel about you, and I started to enjoy how it feels to interact with people again. So thanks, Shiori, for creating such a unique place to be in.\n\n")
+            text _("Hi. It's me, the guy who made you some weapons and funny(?) memes on the internet. It's pretty funny, isn't it, that despite me being in this rabbit hole for 4 years now, it was you who pushed me to start creating something. I don't even remember how it started, probably from me reading how you encouraged us to make fanfictions of you right from debut. So I did, like everyone else, and the process of writing them pulled me into a new community that I enjoy staying in. I made new friends, I learned MMD animation, I helped make a visual novel about you, and I started to enjoy how it feels to interact with people again. So thanks, Shiori, for creating such a unique place to be in.\n\n")
             text _("Also, everytime you see and like the stuff I made, it gives me encouragement that what I made is actually enjoyable, and it gives me motivation to make more. For someone who struggles with finding motivation in doing anything, especially my responsibilities, this means a lot to me.\n\n")
-            text _("Entertainment and being able to brighten someone’s day is your goal, and you certainly hit those two marks spectacularly. At the very least, you’ve been shining like a star in these eyes of mine, brightening up my day without fail. And this time, I hope we can do the same for you with this visual novel. I hope you enjoy the stories we weaved, and I hope you enjoy this birthday project as much as we did creating it.\n\n")
+            text _("Entertainment and being able to brighten someone's day is your goal, and you certainly hit those two marks spectacularly. At the very least, you've been shining like a star in these eyes of mine, brightening up my day without fail. And this time, I hope we can do the same for you with this visual novel. I hope you enjoy the stories we weaved, and I hope you enjoy this birthday project as much as we did creating it.\n\n")
             text _("Once again, happy birthday Shiori! Onwards to archiving these happy moments forever.\n\n")
             text _("(Also pay your child support)\n-SynergyREEE\n~~~~~\n\n\n")
 

@@ -11,7 +11,7 @@ label ch_12:
     stop music
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
 
-    show cultist at center
+    show cultist as cultist1 at center
 
     "I catch myself spacing out and staring at a person standing outside. I blink and finally notice the bright yellow raincoat they're wearing. It seems familiar, but I can't quite put my finger on where I've seen it before. As I watch, I notice that they're not moving, and are just standing there."
 
@@ -19,17 +19,16 @@ label ch_12:
 
     s "Hey, mind if I sit here?" with vpunch
 
-    hide cultist
-
     "I jump a little and I look over toward the voice. Seeing my classmate, I just nod and look back out the window."
 
     p "What the...?"
 
-    show cultist at center
+    show cultist as cultist2 at right_third zorder -1
 
     "I notice a second person in a yellow coat, this time in between the buildings."
 
-    hide cultist
+    hide cultist1
+    hide cultist2
 
     "I hear a scraping from my side as my classmate leans forward to look out the window as well. I lean back in my chair and stretch, my back popping as it arches."
 
@@ -95,13 +94,13 @@ label ch_12:
 
     "Walking down the eerily empty halls, I glance out the window and see a familiar head of black and white hair."
 
-    show shiori normal
+    show shiori neutral
 
     p "Isn't that...?"
 
     p_i "I should say hi, it'll be nice to walk with someone anyway."
 
-    hide shiori normal
+    hide shiori neutral
 
     "I push open the door to exit the building, picking up the pace."
 
@@ -117,13 +116,17 @@ label ch_12:
 
     p "Where'd she go? Wasn't she right here?"
 
-    show shiori normal zoom 3.0
+    show shiori smile: 
+        zoom 3.0
 
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
 
     shi "Boo!" with vpunch
 
-    show shiori normal zoom 1.0
+    show shiori smile: 
+        ease 0.5
+        zoom 1.0
+
     stop music 
     play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
 
@@ -131,7 +134,8 @@ label ch_12:
 
     p "Jeez... You scared me!"
 
-    #shio-giggle
+    show shiori satisfied
+    play sound "audio/shiogiggles/Shio giggles 1.ogg"
 
     "Shiori giggles in reply and grins."
 
@@ -143,13 +147,19 @@ label ch_12:
 
     p "You really did, good job."
 
+    show shiori elated
+
     shi "Yay! Anyway, I'm surprised to see you here, usually all the classes in this building are in session now. Was yours canceled or something?"
 
     p "Honestly? Not sure. No one showed up, so I suppose so."
 
+    show shiori frown
+
     "Shiori tilts her head and frowns a little."
 
     p "You wouldn't happen to have a friend in one of those classes who might know, would you?"
+
+    show shiori neutral
 
     shi "No, sorry. I don't get out much, so..."
 
@@ -160,29 +170,32 @@ label ch_12:
     show cultist at right_third zorder -1
     stop music
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
+    play voice "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5
 
     p_i "Oh, did they have a class canceled too?"
 
-    show shiori frown #need to make a suspicious?
+    show shiori serious 
 
     "I turn back toward Shiori. She's watching the person with a frown and narrowed eyes."
 
     p "What? Their class was probably canceled."
 
     hide cultist 
-    #footstep sfx
+    play sound "audio/sfx/footsteps.ogg"
 
     "Shiori shakes her head and grabs my wrist, walking away at a quick pace. I nearly trip over my feet being pulled away so suddenly." with hpunch
 
     p "W-What? Where are we-"
 
-    show shiori surprise #probably a better choice available or easily makeable
+    show shiori surprised
 
     shi "Just come on!" with hpunch
 
     "As Shiori pulls me along, I notice several people in the same yellow rain jackets peering through windows and doors."
 
     p "I guess it is popular, huh?"
+
+    show shiori surprised
 
     shi "What? No, it's not that, I mean, yes, but no! Just come on!"
 
@@ -194,15 +207,19 @@ label ch_12:
 
     "Pulling me inside, Shiori closes the door behind us and continues dragging me along. Soon, we duck into one of the side rooms and she slams that door too, locking it with the deadbolt."
 
+    show shiori neutral
+
     p "What's going on? Why did you pull me like that? Why are we-"
 
+    show shiori frown
+    
     shi "... thought ... time..."
 
     "I only catch part of what she said as she shakes her head and moves to sit down."
 
     p "What?"
 
-    show shiori normalclosed
+    show shiori wink
 
     shi "Oh, don't worry about it..." 
 
@@ -214,15 +231,21 @@ label ch_12:
 
     p "Huh? What do you mean?"
 
-    show shiori sad2
+    show shiori frown
 
     "Shiori sighs in response and looks at me apologetically."
+
+    show shiori neutral
 
     shi "Well, where to start... Um... Hm. Now that I think about it, I don't really know much myself."
 
     p "Well, what do you know? Besides, I'm pretty sure that guy just had a canceled class and was heading somewhere else."
 
+    show shiori surprised
+
     shi "Wait, what? That's it?"
+
+    show shiori neutral
 
     "A look of confusion, shock, and guilt washes over her face for a moment, before passing the next."
 
@@ -240,21 +263,31 @@ label ch_12:
 
     p "The book you've been reading?"
 
+    show shiori satisfied
+
     "Shiori nods."
 
     shi "Trying to, anyway."
+
+    show shiori frown
 
     shi "I've seen the coat people gathering around seemingly random strangers, who then disappear pretty soon after. It's like they're looking for something."
 
     p "This is mostly a college town, Shiori. People come and go all the time. Sounds like a bunch of coincidences."
 
+    show shiori serious
+
     shi "But everyone gathered had the same yellow raincoat!"
 
     "Shiori raises her voice as she continues, but clasps a hand over her mouth, as if to quiet herself."
 
+    show shiori neutral
+
     shi "That doesn't strike you as weird?"
 
     p "People like to be trendy, so it's probably just a new style or something. Maybe from some show or game?"
+
+    show shiori frown
 
     "Shiori sighs in apparent exasperation."
 
@@ -268,9 +301,13 @@ label ch_12:
 
     shi "I see them a lot, but doing something about it... I'd like to."
 
+    show shiori smile
+    
     "Shiori watches me expectantly. That look. How can I say no?"
 
     p "Alright, so what do we do?"
+
+    show shiori neutral
 
     "Shiori puts a finger to her chin in thought."
 
@@ -292,6 +329,8 @@ label ch_12:
 
     p "Yeah, and?"
 
+    show shiori smile
+
     shi "Well, you'll need to be one. Let's say this is in- a juice. Juice. Admittedly, a bad-tasting juice. But you'll be ok, you'll be fine!"
 
     p "Seems like you were saying something else."
@@ -302,9 +341,13 @@ label ch_12:
 
     p "I just need to drink this?"
 
+    show shiori elated
+
     "Shiori looks around for a moment,her eyes lighting up as she stands and walks over to one of the shelves."
 
     "She turns around, cup in hand."
+
+    show shiori smile
 
     shi "Would this make it easier?"
 
@@ -312,7 +355,11 @@ label ch_12:
 
     p "Uh... I'll just use the bottle, at least it's clean. We have no idea how long that cup's been here, or who used it."
 
+    show shiori frown
+
     shi "Aw, that's no fun. It's fiiiine." 
+
+    show shiori serious
 
     "Shiori's expression shifts to a much more serious one."
 
@@ -322,11 +369,15 @@ label ch_12:
 
     p "Like a shot of something. Got it."
 
+    show shiori smile
+
     shi "I don't drink, but sure."
 
     "I bring the bottle to my lips, and immediately gag at the smell. It's like a mix of gasoline, rotting meat, and sewage."
 
     p "That smells... awful. Ok. Down the hatch."
+
+    show shiori frown
 
     "Shiori eyes me warily, her body tensing. Our gazes lock, hers scrutinizing for the smallest change"
 
@@ -335,6 +386,8 @@ label ch_12:
     "The bottle falls to the floor as my grip loosens. My vision wavers, blurring and darkening around the edges. I have to lean on the table to keep myself upright. Shiori rushes over."
 
     p "Wh... What was that... No way that juice was safe... What did you do?"
+
+    show shiori smile
 
     "Shiori just smiles at me. Or at least it looks like she is. It's getting harder to tell as my vision fails me and I crumple onto a chair, but then fall sideways out of it onto the floor."
 
@@ -350,4 +403,5 @@ label ch_12:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
+    stop voice fadeout 1.0
     scene black with Dissolve(1.0)

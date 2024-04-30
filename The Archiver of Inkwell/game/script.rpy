@@ -35,17 +35,6 @@ label start:
         $ Chapter(22).start()
         $ Chapter(23).start()
         $ Chapter(24).start()
-        if mistakes >= 2:
-            $ Chapter(251).start()
-        else:
-            $ Chapter(252).start()
-    # if route_slice:
-    #     $ Chapter(32).start()
-    #     $ Chapter(33).start()
-    #     $ Chapter(34).start()
-    #     if ending > 2:
-    #         $ Chapter(351).start()
-    #     else:
-    #         $ Chapter(352).start()
+        $ Chapter(25).start()
 
     return

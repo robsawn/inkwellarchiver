@@ -1,6 +1,5 @@
 label ch_23:
-    #scene bg throneroom
-    #Rook arms crossed appears
+    show rook arms at right_third
 
     "Rook sets his equipment aside and steps up to me, extending a hand. I reach back out and he clasps me by the forearm. I try not to wince; the guy has some real grip strength."
 
@@ -8,7 +7,8 @@ label ch_23:
 
     p "Thanks. So, uh... What do we do now?"
 
-    #Rook disappears, Shiori happy appears
+    hide rook arms
+    show shiori happy
 
     shi "Oh, right. I haven't explained that yet. Bishop, since you have the power to walk through the Dreamscape itself, we're planning on having you search the place and collect information on the monster."
 
@@ -16,7 +16,7 @@ label ch_23:
 
     p "W-wait, huh? I thought you already knew about it."
 
-    #Shiori neutral
+    show shiori neutral
 
     shi "Well, yes and no. We were able to collect some amount of info thanks to some skirmishes Knight and Rook had with it, but we still have no idea about how it behaves outside of combat or its weaknesses."
 
@@ -26,21 +26,26 @@ label ch_23:
 
     "Knight intervenes in the conversation."
 
-    #Knight sprite (base pose) appears alongside Shiori (shiori left third, knight right third)
+    show shiori neutral at left_third 
+    with move
+
+    show knight weapon at right_third
 
     k "Is that all you can think about? Your own survival?"
 
     k "You weakling, if it wasn't for Queen and your power, I would've left you to rot in that forest."
 
-    #Shiori surprised
+    show shiori surprised
 
     shi "Knight! Stop-"
 
-    #Rook neutral replaces Knight
+    hide knight weapon 
+    show rook arms at right_third
 
     "Before Shiori can continue, Rook puts out a hand to stop her, seemingly wanting Knight to finish speaking her thoughts."
 
-    #if you add Rook there, remove him here
+    hide rook arms
+    show knight weapon at right_third
 
     k "I am still not convinced we even need you when all you can do is run."
 
@@ -54,27 +59,34 @@ label ch_23:
 
     "Rook, satisfied with the speech, nods, while Shiori smiles with a sigh of relief."
 
-    #shiori smiling sprite
+    show shiori smile
 
     shi "Well, I suppose this is fine. So I take it that you'll be the first to go, Knight?"
 
     k "Yes. I'll look after this weakling in his first skirmish. Are you fine with that, Rook?"
 
-    #Rook sprite (arms laugh) appears
+    show shiori smile at center 
+    with move
+    show rook armslaugh at left_third
+    hide knight weapon
 
     r "Aye, that's fine with me. I'll stay back and protect Queen."
 
-    #Rook sprite disappears, Shiori frown appears
+    hide rook armslaugh
+    show shiori frown at center 
+    with move
 
     shi "Alright, then it's settled. Knight, Bishop, you two are going to set out tonight into the Dreamscape. Your mission is to find and observe the monster for any information that can prove to be useful to our hunt. Once that's done, come back immediately. And avoid a confrontation until we know what we're dealing with."
 
-    #Shiori disappears, Knight appears
+    hide shiori frown
+    show knight weapon
 
     k "By your command."
 
     "Knight stands determined after being given her orders. She grips the scabbard of her sword, using her thumb to push the blade out slightly. It seems like she's ready. But..."
 
-    #Knight disappears, Shiori smiling appears
+    hide knight weapon
+    show shiori smile
 
     p "So anyway, Shiori?"
 
@@ -82,11 +94,13 @@ label ch_23:
 
     p "We've been talking a lot about the Dreamscape and all, but you haven't said anything about how to get there."
 
-    #shiori surprised
+    show shiori surprised
 
     shi "Wait, you still don't know how? Even after you went into it already?"
 
     p_i "Huh? What the heck does she mean I 'went into it already'?"
+
+    show shiori neutral
 
     shi "Remember when you got chased by the monster in your sleep? The place you were in is a part of the Dreamscape."
 
@@ -98,31 +112,32 @@ label ch_23:
 
     p "So uh... will that kinda thing happen every time I go to bed?"
 
-    #shiori neutral
-
     shi "Well, yeah? Sort of? It would take a while to explain, though."
 
-    #Knight appears
+    show knight weapon at left_third zorder -1
 
     k "My Queen, a suggestion, if I may? I believe it would be best for this wimp to experience it firsthand. It will save us valuable time."
 
-    #Knight disappears, Rook cross armed appears
+    hide knight weapon
+    show rook arms at right_third zorder -1
 
     r "I concur. We haven't much time. It would be wise if education could be achieved through action."
 
-    #Rook sprite disappears, Shiori smiling eyes closed appears
+    hide rook arms
+    show shiori satisfied
 
     shi "Make sense. Well then, let's just wing it!"
 
     "After Shiori agrees with the knights with such a casual reply, she grabs my wrist and drags me out of the throne room. Behind us, Rook goes back to cleaning his weapon on the stairs while Knight follows us out of the room."
 
     #all sprites and bg fade to black
+    scene black with dissolve_slow
 
     "After a number of twists and turns, we arrive in a strange room deep inside the castle. It's actually kinda weird how deep this place is compared to the throne room."
 
-    #Ritual room bg
+    scene bg ritual with fade
 
-    #shiori neutral
+    show shiori neutral
 
     "Looking around, I can see a large and ominous ritual circle etched into the floor, with several smaller circles residing within it. Set aside near one of the walls are... pillows and blankets?"
 
@@ -142,12 +157,16 @@ label ch_23:
 
     "While I stand there and contemplate on how sketchy this is, Shiori just stands there looking at me expectantly, as if waiting for me to go lie down."
 
-    #Knight appears
+    show knight weapon at right_third
 
     "Meanwhile, Knight walks past me and goes towards the pillow stack."
 
     k "What are you standing there for? Here!"
-    #at this point have Knight be the only sprite on screen
+
+    show knight weapon at center 
+    with move
+    hide shiori neutral
+
     "As Knight calls out to me, she tosses a pillow at me, hitting me square in the face with a loud thud."
 
     k "Put that in the center, why don't you? You should at least be able to do that much."
@@ -164,7 +183,9 @@ label ch_23:
 
     "She points at the outer edge. I thought she was going to sleep there. Is it actually for me?"
 
-    #Knight moves to left third, Shiori neutral appears right third
+    show knight weapon at left_third 
+    with move
+    show shiori neutral at right_third
 
     shi "Hold on, Knight. Let him sleep in the center."
 
@@ -174,7 +195,9 @@ label ch_23:
 
     p "Wait, 'guide the path'? What does that mean?"
 
-    #Knight disappears, Shiori middle
+    show shiori neutral at right_third 
+    with move
+    hide knight weapon
 
     shi "The spell circle was first designed for multiple people to be able to enter the Dreamscape at the same time, but the process usually causes everyone to be separated upon entry." 
 
@@ -186,13 +209,14 @@ label ch_23:
 
     shi "Now then, Knight, I would like to have him get used to it as fast as possible. Wasn't it you who said that it would be best to have him experience things firsthand?"
 
-    #Shiori disappears, Knight reappears
+    hide shiori neutral
+    show knight weapon
 
     k "Ah- I supposed I did... Fine, I will abide."
 
     k "Weakling! Get in the center! We're going."
 
-    #Knight sprite disappears
+    hide knight weapon
 
     "I sigh and walk to the center, lying down as ordered. I have no idea what this is going to do or feel like, but I think I can trust Shiori, seeing how far she's gone to save my life. Also, at least Knight's not going to yell at me more this way."
 
@@ -208,13 +232,14 @@ label ch_23:
 
     "With this thought, I drift into unconsciousness."
 
-    #fade to black screen
+    scene black with fade
 
     "The next moment I open my eyes to see myself falling into the abyss. It was pitch black and formless figures were flying all over."
 
-    #Void BG
+    scene bg void with fade
 
-    #play hunter bgm
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/2 Hunter L.ogg" loop fadein 0.5
 
     p "AAAAAAAAAAA!"
 
@@ -228,7 +253,7 @@ label ch_23:
 
     "Without questioning where it came from, I pull the cord to open the parachute. It slows me down so I can land safely on the road, and I shimmy out of the harness before its weight pulls me into the abyss."
 
-    #Knight sprite (base pose) appears
+    show knight weapon
 
     "Knight was already standing there and waiting for me with her arms crossed. I can't tell what she's thinking because of the mask on her face, but she looks irritated."
 
@@ -258,7 +283,7 @@ label ch_23:
 
     "Knight steps to the side, letting me take the lead." 
 
-    #Knight sprite disappears
+    hide knight weapon
 
     p_i "So this is a dream, right? In that case, I just need to dream up somewhere we could hide and watch the monster from afar."
 
@@ -266,7 +291,7 @@ label ch_23:
 
     "I focus on this memory, and a new road appears before us, leading to an arch that seems to be a portal to a new locale. We pass under the boughs of the twin trees that form the arch into a forest that looks identical to the cursed part of the forest in the real world."
 
-    #cursed forest bg
+    show bg cursedforest
 
     k "So this is it, the monster's territory. Here, we can harm it. But I doubt it will be easy."
 
@@ -277,8 +302,6 @@ label ch_23:
     "I concentrate on the image of the monster and follow my intuition."
 
     p "This way. It's somewhere in this direction, I think."
-
-    #Knight sprite (base pose) appears
 
     "I say it without much confidence and Knight looks in the direction I'm pointing. She shrugs and touches a bracelet on her wrist."
 
@@ -310,19 +333,19 @@ label ch_23:
 
     k "No, you buffoon. It just means that it has new weaknesses. Just like we are filling in for the knights of the story, the world is substituting the weaknesses of the monster. We need to find common ground, something similar to what the monster was weak to before."
 
-    #Knight sprite disappears
+    hide knight weapon
 
     "A blue haze appeared on the shone from behind distant trees, and she immediately went silent, gesturing for me to do the same."
 
-    #monster sprite (calm) appears
+    show monster calm at right
 
     "The monster was roaming around, looking for something or someone."
 
-    #Monster sprite disappears
+    hide monster calm with dissolve_fast
 
     "Once its form became distinct, Knight hid us with her illusion so we could get close. Several times we saw it lash out at the ephemeral figures that drifted through the trees and tear them asunder with an awful wail. Knight and I took these moments of distraction to creep closer to it as she whispered more instructions to me."
 
-    #Knight sprite disappears
+    show knight weapon
 
     k "Now we need to find what this monster is vulnerable to. One of the weaknesses it had in the book was fire."
 
@@ -332,19 +355,21 @@ label ch_23:
 
     p_i "Use my head? I doubt I've been able to think straight since this whole thing started. This overcast weather isn't helping either. I wish it was a bit clearer, a blue sky would help me think."
 
+    hide knight weapon
+
+    show monster calm at right
+
     "Then, a few clouds over our part of the forest dissipated, and the sun's rays appeared, covering the forest in golden light."
 
-    #Monster sprite (calm)
+    show monster angry at right
+
+    play sound "audio/sfx/monster sunburned.ogg"
+
+    hide monster angry
 
     "When the light fell on the monster, it screamed in anger and covered its head with its claws. With a loud groan, it jumped into the shadows of the canopy and fled to a gloomier part of the forest."
 
-    #Monster sprite (angry) appears 
-
-    #play monster sunburn sfx
-
-    #Monster sprite (angry disappears)
-
-    #Knight sprite (base pose) appears
+    show knight weapon
 
     k "Well that was easier than I was expecting. It's afraid of the sun. Too bad that'll be hard to get in the real world because of the constant rain. Good job, maybe you're not so useless after all."
 
@@ -388,7 +413,7 @@ label ch_23:
 
     k "Yeah, I heard somewhere they're used against vampires or something like that. I-I've tried it or anything!"
 
-    #Knight sprite (base pose) disappears
+    hide knight weapon
 
     p_i "A dreamcatcher is a good choice, although I would be lying if I said the lemon option didn't pique my interest."
 
@@ -405,38 +430,40 @@ label ch_23:
 
         "I picture a wooden hoop hanging from a tree near the monster, with thread spiderwebbing through it and a hanging feather. As soon as I do, a dreamcatcher forms hanging from a branch close to the monster."
 
-        #monster sprite (calm) appears
+        show monster calm at right
 
         "The monster looks up from where it was drinking, apparently noticing the dreamcatcher's sudden appearance. It steps closer to investigate and the dreamcatcher casts a net of glowing threads across it."
 
-        #Monster sprite (angry) appears 
+        show monster angry at right
 
-        #play monster trapped sfx
+        play sound "audio/sfx/monster trapped.ogg"
 
         "The monster, startled by its sudden entanglement, bursts again into flame and begins to thrash around wildly. It manages to shred the net apart with its flailing claws, and scrambles out of the bindings. The monster pauses to growl angrily at the now dull and tattered net before taking off through the forest a second time."
 
-        #Monster sprite (angry) disappears 
+        hide monster angry
 
     else:
         p_i "I've been going along with the absurdity for this long, why quit now?"
 
         "I imagine a big lemon tree sprouting up beside the river and growing the familiar yellow fruits that fall to the ground, catching the monster's attention."
 
-        #monster sprite (calm) appears
+        show monster calm at right
 
-        #play monster curious sfx, few second delay, then monster surprised sfx
+        play sound "audio/sfx/monster curious.ogg"
+        pause 1.5
+        play sound "audio/sfx/monster surprised.ogg"
 
         "It curiously approaches the tree and nudges one of the lemons with a claw. It cocks its head, confused, and picks the lemon up. An instant later the monster squeals and drops the lemon, then looks at its hand where we can see blisters beginning to form."
 
-        #Monster sprite (angry) appears
+        show monster angry at right
 
-        #play monster snarl sfx
+        play sound "audio/sfx/monster snarl.ogg"
 
         "The monster turns its head back toward the discarded lemon and snarls at it. It slams a hand down onto the fruit, crushing it and spraying juice up the monster's arm. With a second pained cry, the monster races away through the forest again, cradling its arm to its chest."
 
-        #Monster sprite (angry) disappears
+        hide monster angry
 
-    #Knight sprite (base pose) appears
+    show knight weapon
 
     k "Nice job. It looks like you might be getting the hang of it. Let's go. It will surely retreat to its lair after another painful surprise like that."
 
@@ -464,7 +491,7 @@ label ch_23:
 
     k "Shush! Keep your voice down. It might hear us."
 
-    #Knight sprite (base pose) disappear
+    hide knight weapon
 
     p_i "Now that I think about it, how can she walk so quietly with that armor? It's not as much as Rook had on, but still. I should ask her about that later if we have the time."
 
@@ -472,11 +499,12 @@ label ch_23:
 
     "We wind through the main passage and descend into the cave, pausing to peek down a few blind ends as we proceed. It's nearly pitch black as we come up to a switchback turn, and I can see a faint blue light reflecting off the water that has condensed on the cave walls. Knight quickly pokes her head around the corner and motions for me to step up as well."
 
-    #blue ember vfx, aimless floating
+    show emberback zorder 5
+    show embermid zorder 15
 
     "The room is beautiful. Stalactites hang from the roof of the cavern like chandeliers, with some meeting the stalagmites that rise from the ground to form fluted columns that have stone dripping from them like a thick layer of ice. There's even a terrace of shallow pools of water further in. It's hard to ignore, though, that the only reason we can see any of this is the dull blue light emanating from a beast that nearly killed me only a matter of hours ago."
 
-    #show knight
+    show knight weapon
 
     "Knight darts between a few of the stalagmites, covering about a third of the distance towards the monster, and waves me forward expectantly."
 
@@ -486,7 +514,8 @@ label ch_23:
 
     k "This is the first time I have seen it vulnerable like this. So far, the only thing that worked was the enchanted weapons Queen made for us, but they were nowhere near that effective. Look."
 
-    #hide knight, show monster calm
+    hide knight weapon
+    show monster calm
 
     if wep_1_dc == True:
 
@@ -496,7 +525,7 @@ label ch_23:
 
         "Knight points at the monster's arm closest to us. The monster's hand seems to have been badly burned from grabbing the lemon, and there's a noticeable rash that has spread up the arm and nearly to the shoulder."
 
-    #show knight left third, monster calm right third
+    show knight weapon at left_third
 
     k "See? Those wounds from what you did are still there on it. Compared to the slashes I did before with my sword, your power is leaps and bounds ahead in effectiveness."
 
@@ -514,13 +543,17 @@ label ch_23:
 
     k "GET UP AND RUN!"
 
-    #hide knight, show monster angry center
+    hide knight weapon
+    show monster calm at center 
+    with move
+    show monster angry
 
-    #play monster roar sfx
+    play sound "audio/sfx/monster roar.ogg"
 
     "As Knight shouts out to me, she grabs my arm and shoves me forward toward the exit of the cave. I hear a terrible howling from behind us."
 
-    #hide monster, show knight
+    hide monster angry
+    show knight weapon
 
     k "Oh for the love of- I was actually praising you and then you go and trip on a rock?!"
 
@@ -536,7 +569,7 @@ label ch_23:
 
     "With that said, Knight sprints headlong into the forest, slashing through the underbrush to clear a path towards the teleportation site."
 
-    #hide knight
+    hide knight weapon
 
     "As I rush after her down the newly created trail, I can hear the monster's enraged hoofbeats getting closer and closer."
 
@@ -555,7 +588,7 @@ label ch_23:
     if wep_2 == 0:
         p_i "Now that I think about it, isn't salt used as a deterrent for evil spirits in some places? If what I used before worked, this might have a chance of working too!"
 
-        #show monster angry
+        show monster angry
 
         "To assault the monster with salt, I picture the only form of it that I know of: commercial salt shakers. One is summoned immediately into my hands when I think of it."
 
@@ -563,7 +596,7 @@ label ch_23:
 
         "I unscrew the shaker's lid and throw the entire bottle's worth of salt at the monster. It seems to be doing little of anything at first, but..."
 
-        #play monster salted
+        play sound "audio/sfx/monster salted.ogg"
 
         "The monster is slowing down. The salt is definitely working."
 
@@ -571,7 +604,9 @@ label ch_23:
 
         "I conjure up several more shakers of salt pouring right onto its head and forming a line of salt between us. As the salt rains down, the monster stumbles backward and convulses in pain."
 
-        #slide monster right third, show knight left third
+        show monster angry at right_third 
+        with move
+        show knight weapon at left_third
 
         k "Good thinking! It won't be able to step in the areas covered in salt for a while! Now let's get out of here while we can!"
         $ blunder = False
@@ -581,11 +616,11 @@ label ch_23:
 
         "I think of a knife, with the one that comes to mind being one from my own kitchen. Suddenly, a large and familiar chef's knife appears in my hand."
 
-        #show monster angry
+        show monster angry
 
         "Seeing that I still have some space between myself and the monster, I turn around and leap backwards in order to look and aim. When the monster is within the knife's trajectory, I throw my knife right at its face."
 
-        #play monster knifed
+        play sound "audio/sfx/monster knifed.ogg"
 
         "The monster cries out in absolute pain as the heavy blade sinks deep into its shoulder. Exactly where I intended. But the monster shows no sign of stopping, even with the blade embedded into it."
 
@@ -597,7 +632,9 @@ label ch_23:
 
         "I throw out my hand and all the knives shoot forward at once, flying towards the monster and stabbing into it. The monster collapses, wounded but still alive."
 
-        #slide monster right third, show knight left third
+        show monster angry at right_third 
+        with move
+        show knight weapon at left_third
 
         k "Nice job! We're nearing the circle now. Let's get out of here!"
         $ blunder = False
@@ -613,13 +650,13 @@ label ch_23:
 
         k "BISHOP! What are you DOING?! The monster is right behind you, RUN!"
 
-        #show monster angry
+        show monster angry
 
         "Knight's shouting breaks me out of my trance, and I can see the monster has nearly caught up to me. The coffee didn't do anything to help at all."
 
         "In desperation, I turn around and throw the half-empty cup at the monster. The lid breaks open and splashes hot coffee in its face, but it does no meaningful damage, evaporating almost instantly in the flames."
 
-        #play monster growl
+        play sound "audio/sfx/monster growl.ogg"
 
         p_i "Uh oh... This is what I get for doing something silly, isn't it?"
 
@@ -627,11 +664,13 @@ label ch_23:
 
         k "Duck!"
 
-        #slide monster right third, show knight left third
+        show monster at right_third 
+        with move
+        show knight weapon at left_third
 
         "I immediately drop to the ground. A split second later, I hear a whooshing above me. Looking up, I see Knight's sword stabbing through the monster's hand and knocking it aside as it tries to grab at me."
 
-        #play sword clash 1
+        play sound "audio/sfx/sword clash 1.ogg"
 
         "The monster bellows and jerks its arm away, pushing Knight's sword deeper though its hand and ripping it from her grasp."
 
@@ -640,13 +679,16 @@ label ch_23:
         "As Knight commands, we book it out of the forest while the monster struggles to remove the sword."
         $ blunder = True
 
-    #hide monster & knight, hide ember vfx
+    hide monster angry
+    hide knight weapon
+    hide emberback
+    hide embermid
 
     "As we come out of the forest into a small clearing, we can see the teleportation circle on the ground. It seems that we're back where we started."
 
     p_i "Weird. I remember falling out of the sky when we first came here, but the circle is on the ground in a different area from where we landed. Or at least I think it's different. I guess I'll ask Shiori about it when we get back."
 
-    #show knight
+    show knight weapon
 
     if  blunder:
         "Knight lets out a heavy sigh."
@@ -683,4 +725,4 @@ label ch_23:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    scene black with Dissolve(1.0)
+    show black with Dissolve(1.0)

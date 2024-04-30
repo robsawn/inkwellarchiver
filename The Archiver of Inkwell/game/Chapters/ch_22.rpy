@@ -1,9 +1,7 @@
 label ch_22:
-    #fade from black
+    scene bg bedroom with fade
 
-    #room bg
-
-    #play BGM_1
+    play music "audio/0 Prologue/cafe1.ogg" loop fadein 0.5
 
     "Despite the harsh storm, I am able to get home relatively quickly. Thankfully, I managed to keep the books dry. It would have been a hassle to explain to the librarian if they were damaged..."
 
@@ -13,7 +11,7 @@ label ch_22:
 
     p "'Hunter of Nightmare', huh? Sounds kinda generic, but oh well. She did recommend it to me. Doesn't hurt to take a peek."
 
-    #forest bg
+    scene bg cursedforest with dissolve_slow
 
     "The first few pages start with the story of a man looking for his childhood friend who disappeared long ago. But very recently he received a message from her out of nowhere, asking for help. He didn't know specifically what she needed, but he decided to set off immediately."
 
@@ -41,9 +39,9 @@ label ch_22:
 
     "As the man wasn't ready for this, his momentum caused him to lose his footing. With tree roots restricting his movements, the monster loomed over him, raising its claw as it prepared to strike him down."
 
-    #abrupt scene change to room bg
+    scene bg bedroom
 
-    #water boiling sfx
+    play sound "audio/sfx/water boiling.ogg"
 
     "I am interrupted by the sudden noise of boiling water. I was so absorbed in reading that I forgot to man the stove, and now the pot boiled over... Great..."
 
@@ -53,21 +51,22 @@ label ch_22:
 
     "I sigh. As much as I like leaving things until the last moment, it's better for me to focus on them now. The story can wait."
 
-    #time passes (I don't know how this is commonly presented, quick fade to & from black? -Wax)
+    scene bg bedroomnight with fade
 
     "I fought with the monster named history for hours, but it finally succeeded in bringing about my demise."
 
     "Tired of this losing battle, I decided to give it a rest. The rain outside has finally ended, so it's quiet enough for me to sleep soundly, anyway. And so, good night!"
 
-    #some time passes
+    scene bg bedroomnight with fade
 
     "It's cold. It's dark. It's wet and scary. All around me I can feel these things with such intensity. I run. And run. I am running. There is no end to this running. Why is there no end? Why am I running? What am I running from?"
 
     p_i "What is going on?"
 
-    #void background
+    scene bg void with dissolve_slow
 
-    #play Hunter bgm
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/2 Hunter L.ogg" loop fadein 0.5
 
     "The scenery is unfamiliar to me. Countless formless figures float all around. A road stretches on without end under my feet, and the sides drop down into an endless void."
 
@@ -79,9 +78,10 @@ label ch_22:
 
     "I run and I run, until I can run no more. The creature moves closer and closer with each step I don't take. The heat spreads more the longer I don't move. So I leap into the void, praying it will shield me from the flames."
 
-    #room background
+    scene bg bedroom with ImageDissolve("020.jpg",1.0,8)
 
-    #play BGM_1
+    stop music fadeout 0.5
+    play music "audio/0 Prologue/cafe1.ogg" loop fadein 0.5
 
     "The next moment, I sit bolt upright in bed, drenched in a cold sweat. The rain is pouring down again, battering the windows incessantly."
 
@@ -95,9 +95,10 @@ label ch_22:
 
     "With that thought, I drift off to sleep. This time, my dreams are filled with cute cats."
 
-    #campus bg
-
-    #play BGM_2
+    scene bg college with fade
+    
+    stop music
+    play music "audio/0 Prologue/cafe2.ogg" loop fadein 0.5
 
     "I've decided to walk around the campus this morning. There are things that I should be doing, but the nightmare still makes me uneasy. Perhaps a change of scenery will help."
 
@@ -105,7 +106,7 @@ label ch_22:
 
     "As I continue my walk, I stumble upon a road in disrepair that leads to a nearby forest. I remember going there a lot as a child. Now it was all overgrown due to negligence."
 
-    #jogging trail bg
+    scene bg trail with dissolve_fast
 
     "Suddenly feeling adventurous, I decide to step in. As I walk through the greenery, the bushes brush gently against my skin. This feels way better than doing homework."
 
@@ -115,7 +116,8 @@ label ch_22:
 
     "Come to think of it, I haven't seen a single person today... Eh, probably nothing."
 
-    #play cursed forest bg
+    stop music fadeout 1.0
+    play music "audio/3 Fantasy/4 Cursed Forest L.ogg" loop fadein 0.25
 
     "I shrug it off and continue walking down the path. The longer I walk, the more the forest changes. The trees are gnarled and dead, the sky darkens, and the path has begun to turn to mud."
 
@@ -127,7 +129,7 @@ label ch_22:
 
     "My self-reassurance did little to change the fact that nothing has changed. An hour has passed, and I am still in the forest."
 
-    #thunderstorm sfx
+    play sound "audio/sfx/thunderstorm 1.ogg"
 
     p_i "I don't like this at all. How did I even manage to get lost staying on the path in the first place? Now it's gonna start pouring again... And what's up with those trees? Awful."
 
@@ -155,7 +157,7 @@ label ch_22:
 
     "As the figure cranes its neck toward me, its body still as a statue, I can't believe my eyes."
 
-    #monster calm sprite
+    show monster calm
 
     p_i "Whatever this thing is, it can't be human. This is a monster out of a nightmare!"
 
@@ -169,13 +171,13 @@ label ch_22:
 
     "It was as if that was a trigger for the monster, as it darted at me, setting itself alight with eerie flames."
 
-    #monster angry sprite
+    show monster angry 
 
-    #monster charge sfx
+    play sound "audio/sfx/monster charge.ogg"
 
     p "What?!"
 
-    #monster angry sprite disappears
+    hide monster angry with dissolve_fast
 
     "Surprised by the drastic turn of events, I booked it as fast as I could. It is hard to run in this godforsaken forest, with the roots trying to trip me up at every turn, but adrenaline keeps me afloat in this sea of trees."
 
@@ -191,35 +193,35 @@ label ch_22:
 
     "I feel defeated. There is nothing I can do besides accept my fate. "
 
-    #fade to black
+    scene black with dissolve_fast
 
     k "Pathetic."
 
     "I hear an unfamiliar voice and open my eyes to look."
 
-    #fade back to trail bg
+    scene bg trail with dissolve_fast
 
-    #Knight appears
+    show knight weapon
 
     "Just before the monster reaches me, a woman stands between us. Her scarlet hair and bright clothes make her stand out against this gray forest."
 
-    #sword clash 1 sfx
+    play sound "audio/sfx/Sword clash 1.ogg"
 
     "She swings her sword at the monster, but it deflects and counters with its claw, piercing her chest."
 
-    #Knight illusion
+    show knight illusion
+
+    show monster angry at right_third zorder -1
 
     "However, the woman disappears like mist and suddenly reappears behind the monster, slashing its head off."
 
-    #Monster sprite (angry form) appears
-
     "The head falls and burns to a crisp, staring sightlessly at the woman until the very end."
 
-    #Monster sprite (angry form) disappears
+    hide monster angry
 
     "Seeing the monster dead, I sit up, trying to process what just happened. Is this still a dream? No. It can't be. The pain in my nose is too real for it to be a dream."
 
-    #Knight appears
+    show knight weapon
 
     k "How long are you going to sit there? Move, we need to go."
 
@@ -233,7 +235,7 @@ label ch_22:
 
     k "... I'm leaving. Follow me or keep wandering around aimlessly for all I care."
 
-    #Knight disappears
+    hide knight weapon
 
     #play outside music short bgm
 
@@ -243,7 +245,7 @@ label ch_22:
 
     p "Uh, what is your name? Also, what's going on here? I was in a normal forest just an hour ago, and now I'm getting chased by monsters!"
 
-    #Knight appears
+    show knight weapon
 
     "The lady pauses and looks around, only continuing walking after she's scanned the nearby forest."
 
@@ -253,17 +255,17 @@ label ch_22:
 
     "Knight doesn't respond. It's evident that she doesn't care to answer any more questions."
 
-    #Knight sprite (base pose) disappears
+    hide knight weapon
 
     "We keep moving in silence, stopping to wait out the blue flames that sporadically flicker to life deeper amidst the trees."
 
-    #castle bg
+    scene bg castleext with fade
 
     "Finally, we reach our destination. It's a castle, gothic in its architecture, looking as if it had sprouted fresh after the evening's rain."
 
     "Unlike the forest, which was like a living nightmare, the castle gives off an otherworldly air. It feels so out-of-place and... unnatural."
 
-    #Knight appears
+    show knight weapon
 
     k "Welcome to Inkwell Castle: the base of a little princess who wants to build her dream here."
 
@@ -273,39 +275,44 @@ label ch_22:
 
     "We enter the castle through the main gate. The imposing halls are empty yet clean. Odd, considering no maids or servants can be seen anywhere."
 
-    #throne room bg
+    scene bg castleint with dissolve_fast
 
     "When we reach the throne room, the big doors swing openly solemnly on either side, revealing a large chamber that echoes with each step."
 
-    #Shiori neutral
+    hide knight weapon
 
-    #play exposition track bgm
+    show shiori neutral
+
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/1 Relaxed Exposition Track L 2.ogg" loop fadein 0.5
 
     "And then, I see her. In the center of the room, sitting upon the throne, is Shiori Novella, reading the very same book from before."
 
     "Upon laying my eyes on her, my jaw almost drops."
 
-    #Rook weapon appears
+    show rook weapon at right_third
 
     "A man wearing medieval plate armor and holding an antique gun with an axe-bayonet is nonchalantly sitting on the steps leading up to her. Seeing my surprised face he chuckles quietly." 
 
-    #Rooks disappears, Happy Shiori sprite
+    hide rook weapon
+    show shiori elated
 
     shi "Oh! You're finally here! I'm glad you made it safely. Good job Knight."
 
     "She closes her book and addresses the woman."
 
-    #Shiori disappears, Knight appears
+    hide shiori elated
+    show knight weapon
 
     k "I still don't know why you need someone like this. Are you sure someone so weak will be of use?"
 
-    #Knight disappears 
+    hide knight weapon
 
     p_i "Ouch..."
 
     "After that sucker punch to my ego, she walks over to Shiori and whips out a nail file. Clearly, this is all beneath her."
 
-    #Shiori normal
+    show shiori happy
 
     shi "Aw don't be like that. Anyway, come here. We need to talk."
 
@@ -313,25 +320,27 @@ label ch_22:
 
     p "So, Shiori, can you please tell me what's going on? I think I'm about to lose it. What was that monster? Why is it here? Why did it try to kill me?! What's this about a princess and a queen, and why is everything like that book you gave me???"
 
-    #shiori normalclosed
-
     shi "Alright, ok. Lemme explain it step by step."
 
     shi "You see, this world was partially merged with the book. Parts of the cursed forest slowly integrated into this world, along with some natives. Just like that monster you met and Rook over there."
 
     "She points to the man, who gives me a friendly wave."
 
-    #Rook cross-armed appears
+    show rook arms at right_third
 
     r "Good day."
 
-    #Rook disappears
+    hide rook arms
 
-    #happy Shiori appears
+    show shiori happy
 
     shi "So Queen is my codename, even though I'm a princess. You should see the pattern now that you've met everyone. But don't worry, you'll get one too!"
 
+    show shiori wink
+
     "She winks at me with a grin. A cloud blots out the sunlight filtering into the room and Shiori looks pensively out the window."
+
+    show shiori neutral
 
     shi "The weather also got much worse around here thanks to the storm also bleeding out from the book."
 
@@ -339,7 +348,7 @@ label ch_22:
 
     shi "Well, like it or not, it's real now. I gave you an early warning, hoping you would read it, so you would be prepared when the time comes."
 
-    #shiori sad
+    show shiori sad
 
     shi "Unfortunately, it all happened way too fast."
 
@@ -347,7 +356,7 @@ label ch_22:
 
     p "O-ok, but what do I have to do with anything?!"
 
-    #Shiori serious
+    show shiori neutral
 
     "Shiori looks into my eyes, choosing her words carefully."
 
@@ -369,6 +378,8 @@ label ch_22:
 
     shi "If I'm right, you have the ability to traverse the Dreamscape. You know how sometimes people can control their own dreams? This is kinda like the better version of that."
 
+    show shiori elated
+
     shi "Also, you might even be able to pull things from dreams into reality! But that's something we don't know for sure."
 
     "I scratch my head. Pull something from dreams? Walking through them? What does she mean? I don't recall doing any of that."
@@ -378,6 +389,8 @@ label ch_22:
     shi "Don't worry, I'll help you with it. Obviously, no one can instantly cast magic. But before that, you have to make a decision."
 
     p "A decision?"
+
+    show shiori neutral
 
     shi "Yes. This is a dangerous mission, and I don't want to include anyone who isn't willing to risk their lives. So, what say you? Will you join us in hunting the monster?"
 
@@ -393,26 +406,28 @@ label ch_22:
 
     "Well that sounds awful, but what can I do? Everything is happening so fast."
 
-    #Shiori disappears, show Knight wine & Rook weapon
+    hide shiori neutral
+    show knight wine at left_third
+    show rook weapon at right_third
 
     "I look at Knight drinking straight from a bottle of wine directly through her mask. It's a bit surreal to watch, but after everything that's happened today, this seems practically normal by comparison. Then I look at Rook, who had disassembled and was in the process of cleaning his blunderbuss. Lastly, I look at Shiori, who was returning my gaze without blinking, waiting for my answer."
 
-    #Knight & Rook disappear, show Shiori serious
+    hide knight wine
+    hide rook weapon
+    show shiori neutral
 
     p "Guess I have no choice. Well, at least I'm not dying alone this way."
 
-    #Shiori excited
+    show shiori satisfied
 
     shi "Yay!"
 
     "Shiori almost jumps for joy."
+
+    show shiori elated
 
     shi "A- Ahem! I mean, thank you."
 
     "She tries to look dignified, but the attempt only gets a poorly-stifled giggle out of Knight."
 
     shi "Now then, for the time being, I shall name you Bishop. I am your Queen, and together we shall vanquish this harbinger of calamity!"
-
-    stop sound fadeout 1.0
-    stop music fadeout 1.0
-    scene black with Dissolve(1.0)
