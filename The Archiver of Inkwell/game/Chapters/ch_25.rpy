@@ -1,4 +1,4 @@
-label ch_251:
+label ch_25:
     #stuff
 
     stop sound fadeout 1.0

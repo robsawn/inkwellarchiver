@@ -412,7 +412,6 @@ label ch_14:
 
         "The sound of footsteps behind me confirms my suspicion as I start running for all my legs are worth."
 
-
     stop sound fadeout 1.0
     stop music fadeout 1.0
     scene black with Dissolve(1.0)
