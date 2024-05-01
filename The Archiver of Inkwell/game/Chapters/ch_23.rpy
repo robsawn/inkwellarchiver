@@ -65,7 +65,7 @@ label ch_23:
 
     k "Yes. I'll look after this weakling in his first skirmish. Are you fine with that, Rook?"
 
-    show shiori smile at center 
+    show shiori smug at center 
     with move
     show rook armslaugh at left_third
     hide knight weapon
@@ -147,11 +147,15 @@ label ch_23:
 
     p_i "Why would someone sleep here normally instead of in a bedroom?"
 
+    show shiori smile
+    
     shi "Anyways, this is where we're entering the Dreamscape from. And by 'we', I mean you. All you have to do is sleep in the middle of that circle, and I'll take care of the rest."
 
     p "Wait, that's it?"
 
     shi "Yup, that's it."
+
+    show shiori neutral
 
     p_i "This sounds kinda... sketchy."
 
@@ -191,11 +195,13 @@ label ch_23:
 
     k "But Queen, he still doesn't know how to use this thing. At least let me guide the path."
 
+    show shiori smile
+
     shi "It'll be fine. Trust me."
 
     p "Wait, 'guide the path'? What does that mean?"
 
-    show shiori neutral at right_third 
+    show shiori neutral at center 
     with move
     hide knight weapon
 
@@ -225,6 +231,8 @@ label ch_23:
     p_i "..."
 
     p_i "Nothing's happening."
+
+    show shiori neutral
 
     "I squint one eye open to see Shiori, nose deep in her book and mumbling to herself. Suddenly, I feel very sleepy. No wonder, after everything that's happened today, I was beat. A monster was chasing me, a fantasy world was merging with ours, and a girl that I just met was actually a Queen."
 

@@ -123,7 +123,7 @@ label ch_12:
 
     shi "Boo!" with vpunch
 
-    show shiori smile: 
+    show shiori happy: 
         ease 0.5
         zoom 1.0
 
@@ -174,7 +174,7 @@ label ch_12:
 
     p_i "Oh, did they have a class canceled too?"
 
-    show shiori serious 
+    show shiori stare 
 
     "I turn back toward Shiori. She's watching the person with a frown and narrowed eyes."
 
@@ -187,7 +187,7 @@ label ch_12:
 
     p "W-What? Where are we-"
 
-    show shiori surprised
+    show shiori serious
 
     shi "Just come on!" with hpunch
 
@@ -195,15 +195,15 @@ label ch_12:
 
     p "I guess it is popular, huh?"
 
-    show shiori surprised
+    show shiori mad
 
     shi "What? No, it's not that, I mean, yes, but no! Just come on!"
 
-    show bg libraryovercast with slideright
-
-    show shiori frown
+    show bg librarynight with slideright
 
     "We approach the library, but we're entering a side entrance I've never used."
+
+    show shiori serious
 
     "Pulling me inside, Shiori closes the door behind us and continues dragging me along. Soon, we duck into one of the side rooms and she slams that door too, locking it with the deadbolt."
 
@@ -230,8 +230,6 @@ label ch_12:
     shi "Is what I'd like to say, but it seems like they're looking at you, too, now."
 
     p "Huh? What do you mean?"
-
-    show shiori frown
 
     "Shiori sighs in response and looks at me apologetically."
 
@@ -275,7 +273,7 @@ label ch_12:
 
     p "This is mostly a college town, Shiori. People come and go all the time. Sounds like a bunch of coincidences."
 
-    show shiori serious
+    show shiori mad
 
     shi "But everyone gathered had the same yellow raincoat!"
 
@@ -347,9 +345,9 @@ label ch_12:
 
     "She turns around, cup in hand."
 
-    show shiori smile
-
     shi "Would this make it easier?"
+    
+    show shiori smile
 
     "Shiori smiles at me, setting the small tea cup on the table. There's no saucer, but it's weird enough that there's a random tea cup in here."
 

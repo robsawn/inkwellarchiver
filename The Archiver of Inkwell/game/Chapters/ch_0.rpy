@@ -141,7 +141,11 @@ label ch_0:
 
     p_i "She can probably tell how nervous I am. Never been good at talking to strangers, for better or worse."
 
+    show shiori smile
+    
     shi "Nope, it's free."
+
+    show shiori neutral
 
     p "Um! Can I sit here, then?"
 
@@ -151,38 +155,44 @@ label ch_0:
 
     shi "Mhm."
 
-    stop sound 
-    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.4
+    show shiori neutral at right with MoveTransition(1.0)
     
     "Without another word, she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
 
+    hide shiori neutral with dissolve_fast
+    
     "Catching myself staring again, I turn to look out the window, watching the rain beat against the glass, the wind battering the trees lining the path outside."
     
     "I lift the cup to my lips, taking a moment to enjoy my drink. And to try to ignore the somewhat awkward silence between myself and the woman next to me."
 
     p_i "Nope. Still awkward."
 
+    show shiori neutral at right with dissolve_fast
+
     shi "Hey, um... What did you get to drink?"
 
     if greentea:
         p "I just got some tea. Thought it would be nice considering outside."
 
-        show shiori elated
+        show shiori happy
+
         shi "Oh, is that green tea? You got my other favorite!"
 
         p "Really? What's the other one, then?"
 
-        show shiori happy
         shi "This! It's Earl Grey."
+        
+        show shiori smile
 
         "The girl picks up her mug and brings it next to mine. I don't know if she is trying to make a toast or just showing me her tea, but her enthusiasm is kinda cute."
+
+        show shiori neutral
     
     if americano:
         p "Oh, I just went with an Americano."
 
         shi "Ah, I thought so with that scent."
 
-        show shiori frown
         "The girl hesitates for a moment, as if she wants to say something but is holding back."
 
         shi "Uh, hey. This might be a weird request, but can I sniff your drink?"
@@ -198,40 +208,55 @@ label ch_0:
         if sniff:
             p "Well, sure. I guess?"
 
-            show shiori surprised
+            show shiori happy
+
             shi "Eh? Really? Wasn't expecting that, but thanks!"
 
             "Popping the lid off, I bring my cup closer to her side of the counter and lift it up a bit. The girl lowers her head and draws a long, gentle breath."
 
-            show shiori satisfied
+            show shiori neutral
+            show shiori satisfied with dissolve_slow
+
             "After a second or two, she sits back upright with a soft smile creeping across her face."
 
             p "Hey, if you don't mind me asking, why did you ask?"
 
+            show shiori smile
+
             shi "Well, I like the smell of coffee, but I just can't drink it. So the scent's the only way I can enjoy it."
+
+            show shiori neutral
 
         else:
             p "Uhhh... Do you ask everyone that?"
 
             show shiori frown
+
             shi "You're not gonna let me smell it?"
 
             p "Of course not! That's weird!"
             
+            show shiori mad
+
             "The girl sulks and pouts, but doesn't say anything more about it."
 
     if cocoa:
         p "I got this; it's cocoa with caramel. Not something I would drink everyday, but I think I deserve a sweet treat on a day like this."
 
+        show shiori surprise
+
         shi "You're not worried about your weight?"
 
         p "I move around a lot so it's fine, plus you're one to talk with a plate full of cake."
+        
+        show shiori mad
 
-        show shiori frown
         shi "It's an off-day, so a little cake is fine, meanie!"
 
         p_i "And now she's pouting at me. I thought that was something only anime girls do, but here we are."
     
+    show shiori neutral
+
     p "So what're you reading? Seems pretty good, just going off how immersed you are."
 
     show shiori happy
@@ -241,11 +266,15 @@ label ch_0:
 
     p "So what book are you reading?"
 
-    show shiori frown
+    show shiori sad with dissolve_slow
 
     shi "Ah, it's a story that... A friend helped with. Sorry, it's kind of personal..."
 
+    hide shiori sad with dissolve_fast
+
     "I glance at the book in her hands, but can only see two pages: one blank and another with strange symbols on it."
+
+    show shiori neutral at right with dissolve_fast
 
     "Looking back up at her, I see her watching me, studying me."
 
@@ -268,13 +297,13 @@ label ch_0:
     if booklove:
         p "Honestly? I love them. The smell of the ink and the paper, the feel of the pages in your hands, the lives and worlds they all contain... It's just the best."
 
-        show shiori surprised
+        show shiori elated
 
         shi "ME TOO!"
 
-        show shiori happy
-
         "She nearly shouts in excitement, but she takes a moment to compose herself."
+
+        show shiori happy
 
         shi "I- Ahem. Me too, I just love getting lost in them. It's like you jump into a whole new world, you know? All the different perspectives and everything..."
 
@@ -283,13 +312,15 @@ label ch_0:
     if bookneutral:
         p "They're alright. I wouldn't say I love them, but I do read just for fun every now and then."
 
-        show shiori neutral
+        show shiori smile
+        play voice "audio/shiogiggles/Shio giggles 4.ogg" 
 
         shi "Really? I love them."
 
         shi "They can take you to places you might never have even dreamed of and can teach you all kinds of things."
-            
-        show shiori wink
+        
+        show shiori happy
+        play voice "audio/shiogiggles/Shio giggles 10.ogg"
 
         shi "I might be a bit biased though. *giggle*"
 
@@ -304,10 +335,12 @@ label ch_0:
 
         shi "Aw really? They can take you to brand new places, help you relax, teach you all kinds of lessons. Oh, and they smell great!"
 
-        show shiori smile
+        show shiori neutral
 
         shi "I like how they feel as I flip through them, too."
         
+        show shiori happy
+
         "She continues talking about why books are great, and why everyone should read them more."
 
         p_i "Her love for books is actually a little infectious..."
@@ -316,6 +349,8 @@ label ch_0:
 
     stop sound
     play sound "audio/Ambient/rain1.ogg" loop volume 0.25
+
+    show shiori neutral
 
     "The two of us continue talking about books for a while, but as we're talking, I get the sense that there's more than just love for books behind her passion."
     
@@ -331,7 +366,7 @@ label ch_0:
     
     p "Oh, and thanks for the recommendations!"
 
-    show shiori smile
+    show shiori smile at center with MoveTransition(0.75)
 
     "She smiles and nods, not making any kind of move to leave herself. Then, as I turn to leave I hear a squeak of a chair leg on the floor."
 
@@ -347,17 +382,23 @@ label ch_0:
 
     "Seeing my confusion, she shakes her head, dismissing her own question."
 
+    show shiori smile
+
     shi "Never mind, forget it. It's not important right now."
 
     p "Right. Well, maybe I'll see you around."
 
+    show shiori happy
+
     shi "Sorry for the weird question. Anyway, have a safe trip home, and make sure not to get struck by lightning!"
 
-    hide shiori neutral with dissolve_fast
+    show shiori neutral 
 
     "Grabbing my umbrella on the way out, I sneak a glance back at her. The sight of her reading under the warm lights makes my lips curl into a soft smile."
+
+    hide shiori neutral with dissolve_fast
     
-    stop music
+    stop music fadeout 0.5
     stop sound fadeout 0.5
     scene bg street with dissolve_fast
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65

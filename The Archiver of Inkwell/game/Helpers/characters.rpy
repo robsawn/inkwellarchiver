@@ -95,7 +95,7 @@ image shiori frown = Composite(
     (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_frown.png"),
     (0,0), "images/shiori/Eyebrows/eyebrows2.png")
 
-image shiori serious = Composite(
+image shiori frown = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
     (0,0), "shio eyesshock",
@@ -106,7 +106,7 @@ image shiori sad = Composite(
     (562,840),
     (0,0), "images/shiori/base.png",
     (0,0), "shio eyes",
-    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_frown.png"),
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_frown.png"),
     (0,0), "images/shiori/Eyebrows/eyebrows4.png")
 
 image shiori satisfied = Composite(
@@ -144,6 +144,49 @@ image shiori cry = Composite(
     (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_open4.png"),
     (0,0), "images/shiori/Eyebrows/eyebrows5.png",
     (0,0), "images/shiori/Eyes/tears.png")
+
+image shiori happytearsclose = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "images/shiori/Eyes/eyes_closed.png",
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows5.png",
+    (0,0), "images/shiori/Eyes/tears.png")
+
+image shiori mortified = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyesextreme",
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_open5.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows4.png")
+
+image shiori mad = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyes",
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_frown.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows_angry.png")
+
+image shiori cry = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyes",
+    (0,0), WhileSpeaking("shi", "shio mouth frown", "images/shiori/Mouths/mouth_neutral.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows_angry.png")
+
+image shiori smug = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyes",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_closed.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows_angry.png")
+
+image shiori stare = Composite(
+    (562,840),
+    (0,0), "images/shiori/base.png",
+    (0,0), "shio eyesshock",
+    (0,0), WhileSpeaking("shi", "shio mouth normal", "images/shiori/Mouths/mouth_frown.png"),
+    (0,0), "images/shiori/Eyebrows/eyebrows_angry.png")
 
 image shio eyes:
     "images/shiori/Eyes/eyes_open.png"

@@ -9,9 +9,13 @@ init:
         Snow("Helpers/effects/rain3.png",max_particles=50,speed=800,wind=0)
 
 label ch_13:
-    scene bg bedroomnight with fade
+    scene black
+
     #pulse if possible
+
     play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
+    play voice "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.0
+    
     "My head's pounding. I can't move or open my eyes, but I can feel it. My surroundings and everything around me. More than anything though, I just want to lie here, in the dark and silence of... wherever I am." 
 
     "I have no idea where I am. I don't know what my condition is. I feel like I have no sense of touch. I know I'm on something cushiony, but that's all I can tell."
@@ -24,6 +28,8 @@ label ch_13:
 
     "Taking a moment, I realize I'm actually in my apartment. Somehow."
 
+    scene bg bedroomnight with dissolve_slow
+    
     p_i "How'd I get here...?"
 
     "There's a clock staring at me from the corner of, what I'm pretty sure is, my room."
@@ -50,13 +56,16 @@ label ch_13:
 
     "The darkness goes away after another minute or so, so it must have been my imagination."
 
-    "I'm still a little dazed, and there's still a bit of a dull ache throughout my body, but I feel alright enough to actually get up. My legs feel unsteady under me as I haul myself up and I balance myself against the wall."
+    "I'm still a little dazed, and there's still a bit of a dull ache throughout my body, but I feel alright enough to actually get up. My legs feel unsteady under me as I haul myself up and I balance myself against the wall." with hpunch
 
     p "What was in that drink Shiori gave me? And why does it feel like I haven't had anything to drink in weeks...?"
 
     "I wobble to the kitchen, and get myself a bottle of water from the fridge."
 
     "Gulping it down, it tastes amazing, and the cold water feels like a cooling balm for my throat. The fog in my head clears, and the ache disappears as soon as I swallow the water."
+
+    show bg bedroom with dissolve_slow
+    stop voice fadeout 1.0
 
     p "That was… It's just water… Why was it so good?"
 
@@ -80,7 +89,7 @@ label ch_13:
     
     scene bg street with slideleft
     stop music fadeout 0.75
-    #play music 
+    play music "audio/3 Fantasy/3 Gatherer piano L.ogg" loop fadein 0.75
 
     show rainbackheavy
     show rainmidheavy
@@ -88,23 +97,37 @@ label ch_13:
 
     "I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
 
+    play voice "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5 volume 0.65
+
     "I can feel myself being watched, but it doesn't feel like before, it feels less... creepy. Comforting almost."
 
     "I look around, trying to see if I can find who's watching me, and notice that there's a strange flower in the shadows at the end of the walk in front of the apartment. I rub my eyes and look again, and it's gone."
 
     p "Was that an eye watching me? Must have imagined it… That feeling is still there, but I can't see anything watching me. Weird."
 
+    stop music fadeout 0.5
+    play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
+
     "I start walking to the library, but, on the way, I feel unease and comfort in equal measure." 
+
+    show cultist at right
 
     "Out of the corner of my eye, I can see those yellow raincoats staring at me from some windows lurking inside some of the buildings. Outside, I can occasionally catch glances of those weird flowers again, but when I look back, they're gone again."
 
     p_i "Thankfully, the people in yellow coats keep away from me, so maybe this is what Shiori was talking about?"
+
+    hide cultist
+
+    scene bg libraryovercast
 
     "I finally reach the library, making sure to greet the front desk worker as I deposit my umbrella and walk by. I can't help but notice the yellow raincoat draped on the chair behind them."
 
     p_i "What an... interesting trend. I guess I shouldn't be too paranoid about it, even if some people wearing them are kind of weird."
 
     p_i "That said, I get the sense that I shouldn't ask about where these numbers lead, book-wise."
+
+    stop music fadeout 0.5
+    play music "audio/4 Lovecraftian/3B/2 Cult Lore Dump, Unveiling Mystery Track L.ogg" loop fadein 0.5
 
     "Pulling the bookmark out of my pocket, I make my way over to a computer and search the numbers in the library catalog."
 
@@ -193,7 +216,11 @@ label ch_13:
 
         "I grab the book, and then go back to where that Sherlock book was."
 
+        show cultist
+
         "I look down the aisle, and see a person in a yellow jacket looking at the books. They don't seem to have noticed me yet. I quickly slide it off the shelf, and then return to the study room."
+
+        hide cultist
 
         "Before I close the door all the way, I sneak a peek outside. Safe. I breathe a sigh of relief and sit back down."
 
@@ -215,12 +242,20 @@ label ch_13:
 
     "Just as I'm getting invested in what I'm reading, I hear a soft click. The door opens, and I look up to see a golden eye peering through the crack."
 
+    stop music fadeout 0.5
+    stop voice fadeout 0.5
+    play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
+
     "A golden eye meets my gaze. The crack is just big enough that I see a glimpse of a familiar smile. After another moment, the door opens all the way, revealing Shiori."
+
+    show shiori smile with dissolve_fast
 
     if correctstudy:
         shi "Oh, you're reading Sherlock!"
 
         p "Yep. I just got to 'The Adventure of the Speckled Band', and, while it's interesting enough, I still think 'A Study in Scarlet' is better."
+
+        show shiori elated
 
         shi "Me too! It's easier to ship Holmes and Watson in that one! It was the first one written too, so it had to introduce the characters really well!"
 
@@ -228,9 +263,13 @@ label ch_13:
 
         p "So that was what you meant by 'follow the years', good to know."
 
+        show shiori satisfied
+
         shi "Yep! Hopefully it wasn't too hard!"
 
         p "Nah, it's fine. Easier than I expected, to be honest."
+
+        show shiori elated
 
         shi "Oh, yeah? Maybe if we do this again, I'll make it harder for you!"
 
@@ -243,29 +282,46 @@ label ch_13:
 
         p_i "I don't want to admit that I got it wrong..."
 
+        show shiori sad
+
         shi "Ah, maybe it was? Sorry, I needed to make sure that those people in the yellow jackets wouldn't figure it out."
 
         p "It's ok. Just frustrated at myself not getting it more than anything else."
+
+        show shiori smile
 
         shi "Well, I hope you'll be ready next time, because it'll probably be a bit harder!"
 
         p "Please, go easy on me."
 
+        show shiori smug
+
         shi "No can do! You'll just have to be ready!"
 
         p " *sigh* Fine, I'll try to be."
+
+    stop music fadeout 0.25
+    play music "audio/4 Lovecraftian/3B/2 Cult Lore Dump, Unveiling Mystery Track L.ogg" loop fadein 0.5
+
+    show shiori smile
 
     shi "Anyway, about those people in the yellow jackets."
 
     p "Yeah?"
 
+    show shiori neutral
+
     "Shiori tenses up for a moment before letting out a deep exhale."
+
+    show shiori serious
 
     shi "Alright, I mentioned before that those people are dangerous are up to no good, right?"
 
     shi "Well, they seem to follow and worship this 'thing' called the 'Void Wyrm'. I still don't know much about it, but the eye on their coats? It's supposed to be that thing's eye."
 
     p "There's an eye on their coats? Uh huh."
+
+    show shiori neutral
 
     shi "I get it, but I need you to trust me on this." 
 
@@ -285,11 +341,15 @@ label ch_13:
 
     p_i "If I play along, it should be fine. Not like any of what she's talking about is real."
 
+    show shiori smile
+
     shi "I'm gonna see what else I can find out, though. Try to keep a low profile and avoid the people in the yellow coats as best you can, ok?"
 
     p "Alright, I'll try. Not that it's a hard ask. They're uncomfortable to be around anyways."
 
     p "What about your book?"
+
+    show shiori neutral
 
     "We both look at the book resting on the table between us."
 
@@ -297,7 +357,11 @@ label ch_13:
 
     p "Sorry, what? It writes itself?"
 
+    show shiori wink
+
     shi "Yep! No idea how, but it does!"
+
+    show shiori smile
 
     p "Alright. So, how long am I holding onto this?"
 
@@ -305,13 +369,23 @@ label ch_13:
 
     p "That soon? I thought you'd need a couple days at least." 
 
+    show shiori happy
+    play voice "audio/shiogiggles/Shio giggles 5.ogg"
+
     shi "*giggle* Don't underestimate Archivers!"
 
     p "Archivers...? Okay. Here, tomorrow, same time. Got it."
 
+    show shiori smile
+
     shi "Yep, see you then!"
 
+    show shiori neutral
+
     shi "Oh, and don't leave right after me. Wait a bit, ok?"
+
+    show shiori smile
+    hide shiori smile with dissolve_fast
 
     "I nod and she turns around and opens the door slowly, looking around. She nods to herself, as if to psyching herself up, and leaves, closing the door softly behind her."
 
@@ -324,6 +398,8 @@ label ch_13:
     p_i "Yeah, I figured. I just needed some more time to wake up. Was definitely just imagining things."
 
     scene bg librarynight with fade
+    stop music fadeout 0.25
+    play music "audio/4 Lovecraftian/3B/3 Shiori Missing Track L.ogg" loop fadein 0.5
 
     "I swing by the study rooms the next day, but Shiori never shows up."
 
