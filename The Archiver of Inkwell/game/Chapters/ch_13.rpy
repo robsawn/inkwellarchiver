@@ -14,7 +14,7 @@ label ch_13:
     #pulse if possible
 
     play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
-    play voice "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.0
+    play sound "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.0
     
     "My head's pounding. I can't move or open my eyes, but I can feel it. My surroundings and everything around me. More than anything though, I just want to lie here, in the dark and silence of... wherever I am." 
 
@@ -65,7 +65,7 @@ label ch_13:
     "Gulping it down, it tastes amazing, and the cold water feels like a cooling balm for my throat. The fog in my head clears, and the ache disappears as soon as I swallow the water."
 
     show bg bedroom with dissolve_slow
-    stop voice fadeout 1.0
+    stop sound fadeout 1.0
 
     p "That was… It's just water… Why was it so good?"
 
@@ -89,7 +89,7 @@ label ch_13:
     
     scene bg street with slideleft
     stop music fadeout 0.75
-    play music "audio/3 Fantasy/3 Gatherer piano L.ogg" loop fadein 0.75
+    play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 0.75
 
     show rainbackheavy
     show rainmidheavy
@@ -97,7 +97,7 @@ label ch_13:
 
     "I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
 
-    play voice "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5 volume 0.65
+    play sound "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5 volume 0.65
 
     "I can feel myself being watched, but it doesn't feel like before, it feels less... creepy. Comforting almost."
 
@@ -243,7 +243,7 @@ label ch_13:
     "Just as I'm getting invested in what I'm reading, I hear a soft click. The door opens, and I look up to see a golden eye peering through the crack."
 
     stop music fadeout 0.5
-    stop voice fadeout 0.5
+    stop sound fadeout 0.5
     play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
 
     "A golden eye meets my gaze. The crack is just big enough that I see a glimpse of a familiar smile. After another moment, the door opens all the way, revealing Shiori."
@@ -309,11 +309,10 @@ label ch_13:
 
     p "Yeah?"
 
-    show shiori neutral
 
     "Shiori tenses up for a moment before letting out a deep exhale."
 
-    show shiori serious
+    show shiori neutral
 
     shi "Alright, I mentioned before that those people are dangerous are up to no good, right?"
 
@@ -370,7 +369,7 @@ label ch_13:
     p "That soon? I thought you'd need a couple days at least." 
 
     show shiori happy
-    play voice "audio/shiogiggles/Shio giggles 5.ogg"
+    play audio "audio/shiogiggles/Shio giggles 5.ogg"
 
     shi "*giggle* Don't underestimate Archivers!"
 
@@ -433,4 +432,5 @@ label ch_13:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
+    stop audio fadeout 1.0
     scene black with Dissolve(1.0)

@@ -7,7 +7,7 @@ transform left_mid:
     yalign 1.0
 
 transform left_third:
-    xalign 0.33
+    xalign 0.15
     yalign 1.0
 
 transform center:
@@ -15,7 +15,7 @@ transform center:
     yalign 1.0
 
 transform right_third:
-    xalign 0.66
+    xalign 0.85
     yalign 1.0
 
 transform right_mid:

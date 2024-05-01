@@ -50,13 +50,15 @@ label ch_24:
 
     p "Shiori, why aren't you sleeping? Did you get enough rest?"
 
+    show shiori smile
+
     shi "Insomnia."
 
     p_i "Uh huh..."
 
     shi "But actually though, I no longer need to sleep. Not since I got this book, anyway."
 
-    "Shiori shows me the book that she had tucked beneath her arm. There are no words written on the cover, but it seems to be the same as the book she was reading back in the cafe."
+    "Shiori shows me the book that she had tucked beneath her arm. There are no words written on the cover, but it seems to be similar to the book she was reading back in the cafe."
 
     shi "This book allows me to stay up at full energy all the time as long as I have it with me. Can't tell you how it does that though."
 
@@ -69,8 +71,8 @@ label ch_24:
     "Rook yawns loudly."
 
     show shiori at left_third
-    with move
-    show rook weapon at right_third
+    with MoveTransition(1.0)
+    show rook weapon at right_third with dissolve_fast
 
     r "Hahhh, good morning gentlefolk! You sure took your sweet time, kid. How did the exploration go?"
 
@@ -81,27 +83,6 @@ label ch_24:
     shi "Just go along with it. I need to confirm something."
 
     "At Shiori's request, I recount everything that happened in the Dreamscape. From landing in the dream to fighting off the monster, I lay it all out, making sure not to leave out any detail."
-
-    if not blunder:
-        p "...and then the ground under the circle shattered and we returned safely."
-
-        shi "Hm... Yup, nothing wrong with that. The first entry into the dream usually leaves someone's memory of their time there scrambled, but yours seem to be completely fine. Your compatibility with the dream really is high, just like I thought!"
-
-        show shiori satisfied at left_third
-
-        "Shiori puffs up her chest with a satisfied, almost smug look on her face."
-
-        shi "And you managed to fight back against the monster on your own too!"
-
-        p_i "I guess she's proud of me."
-
-        show rook armslaugh at right_third
-
-        r "Aye! You did well for your first time, kid. The title of Bishop is not wasted on ya."
-
-        hide rook armslaugh
-        show shiori satisfied at center
-        with move
 
     if blunder:
         p "...and then the ground under the circle shattered and we returned safely... mostly."
@@ -144,8 +125,32 @@ label ch_24:
         p "Thank you, Shiori."
 
         "Shiori gives me a soft and warm smile. Her support helps me regain the confidence to keep pushing forward."
+    
+    else:
+        p "...and then the ground under the circle shattered and we returned safely."
 
-    show shiori neutral at left_third
+        show shiori neutral
+
+        shi "Hm... Yup, nothing wrong with that. The first entry into the dream usually leaves someone's memory of their time there scrambled, but yours seem to be completely fine. Your compatibility with the dream really is high, just like I thought!"
+
+        show shiori satisfied at left_third
+
+        "Shiori puffs up her chest with a satisfied, almost smug look on her face."
+
+        shi "And you managed to fight back against the monster on your own too!"
+
+        p_i "I guess she's proud of me."
+
+        show rook armslaugh at right_third
+
+        r "Aye! You did well for your first time, kid. The title of Bishop is not wasted on ya."
+
+        hide rook armslaugh
+        show shiori satisfied at center
+        with MoveTransition(1.0)
+
+
+    show shiori smile at left_third
 
     shi "Now then, stand still for me, would you? I need to run some checks on you."
 
@@ -169,9 +174,9 @@ label ch_24:
 
     show rook arms at right_third
 
-    shi "Yeah, you should do that [player_name]. Since you can't really leave the castle right now, might as well walk around! Who knows, you might find something interesting. Also, here you go!"
+    show shiori smile
 
-    show shiori neutral
+    shi "Yeah, you should do that [player_name]. Since you can't really leave the castle right now, might as well walk around! Who knows, you might find something interesting. Also, here you go!"
 
     "Shiori takes out her phone and sends me a file. It is a map of the castle, with all of the important places marked down in different colors."
 
@@ -247,11 +252,13 @@ label ch_24:
 
         "Opening the door, the sight that greets me is not a small balcony of potted plants and miniature shrubbery, but a large-scale park teeming with plant life and rivers. The paths paved in front of me are lined with colorful flower beds, and a familiar-looking goth girl sits at the end of one of them, playfully inspecting a flower."
 
-        show shiori satisfied
+        show shiori happy
 
         shi "Oh hey, you found me!"
 
         p "Well, the map was really helpful, to say the least. Even though someone added a little GPS tracker to my phone without my consent."
+
+        show shiori wink
 
         shi "I don't know what you're talking about~"
 
@@ -265,10 +272,14 @@ label ch_24:
 
         p_i "Space-time magic?! Is that something to be used lightly?"
 
+        show shiori neutral
+
         shi "I know what you're thinking. 'Oh Shiori, you shouldn't be using such a powerful and important-sounding spell on something so trivial'. Well I do what I want, and what I want is a big garden where I can take naps whenever!"
 
         p "Naps? Didn't you mention you don't need to sleep anymore?"
 
+        show shiori smile
+        
         shi "Yeah, as long as I have this."
 
         "Shiori takes out the magic book from before."
@@ -277,6 +288,8 @@ label ch_24:
 
         "Shiori leans backwards and falls onto a flowerbed. Curiously, the flowers seem to be moving themselves up, cushioning her."
 
+        show shiori satisfied
+        
         shi "Ah~ It feels so nice to relax... Come on [player_name], lay down too! It feels great, you know?"
 
         "Seeing Shiori enjoying herself, I lay down to rest close to her; not touching, but close enough to not feel like strangers."
@@ -285,11 +298,15 @@ label ch_24:
 
         shi "Hehe, of course it does! The flowers we're sleeping on are called pushpetals, you know? They are extremely resilient, and a bunch of them together can even hold up a car."
 
+        show shiori elated
+
         "Shiori then goes on about the various species of otherworldly flowers in the area. It seems that she spent a lot of time planting them here."
 
         p "You really know a lot about plants, huh?"
 
         shi "Well, being cooped up inside the same castle really pushes you to find new hobbies. Plus, most of that knowledge came from this."
+
+        show shiori smile
 
         "Shiori takes out a different book from before. It looks to be the same one she was reading back in the cafe."
 
@@ -317,7 +334,7 @@ label ch_24:
             "Why do those books look so similar?":
                 p "If you don't mind me asking, why are the two books so similar? I thought one of them was written with your friend, and the other popped out of nowhere."
 
-                show shiori frown
+                show shiori neutral
 
                 shi "..."
 
@@ -338,7 +355,7 @@ label ch_24:
 
                 shi "Well, of course I do. Otherwise why would I drag you into all of this?"
 
-                show shiori wink
+                show shiori smug
 
                 shi "Oh wait, is someone feeling a bit... unmotivated?"
 
@@ -349,6 +366,8 @@ label ch_24:
                 "Suddenly, Shiori rolls over towards me and pulls on my cheeks."
 
                 p "Ow! What was that for?!"
+
+                show shiori smile
 
                 shi "A little wake-up pinch for our latest recruit. Have some more faith in yourself. Things will go badly if you think they will, and things will go great if you believe hard enough."
 
@@ -367,10 +386,9 @@ label ch_24:
 
                 shi "She was... a great person. One of the few people I could call a true friend. It was her who wrote the story within this book with me, and she was also responsible for warning me about the Dreamscape."
 
+                show shiori sad
 
                 shi "It would've been great if she could see the end of her work herself..."
-                
-                show shiori sad
 
                 "Shiori sniffles a little bit, her face full of melancholy."
 
@@ -756,11 +774,15 @@ label ch_24:
 
     p "As much as I'll ever be, I guess."
 
+    show shiori smug at left with moveinleft
+
     shi "Well you better be! I'm just about done with the spell!"
 
     "The ritual circle begins to shine slightly. It is time."
 
     "Knowing what to do, I lay down in the center and try to fall asleep. It doesn't take long for my consciousness to drift away, and my mind becomes blank once again."
+
+    hide shiori smug with dissolve_fast
 
     show bg void with fade
 
@@ -790,25 +812,25 @@ label ch_24:
 
     "Shiori's voice rings in my head, as if she was talking from inside of it."
 
-    r  "Shiori? Is that you? How are you doing this?"
+    p  "Shiori? Is that you? How are you doing this?"
 
-    shi "Good, the connection works. How do I do this, you ask? Magic of course! I can communicate with you for a short time as long as you don't get any deeper into the Dreamscape."
+    shi "Good, the connection works. How do I do this, you ask? Magic of course! I can communicate with you as long as you don't get any deeper into the Dreamscape."
 
     shi "But only for a short time, so I'll explain the goal here quickly."
 
     shi "You've already discovered weaknesses of the monster and found its lair. However there is one more thing that needs to be done."
 
-    shi "When we corner the creature in the Dreamscape, it will try to escape into the real world. In the real world your powers will not work and it may have an advantage over us. Unless we prepare."
+    shi "When we corner the creature in the Dreamscape, it will try to escape into the real world, where your powers will not work and it may have an advantage over us. Unless we prepare."
 
-    r "Really? Didn't you mention I might pull things from dream into reality?"
+    p "Really? Didn't you mention I might pull things from dream into reality?"
 
-    shi "In theory, yes. But even if you can, we don't know how effective it will be. It is something that requires a lot of practice and time, and this is something we don't have."
+    shi "In theory, yes. But even if you can, we don't know how effective it will be. It is something that requires a lot of practice and time, both of which we don't have."
 
     shi "So we decided to search for a weapon from the real world that is stuck in the Dreamscape."
 
-    p "What?"
+    p "...What?"
 
-    shi "I see you are surprised. We are not the first who tried to defeat the monster. There were many adventurers, knights and heroes who tried to slay it. They all failed, but many of them had magically enhanced artifacts to aid them in combat. They're still in there somewhere, and if you can find them then we can use them in the real world."
+    shi "I see you are surprised. We aren't the first ones who tried to defeat the monster. There were many adventurers, knights and heroes who tried to slay it. They all failed, but many of them had magically enhanced artifacts to aid them in combat. They're still in there somewhere, and if you can find them, we can use them in the real world."
 
     p "How do you know that? Knight said nothing in the book worked, and there's no telling if anything else will until we actually try it, right?"
 
@@ -820,13 +842,15 @@ label ch_24:
 
     r "You needn't worry. I will protect Bishop at all costs."
 
-    "Now to find these artifacts to fight the monster. But what were they, and where were we supposed to look for them?"
+    "Shiori's voice trails off. The connection has been cut, and we're now left alone in the Dreamscape."
+
+    "Now to find these artifacts to fight the monster. But what were they, and where are we supposed to look for them?"
 
     "I glance at Rook hoping to receive a hint."
 
     r "You needn't be so anxious. Just do what you did before, follow your intuition, and I'm sure it will lead us toward the objective."
 
-    p "Oh come on, give me at least something to start with."
+    p "Oh come on, at least give me something to start with."
 
     show rook armslaugh
 
@@ -868,11 +892,11 @@ label ch_24:
 
     hide rook arms
 
-    "Together, we walked down the main hallway. It was eerily silent, the only sound being the muted echoes of our footsteps."
+    "Together, we walked down the main hallway. It was eerily silent, with the only sound heard being the muted echoes of our footsteps."
 
-    "The hallways felt narrower than they used to, and some that I looked down on either side had a distinctly organic undulation to them that made my skin crawl. For all I tried, I wasn't able to replicate things perfectly, and the Dreamscape seemed happy to fill in any gaps in my memory."
+    "The hallways feel narrower than they used to, and some that I look down on either side had a distinctly organic undulation to them that made my skin crawl. For all I tried, I wasn't able to replicate things perfectly, and the Dreamscape seemed happy to fill in any gaps in my memory."
 
-    "It was dark. I looked up and the lights were clearly on, a few even flickered a bit, but they were putting out very little light. I can't help but wonder if this is some subconscious memory worming its way in, or if I had just never thought about the lights being what actually illuminated the whole building."
+    "It is dark. I look up and the lights are clearly on, a few even flickered a bit, but they are putting out very little light. I can't help but wonder if this is some subconscious memory worming its way in, or if I had just never thought about the lights being what actually illuminated the whole building."
 
     r "This is no good, I can hardly see five paces in front of me."
 
@@ -888,7 +912,7 @@ label ch_24:
 
     r "So, do you have any ideas where to look?"
 
-    p_i "I honestly have no idea, if only there was something that showed us the way. In games there's always map markers telling you where to go, or at least a compass showing the general direction." 
+    p_i "I honestly have no idea, if only there was something that showed us the way. In games there are always map markers telling you where to go, or at least a compass showing the general direction." 
 
     stop music fadeout 0.5
     play music "audio/3 Fantasy/3 Gatherer L.ogg" loop fadein 0.5
@@ -917,7 +941,7 @@ label ch_24:
 
     "Rook lovingly pats the gun. Seriously, where did Shiori even get something like that?"
 
-    "I sigh. It would take too much time to explain what the death flags are and why no one should boast how strong they are during the 'slay the monster' quest."
+    "I sigh. It would take too much time to explain what death flags are and why no one should boast how strong they are during the 'slay the monster' quest..."
 
     p "Ok then, let's keep moving."
 
@@ -948,19 +972,19 @@ label ch_24:
 
         show bg classroom with fade
 
-        "The room was almost the same as I remember. Multiple tables sitting in line. A big green board.The teacher's table near the window. It almost felt nostalgic, but one small difference bothered me."
+        "The room is almost the same as I remember. Multiple tables sitting in line. A big green board. The teacher's table near the window. It almost feels nostalgic, but one small difference bothers me."
 
-        "It was full of skeletons."
+        "It is full of skeletons."
 
-        "They were lying all over the room, wearing armor and robes of different colors."
+        "They are lying all over the room, wearing armor and robes of different colors."
 
-        "In the middle of the homeroom, a golden sword sticks out of the central table. One of the skeletons sat beside it"
+        "In the middle of the homeroom, a golden sword sticks out of the central table. One of the skeletons sits beside it"
 
         p "What the..."
 
         show rook arms
 
-        r "All who tried to defeat the creature.The Lord of Nightmares has terrorized people for many years."
+        r "All who tried to defeat the creature. The Lord of Nightmares has terrorized people for many years."
 
         "Rook kneels to give final honors to the fallen warriors."
 
@@ -980,9 +1004,9 @@ label ch_24:
 
         "Maybe I can try to make the table disappear? Or break it?"
 
-        "I imagine it disappears, or melts away."
+        "I imagine it disappearing or melting away."
 
-        "Nothing happens. My powers do not affect the sword or the table. Pulling it out seems like the only option"
+        "Nothing happens. My powers do not affect the sword or the table. Pulling it out seems like the only option."
 
         "Rook finishes paying his respects and joins me."
 
@@ -1035,7 +1059,7 @@ label ch_24:
 
         "As we walk through the corridors, Rook tells me more about the fantasy world he came from. I'm thankful for the distraction."
 
-        "Although it wasn't completely dark anymore, there were still pockets of dark shadows. I couldn't shake the feeling that something was about to pounce on me from one of them."
+        "Although it isn't completely dark anymore, there are still pockets of dark shadows. I couldn't shake the feeling that something was about to pounce on me from one of them."
 
         "Finally, we reach the big double door that leads to the natatorium. Rook slowly opens it, looking inside to be sure it is safe and enters, giving me a signal."
 
@@ -1079,7 +1103,7 @@ label ch_24:
 
         p_i  "I can't forget, I don't need to worry about things like this as long as I keep my head. Still, what touched me? It couldn't have been like a fish or seaweed."
 
-        "That was a mistake. As soon as the thought passed through my mind, the bottom of the pool cracked open and a forest of kelp grew up around me, obscuring the light I was swimming after. A glittering school of fish took me by surprise as they swam in front of me."
+        "That was a mistake. As soon as the thought passed through my mind, the bottom of the pool cracked open and a forest of kelp grew up around me, obscuring the light I was swimming after. A glittering school of fish takes me by surprise as they swim in front of me."
 
         "I wave them away and make my way to the bottom, pulling away the kelp that has wrapped around the light. The brilliant cyan glow blinds me for a second, and I see the artifact I'm looking for."
 
@@ -1250,7 +1274,7 @@ label ch_24:
 
     play sound "audio/sfx/monster steppies.ogg"
 
-    "Somewhere in the building we hear heavy steps echo throughout the halls. It was after us, inside the school."
+    "Somewhere in the building we hear heavy steps echo throughout the halls. It is after us, inside the school."
 
     "We're almost at the exit, we just need to pass the last hallway. I turn around and freeze."
 
@@ -1262,19 +1286,19 @@ label ch_24:
 
     show monster calm at right_third
 
-    "The monster was standing in the middle of the hall. It was also bigger this time. Did it grow, or did the hallway shrink?"
+    "The monster is standing in the middle of the hall. It is also bigger this time. Did it grow, or did the hallway shrink?"
 
     "I couldn't tell. The only thing clear to me now is that it's going to be nearly impossible to pass it by."
 
     "The monster lumbers towards us, its flickering fiery mane casting erratic shadows across the walls and floor."
 
-    p_i "We needed to do something."
+    p_i "We need to do something."
 
     r "Listen here, kid. I'll act as a distraction and lure it away from you. You take that weapon and run for it."
 
     p "What about you? I am not leaving you here!"
 
-    r " Don't worry, I'll be right behind you. Just take care of your new weapon."
+    r "Don't worry, I'll be right behind you. Just take care of your new weapon."
 
     "As much as I hate the thought, he has more experience in this kind of situation, and I can't come up with a better option."
 
@@ -1380,7 +1404,7 @@ label ch_24:
         if blunder:
             p_i "I won't run now, not when I have to make up for before. I'm not running from my past mistakes, and I refuse to make more!"
 
-        if not blunder:
+        else:
             p_i "I fought this thing before when I was with Knight, I can do it again!"
 
         "Throwing caution to the wind, I grab my weapon tightly and run into the fray."
@@ -1438,7 +1462,7 @@ label ch_24:
 
         hide monster angry
         show rook weaponeyeglow at center
-        with move
+        with MoveTransition(1.0)
 
         hide emberback
         hide embermid
@@ -1506,7 +1530,7 @@ label ch_24:
     "Shiori pokes my face with her finger, trying to wake me up."
 
     show shiori neutral at left_third
-    with move
+    with MoveTransition(1.0)
     show knight weapon at right_third
 
     k "Oi, how long are you gonna sleep, Bishop! Rook's already up!"
@@ -1577,7 +1601,7 @@ label ch_24:
 
             p "... Shiori, the point of your mission was to steal something from the dream."
 
-            show shiori smile
+            show shiori wink
 
             shi "... Oh yeah, I forgot about that. Teehee~"
 
@@ -1587,7 +1611,7 @@ label ch_24:
             k "Well would you look at that, we finally have a mage."
 
             hide rook injured
-            show shiori frown
+            show shiori mad
 
             shi "Hey! I cast spells too, y'know?"
 
@@ -1622,6 +1646,8 @@ label ch_24:
     shi "How about you, [player_name]? How are you feeling?"
 
     p "I'd be lying if I said I'm not scared, but we've come this far already. I can't give up now!"
+
+    show shiori satisfied
 
     shi "Nice answer. Well then, let us prepare for the night. I'll see you guys here again at the same time this evening."
 

@@ -39,11 +39,10 @@ default ending = 0
 default wep_1_dc = False
 default blunder = False
 default wep_2 = 0
-
-#endregion
-
-# region Slice of Life Globals
-
-# variables here
+default downtime = 0
+default wep_3 = 0
+default rook_inj = False
+default fgoodend = True
+default kchosen = True
 
 #endregion

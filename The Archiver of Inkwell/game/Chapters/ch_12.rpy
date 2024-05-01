@@ -170,7 +170,7 @@ label ch_12:
     show cultist at right_third zorder -1
     stop music
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
-    play voice "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5
+    play audio "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5
 
     p_i "Oh, did they have a class canceled too?"
 
@@ -187,7 +187,7 @@ label ch_12:
 
     p "W-What? Where are we-"
 
-    show shiori serious
+    show shiori neutral
 
     shi "Just come on!" with hpunch
 
@@ -203,11 +203,9 @@ label ch_12:
 
     "We approach the library, but we're entering a side entrance I've never used."
 
-    show shiori serious
+    show shiori neutral
 
     "Pulling me inside, Shiori closes the door behind us and continues dragging me along. Soon, we duck into one of the side rooms and she slams that door too, locking it with the deadbolt."
-
-    show shiori neutral
 
     p "What's going on? Why did you pull me like that? Why are we-"
 
@@ -357,7 +355,7 @@ label ch_12:
 
     shi "Aw, that's no fun. It's fiiiine." 
 
-    show shiori serious
+    show shiori neutral
 
     "Shiori's expression shifts to a much more serious one."
 
@@ -401,5 +399,5 @@ label ch_12:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    stop voice fadeout 1.0
+    stop audio fadeout 1.0
     scene black with Dissolve(1.0)

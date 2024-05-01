@@ -9,8 +9,6 @@
 
 label start:
 
-    show shiori frown
-
     $ player_name = renpy.input("What's my name, again?",length=24, default="")
 
     $ player_name = player_name.strip()

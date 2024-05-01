@@ -78,7 +78,7 @@ label ch_22:
 
     "I run and I run, until I can run no more. The creature moves closer and closer with each step I don't take. The heat spreads more the longer I don't move. So I leap into the void, praying it will shield me from the flames."
 
-    scene bg bedroom with ImageDissolve("020.jpg",1.0,8)
+    scene bg bedroom with ImageDissolve("Helpers/wipes/020.jpg",1.0,8)
 
     stop music fadeout 0.5
     play music "audio/0 Prologue/cafe1.ogg" loop fadein 0.5
@@ -203,7 +203,7 @@ label ch_22:
 
     show knight weapon
 
-    "Just before the monster reaches me, a woman stands between us. Her scarlet hair and bright clothes make her stand out against this gray forest."
+    "Just before the monster reaches me, a woman stands between us. Her scarlet hair and dark clothes make her stand out against this gray forest."
 
     play sound "audio/sfx/Sword clash 1.ogg"
 

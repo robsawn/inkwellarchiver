@@ -15,9 +15,9 @@ init:
         Snow("Helpers/effects/rain3.png",50,800,0)
     
     image emberback:
-        Snow("Helpers/effects/ember1.png",150,speed=(.1,1.0),wind=50)
+        Snow("Helpers/effects/ember1.png",150,speed=.5,wind=50)
     image embermid:
-        Snow("Helpers/effects/ember2.png",150,speed=(.1,1.0),wind=50)
+        Snow("Helpers/effects/ember2.png",150,speed=.5,wind=50)
     
 label ch_0:
 
@@ -155,7 +155,7 @@ label ch_0:
 
     shi "Mhm."
 
-    show shiori neutral at right with MoveTransition(1.0)
+    show shiori neutral at right_third with MoveTransition(1.0)
     
     "Without another word, she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
 
@@ -243,7 +243,7 @@ label ch_0:
     if cocoa:
         p "I got this; it's cocoa with caramel. Not something I would drink everyday, but I think I deserve a sweet treat on a day like this."
 
-        show shiori surprise
+        show shiori surprised
 
         shi "You're not worried about your weight?"
 
@@ -313,14 +313,14 @@ label ch_0:
         p "They're alright. I wouldn't say I love them, but I do read just for fun every now and then."
 
         show shiori smile
-        play voice "audio/shiogiggles/Shio giggles 4.ogg" 
+        play audio "audio/shiogiggles/Shio giggles 4.ogg" 
 
         shi "Really? I love them."
 
         shi "They can take you to places you might never have even dreamed of and can teach you all kinds of things."
         
         show shiori happy
-        play voice "audio/shiogiggles/Shio giggles 10.ogg"
+        play audio "audio/shiogiggles/Shio giggles 10.ogg"
 
         shi "I might be a bit biased though. *giggle*"
 

@@ -97,7 +97,7 @@ label ch_1:
     p "Thanks."
 
     show shiori smile
-    play voice "audio/shiogiggles/Shio giggles 9.ogg"
+    play audio "audio/shiogiggles/Shio giggles 9.ogg"
 
     shi "You're welcome, your sneezes were a little distracting, so I have no choice but to sacrifice my tissues. *giggle*"
 
@@ -169,7 +169,7 @@ label ch_1:
     shi "Shiori Novella at your service. Nice to officially meet you."
 
     show shiori satisfied
-    play voice "audio/shiogiggles/Shio giggles 8.ogg"
+    play audio "audio/shiogiggles/Shio giggles 8.ogg"
 
     shi "*giggle* 'Officially', 'fish'."
 
@@ -384,7 +384,7 @@ label ch_1:
         p "Well, considering you know what I'm looking for, would you still help me find those books?"
         
         show shiori smug
-        play voice "audio/shiogiggles/Shio giggles 5.ogg"
+        play audio "audio/shiogiggles/Shio giggles 5.ogg"
 
         shi "Hmm? What makes you think I would help you out? *giggle*"
         
@@ -452,7 +452,7 @@ label ch_1:
         "She stops right before turning into the next aisle of books, and just looks at me and blinks a few times."
 
         show shiori smile
-        play voice "audio/shiogiggles/Shio giggles 3.ogg"
+        play audio "audio/shiogiggles/Shio giggles 3.ogg"
 
         shi "*giggle* If only it was so simple..."
         
@@ -764,7 +764,7 @@ label ch_1:
         shi "My number's on the bookmark. Let me know when you finish it, or just find me here again. We'll meet again soon, so be sure to read it all." 
 
         show shiori satisfied
-        play voice "audio/shiogiggles/Shio giggles 11.ogg"
+        play audio "audio/shiogiggles/Shio giggles 11.ogg"
         
         shi "If you want to survive, that is."
 
@@ -794,5 +794,5 @@ label ch_1:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    stop voice fadeout 1.0
+    stop audio fadeout 1.0
     scene black with Dissolve(1.0)

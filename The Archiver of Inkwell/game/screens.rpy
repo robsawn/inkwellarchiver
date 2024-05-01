@@ -719,6 +719,18 @@ screen extras():
             text _("In my usual and true fashion, I leave you with this: I'm proud of you, Shiorin. Now and forever.\n\n")
             text _("Sincerely, your Novelknight,\nBoon.\n~~~~~\n\n\n")
 
+            #Firemind
+            text _("Firemind\n~~~~~\n")
+            text _("Happy day of birth, Shiori~n!\n\n")
+            text _("I hope you’ll eat good and do the things you want and love to do the most in your special day! I’m honestly quite bad at wishing others a happy birthday, I rarely celebrate mine as is, I think this had to do with barely having friends.. if any www. But this honestly changed recently when you joined Hololive! I’ve met amazing Novelites whom I treasure and call friends now, we celebrated my bday in discord! It was short but sweet and I couldn’t ask for more.\n\n")
+            text _("You changed my perspective on many things and there’s no words I can use to express how thankful I am to your mother for birthing you www. (and maybe also to mama Yagoo? www)\n\n")
+            text _("Thank you so much for making all of our days better, and I hope we Novelites have also helped on making your days better.\n\n")
+            text _("We love you and we are so proud of all the things you’ve achieved thus far, and I cannot wait to see you accomplish more amazing things in the future, be it small or big we will be there to celebrate it with you.\n\n")
+            text _("So uhmm I think my anxiety on wishing others a happy bday is kicking in so I’ll leave it here www, I can’t wait to see what you have prep for your bday! I’m planning on making some cheese tonkatsu and for dessert I’m debating between passion fruit cheesecake or some fruit jello with condensed milk (yeee not that healthy www).\n\n")
+            text _("Sooo yep! Happy Birthday !!! Love ya!\n\n")
+            text _("-Firemind\n\n")
+            text _("(Sorry for any spelling errors and whatnot, english is too hard www)\n~~~~~\n\n\n")
+
             #Forgotten Skinner
             text _("Forgotten Skinner\n~~~~~\n")
             text _("Dear Archiver,")
@@ -854,6 +866,17 @@ screen extras():
             text _("I hope you have a lovely and fantastic birthday!\n\n")
             text _("From, Project Organizer: Shiori's Jacket.\n~~~~~\n\n\n")
 
+            #Sine_Fine_Belli
+            text _("Sine_Fine_Belli\n~~~~~\n")
+            text _("Happy Birthday Shiori!\n\n")
+            text _("I remember well when you debuted. I was there watching all of Advent’s debuts, including yours.\n")
+            text _("You're one of my favorite Vtubers and oshies. I keep watching you because of how funny, Chill, comfy, and wholesome you are, and your funny, comfy, and chill streams are great!\n")
+            text _("I watch your streams, gaming streams, karaoke streams, ASMR streams, and collab streams.\n")
+            text _("I might not have been able to watch every stream, I wasn't able to attend and watch as many streams as I would have liked, but I enjoyed every stream I was able to watch. I'm glad that I was able to spend some time with you. Although I haven't watched most of your streams, I do enjoy the time I got to spend with you and the streams I managed to watch.\n")
+            text _("I can’t wait to see what you do, what you are also planning to do in the future. Here’s to more fun and entertaining streams as well as your future plans!\n")
+            text _("I’ll continue to watch your streams and spend time with you\nWe are proud of what you achieved and accomplished.\nYou're such a great Oshi to have and I hope to attend more of your streams!\n")
+            text _("Sine_Fine_Belli\n~~~~~\n\n\n")
+
             #Smilely
             text _("Smilely\n~~~~~\n")
             text _("Happy birthday Shiori!\n\n")
@@ -882,7 +905,7 @@ screen extras():
             text _("Okay, gotta stop this now or I'll never end writing (or suddenly start crying). Have a beautiful day and keep being you, gorgeous, dorky Queen of Inkwell.\n\n")
             text _("Your,\nViratasya\n~~~~~\n\n\n")
 
-            #fdvcx
+            #Void Wyrm
             text _("Void Wyrm\n~~~~~\n")
             text _("Dear Shiori Novella, our precious Queen.\n\n")
             text _("This letter from me is made to commemorate your birthday, a special day for all of Inkwell. It is of great joy for me to be here to celebrate your first birthday with us in this wonderful community of ours.\n\n")
@@ -894,6 +917,15 @@ screen extras():
             text _("Some streams I really loved where the lord of the rings watchalongs, the membership zatsudans and the unity streams. Some games I loved watching you play were Sonic Frontiers, Ender Lilies and Slay the Princess. The handcam streams have been fun too. Those handcam streams have had their challenges and mishaps over time, but you've made some fun stuff out of them. As long as you had fun in those streams, we are happy. You've been very kind and nice to me when you respond to my comments in the streams. Gotten some fun responses from time to time. Finally, I love, love, love your piano playing and singing. It's so pleasant and fun to listen to. I think you will become great at those things someday. You put great effort into those things and it shows. We all love hearing you play and sing in the streams. I can see a great future where you and your friends jam it out greatly on the big stage with your 3d models in front of the loving fans. Your going to go far and do very well in hololive. I know it.\n\n")
             text _("This has been a long letter, so I will finish it here. Keep doing well Shiori, our dear Queen. We all love you. Thank you for being here with all of us and this great community you've made with us. From us to you Shiori, have a great day and an amazing birthday.\n\n")
             text _("With everlasting love from one of your many faithful caretakers,\nThe Void Wyrm.\n~~~~~\n\n\n")
+
+            #Wrong
+            text _("Wrong\n~~~~~\n")
+            text _("Dear Shiori,\n\n")
+            text _("I don't know how to write a proper letter, so I'll just wing it.\n\n")
+            text _("It’s your birthday today yay! (or at least that’s what the official Hololive website says, but It’s official, so I believe it). It’s been like what, 8, maybe 9 months since your debut. I still remember when you used to talk about cannibalism on stream and now, you still talk about cannibalism but not as much as before I think (I’m not willing to check every vod to do the math, way too much work).\n\n")
+            text _("I’d like to thank you for creating a pretty cool community consisting of flowers with eyes, pages with limbs, wyrms that are books, and knights that probably write novels. Seeing and reading everyone enjoy and reply to your prompts puts a smile on my face (We live in a society). The piano streams/spaces are also enjoyable to put as background music while doing other stuff (random dude comes out of nowhere and says “I’m stuff”).\n\n")
+            text _("And with that I’m out of ideas to write, so to end this letter I’d like to thank you for all you do for the community, and I’d like to thank the community itself for organizing this. I hope you enjoy today because It’s Shiori Novella's birthday!\nGet food, water, maybe some shelter while you’re at it, and again on behalf of the Novelites and even the Novelights (Gotta throw em a bone every now and then “Bau bau”) thank you for being a cool archiver Shiori Novella.\n\n")
+            text _("-Bobby Wrong\nP.S. I think letters with P.S. are cool! So I added one.\n~~~~~\n\n\n")
 
 style extras_label is gui_label
 style extras_label_text is gui_label_text
