@@ -77,7 +77,7 @@ label ch_14:
 
         fc "You know what I-"
 
-        p "ow"
+        p "Ow."
 
         fc "Wait! What was that?"
 
@@ -456,6 +456,10 @@ label ch_14:
         show bg compound with fade
         stop music fadeout 0.5
         play music "audio/4 Lovecraftian/4B/3 At The Cultists_ Hideaway L.ogg" loop fadein 0.5
+        show rainbackheavy zorder 5
+        show rainmidheavy zorder 15
+        show rainfront onlayer front
+        play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.65
 
         "Since the only way to find out what they are doing is up close and personal, I double back towards the cult's headquarters. The streets are fairly empty on the way there. Everything feels empty, in fact." 
         
@@ -467,10 +471,11 @@ label ch_14:
         
         "The hard part is of course getting around the building undetected. Hiding behind cracked doors, furniture or random objects. Anything to slip by while no one is looking."
 
-        show bg culthall with fade
         hide rainbackheavy
         hide rainmidheavy
         hide rainfront onlayer front
+        stop nature fadeout 1.5
+        show bg culthall with fade
 
         p_i "Everyone in here seems busy, maybe they are up to something?"
 
@@ -502,7 +507,7 @@ label ch_14:
         play music "audio/4 Lovecraftian/4B/1 When The City-Story is Unraveling L.ogg" loop fadein 0.5
         play ambient "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5
 
-        "What I see in this room is beyond description. I had come expecting blood and bones, arcane symbols, or prayers to an uncaring god. But this is *different*. The basement is flooded, but the water is not pouring in from outside." 
+        "What I see in this room is beyond description. I had come expecting blood and bones, arcane symbols, or prayers to an uncaring god. But this is {i}}different{/i}}. The basement is flooded, but the water is not pouring in from outside." 
         
         "Instead, it is trickling up the walls. It's all so clear. So clean. So empty. All swirling out from a circle at the center of everything. I watch as the cultists take one of their own and submerge them." 
         
@@ -615,6 +620,12 @@ label ch_14:
 
         stop music fadeout 0.5
         play music "audio/4 Lovecraftian/3B/3 Shiori Missing Track L.ogg" loop fadein 0.5
+        scene bg compound with fade
+        
+        show rainbackheavy zorder 5
+        show rainmidheavy zorder 15
+        show rainfront onlayer front
+        play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.65
 
         p_i "The police should be able to handle this."
 
@@ -625,11 +636,6 @@ label ch_14:
         o "Hello, 911, what's your emergency?"
 
         p "Ah, yes! I'd like to report a robbery in progress? Someone is using the storm as cover to rob the manor up on the hill!"
-
-        scene bg compound with fade
-        hide rainfront onlayer front
-        stop nature fadeout 1.0
-
 
         "It wasn't my best plan, admittedly, but it is at least believable. All I had to do now was wait. The police will come in, they will see the cult's activities, and Shiori will be freed. That is how I assumed it would go." 
         

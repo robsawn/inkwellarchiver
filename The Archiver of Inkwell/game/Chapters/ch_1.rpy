@@ -27,7 +27,7 @@ label ch_1:
     stop music fadeout 0.25
     scene bg street with dissolve_fast
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play nature "audio/Ambient/rain1.ogg" loop fadein 0.5
+    play nature "audio/Ambient/rain1.ogg" loop fadein 0.25
 
     "Walking down the street, I feel a calm wash over me as I listen to the soft drumming of the light rain against my umbrella."
 
@@ -110,7 +110,7 @@ label ch_1:
     hide shiori smile
 
     show bg libraryovercast with dissolve_slow
-    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.35
+    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.25
 
     "It seems the weather is getting worse. Outside, I can see more of the automatic lights turning on."
 
@@ -440,7 +440,7 @@ label ch_1:
 
         shi "... the ones who can't escape their own fate?"
         
-        play nature "audio/Ambient/rain4.ogg" loop volume 0.5
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.4
 
         "I struggle to find an answer to that as the rain fills the void of silence between us, battering against the window as we walk by."
         
@@ -540,7 +540,7 @@ label ch_1:
         "Her cheery voice fades into a more serious tone."
         
         stop nature fadeout 0.75
-        play nature "audio/Ambient/rain4.ogg" loop volume 0.6 fadein 1.0
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.45 fadein 1.0
         stop music fadeout 3.5
 
         shi "It's going to be raining for a while."

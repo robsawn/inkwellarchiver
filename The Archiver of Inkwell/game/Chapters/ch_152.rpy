@@ -264,7 +264,9 @@ label ch_152:
 
     shi "Yeah, that's right. I'm carrying you out of here. It's gonna be a bit rough, but I won't let you suffer any longer."
 
-    show bg street with Fade(0.5,1.5,0.5)
+    show bg street:
+        blur 16
+    with Fade(0.5,1.5,0.5)
 
     show shiori serious
 
@@ -297,11 +299,11 @@ label ch_152:
 
     shi "Go ahead and close your eyes..."
 
-    show bg ritualhill with Fade(0.5,1.5,0.5)
+    show bg bedroomnight with Fade(0.5,1.5,0.5)
 
     shi "Focus on my voice, and try to relax a little..."
 
-    show black with dissolve_slow
+    scene black with dissolve_slow
 
     shi "Everything's going to be okay..."
 

@@ -946,7 +946,7 @@ label ch_24:
 
     p "I just wanted something to guide us. So I would guess it shows where the artifacts are? But that's just a theory."
 
-    "Rook pats me on the shoulder and gives a thumb up."
+    "Rook pats me on the shoulder and gives me a thumbs up."
 
     r "Good job kid, now let's follow where it's showing."
 
@@ -1304,7 +1304,7 @@ label ch_24:
 
     "The monster is standing in the middle of the hall. It is also bigger this time. Did it grow, or did the hallway shrink?"
 
-    "I couldn't tell. The only thing clear to me now is that it's going to be nearly impossible to pass it by."
+    "I can't tell. The only thing clear to me now is that it's going to be nearly impossible to pass it by."
 
     "The monster lumbers towards us, its flickering fiery mane casting erratic shadows across the walls and floor."
 

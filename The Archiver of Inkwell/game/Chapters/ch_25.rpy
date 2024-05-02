@@ -1,26 +1,24 @@
 label ch_25:
-    #bgm is still exposition
-    #fades from black
-
-    #Throne room bg
+    
+    scene bg castleint with fade
 
     "We gather again in the throne room at sunset. Shiori insisted that we spend some time together before the final battle."
 
     "I'm sitting on the floor and playing cards with Knight and Rook. Knight is using Rook's inexperience to her advantage, and has beaten the both of us every round so far."
 
-    #shiori smile
+    show shiori smile with dissolve_fast
 
     "Shiori is sitting on her throne and reading that book of hers."
 
-    #Shiori sprite disappears
+    hide shiori smile with dissolve_fast
 
-    #Rook sprite with a mug
+    show rook mug at left_third
 
     "Rook tosses his cards to the ground and shakes his head."
 
     r "As I thought, it was a bad idea to play against you Knight. You show no mercy to a rookie player."
 
-    #Rook mug to left third, Knight with mug right third
+    show knight mug at right_third
 
     k "Aw, you're giving up already? Come on, let's play some more."
 
@@ -28,13 +26,14 @@ label ch_25:
 
     "While Rook was contemplating if he should take the bait, Shiori closed the book and stood up."
 
-    #show shiori neutral
+    show shiori neutral
 
     shi "It is time."
 
     "Everyone turns to her. The moment had arrived to head out."
 
-    #Rook and Knight sprite disappears, Shiori neutral appears
+    hide rook mug with dissolve_fast
+    hide knight mug with dissolve_fast
 
     shi "Are you ready? This is the fourth day of the hunt. In the book, this is the day the monster is defeated. So we must finish this today and no later, or who knows what might happen."
 
@@ -46,45 +45,40 @@ label ch_25:
 
     shi "Protecting your real bodies of course. You are all completely defenseless while you're in the Dreamscape. To be honest, I'm always tempted to draw something with a marker on your faces."
 
-    #shiori smile
+    show shiori smile
 
     "I don't know if she's being serious or just trying to cheer me up, but still, I do feel a bit less nervous."
 
-    #Ritual room bg
+    show bg ritual with fade
 
     "Both of the knights and I are getting ready to sleep while Shiori is preparing the spell."
 
     "I hug the artifact close to my chest and shut my eyes, trying my best to fall asleep by counting sheep."
 
-    #fade to black, 1 sec
+    scene bg void with fade
 
-    #flat black bg 1 sec
-
-    #fade out of black, 1 sec
-
-    #void bg
-
-    #bgm change to gatherer
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/3 Gatherer L.ogg" loop fadein 0.5
 
     "At this point, the jump is becoming routine and the surroundings aren't as alien and scary. We appear just a few feet above the road and quickly look around to confirm it is safe."
 
-    #Knight sprite base pose 
+    show knight weapon with dissolve_fast
 
     k "Well Bishop, do your thing."
 
-    #Knight sprite disappears
+    hide knight weapon with dissolve_fast
 
     "I close my eyes and try to picture the cave we visited, hoping it would be unoccupied this time."
 
-    #monster lair bg
+    show bg lair with fade
 
     "I reopen my eyes, and we stand at the mouth of the lair."
 
-    #Rook sprite weapon out 
+    show rook weapon with dissolve_fast
 
     r "I hear nothing from within, the beast must not be home. We can begin our preparations."
 
-    #Rook sprite disappears
+    hide rook weapon with dissolve_fast
 
     "We begin our descent to the main chamber. The light from outside is enough to make it to the final hairpin turn, and as we round the corner the darkness that greets us confirms that the monster is elsewhere."
 
@@ -92,7 +86,7 @@ label ch_25:
 
     "I hang dreamcatchers from the branches, and quickly excavate a few trenches. These I trap with upward-pointing steak knives and fill with salt. As I finish, Knight approaches me." 
 
-    #Knight sprite base pose 
+    show knight weapon with dissolve_fast
 
     k "Ok, Bishop, you're going to be the bait."
 
@@ -106,17 +100,22 @@ label ch_25:
 
     "It was a solid plan. Though the thought of being targeted by that creature again was less than pleasant."
 
-    #Knight sprite slides right third, Rook (weapon) appears left third
+    show knight weapon at right_third
+    with MoveTransition(1.0)
+    show rook weapon at left_third
+    with dissolve_fast
 
     r "Don't worry kid, we won't let the monster touch you. We will be right there to jump to your aid should it come close."
 
     "He pats my shoulder, trying to reassure me. It helps, a bit, and I step around the switchback corner to be the cheese in our mousetrap while he and Knight settle into the shadows of the cavern for the ambush."
 
-    #Both sprites disappear
+    hide knight weapon with dissolve_fast
+    hide rook weapon with dissolve_fast
 
-    #bgm change to hunter
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/2 Hunter L.ogg" loop fadein 0.5
 
-    #monster steppies sfx
+    play sound "audio/sfx/monster steppies.ogg"
 
     "I hear the monster crunch through the underbrush as it returns home, closing in on me."
 
@@ -124,13 +123,14 @@ label ch_25:
 
     p_i "Maybe I should dream myself a little red cape to wave in front of it. Just standing here waiting for it to come attack me makes me feel like a matador. Or a rodeo clown..."
 
-    #ember vfx start here
+    show emberback zorder 5
+    show embermid zorder 15
 
     "I stand 'alone', artifact in hand, and the monster appears at the entrance of its lair. For a moment, all I hear is the sputtering and hissing of the monster's flames, and my heart thundering in my chest."
 
     "The moment of tension is broken as it lets out a low growl and the echo of its hoof hitting the stone bounces down the passage. It is abundantly clear that I am an uninvited guest." 
 
-    #Monster sprite (angry)
+    show monster angry with dissolve_fast
 
     "The creature strides slowly down the tunnel, the flames from its back licking the ceiling. Has it gotten bigger?"
 
@@ -154,17 +154,20 @@ label ch_25:
 
     "I spin around and center my attention on growing a tree to block the exit as soon as the monster is fully in the main chamber."
 
-    #Monster sprite disappears
+    hide monster angry with dissolve_fast
 
     "All the dreamcatchers are set off at once, pinning the monster to the ground with a dozen glowing nets sizzling into its flesh. The illusion concealing our traps is dispelled as Knight and Rook emerge from the shadows."
 
-    #Rook weapon appears left third, Knight weapon appears right third
+    show rook weapon at left_third with dissolve_fast
+    show knight weapon at right_third with dissolve_fast
 
     "Rook takes a knee between two of the trees and fires shot after shot at the beast. Knight runs circles around it, sending salt from the ditches spraying up onto the monster using the tip of her blade."
 
-    #knight & rook disappear, monster angry appears center
+    hide rook weapon with dissolve_fast
+    hide knight weapon with dissolve_fast
+    show monster angry with dissolve_fast
 
-    #monster sunburned sfx
+    play sound "audio/sfx/monster sunburned.ogg"
 
     "The monster screams and writhes in pain. It tears at itself with its claws to pull the nets away and lashes its tail back and forth, spewing gouts of ghastly flame. Knight and Rook are forced to retreat as the trees begin to catch fire."
 
@@ -202,7 +205,7 @@ label ch_25:
 
         "The monster shakes loose the last of the nets and turns to me, all the muscles in its body tensing as it prepares to pounce. Just in time to be hit by the ball of radiant flame."
 
-    #monster trapped sfx
+    play sound "audio/sfx/monster trapped.ogg"
 
     "The impact of the attack knocks the monster backwards, and it stumbles into the one of the spiked salt pits I made. The monster starts to scream as if it were melting, and Rook and Knight run to finish it off."
 
@@ -212,11 +215,15 @@ label ch_25:
 
     "Then, it turns and runs toward the exit."
 
-    #Monster left third, knight weapon appears right third
+    show monster angry at left_third
+    with MoveTransition(0.5)
+    show knight weapon at right_third with dissolve_fast
 
     k "Stop it!"
 
-    #Knight disappears, monster back to center
+
+    hide knight weapon with dissolve_fast
+    show monster angry with MoveTransition(0.5)
 
     "The monster begins to slam both of its claws into the tree blocking the exit, heedless of the rash spreading across its body. The trunk cracks and I focus on growing two additional trees on either side of it to further wall off the exit."
 
@@ -224,13 +231,20 @@ label ch_25:
 
     "Swinging both its claws in a wide arc, the creature rips into the fabric of the Dreamscape itself."
 
-    #Monster left third, rook weapon appears right third
+    
+    show monster angry at left_third
+    with MoveTransition(0.5)
+    
+    show rook weapon at right_third with dissolve_fast
 
     r "It's trying to escape into your world!"
 
-    #Rook & monster disappear
+    hide rook weapon with dissolve_fast
+    hide monster angry with dissolve_fast
 
     #ember vfx off
+    hide emberback with dissolve_fast
+    hide embermid with dissolve_fast
 
     "I try my best to close the portal, but with a flash of blue, the monster has already slipped into the void."
 
@@ -249,14 +263,17 @@ label ch_25:
     "I step onto the portal after Knight and Rook and it flashes, sending us back to the waking world." 
 
     #fade to black, flash white
+    scene black with flash_white
 
     #fade from black to Ritual room bg
+    scene bg ritual with dissolve_slow
 
     "We all jolt awake. How much of a head start does the monster have on us? It's hard to tell because of the time dilation."
 
     p "Uh... Hey guys? Where's Shiori?"
 
     #Throne room bg
+    scene bg castleint with fade
 
     "Knight sprints toward the throne room with Rook and I following right behind her. I hear Knight gasp as I round the corner, and I can only share in her shock at the destruction."
 
@@ -265,12 +282,16 @@ label ch_25:
     p_i "But still no Shiori in sight. Did the monster catch her?"
 
     #Knight sprite appears
+    show knight weapon with dissolve_fast
 
     k "No. No no no NO! It wasn't supposed to come here! Where is Shiori?!"
 
     "I can hear the panic setting into her voice."
 
     #Knight sprite slides to the left, Rook sprite appears
+    show knight weapon at left
+    with MoveTransition(0.75)
+    show rook weapon with dissolve_fast
 
     r "Breathe, Knight. We'll find where Queen is. Clearly there was a fight, so she would have led it away from our sleeping bodies."
 
@@ -279,46 +300,66 @@ label ch_25:
     p "I know where she is, let's go!"
 
     #knight & rook disappear
+    hide knight weapon with dissolve_fast
+    hide rook weapon with dissolve_fast
 
     "Trusting that the two of them are following me, I take off towards the stairs down to the castle dungeon."
 
     #catacombs bg
+    scene bg catacombs with Fade(1.0,1.75,1.0)
 
     "The basement level of the castle is a labyrinth, more catacombs than dungeon. Without the map I would have gotten hopelessly lost immediately." 
 
     "Turn after winding turn, we approach Shiori's marker. Every few paces we see claw marks, burned ceilings, or a caved-in wall. Suddenly, I hear the sounds of a fight echoing somewhere in front of us."
 
     #sword clash 1 sfx
+    play sound "audio/sfx/Sword clash 1.ogg"
 
     #ember vfx start
+    show emberback zorder 5
+    show embermid zorder 15
 
     #show shiori serious
+    show shiori serious with dissolve_fast
 
     "We step into a slightly larger room. Shiori, holding her greatsword with both of her hands, is cornered by the monster. It was injured, but that only made it more dangerous."
 
     #Shiori happy on the left and monster sprite angry on the right
+    show shiori happy at left_third
+    with MoveTransition(1.0)
+    show monster angry at right_third
+    with dissolve_fast
 
     "As soon as she sees us, her eyes light up. The monster, on the other hand, responds very differently."
 
     #monster roar sfx
+    play sound "audio/sfx/monster roar.ogg"
 
     #bgm change to combat
+    stop music fadeout 0.5
+    play music "audio/3 Fantasy/5 Combat L.ogg" loop fadein 0.5
 
     #both sprites disappear
+    hide shiori happy with dissolve_fast
+    hide monster angry with dissolve_fast 
 
     "Rook drops one knee and fires off several shots, but the creature, this 'Lord of Nightmares' as he called it, dodges the attack and charges at him."
 
     #Knight sprite (using illusion magic) appears
+    show knight illusion with dissolve_fast
 
     "Knight tries to intercept it by creating several illusory duplicates of herself, but the monster plows through, tossing its flaming head. With the fake Knights scattered, the real Knight has to dive out of the way to avoid being gored."
 
     #Knight sprite disappears, Shiori sprite (angry, frown) appears
+    hide knight illusion with dissolve_fast
+    show shiori mad with dissolve_fast
 
     "The monster rounds on her and tries to crush her with a hoof. Shiori uses the opportunity to lunge at it with her sword, opening another wound in its leg."
 
     "Black blood splashes to the ground and the monster groans. The creature repays her by whipping out with its tail, sending her skidding backward even after blocking it with her sword."
 
     #Shiori disappears
+    hide shiori mad with dissolve_fast
 
     if wep_3 == 0:
 
@@ -333,12 +374,17 @@ label ch_25:
         "I try to send several more balls of the golden fire towards the monster, but it intercepts them with its own blasts of flame. The resulting explosions are more dangerous to the four of us than to the monster, so I have to stop before the ceiling collapses on us."
 
     #Rook weapon appears
+    show rook weapon with dissolve_fast
 
     r "This is becoming a battle of attrition, and I'm not so sure I like our prospects!"
 
     "He shouts out to us while diving beneath a plume of blue flame. He's filling the monster with lead, but that doesn't seem to be slowing it down much."
 
     #show shiori surprised
+    show rook weapon at left_third
+    with MoveTransition(0.75)
+    show shiori surprised at right_third
+    with dissolve_fast
 
     shi "I have an idea! But I need Bishop's help. Cover us!"
 
@@ -349,6 +395,7 @@ label ch_25:
     "The Lord of Nightmares is gaining the upper hand."
 
     #show shiori serious
+    show shiori serious
     shi "We need your artifact. Use it the same way you have been while I enhance its powers with this."
 
     "She pulls out the book. It looks like I'll finally learn what it's capable of."
@@ -356,6 +403,7 @@ label ch_25:
     shi "I'm going to need someone to hold off or distract the creature. This is something we can do only once, and if we miss it would go very bad for us."
 
     #Shiori sprite disappears
+    hide shiori serious with dissolve_fast
 
     menu:
         "Have Knight distract the Lord of Nightmares." if not blunder:
@@ -382,18 +430,31 @@ label ch_25:
             "Black ink wells up from pages, spilling over onto the artifact and, to my surprise, it begins to glow even brighter. The room is lit up as if I held the noonday sun in my hands."
 
             #Knight illusion x3 (left, middle, & right; middle sprite should be in front of the other two since they likely won't all fit)
+            image knight1 = "images/fantasy/knight/knight illusion.png"
+            image knight2 = "images/fantasy/knight/knight illusion.png"
+            image knight3 = "images/fantasy/knight/knight illusion.png"
+
+            show knight1 at left
+            with dissolve_fast
+            show knight2 at right
+            with dissolve_fast
+            show knight3 at center
+            with dissolve_fast
 
             "Rook provides covering fire so Knight can throw everything she has left at the monster. She huffs and takes a fencing stance, almost like she's playing with it, as three different Knights blink in and out of existence."
 
             #sword clash 2 sfx
+            play sound "audio/sfx/Sword clash 2.ogg"
 
             "The creature tries to lash out at her as she darts in and out, but she either vanishes before it makes contact, dips just out of reach, or the claw phases through completely. It's as if she and her clones are teleporting across the battleground."
-
-            #knight illusion left third, monster angry right third
 
             "Suddenly, a dozen Knights encircle the monster and charge in as one. Its head snaps to the side and launches a kick at one of the Knights."
 
             #remove left & right knight, change center to knight weapon
+            hide knight1 with dissolve_fast
+            hide knight2 with dissolve_fast
+            hide knight3 with dissolve_fast
+            show knight weapon with dissolve_fast
 
             "All the others vanish as the true Knight barely has the time to bring her blade up to block the hoof from caving her chest in."
 
@@ -409,10 +470,15 @@ label ch_25:
             "Black ink wells up from pages, spilling over onto the artifact and, to my surprise, it begins to glow even brighter. The room is lit up as if I held the noonday sun in my hands."
 
             #Monster sprite angry
+            show monster angry with dissolve_fast
 
             "The monster, of course, notices the glow. With a wide sweep of its tail it forces Knight to momentarily retreat away and jumps at us."
 
             #move monster to right third, rook arms crossed eyes appears left third
+            show monster angry at right_third
+            with move
+            show rook armseyeglow at left_third
+            with dissolve_fast
 
             "But its claws don't reach us. As it lunges forward, Rook jumps onto its back and grabs it by the horns. He wrenches its head away, redirecting the monster through the wall next to us."
 
@@ -421,14 +487,21 @@ label ch_25:
             "The creature staggers back out of the rubble, dazed. Rook stands up from the pile of bricks and mortar, hefts his weapon, and loads another shot down the barrel."
 
             #Rook sprite cross armed injured on the left, monster sprite on the right
+            show rook injured at left
+            with move
+            show monster angry at right 
+            with move
 
             #gunshot sfx
+            play sound "audio/sfx/Rook_s gunshot.ogg"
 
             "Even bruised and seriously burned, he charges out of the ruined wall like a freight train. With a mighty downward cleave, he buries the axe into the monster's chest and fires another hail of shrapnel into its throat."
 
             "Devastating though the attack was, it leaves Rook vulnerable for a split second inside the creature's reach. Reeling, it thrusts a claw forward to hit Rook and sends him sailing back into the remnants of the fallen wall."
 
             #hide both sprites
+            hide rook injured with dissolve_fast
+            hide monster angry with dissolve_fast
 
             "We see a hand raise from the cloud of dust with a groan, and give us a thumbs up."
 
@@ -437,6 +510,7 @@ label ch_25:
             "That's all I needed to hear and all the time we needed."
 
         #show serious shiori
+        show shiori serious
 
         shi "Now, use the artifact!"
 
@@ -450,11 +524,13 @@ label ch_25:
             "A gleaming crescent arcs from the sword, and I could swear that, in that instant, I see it bristling with the blades of the lost."
 
             #monster death sfx
-
+            play sound "audio/sfx/monster death.ogg"
 
             "Its existence is brief, but devastating. I look at the monster, and it roars at Shiori and I. It takes a step forward with its left leg, and leaves the right half of its body behind. The flames sputter out as each half of the bisected creature drops to the ground, black blood still steaming in the cool, dry underground."
 
             #ember vfx stop
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
         if wep_3 == 1:
             "The trident shakes violently in my hands, as if it wants to fly away toward the monster. I'm about to let it go when I feel my feet lift from under me."
@@ -466,8 +542,13 @@ label ch_25:
             "I collide with it, ramming the trident into its chest and bowling it over onto the ground. The water carrying me washes away as I stand on top of the creature and the trident begins to rumble again. A geyser of water erupts from the prongs, directly into the monster's chest."
 
             #monster death sfx
+            
+            play sound "audio/sfx/monster death.ogg"
 
             #ember vfx stop
+            
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
             "Its roar becomes a gurgle as water floods out of its mouth and the vents in its chest. The torrent of water continues as the monster's flaming mane dwindles, only stopping when it is finally extinguished."
 
@@ -477,10 +558,14 @@ label ch_25:
             p "{b}VONPHO VARCA-VOVIM.{/b}"
 
             #dragon fireball sfx
+            play sound "audio/sfx/Dragon fireball 3.ogg"
 
             "A solar flare comes roaring forth from the end of the staff, taking the shape of a dragon as it engulfs the monster. It's difficult to tell whether the noise I hear is the fury of the monster or the raging inferno of blue and gold before us."
 
             #ember vfx stop
+            
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
             "As the conflagration dies down, I can make out the form of the monster, blackened, but no longer burning."
 
@@ -489,20 +574,28 @@ label ch_25:
             "I look back to Shiori, Rook, and Knight."
 
         #Monster sprite disappears
+        hide monster angry with dissolve_fast
 
         "It was finally over. The hunt was a success."
 
         #slice of life good end bgm
+        stop music fadeout 1.0
+        play music "audio/From SoL route/6 Good End L.ogg"
 
         p "So it's dead for good? We did it!"
 
         "I am in disbelief. The artifact in my hand cracks apart. Its colors fade away and scatter to the winds, having served its purpose at long last."
 
         #show shiori happy
+        show shiori happy
 
         shi "Yes! Good job everyone! Is everyone okay?"
 
         #Shiori sprite stays center, Knight weapon appears right third,  rook arms crossed appears left third
+        show knight weapon at right_third
+        with dissolve_fast
+        show rook arms at left_third
+        with  dissolve_fast
 
         "Both knights slump to the ground, out of breath."
 
@@ -511,8 +604,11 @@ label ch_25:
         r "I'll live."
 
         #both knight sprites disappear
+        hide rook arms with dissolve_fast
+        hide knight weapon with  dissolve_fast
 
         #show shiori smile
+        show shiori smile
 
         shi "And you too, Bishop. You did great. If it wasn't for you, we wouldn't have beat it. Just like in the book, the monster is gone."
 
@@ -523,28 +619,40 @@ label ch_25:
         shi "Let's go outside and have a look for ourselves. It should be clear when we see the forest."
 
         #Shiori sprite disappear
+        hide shiori smile with dissolve_fast
 
         "We step back up through the castle and out the main gate."
 
         #castle exterior bg
+        scene bg castleext with fade
 
         "The forest looks so green and lively, with no sign of the twisted, nightmarish forms I saw a few days ago. Carefree bumblebees buzz between flowers and I hear birdsong floating through the trees."
 
         #show shiori smile
+        show shiori smile
 
         shi "With the monster gone, the land should be healed. As for the merging of the worlds-"
 
         "But Shiori didn't get to finish her thought because Rook's body had started becoming transparent."
 
         #Shiori sprite disappears, Rook arms crossed appears
+        hide shiori smile with dissolve_fast
+        show rook arms with dissolve_fast
 
         r "Oh? I feel strange. Similar to how I first felt traveling to this world, actually."
 
         #Rook slides left third, shiori smile appears right third
+        show rook arms at left_third
+        with MoveTransition(1.0)
+        show shiori smile at right_third
+        with dissolve_fast
 
         shi "Yes, everything not from this world will return back, so this is goodbye Rook."
 
         #Knight weapon sprite switches with Shiori
+        hide shiori smile with dissolve_fast
+        show knight weapon at right_third
+        with dissolve_fast
 
         k "Huh? You're leaving? Just like that? Too bad, I was really looking forward to learning more about your world."
 
@@ -553,12 +661,16 @@ label ch_25:
         r "Don't be sad, kids. It's not like I'm dying, I'm just going back home."
 
         #shiori_happytearsclose switches with knight
+        hide knight weapon with dissolve_fast
+        show shiori happytearsclose at right_third
+        with dissolve_fast
 
         shi "Right, have a safe journey back and thanks for your service."
 
         "Rook nods and gives a thumb up."
 
         #Shiori sprite disappears
+        hide shiori happytearsclose with dissolve_fast
 
         r "I shall. Thank you for everything you've taught me. It was a lot of fun."
 
@@ -566,10 +678,15 @@ label ch_25:
             r "And thanks for the entertainment, Bishop."
 
         #Rook injured sprite fades
+        hide rook injured with dissolve_fast
 
         "With that, Rook completely disappeared. Even the grass where he had been standing began to spring back up, as if he had never been there at all."
         
         #shiori smile and Knight weapon appear
+        show shiori smile at right_third
+        with dissolve_fast
+        show knight weapon at left_third
+        with dissolve_fast
 
         shi "On that note we should head back to the city. We spent four days out here, and we still have homework to do."
 
@@ -589,6 +706,7 @@ label ch_25:
         p_i "At least, I hope so."
 
         #fade to black, fin.
+        scene black with Dissolve(1.5)
 
 
 
@@ -601,12 +719,25 @@ label ch_25:
             "Black ink wells up from pages, spilling over onto the artifact and, to my surprise, it begins to glow even brighter. The room is lit up as if I held the noonday sun in my hands."
 
             #Knight illusion x3 (left, middle, & right; middle sprite should be in front of the other two since they likely won't all fit)
+            image knight1 = "images/fantasy/knight/knight illusion.png"
+            image knight2 = "images/fantasy/knight/knight illusion.png"
+            image knight3 = "images/fantasy/knight/knight illusion.png"
+
+            show knight1 at left
+            with dissolve_fast 
+            show knight2 at right
+            with dissolve_fast
+            show knight3 at center
+            with dissolve_fast
 
             "Rook provides covering fire so Knight can throw everything she has left at the monster. She huffs and takes a fencing stance, but she's breathing heavily and her grip is faltering. She conjures two duplicates and they charge in."
 
             #sword clash 2 sfx
+            play sound "audio/sfx/Sword clash 2.ogg"
 
             #monster slides to left third, 
+            show monster angry at left_third
+            with move
 
             "The monster slashes at them, but pauses, confused, as they blink out of existence. Suddenly, they reappear, stabbing it in the side at three different angles. The monster roars and throws her back with a sweep of its arm."
 
@@ -617,6 +748,10 @@ label ch_25:
             "The Lord of Nightmares lives up to its name. With a two-handed blow, it breaks not only Knight's defensive stance, but shatters her sword and sends the fragments into her sword arm. The bladeless hilt drops from her hand as she clutches her arm in pain."
 
             #Knight sprite switches to injured
+            hide knight1 with dissolve_fast
+            hide knight2 with dissolve_fast
+            hide knight3 with dissolve_fast
+            show knight injured with dissolve_fast
 
             k "Ah-"
 
@@ -626,23 +761,31 @@ label ch_25:
 
             "The second happens as that body hits the wall on the opposite side of the room."
 
+            hide knight injured with dissolve_fast
             #show shiori shocked
+            show shiori shocked with dissolve_fast
 
             shi "No, Knight!"
 
             #hide Shiori
+            hide shiori shocked with dissolve_fast
 
             "As the dust clears, I see Knight slumped against the wall. No armor, no mask, eyes unfocused and blood trickling from her mouth."
 
             "She's not breathing."
 
             #show Rook weapon eyes
+            show rook weaponeyeglow at left_third
+            with dissolve_fast
 
             r "Damn it all! Come here!"
 
             "Rook, in a fit of rage, leaps at the monster to strike it down. However, his cry refocuses the monster's attention back to him. Rook abandons any subtlety he may have had, fueled now only by aggression."
 
             #show shiori cry
+            show shiori cry 
+            with dissolve_fast
+
 
             shi "Come on, charge faster! Please, charge faster!"
 
@@ -659,6 +802,7 @@ label ch_25:
             r "ARGHHHH!"
 
             #show shiori mortified
+            show shiori mortified with dissolve_fast
 
             shi "N- No... Not Rook, too!"
 
@@ -674,10 +818,15 @@ label ch_25:
             "Black ink wells up from pages, spilling over onto the artifact and, to my surprise, it begins to glow even brighter. The room is lit up as if I held the noonday sun in my hands."
 
             #Monster sprite angry
+            show monster angry with dissolve_fast
 
             "The monster, of course, notices the glow. With a wide sweep of its tail it forces Knight to momentarily retreat away and jumps at us."
 
             #move monster to right third, rook arms crossed eyes appears left third
+            show monster angry at right_third
+            with move
+            show rook armseyeglow at left_third
+            with dissolve_fast
 
             "But its claws don't reach us. As it lunges forward, Rook jumps onto its back and grabs it by the horns. The monster snarls and its fiery mane flares with rage as Rook pulls its head away from us."
 
@@ -686,16 +835,21 @@ label ch_25:
             "The monster shakes its head, recovering quickly. It sees Rook still on the ground and wraps its tail around him. The flames down its tail blaze as it constricts Rook, crushing him in his armor as it roasts him alive."
 
             #show shiori shocked
+            show shiori shocked with dissolve_fast
 
             shi "No, Rook!"
 
             #hide Shiori, show Knight weapon
+            hide shiori shocked with dissolve_fast
+            show knight weapon with dissolve_fast
 
             k "Dammit you old fart! Fine, my turn!"
 
             "Trying to free Rook from the coils of the monster's tail, Knight dashes forward, sword readied in hand. She swings at the monster repeatedly, but the slashes of her replacement sword are barely leaving scratches before the heat forces her to retreat."
 
             #hide knight, show shiori cry
+            hide knight weapon with dissolve_fast
+            show shiori cry with dissolve_fast
 
             "The spell falters again as Shiori shifts her focus between it and the dire situation Rook and Knight are in."
 
@@ -726,6 +880,7 @@ label ch_25:
             p_i "Wait... Why can I see her face?"
 
             #show shiori mortified
+            show shiori mortified
 
             shi "N- no... This can't be happening!"
 
@@ -734,16 +889,17 @@ label ch_25:
         p "... Shiori."
 
         #show shiori cry
+        show shiori cry
 
         shi "Wh- what...?"
 
         p "I probably don't need to say this, but the next attack really might be our last. Those two did so much for us, it's time to repay their bravery!"
 
-        #show shiori sad
+        show shiori sad
 
         shi "...Right!"
 
-        #show shiori serious
+        show shiori serious
 
         shi "Let's end this, [player_name]!"
 
@@ -786,8 +942,11 @@ label ch_25:
             "I swing the sword upward with the last of my strength to send another arc of light through the monster's neck as it looms above me."
 
             #monster death sfx
+            play sound "audio/sfx/monster death.ogg"
 
             #ember vfx stop
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
             "Its head falls to the floor beside me, flames finally extinguished, and its body takes a single step before collapsing."
 
@@ -809,12 +968,16 @@ label ch_25:
             "I feel my upper half being lifted into the air as I pass out from the pain."
 
             #quick fade to black, then back to catacombs bg
+            show bg catacombs with fade
 
             #monster death sfx
+            play sound "audio/sfx/monster death.ogg"
 
             "I come back to consciousness on the ground as water is thrown onto my face. I blink and see geysers erupting from the monster's mouth and head, and from the vents in its chest." 
 
             #ember vfx stop
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
             #quick fade to black, then back to catacombs bg
 
@@ -833,22 +996,29 @@ label ch_25:
             p "{b}VONPHO VARCA-VOVIM.{/b}"
 
             #dragon fireball sfx
+            play sound "audio/sfx/Dragon fireball 3.ogg"
 
             "My shout rings out through the catacombs, my voice like a bell, as a torrent of flame, gold as the disk of the sun, erupts from the end of the staff."
 
             "Their combined heat is boiling my eyes, but the creature steps back and drops its head, causing me to fall to the ground. I see the blue flame running down its back and glowing in its chest flash gold as the inferno explodes upward through its body in the form of a roaring dragon."
 
             #ember vfx stop
+            hide emberback with dissolve_fast
+            hide embermid with dissolve_fast
 
             "The monster teeters for a second before crumpling to the ground, a smoking crater where the top half of its body used to be"
 
         #hide monster
+        hide monster angry with dissolve_fast
 
         #bgm switch to cursed forest
+        stop music fadeout 1.0
+        play music "audio/3 Fantasy/4 Cursed Forest L.ogg" loop fadein 1.0
 
         "Even through the pain, I look at the slain monster. Despite our losses, we have won this day."
 
         #show shiori mortified
+        show shiori mortified
 
         shi "[player_name]! Are you alright?! [player_name]!"
 
@@ -859,6 +1029,7 @@ label ch_25:
         "I cough a mouthful of blood onto the ground. It seems I'm not long for this world."
 
         #show shiori cry
+        show shiori cry
 
         shi "N- No... No, don't die on me please. Don't leave me here alone! Not again..."
 
@@ -877,9 +1048,10 @@ label ch_25:
         p "But, in the end... it... wasn't... so bad..."
 
         #show shiori mortified
+        show shiori mortified
         shi "No... {i}NOOOOOOOOOOOOOOOOOOOO!!!{/i}"
 
 
-    stop sound fadeout 1.0
-    stop music fadeout 1.0
-    scene black with Dissolve(1.0)
+    stop sound fadeout 2.0
+    stop music fadeout 2.0
+    scene black with Dissolve(2.0)

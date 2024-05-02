@@ -347,7 +347,7 @@ label ch_0:
         p_i "I have to get some reference books from the library soon, so maybe I'll pick something up to see how it feels to read for fun again."
 
     stop nature fadeout 0.5
-    play nature "audio/Ambient/rain1.ogg" loop volume 0.25
+    play nature "audio/Ambient/rain1.ogg" loop fadein 0.5 volume 0.25
 
     show shiori neutral
 
