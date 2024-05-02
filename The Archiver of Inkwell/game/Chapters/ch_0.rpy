@@ -1,23 +1,23 @@
 init:
     image rainbacklight:
-        Snow("Helpers/effects/rain2.png",750,800,0)
+        Snow("Helpers/effects/rain2.png",1500,800,0)
     
     image rainmidlight:
-        Snow("Helpers/effects/rain2.png",350,800,0)
+        Snow("Helpers/effects/rain2.png",700,800,0)
 
     image rainbackheavy:
-        Snow("Helpers/effects/rain3.png",3000,1500,0)
+        Snow("Helpers/effects/rain3.png",6000,1500,0)
     
     image rainmidheavy:
-        Snow("Helpers/effects/rain3.png",1750,1500,0)
+        Snow("Helpers/effects/rain3.png",3500,1500,0)
 
     image rainfront:
         Snow("Helpers/effects/rain3.png",50,800,0)
     
     image emberback:
-        Snow("Helpers/effects/ember1.png",150,speed=.5,wind=50)
+        Snow("Helpers/effects/ember1.png",300,speed=-150,wind=100)
     image embermid:
-        Snow("Helpers/effects/ember2.png",150,speed=.5,wind=50)
+        Snow("Helpers/effects/ember2.png",300,speed=-150,wind=100)
     
 label ch_0:
 
@@ -29,8 +29,6 @@ label ch_0:
 
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
     play nature "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.65
-
-    scene bg college with dissolve_fast
 
     "As I leave my last lecture for the day, I follow the stream of other students out of the building."
     

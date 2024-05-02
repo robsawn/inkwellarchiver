@@ -1,11 +1,11 @@
 init: 
-    image rainbackheavy:
+    image rainbackheavy2:
         Snow("Helpers/effects/rain3.png",max_particles=5000,speed=1750,wind=0)
     
-    image rainmidheavy:
+    image rainmidheavy2:
         Snow("Helpers/effects/rain3.png",max_particles=2750,speed=1750,wind=0)
 
-    image rainfront:
+    image rainfront2:
         Snow("Helpers/effects/rain3.png",max_particles=50,speed=800,wind=0)
 
 label ch_13:
@@ -89,9 +89,9 @@ label ch_13:
     stop music fadeout 1.5
     play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 1.5
 
-    show rainbackheavy
-    show rainmidheavy
-    show rainfront onlayer front
+    show rainbackheavy2
+    show rainmidheavy2
+    show rainfront2 onlayer front
     play nature "audio/Ambient/rain4.ogg" loop fadein 1.0
 
     "I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
@@ -117,9 +117,9 @@ label ch_13:
 
     hide cultist
 
-    hide rainbackheavy
-    hide rainmidheavy
-    hide rainfront onlayer front
+    hide rainbackheavy2
+    hide rainmidheavy2
+    hide rainfront2 onlayer front
     stop nature fadeout 1.0
 
     scene bg libraryovercast with fade

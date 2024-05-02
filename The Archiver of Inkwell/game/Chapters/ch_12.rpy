@@ -1,5 +1,5 @@
 label ch_12:
-    scene bg classroom with fade
+    show bg classroom with fade
     play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
 
     "Looking outside from my seat, I continue to think about the rain. Well, the lack of it. I can't even remember the last time it wasn't raining. Instead, everything's turned hazy, making it difficult to see very far. I can see the building across the field, but that's about it."
@@ -51,7 +51,7 @@ label ch_12:
 
     "The professor walks in, and the conversations quiet down throughout the room as they get ready. As they move to their podium, the conversations stop completely and the professor starts."
 
-    scene bg college with fade
+    show bg college with fade
 
     "Class is finally over. No matter how hard I tried to listen to the lecture, my eyes kept drooping. Makes sense seeing as how I couldn't sleep at all." 
 
@@ -73,7 +73,7 @@ label ch_12:
 
     p_i "Didn't they have perfect attendance?"
 
-    scene bg classroom with fade
+    show bg classroom with fade
 
     "I go into class the next day, but the talkative classmate who usually sits next to me isn't here yet."
 
@@ -91,7 +91,7 @@ label ch_12:
 
     p "Maybe I'll stop by the library to try to get some of the report done."
 
-    scene bg hallway
+    show bg hallway
 
     "Walking down the eerily empty halls, I glance out the window and see a familiar head of black and white hair."
 
@@ -118,10 +118,8 @@ label ch_12:
     p "Where'd she go? Wasn't she right here?"
 
     show shiori smile:
-        zoom 2.0
-        xalign 0.5
-        yalign -2.0
-    
+        zoom 2.0 xalign 0.5 
+    with dissolve_fast
 
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
 

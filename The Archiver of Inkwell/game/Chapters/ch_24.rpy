@@ -87,7 +87,7 @@ label ch_24:
     if blunder:
         p "...and then the ground under the circle shattered and we returned safely... mostly."
 
-        show shiori neutral
+        show shiori neutral at left_third
 
         shi "Well, I expected something like this might happen on your first trip. Don't dwell too much on it. We're bound to make mistakes sometimes, but try to not let it happen again, alright? Thankfully it was Knight who went in with you this time. If it was Rook, you would've been dead by now."
 
@@ -129,11 +129,11 @@ label ch_24:
     else:
         p "...and then the ground under the circle shattered and we returned safely."
 
-        show shiori neutral
+        show shiori neutral at left_third
 
         shi "Hm... Yup, nothing wrong with that. The first entry into the dream usually leaves someone's memory of their time there scrambled, but yours seem to be completely fine. Your compatibility with the dream really is high, just like I thought!"
 
-        show shiori satisfied at left_third
+        show shiori satisfied
 
         "Shiori puffs up her chest with a satisfied, almost smug look on her face."
 
@@ -146,9 +146,7 @@ label ch_24:
         r "Aye! You did well for your first time, kid. The title of Bishop is not wasted on ya."
 
         hide rook armslaugh
-        show shiori satisfied at center
-        with MoveTransition(1.0)
-
+        show shiori satisfied 
 
     show shiori smile at left_third
 
@@ -402,17 +400,17 @@ label ch_24:
 
                 show shiori neutral
 
-                shi "Well, that's enough sunbathing for today. Let's head back. You still have some prep work to do, right?"
+        shi "Well, that's enough sunbathing for today. Let's head back. You still have some prep work to do, right?"
 
-                "I stand up from the flowerbed as well."
+        "I stand up from the flowerbed as well."
 
-                p "Guess so. I should prepare as much as I can."
+        p "Guess so. I should prepare as much as I can."
 
-                show shiori smile
+        show shiori smile
 
-                shi "Well then, I'll head back to the throne room. See ya!"
+        shi "Well then, I'll head back to the throne room. See ya!"
 
-                hide shiori smile
+        hide shiori smile
 
     if downtime == 1:
         "From the map, the purple dot is making its way towards what looks to be the lounge."
@@ -479,7 +477,7 @@ label ch_24:
 
         show rook phone
 
-        "Rook pulls out a phone from inside his armor. Do not ask me where he kept it or how. I don't want to know either."
+        "Rook pulls out a phone from a little leather satchel fastened to the belt of his armor."
 
         r "What was it called again? A fane? No, a foon! Amazing, this foon is. Such wonders of technological ingenuity! Even the highest grade spells cannot compare to the sheer convenience this affords!"
 
@@ -1584,11 +1582,7 @@ label ch_24:
 
         k "So you got hurt? How bad's the phantom pain this time around?"
 
-        show rook injuredeyeglownoblood
-
         r "Gash down my side, but that's about it. It hurts when I move, but at least the wound's not there now. Don't worry much, this old man's still tough!"
-
-        show rook injured
 
         k "Well, at least you can still move around. Since it's your decision, I suppose I won't fault Bishop for it. Anyways, what did you find?"
 
@@ -1598,13 +1592,13 @@ label ch_24:
         r "Aye. One of the lost souls who fought against the blasted beast. The sword is ours now, and we have inherited its will to fight. It's our duty to finish the job."
 
         hide knight weapon
-        hide rook injured
+        hide rook arms
 
     if wep_3 == 1:
         p "We took this trident from the bottom of a pool. It stabs good, and that's about it."
 
         hide knight weapon
-        hide rook injured
+        hide rook arms
         show shiori surprised
 
         shi "Hey, give me that! Lemme take a look."
@@ -1626,9 +1620,9 @@ label ch_24:
 
         k "Well would you look at that, we finally have a mage."
 
-        hide rook injured
+        hide rook arms
         show shiori mad at left_third
-        with move
+        with MoveTransition(1.0)
 
         shi "Hey! I cast spells too, y'know?"
 
@@ -1651,6 +1645,9 @@ label ch_24:
     show knight weapon at right_third
 
     k "Soon, huh? Good!"
+
+    show shori smile at center 
+    with MoveTransition(0.75)
 
     show rook armseyeglow at left_third
 

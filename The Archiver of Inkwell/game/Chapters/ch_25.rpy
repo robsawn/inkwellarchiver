@@ -24,7 +24,7 @@ label ch_25:
 
     "She shuffles the deck of cards again."
 
-    "While Rook was contemplating if he should take the bait, Shiori closed the book and stood up."
+    "While Rook was contemplating if he should take the bait, Shiori closes the book and stands."
 
     show shiori neutral
 
@@ -43,9 +43,9 @@ label ch_25:
 
     p "I hope it goes as smoothly as you say. What will you do while we are sleeping?"
 
-    shi "Protecting your real bodies of course. You are all completely defenseless while you're in the Dreamscape. To be honest, I'm always tempted to draw something with a marker on your faces."
-
     show shiori smile
+
+    shi "Protecting your real bodies of course. You are all completely defenseless while you're in the Dreamscape. To be honest, I'm always tempted to draw something with a marker on your faces."
 
     "I don't know if she's being serious or just trying to cheer me up, but still, I do feel a bit less nervous."
 
@@ -381,8 +381,7 @@ label ch_25:
     "He shouts out to us while diving beneath a plume of blue flame. He's filling the monster with lead, but that doesn't seem to be slowing it down much."
 
     #show shiori surprised
-    show rook weapon at left_third
-    with MoveTransition(0.75)
+    hide rook weapon with dissolve_fast
     show shiori surprised at right_third
     with dissolve_fast
 
@@ -414,10 +413,10 @@ label ch_25:
             $ fgoodend = True
             $ kchosen = False
 
-        "Have Knight distract the Lord of Nightmares." if blunder:
+        "Have Knight distract the Lord of Nightmares." if blunder and rook_inj:
             $ fgoodend = False
             $ kchosen = True
-        "Have Rook fend off the Lord of Nightmares." if rook_inj:
+        "Have Rook fend off the Lord of Nightmares." if rook_inj and rook_inj:
             $ fgoodend = False
             $ kchosen = False
 
@@ -461,6 +460,7 @@ label ch_25:
             "A lesser blade may not have stood up to the force of the blow, but the enchantments Shiori laid on her sword mean that she merely goes sliding backwards into a wall. The impact knocks the wind from her and she drops to a knee, gasping for air."
 
             "But she had bought us the moment we needed."
+            hide knight weapon with dissolve_fast
 
         else:
             p "Rook, don't let it get to us! We're taking this thing down!"
@@ -510,9 +510,11 @@ label ch_25:
             "That's all I needed to hear and all the time we needed."
 
         #show serious shiori
-        show shiori serious
+        show shiori serious with dissolve_fast
 
         shi "Now, use the artifact!"
+
+        hide shiori serious with dissolve_fast
 
         if wep_3 == 0: 
             "The golden light fills the room, and a score of shimmering ghosts appear alongside me. The warriors that fell to the monster scatter to a glowing dust that adheres to the sword, and I hear them whisper to me."
@@ -708,8 +710,6 @@ label ch_25:
         #fade to black, fin.
         scene black with Dissolve(1.5)
 
-
-
     else:
         if kchosen:
             p "Knight, distract it for as long as possible! We're going to finish it off!"
@@ -825,8 +825,6 @@ label ch_25:
             #move monster to right third, rook arms crossed eyes appears left third
             show monster angry at right_third
             with move
-            show rook armseyeglow at left_third
-            with dissolve_fast
 
             "But its claws don't reach us. As it lunges forward, Rook jumps onto its back and grabs it by the horns. The monster snarls and its fiery mane flares with rage as Rook pulls its head away from us."
 
@@ -985,7 +983,7 @@ label ch_25:
 
         if wep_3 == 2:
 
-            "It drops down to all fours, the flames along its back burning brighter. They begin to flash out from its mouth lick up the side of its face as it takes two slow steps backwards. It's going to charge us, and it's going to light itself on fire as it does."
+            "It drops down to all fours, the flames along its back burning brighter. They begin to flash out from its mouth lick up the sides of its face as it takes two slow steps backwards. It's going to charge us, and it's going to light itself on fire as it does."
 
             "I skid to a halt as it launches itself at us. I only get a fraction of a second to push Shiori out of its path."
 

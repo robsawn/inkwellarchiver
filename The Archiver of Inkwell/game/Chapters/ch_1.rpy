@@ -25,9 +25,11 @@ label ch_1:
     "With the books noted, I leave for the library with a grimace, feeling like a couple of them might be difficult to find."
     
     stop music fadeout 0.25
-    scene bg street with dissolve_fast
+    show bg street with dissolve_fast
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play nature "audio/Ambient/rain1.ogg" loop fadein 0.25
+    play nature "audio/Ambient/rain1.ogg" loop fadein 0.35
+    show rainbacklight zorder 5
+    show rainmidlight zorder 15
 
     "Walking down the street, I feel a calm wash over me as I listen to the soft drumming of the light rain against my umbrella."
 
@@ -40,6 +42,8 @@ label ch_1:
     "Luckily, it doesn't take long to get to the library and I step inside right as the rain starts coming down harder."
     
     stop nature fadeout 0.25
+    hide rainbacklight
+    hide rainmidlight
     scene bg library with dissolve_fast
     stop music fadeout 0.25
     define librarytracks = ['audio/1 Act 1/Library.ogg','audio/From SoL route/1 Hallway + Lecture Hall L.ogg']
@@ -110,7 +114,7 @@ label ch_1:
     hide shiori smile
 
     show bg libraryovercast with dissolve_slow
-    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.25
+    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.35
 
     "It seems the weather is getting worse. Outside, I can see more of the automatic lights turning on."
 
@@ -440,7 +444,7 @@ label ch_1:
 
         shi "... the ones who can't escape their own fate?"
         
-        play nature "audio/Ambient/rain4.ogg" loop volume 0.4
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.45
 
         "I struggle to find an answer to that as the rain fills the void of silence between us, battering against the window as we walk by."
         
@@ -540,7 +544,7 @@ label ch_1:
         "Her cheery voice fades into a more serious tone."
         
         stop nature fadeout 0.75
-        play nature "audio/Ambient/rain4.ogg" loop volume 0.45 fadein 1.0
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.5 fadein 1.0
         stop music fadeout 3.5
 
         shi "It's going to be raining for a while."
@@ -565,7 +569,10 @@ label ch_1:
         stop ambient fadeout 1.0
         scene bg college with slideright
         play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.25 volume 0.65
-        play nature "audio/Ambient/rain1.ogg" loop fadein 0.25
+        play nature "audio/Ambient/rain1.ogg" loop fadein 0.35
+        show rainbacklight zorder 5
+        show rainmidlight zorder 15
+        show rainfront onlayer front
         
         p_i "That was... interesting."
         
@@ -580,6 +587,10 @@ label ch_1:
         "I try to calm my breathing and focus on taking one step at a time away from this place."
         
         p_i "Why do I feel like I'm being watched?"
+
+        hide rainbacklight
+        hide rainmidlight
+        hide rainfront onlayer front
 
     if route_fantasy:
     

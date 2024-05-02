@@ -550,7 +550,7 @@ label ch_23:
     k "See? Those wounds from what you did are still there on it. Compared to the slashes I did before with my sword, your power is leaps and bounds ahead in effectiveness."
 
     p_i "She's right. I remembered her cutting its head right off, but it's definitely been attached to the body this whole time. I guess my power is really working."
-
+    hide monster calm
     p "So, what do you think we should do now? Should we head back to the real world?"
 
     k "Maybe. As much as I want to finish it off while it's wounded, Queen wouldn't want us to be reckless. We got enough info today, and I have been convinced that you're not as useless as I thought you were. A fruitful effort."

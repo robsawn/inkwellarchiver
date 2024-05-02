@@ -489,11 +489,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
                     transclude
 
     use navigation
-    if renpy.get_screen("submenunavigation"):
-        textbutton _("Return"):
-            style "return_button"
-
-            action [Return(),Hide("submenunavigation")]
+    
+    textbutton _("Return") style "return_button" action Return()
 
     label title
 
