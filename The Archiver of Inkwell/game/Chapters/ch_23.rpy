@@ -587,10 +587,10 @@ label ch_23:
 
     k "So whatever it is that you can do with that power, use it to fight back! I'll find the way forward!"
 
-    "With that said, Knight sprints headlong into the forest, slashing through the underbrush to clear a path towards the teleportation site."
 
     hide knight weapon
     show bg cursedforest with slideleft
+    "With that said, Knight sprints headlong into the forest, slashing through the underbrush to clear a path towards the teleportation site."
 
     "As I rush after her down the newly created trail, I can hear the monster's enraged hoofbeats getting closer and closer."
 

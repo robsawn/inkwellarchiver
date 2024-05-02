@@ -108,6 +108,7 @@ label ch_22:
     "As I continue my walk, I stumble upon a road in disrepair that leads to a nearby forest. I remember going there a lot as a child. Now it was all overgrown due to negligence."
 
     scene bg trail with dissolve_fast
+    stop nature fadeout 1.5
 
     "Suddenly feeling adventurous, I decide to step in. As I walk through the greenery, the bushes brush gently against my skin. This feels way better than doing homework."
 

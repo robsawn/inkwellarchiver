@@ -583,13 +583,16 @@ screen about():
             text _("\n~~~~~")
             text _("\nServer Admin:\n    Shiori's Jacket")
             text _("\nDirector:\n    robsawn")
-            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Kronosok Kusok\n    SynergyREEE\n    Wax\n    Zero Zeta")
-            text _("\nEditors:\n    Ingram\n    robsawn\n    Thadd\n    Wax")
+            text _("\nWriters:\n    Alice\n    ChemistWeeb\n    MakeShiftWriter\n    Penguiboss\n    robsawn\n    Kronosok Kusok\n    SynergyREEE\n    WaxglareWand\n    Zero Zeta")
+            text _("\nEditors:\n    Ingram\n    robsawn\n    Thadd\n    WaxglareWand")
             text _("\nSprite Artists:\n    Ichira (Fantasy Characters)\n    Jermy (Shiori, Yellow Stranger)\n    Nobu (outlines, Fantasy Characters)")
             text _("\nScene Artists:\n    hzlform (library)\n    Yomosaka (main menu)\n    P!ckleMan (cafe)\n    Phosphophyllite Boss")
             text _("\nAnimators: \n    Jusagi-chan (main menu)")
             text _("\nComposers & Musicians:\n    Nokutaan\n    Sinnoh")
-            text _("\nProgrammers:\n    robsawn")
+            text _("\nVoice Actor:\n    WaxglareWand (Lord of Nightmares)")
+            text _("\nProgrammer:\n    robsawn")
+
+            text _("\nSpecial Photo Credits:\n    Elliott Brown\n    James M. Gose\n    Kotomi_\n    Luis Villa del Campo\n    Mark Robinson\n    Watts\n    webtreats")
 
 
 style about_label is gui_label

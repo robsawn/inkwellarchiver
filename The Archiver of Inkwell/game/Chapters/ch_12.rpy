@@ -170,7 +170,7 @@ label ch_12:
     "As our chat drifts into a comfortable lull and we turn to walk down the path, I notice footsteps behind me. Looking back, I see a figure in the mist approaching. A few steps and a yellow jacket becomes more noticeable."
 
     show cultist at right_third 
-    zorder -1
+    
     stop music
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
     play ambient "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5

@@ -793,7 +793,7 @@ label ch_25:
 
             r "Ugh!"
 
-            "As Rook attempts to right himself, he goes to line up another shot at the monster, and convulses. The gun clatters to the ground as the pain of his phantom wounds flare up at exactly the worst moment."
+            "As Rook attempts to right himself, he goes to line up another shot at the monster, and convulses. The gun clatters to the ground as the pain of his old wounds flare up at exactly the worst moment."
 
             "The monster, seeing Rook vulnerable on the ground, stalks forward as the hissing of flames down its back sound almost like malicious laughter. Rook tries to reach for his gun, but the creature sweeps its tail, almost lazily, and sends it skittering away across the floor."
 
@@ -843,7 +843,7 @@ label ch_25:
 
             k "Dammit you old fart! Fine, my turn!"
 
-            "Trying to free Rook from the coils of the monster's tail, Knight dashes forward, sword readied in hand. She swings at the monster repeatedly, but the slashes of her replacement sword are barely leaving scratches before the heat forces her to retreat."
+            "Trying to free Rook from the coils of the monster's tail, Knight dashes forward, sword readied in hand. She swings at the monster repeatedly, but the slashes of her weakened slashes are barely leaving scratches before the heat forces her to retreat."
 
             #hide knight, show shiori cry
             hide knight weapon with dissolve_fast

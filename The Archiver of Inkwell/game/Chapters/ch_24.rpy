@@ -1013,7 +1013,7 @@ label ch_24:
 
         "I grab the handle with both of my hands and try to pull it out."
 
-        "It doesn't flinch."
+        "It doesn't budge."
 
         "I try again, applying more strength, but no matter how hard I try, it might as well be stuck in stone."
 
