@@ -152,9 +152,10 @@ label ch_0:
 
     shi "Mhm."
 
-    show shiori neutral at right_third with MoveTransition(1.0)
+    show shiori neutral at right_third 
+    with MoveTransition(1.0)
     
-    "Without another word, she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
+    "Without another word, I take the seat next to her as she turns back to her book, pulling her oversized jacket together a little. The fur collar brushes her hair, and the purple down interior is hidden from view again."
 
     hide shiori neutral with dissolve_fast
     
@@ -164,7 +165,8 @@ label ch_0:
 
     p_i "Nope. Still awkward."
 
-    show shiori neutral at right_third with dissolve_fast
+    show shiori neutral at right_third 
+    with dissolve_fast
 
     shi "Hey, um... What did you get to drink?"
 
