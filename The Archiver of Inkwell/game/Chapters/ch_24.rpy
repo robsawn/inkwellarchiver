@@ -38,7 +38,7 @@ label ch_24:
 
     show shiori neutral
 
-    shi "Let's see... It's been around 6 hours since you guys went into the dream, 2 hours since Knight left, and you just woke us. So that's a solid 8 hours right there."
+    shi "Let's see... It's been around 6 hours since you guys went into the dream, 2 hours since Knight left, and you just woke up. So that's a solid 8 hours right there."
 
     p_i "Wait, 8 hours?! Did I just sleep through the night?"
 
@@ -118,7 +118,7 @@ label ch_24:
 
         show shiori satisfied
 
-        shi "It's still fine. You're still alive, after all. Knight anticipated this possibility beforehand, which must be why she chose to go with you first — to protect you. She's kinder than she looks, so make sure to thank her properly later, ok?"
+        shi "It's still fine. You're still alive, after all. Knight anticipated this possibility beforehand, which must be why she chose to go with you first: to protect you. She's kinder than she looks, so make sure to thank her properly later, ok?"
 
         "She pats my head again gently before stepping back."
 
@@ -166,9 +166,9 @@ label ch_24:
 
     p_i "So that's where she went, huh? I thought she was just tired of babysitting me."
 
+    show rook armslaugh at right_third
     r "Speaking of which, you should go rest up too, kid. Even if you're not tired, you should spend some time for yourself in the real world. We're going back in tonight after all, hahahaha!"
 
-    show rook armslaugh at right_third
 
     "Rook lets out a hearty laugh. He seems to be eager for his turn to go in."
 
@@ -250,7 +250,11 @@ label ch_24:
         stop music fadeout 0.5
         play music "audio/1 Act 1/Library.ogg" loop fadein 0.5 volume 0.75
 
-        "Opening the door, the sight that greets me is not a small balcony of potted plants and miniature shrubbery, but a large-scale park teeming with plant life and rivers. The paths paved in front of me are lined with colorful flower beds, and a familiar-looking goth girl sits at the end of one of them, playfully inspecting a flower."
+        show bg garden with fade
+
+        "Opening the door, the sight that greets me is not a small balcony of potted plants and miniature shrubbery, but a large-scale park teeming with plant life and rivers." 
+        
+        "The paths paved in front of me are lined with colorful flower beds, and a familiar-looking goth girl sits at the end of one of them, playfully inspecting a flower."
 
         show shiori happy
 
@@ -433,10 +437,13 @@ label ch_24:
 
         "I chuckle a bit, imagining Shiori with noodles for arms, and make my way into the lounge. The gaudy doors and my imagination did not disappoint me at all... Or at least, it did so in a different way." 
 
+        show bg lounge with fade
         stop music fadeout 0.5
         play music "audio/From SoL route/1 Hallway + Lecture Hall L.ogg" loop fadein 0.5
 
-        "The image of a cushy room frequented by nobles that I have in my head is blown away by the sight of the real lounge: an unbelievably modern room with an open layout and floor-to-ceiling windows that are welcoming in a healthy amount of sunlight. Square couches are arranged around the room, with several side tables accompanying them. A large television sits on one side of the room, and there seems to be a gaming console attached to it."
+        "The image of a cushy room frequented by nobles that I have in my head is blown away by the sight of the real lounge: an unbelievably modern room with an open layout and floor-to-ceiling windows that are welcoming in a healthy amount of sunlight." 
+        
+        "Square couches are arranged around the room, with several side tables accompanying them. A large television sits on one side of the room, and there seems to be a gaming console attached to it."
 
         p_i "Perhaps it's something Shiori brought with her?"
 
@@ -530,7 +537,9 @@ label ch_24:
             "How did you end up here?":
                 p "How did you end up here, anyway?"
 
-                r "Well kid, it isn't something I like to think about much, but I'll tell you. It started off no different than a normal day. I sought to vanquish our monstrous friend in the forest near my liege's castle, but on that day, something strange happened. The monster was far stronger than anyone had reported, and it wounded me deep. I ran from the fight, valuing my guts over glory, hah! That was when I met the little Queen and Knight."
+                r "Well kid, it isn't something I like to think about much, but I'll tell you. It started off no different than a normal day. I sought to vanquish our monstrous friend in the forest near my liege's castle, but on that day, something strange happened." 
+                
+                r "The monster was far stronger than anyone had reported, and it wounded me deep. I ran from the fight, valuing my guts over glory, hah! That was when I met the little Queen and Knight."
 
                 r "I only knew later when they took me to this castle that they weren't from my world, but yours. It was quite shocking, you know, learning that there was another world alongside my own."
 
@@ -554,7 +563,7 @@ label ch_24:
 
         show rook muglaugh
 
-        r "Haha! Well, man cannot survive by drink alone, I suppose. I'm going to go grab a bite to eat—have to be full of energy for later, you know. You may join me if you wish, but just be sure to take things easy today, ok kid?"
+        r "Haha! Well, man cannot survive by drink alone, I suppose. I'm going to go grab a bite to eat. Have to be full of energy for later, you know. You may join me if you wish, but just be sure to take things easy today, ok kid?"
 
         "He pats my shoulder and sets off from the lounge on his next quest for the day, having successfully turned off the game console while completely forgetting to turn off the television."
 
@@ -572,8 +581,13 @@ label ch_24:
             p_i "I wanna talk to her about how long she's been here, and I really wanna ask her how she was able to be so nimble and quiet in metal armor, too. I might be able to use that."
 
         "I walk from the ritual room towards the dining hall, using the map as a guide. After a while, I managed to make it without getting lost."
+        stop music fadeout 0.5
+        play music "audio/From SoL route/2 Study Session L.ogg" loop fadein 0.75
+        show bg dininghall with fade 
 
-        "As the door creaks and swings open, the sight of a large clearing fills my vision. Long tables and chairs are aligned neatly, far more than required to seat our little quartet. Chandeliers hang silently from the ceiling, illuminating the entire room with a soft glow. Lining the walls at the back are multiple kegs stacked horizontally on top of each other, their contents unlisted but immediately known to all enjoyers of alcohol."
+        "As the door creaks and swings open, the sight of a large clearing fills my vision. Long tables and chairs are aligned neatly, far more than required to seat our little quartet. Chandeliers hang silently from the ceiling, illuminating the entire room with a soft glow." 
+        
+        "Lining the walls at the back are multiple kegs stacked horizontally on top of each other, their contents unlisted but immediately known to all enjoyers of alcohol."
 
         "Speaking of which, one such enjoyer is standing right in front of a keg, pouring a healthy amount of drink into her cup."
 
@@ -768,14 +782,15 @@ label ch_24:
 
     "Once again, I find myself standing in the middle of the ritual circle. Rook stands next to me, a pillow in hand. Knight leans against one of the walls with her arms crossed, while Shiori prepares her chants."
 
-    show rook weapon
+    show rook weapon with dissolve_fast
 
     r "You ready, kid?"
 
     p "As much as I'll ever be, I guess."
 
+    hide rook weapon with dissolve_fast
     show shiori smug at left with moveinleft
-
+    
     shi "Well you better be! I'm just about done with the spell!"
 
     "The ritual circle begins to shine slightly. It is time."
@@ -783,10 +798,10 @@ label ch_24:
     "Knowing what to do, I lay down in the center and try to fall asleep. It doesn't take long for my consciousness to drift away, and my mind becomes blank once again."
 
     hide shiori smug with dissolve_fast
+    hide rook weapon with dissolve_fast
 
     show bg void with fade
 
-    #play gatherer piano bgm
     stop music fadeout 0.5
     play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 0.5
 
@@ -794,7 +809,7 @@ label ch_24:
 
     "Again I am falling through darkness. However this time I know nothing will happen to me and I wait until my feet hit the ground."
 
-    "It was such an odd feeling, I fell from a high height but I felt no impact whatsoever. As if I had become a feathe—"
+    "It was such an odd feeling, I fell from a high height but I felt no impact whatsoever. As if I had become a feathe-"
 
     "I clap my cheeks to stop the thought. If my every thought here manifests, it wouldn't be a good idea to let my mind wander to something like that."
 
@@ -830,7 +845,9 @@ label ch_24:
 
     p "...What?"
 
-    shi "I see you are surprised. We aren't the first ones who tried to defeat the monster. There were many adventurers, knights and heroes who tried to slay it. They all failed, but many of them had magically enhanced artifacts to aid them in combat. They're still in there somewhere, and if you can find them, we can use them in the real world."
+    shi "I see you are surprised. We aren't the first ones who tried to defeat the monster. There were many adventurers, knights and heroes who tried to slay it." 
+    
+    shi "They all failed, but many of them had magically enhanced artifacts to aid them in combat. They're still in there somewhere, and if you can find them, we can use them in the real world."
 
     p "How do you know that? Knight said nothing in the book worked, and there's no telling if anything else will until we actually try it, right?"
 
@@ -878,7 +895,7 @@ label ch_24:
 
     show bg hallway with fade
 
-    "I open my eyes to see what he's talking about. The landscape had completely changed—instead of on a path snaking through the void, we stood in the entry of my old school. It seemed more solid and less hazy than the forest had been."
+    "I open my eyes to see what he's talking about. The landscape had completely changed. Instead of on a path snaking through the void, we stood in the entry of my old school. It seemed more solid and less hazy than the forest had been."
 
     p "This is my old school."
 
@@ -1097,7 +1114,7 @@ label ch_24:
 
         "I swim toward the light, deeper and deeper down. The pool is deeper than it looked from above, but I think I'll manage."
 
-        "Then I feel something—or someone—touch my leg. I yelp in surprise, losing most of my air. I look up with worry. I had swum down fairly deep already and I don't know if I have enough to make it back to the surface."
+        "Then I feel something, or someone, touch my leg. I yelp in surprise, losing most of my air. I look up with worry. I had swum down fairly deep already and I don't know if I have enough to make it back to the surface."
 
         "To my surprise, nothing happens. My lungs don't burn for air and I have no issues remaining underwater."
 
@@ -1258,7 +1275,7 @@ label ch_24:
 
     r "But still, I would like to go back to my world. Being a guest is good, but being at home is better."
 
-    "But can he go back? I don't voice this concern—he's probably asked himself the same question."
+    "But can he go back? I don't voice this concern. He's probably asked himself the same question."
 
     "The lights in the hall suddenly turned off, plunging us into darkness."
 
@@ -1280,7 +1297,6 @@ label ch_24:
 
     #bg up to 40% brightness - no. robsawn
 
-    #aimless blue ember vfx
     show emberback zorder 5
     show embermid zorder 15
 
@@ -1341,6 +1357,7 @@ label ch_24:
         p_i "Come on, don't notice me now!"
 
         hide rook arms
+        hide monster angry
 
         "The monster is completely preoccupied with Rook behind me. All I can hear are gunshots and the sounds of a struggle. I can only hope Rook comes out on top."
 
@@ -1348,7 +1365,7 @@ label ch_24:
 
         hide emberback
         hide embermid
-        show bg cursedforest with dissolve_fast
+        scene bg cursedforest with dissolve_fast
 
         "I run through the courtyard as fast as I can, and hide behind the trees outside, waiting for the fighting to stop. With the indistinct sounds as my only guide, I don't know how long it's going to last. But then..."
 
@@ -1456,7 +1473,9 @@ label ch_24:
 
         show rook weaponeyeglow at left_third
 
-        "While the monster is fixated on me, Rook leaps into the air and swings his axe into the beast. The blade carves deep into its shoulder and embeds itself with the barrel of the gun pointing at the monster's face. Then Rook, holding onto his weapon, uses it to swing up onto the monster's body, where grabs the trigger and shoots the monster in the head point-blank."
+        "While the monster is fixated on me, Rook leaps into the air and swings his axe into the beast. The blade carves deep into its shoulder and embeds itself with the barrel of the gun pointing at the monster's face." 
+        
+        "Then Rook, holding onto his weapon, uses it to swing up onto the monster's body, where he grabs the trigger and shoots the monster in the head point-blank."
 
         play sound "audio/sfx/Rook_s gunshot.ogg"
 
@@ -1511,16 +1530,12 @@ label ch_24:
     else:
         hide rook arms
 
-    show black with flash_white
+    show black with fade
     stop music
-
-    "As Knight finishes explaining, I suddenly feel lightheaded. I'm blinded as everything around us starts to glow with an intense white, and then..."
-
-    "..."
 
     "Again, it takes a while for us to come back to reality. Like waking up from a dream, I'm inclined to lie still for just a bit more..."
 
-    scene bg ritual with fade
+    scene bg ritual with flash_white
     show shiori neutral
 
     play music "audio/3 Fantasy/1 Relaxed Exposition Track L 2.ogg" loop fadein 0.5
@@ -1541,8 +1556,9 @@ label ch_24:
 
     "I get up from the ritual circle and walk towards Shiori. Rook is already sitting in a chair against the wall, leaning on the table next to him."
 
-    show shiori neutral at offscreenleft
-    show rook injured at left_third
+    show shiori neutral at center
+    with moveinleft
+    show rook arms at left_third
     with moveinleft
 
     r "Oh, that was exhausting. At least these old bones can still keep up with the young'uns."
@@ -1568,7 +1584,7 @@ label ch_24:
 
         k "So you got hurt? How bad's the phantom pain this time around?"
 
-        show rook injuredeyeglow
+        show rook injuredeyeglownoblood
 
         r "Gash down my side, but that's about it. It hurts when I move, but at least the wound's not there now. Don't worry much, this old man's still tough!"
 
@@ -1576,48 +1592,49 @@ label ch_24:
 
         k "Well, at least you can still move around. Since it's your decision, I suppose I won't fault Bishop for it. Anyways, what did you find?"
 
-        if wep_3 == 0:
-            p "We found this glowing sword stabbed into a desk. From what Rook said, it was once used by a fallen knight."
+    if wep_3 == 0:
+        p "We found this glowing sword stabbed into a desk. From what Rook said, it was once used by a fallen knight."
 
-            r "Aye. One of the lost souls who fought against the blasted beast. The sword is ours now, and we have inherited its will to fight. It's our duty to finish the job."
+        r "Aye. One of the lost souls who fought against the blasted beast. The sword is ours now, and we have inherited its will to fight. It's our duty to finish the job."
 
-            hide knight weapon
-            hide rook injured
+        hide knight weapon
+        hide rook injured
 
-        if wep_3 == 1:
-            p "We took this trident from the bottom of a pool. It stabs good, and that's about it."
+    if wep_3 == 1:
+        p "We took this trident from the bottom of a pool. It stabs good, and that's about it."
 
-            hide knight weapon
-            hide rook injured
-            show shiori surprised
+        hide knight weapon
+        hide rook injured
+        show shiori surprised
 
-            shi "Hey, give me that! Lemme take a look."
+        shi "Hey, give me that! Lemme take a look."
 
-            "Shiori takes the trident from my hands."
+        "Shiori takes the trident from my hands."
 
-            show shiori neutral
+        show shiori neutral
 
-            shi "Huh, are you sure you didn't steal this from somewhere? Because this looks similar to the trident someone I know owns. It's blue, it's sharp, and it's kinda stinky."
+        shi "Huh, are you sure you didn't steal this from somewhere? Because this looks similar to the trident someone I know owns. It's blue, it's sharp, and it's kinda stinky."
 
-            p "... Shiori, the point of your mission was to steal something from the dream."
+        p "... Shiori, the point of your mission was to steal something from the dream."
 
-            show shiori wink
+        show shiori wink
 
-            shi "... Oh yeah, I forgot about that. Teehee~"
+        shi "... Oh yeah, I forgot about that. Teehee~"
 
-        if wep_3 == 2:
-            p "We got this staff that can shoot fireballs or anything that's close enough."
+    if wep_3 == 2:
+        p "We got this staff that can shoot fireballs or anything that's close enough."
 
-            k "Well would you look at that, we finally have a mage."
+        k "Well would you look at that, we finally have a mage."
 
-            hide rook injured
-            show shiori mad
+        hide rook injured
+        show shiori mad at left_third
+        with move
 
-            shi "Hey! I cast spells too, y'know?"
+        shi "Hey! I cast spells too, y'know?"
 
-            k "Queen, you know that's not how I meant it..."
+        k "Queen, you know that's not how I meant it..."
 
-            hide knight weapon
+        hide knight weapon
 
     show shiori satisfied
 
@@ -1664,7 +1681,3 @@ label ch_24:
     "With that revelation ringing deep in my thoughts, I head towards my room to prepare for the final fight."
 
     "There's no turning back now."
-
-    stop sound fadeout 1.0
-    stop music fadeout 1.0
-    scene black with Dissolve(1.0)

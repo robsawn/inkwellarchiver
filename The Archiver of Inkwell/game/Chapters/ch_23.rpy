@@ -66,7 +66,7 @@ label ch_23:
     k "Yes. I'll look after this weakling in his first skirmish. Are you fine with that, Rook?"
 
     show shiori smug at center 
-    with move
+    with MoveTransition(1.0)
     show rook armslaugh at left_third
     hide knight weapon
 
@@ -74,7 +74,7 @@ label ch_23:
 
     hide rook armslaugh
     show shiori frown at center 
-    with move
+    with MoveTransition(1.0)
 
     shi "Alright, then it's settled. Knight, Bishop, you two are going to set out tonight into the Dreamscape. Your mission is to find and observe the monster for any information that can prove to be useful to our hunt. Once that's done, come back immediately. And avoid a confrontation until we know what we're dealing with."
 
@@ -168,7 +168,7 @@ label ch_23:
     k "What are you standing there for? Here!"
 
     show knight weapon at center 
-    with move
+    with MoveTransition(1.0)
     hide shiori neutral
 
     "As Knight calls out to me, she tosses a pillow at me, hitting me square in the face with a loud thud."
@@ -188,7 +188,7 @@ label ch_23:
     "She points at the outer edge. I thought she was going to sleep there. Is it actually for me?"
 
     show knight weapon at left_third 
-    with move
+    with MoveTransition(1.0)
     show shiori neutral at right_third
 
     shi "Hold on, Knight. Let him sleep in the center."
@@ -202,7 +202,7 @@ label ch_23:
     p "Wait, 'guide the path'? What does that mean?"
 
     show shiori neutral at center 
-    with move
+    with MoveTransition(1.0)
     hide knight weapon
 
     shi "The spell circle was first designed for multiple people to be able to enter the Dreamscape at the same time, but the process usually causes everyone to be separated upon entry." 
@@ -351,7 +351,9 @@ label ch_23:
 
     hide monster calm with dissolve_fast
 
-    "Once its form became distinct, Knight hid us with her illusion so we could get close. Several times we saw it lash out at the ephemeral figures that drifted through the trees and tear them asunder with an awful wail. Knight and I took these moments of distraction to creep closer to it as she whispered more instructions to me."
+    "Once its form became distinct, Knight hid us with her illusion so we could get close. Several times we saw it lash out at the ephemeral figures that drifted through the trees and tear them asunder with an awful wail." 
+    
+    "Knight and I took these moments of distraction to creep closer to it as she whispered more instructions to me."
 
     show knight weapon
 
@@ -419,7 +421,7 @@ label ch_23:
 
     p "A lemon?"
 
-    k "Yeah, I heard somewhere they're used against vampires or something like that. I-I've tried it or anything!"
+    k "Yeah, I heard somewhere they're used against vampires or something like that. N-not that I've tried it or anything!"
 
     hide knight weapon
 
@@ -446,7 +448,9 @@ label ch_23:
 
         play sound "audio/sfx/monster trapped.ogg"
 
-        "The monster, startled by its sudden entanglement, bursts again into flame and begins to thrash around wildly. It manages to shred the net apart with its flailing claws, and scrambles out of the bindings. The monster pauses to growl angrily at the now dull and tattered net before taking off through the forest a second time."
+        "The monster, startled by its sudden entanglement, bursts again into flame and begins to thrash around wildly. It manages to shred the net apart with its flailing claws, and scrambles out of the bindings." 
+        
+        "The monster pauses to growl angrily at the now dull and tattered net before taking off through the forest a second time."
 
         hide monster angry
 
@@ -477,7 +481,9 @@ label ch_23:
 
     "Before I can even begin to reply, she grabs me by my collar and drags me after the monster." 
 
-    p_i "She is stronger than she looks. It makes sense though, considering she was able to hold her own against the monster earlier. And she's been moving around with that armor on all this time, but what's with it looking so fantasy-like? Even Rook's looked normal in comparison."
+    p_i "She is stronger than she looks. It makes sense though, considering she was able to hold her own against the monster earlier." 
+    
+    p_i "And she's been moving around with that armor on all this time, but what's with it looking so fantasy-like? Even Rook's looked normal in comparison."
 
     "It takes us some time, but we finally spot the mouth of a large cave. When we catch sight of it I can see the edge of a blue glow disappearing into the darkness."
 
@@ -503,14 +509,20 @@ label ch_23:
 
     p_i "Now that I think about it, how can she walk so quietly with that armor? It's not as much as Rook had on, but still. I should ask her about that later if we have the time."
 
+    show bg lair with fade
+
     "Knight proceeds cautiously, hugging the walls and signaling for me to do the same. The temperature continues to rise and the humidity is high enough that I'm beginning to feel like someone dumped a bucket of water on my head."
 
-    "We wind through the main passage and descend into the cave, pausing to peek down a few blind ends as we proceed. It's nearly pitch black as we come up to a switchback turn, and I can see a faint blue light reflecting off the water that has condensed on the cave walls. Knight quickly pokes her head around the corner and motions for me to step up as well."
+    "We wind through the main passage and descend into the cave, pausing to peek down a few blind ends as we proceed. It's nearly pitch black as we come up to a switchback turn, and I can see a faint blue light reflecting off the water that has condensed on the cave walls." 
+    
+    "Knight quickly pokes her head around the corner and motions for me to step up as well."
 
     show emberback zorder 5
     show embermid zorder 15
 
-    "The room is beautiful. Stalactites hang from the roof of the cavern like chandeliers, with some meeting the stalagmites that rise from the ground to form fluted columns that have stone dripping from them like a thick layer of ice. There's even a terrace of shallow pools of water further in. It's hard to ignore, though, that the only reason we can see any of this is the dull blue light emanating from a beast that nearly killed me only a matter of hours ago."
+    "The room is beautiful. Stalactites hang from the roof of the cavern like chandeliers, with some meeting the stalagmites that rise from the ground to form fluted columns that have stone dripping from them like a thick layer of ice." 
+    
+    "There's even a terrace of shallow pools of water further in. It's hard to ignore, though, that the only reason we can see any of this is the dull blue light emanating from a beast that nearly killed me only a matter of hours ago."
 
     show knight weapon
 
@@ -578,6 +590,7 @@ label ch_23:
     "With that said, Knight sprints headlong into the forest, slashing through the underbrush to clear a path towards the teleportation site."
 
     hide knight weapon
+    show bg cursedforest with slideleft
 
     "As I rush after her down the newly created trail, I can hear the monster's enraged hoofbeats getting closer and closer."
 

@@ -8,10 +8,10 @@ label ch_12:
 
     "There's still a bit of time before class starts. I let my gaze wander across the view outside. Several students huddle together, moving in close-knit groups, chatting and seemingly not bothered by the lack of rain; others, moving alone, stay close to the buildings, the familiar landmarks offering some small comfort in the strange mist."
 
-    stop music
+    stop music fadeout 1.0
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
 
-    show cultist as cultist1 at center
+    show cultist at center
 
     "I catch myself spacing out and staring at a person standing outside. I blink and finally notice the bright yellow raincoat they're wearing. It seems familiar, but I can't quite put my finger on where I've seen it before. As I watch, I notice that they're not moving, and are just standing there."
 
@@ -23,11 +23,12 @@ label ch_12:
 
     p "What the...?"
 
-    show cultist as cultist2 at right_third zorder -1
+    image cultist2 = "images/lovecraft/cultist.png"
+    show cultist2 at right_third
 
     "I notice a second person in a yellow coat, this time in between the buildings."
 
-    hide cultist1
+    hide cultist
     hide cultist2
 
     "I hear a scraping from my side as my classmate leans forward to look out the window as well. I lean back in my chair and stretch, my back popping as it arches."
@@ -58,7 +59,7 @@ label ch_12:
 
     "Yawning, I head to my next class in another building. On exiting, I notice the mist is heavier, like a fog. It's clinging to me and weighing me down. Feeling isolated and exposed, I carefully walk ahead, doing my best to stay on the path."
 
-    show cultist at center with dissolve_slow
+    show cultist at right_third with dissolve_slow
 
     "As I continue moving, a figure emerges from the mist, standing to the side. Closing in, I see that it's someone in a yellow raincoat. Facing me."
 
@@ -82,7 +83,7 @@ label ch_12:
 
     p_i "Forgot to charge it, I guess."
 
-    "I finally actually check the time: 3:45... Class was supposed to start fifteen minutes ago. And the phone shuts down, the battery depleted."
+    "I finally actually check the time: 3:45 PM... Class was supposed to start fifteen minutes ago. And the phone shuts down, the battery depleted."
 
     p "I guess I'll leave? No one's here, after all."
 
@@ -116,18 +117,21 @@ label ch_12:
 
     p "Where'd she go? Wasn't she right here?"
 
-    show shiori smile: 
-        zoom 3.0
+    show shiori smile:
+        zoom 2.0
+        xalign 0.5
+        yalign -2.0
+    
 
     "Shrugging, I turn around and my vision is filled with a pair of golden eyes."
 
     shi "Boo!" with vpunch
 
-    show shiori happy: 
-        ease 0.5
-        zoom 1.0
+    hide shiori smile
 
-    stop music 
+    show shiori happy at center
+
+    stop music fadeout 0.5
     play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
 
     "My heels leave the ground as I jump, my heart thumping in my chest, a low drumbeat to underscore my surprise."
@@ -170,7 +174,7 @@ label ch_12:
     show cultist at right_third zorder -1
     stop music
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
-    play audio "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5
+    play ambient "audio/Ambient/1 Subtrack L.ogg" loop volume 0.25 fadein 0.5
 
     p_i "Oh, did they have a class canceled too?"
 
@@ -225,7 +229,7 @@ label ch_12:
 
     show shiori sad
 
-    shi "Is what I'd like to say, but it seems like they're looking at you, too, now."
+    shi "... Is what I'd like to say, but it seems like they're looking at you, too, now."
 
     p "Huh? What do you mean?"
 
@@ -259,7 +263,7 @@ label ch_12:
 
     p "The book you've been reading?"
 
-    show shiori satisfied
+    show shiori neutral
 
     "Shiori nods."
 
@@ -339,7 +343,7 @@ label ch_12:
 
     show shiori elated
 
-    "Shiori looks around for a moment,her eyes lighting up as she stands and walks over to one of the shelves."
+    "Shiori looks around for a moment, her eyes lighting up as she stands and walks over to one of the shelves."
 
     "She turns around, cup in hand."
 
@@ -355,7 +359,7 @@ label ch_12:
 
     shi "Aw, that's no fun. It's fiiiine." 
 
-    show shiori neutral
+    show shiori serious
 
     "Shiori's expression shifts to a much more serious one."
 
@@ -375,11 +379,11 @@ label ch_12:
 
     show shiori frown
 
-    "Shiori eyes me warily, her body tensing. Our gazes lock, hers scrutinizing for the smallest change"
+    "Shiori eyes me warily, her body tensing. Our gazes lock, hers scrutinizing for the smallest change."
 
     "The 'juice' passes my lips. My tongue feels like it is on fire as the weird substance chunkily slides down my throat. I barely manage to suppress coughing it all back up. Slowly, the bottle empties into my mouth." 
 
-    "The bottle falls to the floor as my grip loosens. My vision wavers, blurring and darkening around the edges. I have to lean on the table to keep myself upright. Shiori rushes over."
+    "The bottle falls to the floor as my grip loosens. My vision wavers, blurring and darkening around the edges. I have to lean on the table to keep myself upright. Shiori rushes over." with hpunch
 
     p "Wh... What was that... No way that juice was safe... What did you do?"
 
@@ -399,5 +403,6 @@ label ch_12:
 
     stop sound fadeout 1.0
     stop music fadeout 1.0
-    stop audio fadeout 1.0
+    stop nature fadeout 1.0
+    stop ambient fadeout 1.0
     scene black with Dissolve(1.0)

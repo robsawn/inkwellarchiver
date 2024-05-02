@@ -14,3 +14,13 @@ init python:
 
 init -5:
     define config.layers = ['master','transient','immersionvfx','screens','front','overlay']
+
+init: 
+    define vpunch = Move((0,20),(0,-20),.10,bounce=True,repeat=True,delay=.275)
+    define hpunch = Move((25,0),(-25,0),.10,bounce=True,repeat=True,delay=.275)
+
+    define vpunch2 = Move((0,40),(0,-40),.20,bounce=True,repeat=True,delay=.275)
+    define hpunch2 = Move((45,0),(-45,0),.20,bounce=True,repeat=True,delay=.275)
+
+    define vpunch3 = Move((0,20),(0,-20),.10,bounce=True,repeat=True,delay=.275)
+    define hpunch3 = Move((25,0),(-25,0),.10,bounce=True,repeat=True,delay=.275)

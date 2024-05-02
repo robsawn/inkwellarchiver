@@ -28,7 +28,7 @@ label ch_0:
     show rainfront onlayer front
 
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.65
+    play nature "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.65
 
     scene bg college with dissolve_fast
 
@@ -61,15 +61,15 @@ label ch_0:
 
     p_i "Do I want to stop in somewhere…?"
 
-    show rainbackheavy
-    show rainmidheavy
-    stop sound
-    play sound "audio/Ambient/rain4.ogg" loop 
+    show rainbackheavy zorder 5
+    show rainmidheavy zorder 15
+    stop nature fadeout 0.5
+    play nature "audio/Ambient/rain4.ogg" loop fadein 0.5
 
     "Suddenly, the pattering on my umbrella intensifies, and the wind picks up. Hearing my umbrella strain against the building wind, I realize the weather is making the decision for me as I duck into the nearest open storefront."
 
     hide rainfront onlayer front
-    stop sound
+    stop nature fadeout 0.75
     stop music fadeout 0.5
     scene bg cafe with slideleft
     define cafetracks = ['audio/0 Prologue/cafe1.ogg','audio/0 Prologue/cafe2.ogg','audio/0 Prologue/cafe3.ogg']
@@ -106,7 +106,7 @@ label ch_0:
 
     "As I wind my way over between the tables, I notice that she's absorbed in a book. I don't really want to disturb her, but I should still be polite and ask if it's okay to sit next to her."
 
-    play sound "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.2
+    play nature "audio/Ambient/rain4.ogg" loop fadein 0.5 volume 0.2
 
     "As I walk up, I try to get her attention."
 
@@ -120,12 +120,11 @@ label ch_0:
 
     p_i "She's really focused. Or, I'm being ignored, which seems just as likely, to be honest."
 
-    #could do an animation and sound effect here instead of saying it
     "I brace myself, and wave my hand next to her, hoping she notices this time."
 
     p "Excuse me?"
 
-    show shiori surprised with dissolve_fast
+    show shiori surprised with Dissolve(0.25)
 
     shi "Hwah?! Oh! Can I... help you?"
 
@@ -167,7 +166,7 @@ label ch_0:
 
     p_i "Nope. Still awkward."
 
-    show shiori neutral at right with dissolve_fast
+    show shiori neutral at right_third with dissolve_fast
 
     shi "Hey, um... What did you get to drink?"
 
@@ -313,14 +312,14 @@ label ch_0:
         p "They're alright. I wouldn't say I love them, but I do read just for fun every now and then."
 
         show shiori smile
-        play audio "audio/shiogiggles/Shio giggles 4.ogg" 
+        play sound "audio/shiogiggles/Shio giggles 4.ogg" 
 
         shi "Really? I love them."
 
         shi "They can take you to places you might never have even dreamed of and can teach you all kinds of things."
         
         show shiori happy
-        play audio "audio/shiogiggles/Shio giggles 10.ogg"
+        play sound "audio/shiogiggles/Shio giggles 10.ogg"
 
         shi "I might be a bit biased though. *giggle*"
 
@@ -347,8 +346,8 @@ label ch_0:
             
         p_i "I have to get some reference books from the library soon, so maybe I'll pick something up to see how it feels to read for fun again."
 
-    stop sound
-    play sound "audio/Ambient/rain1.ogg" loop volume 0.25
+    stop nature fadeout 0.5
+    play nature "audio/Ambient/rain1.ogg" loop volume 0.25
 
     show shiori neutral
 
@@ -356,7 +355,7 @@ label ch_0:
     
     "Eventually, we reach a lull in the conversation, but it's not uncomfortable this time. Rather, it's a pleasant silence, accented by the light tapping of the rain on the window."
 
-    "The time passes slowly but comfortably, so much so that you almost don't notice the storm letting up."
+    "The time passes slowly but comfortably, so much so that I almost don't notice the storm letting up."
     
     "It takes me a couple minutes to notice that the store's nearly empty as well, with groups of people quickly heading back out into town to salvage what's left of their plans."
     
@@ -399,10 +398,10 @@ label ch_0:
     hide shiori neutral with dissolve_fast
     
     stop music fadeout 0.5
-    stop sound fadeout 0.5
+    stop nature fadeout 0.5
     scene bg street with dissolve_fast
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play sound "audio/Ambient/rain1.ogg" loop fadein 0.5
+    play nature "audio/Ambient/rain1.ogg" loop fadein 0.5
 
     show rainbacklight zorder 5
     show rainmidlight zorder 15
@@ -417,5 +416,6 @@ label ch_0:
     hide rainfront onlayer front
     stop music fadeout 1.0
     stop sound fadeout 1.0
+    stop nature fadeout 1.0
     scene black with Dissolve(1.0)
 

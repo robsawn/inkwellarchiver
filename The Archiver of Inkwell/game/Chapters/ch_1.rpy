@@ -27,7 +27,7 @@ label ch_1:
     stop music fadeout 0.25
     scene bg street with dissolve_fast
     play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.5 volume 0.65
-    play sound "audio/Ambient/rain1.ogg" loop fadein 0.5
+    play nature "audio/Ambient/rain1.ogg" loop fadein 0.5
 
     "Walking down the street, I feel a calm wash over me as I listen to the soft drumming of the light rain against my umbrella."
 
@@ -39,10 +39,10 @@ label ch_1:
     
     "Luckily, it doesn't take long to get to the library and I step inside right as the rain starts coming down harder."
     
-    stop sound fadeout 0.25
+    stop nature fadeout 0.25
     scene bg library with dissolve_fast
     stop music fadeout 0.25
-    define librarytracks = ['audio/1 Act 1/Library.ogg','audio/From SoL route/1 Hallway + Lecture Hall L.ogg','audio/From SoL route/2 Study Session L.ogg']
+    define librarytracks = ['audio/1 Act 1/Library.ogg','audio/From SoL route/1 Hallway + Lecture Hall L.ogg']
     $ renpy.random.shuffle(librarytracks)
     $ renpy.music.queue(librarytracks,channel='music',loop=True,clear_queue=False,fadein=0.5,tight=True)
 
@@ -97,7 +97,7 @@ label ch_1:
     p "Thanks."
 
     show shiori smile
-    play audio "audio/shiogiggles/Shio giggles 9.ogg"
+    play sound "audio/shiogiggles/Shio giggles 9.ogg"
 
     shi "You're welcome, your sneezes were a little distracting, so I have no choice but to sacrifice my tissues. *giggle*"
 
@@ -110,7 +110,7 @@ label ch_1:
     hide shiori smile
 
     show bg libraryovercast with dissolve_slow
-    play sound "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.35
+    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0 volume 0.35
 
     "It seems the weather is getting worse. Outside, I can see more of the automatic lights turning on."
 
@@ -169,7 +169,7 @@ label ch_1:
     shi "Shiori Novella at your service. Nice to officially meet you."
 
     show shiori satisfied
-    play audio "audio/shiogiggles/Shio giggles 8.ogg"
+    play sound "audio/shiogiggles/Shio giggles 8.ogg"
 
     shi "*giggle* 'Officially', 'fish'."
 
@@ -384,7 +384,7 @@ label ch_1:
         p "Well, considering you know what I'm looking for, would you still help me find those books?"
         
         show shiori smug
-        play audio "audio/shiogiggles/Shio giggles 5.ogg"
+        play sound "audio/shiogiggles/Shio giggles 5.ogg"
 
         shi "Hmm? What makes you think I would help you out? *giggle*"
         
@@ -440,8 +440,7 @@ label ch_1:
 
         shi "... the ones who can't escape their own fate?"
         
-        stop sound
-        play sound "audio/Ambient/rain4.ogg" loop volume 0.5
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.5
 
         "I struggle to find an answer to that as the rain fills the void of silence between us, battering against the window as we walk by."
         
@@ -449,14 +448,14 @@ label ch_1:
 
         p "If that's the case, then they need someone to come along and help them out."
         
-        "She stops right before turning into the next aisle of books, and just looks at me and blinks a few times."
+        "She stops right before turning into the next aisle of books, and just looks at me, blinking a few times."
+
+        stop nature fadeout 1.5
 
         show shiori smile
-        play audio "audio/shiogiggles/Shio giggles 3.ogg"
+        play sound "audio/shiogiggles/Shio giggles 3.ogg"
 
         shi "*giggle* If only it was so simple..."
-        
-        stop sound fadeout 1.5
         
         p "Hey, you asked."
 
@@ -540,13 +539,15 @@ label ch_1:
         
         "Her cheery voice fades into a more serious tone."
         
-        stop sound
-        play sound "audio/Ambient/rain4.ogg" loop volume 0.6
+        stop nature fadeout 0.75
+        play nature "audio/Ambient/rain4.ogg" loop volume 0.6 fadein 1.0
+        stop music fadeout 3.5
 
         shi "It's going to be raining for a while."
         
         p "Ah yeah. Good thing I still have my umbr—"
         
+        play ambient "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.5
         "When I look over my shoulder, I don't see anyone."
         
         p_i "Huh? Wait. But she was just..."
@@ -560,10 +561,11 @@ label ch_1:
         "The longer I stand there, the more uneasy I feel. Shrugging, I check out the books at the front desk and grab my umbrella on the way out."
 
         stop music fadeout 0.5
-        stop sound 
+        stop nature fadeout 0.5
+        stop ambient fadeout 1.0
         scene bg college with slideright
         play music "audio/0 Prologue/Outside Music.ogg" loop fadein 0.25 volume 0.65
-        play sound "audio/Ambient/rain1.ogg" loop fadein 0.25
+        play nature "audio/Ambient/rain1.ogg" loop fadein 0.25
         
         p_i "That was... interesting."
         
@@ -678,9 +680,9 @@ label ch_1:
                 
                 p "A damsel in distress? Classic. Sure, I'd probably try to help her if I could."
                 
-                "Shiori makes a light smile."
-
                 show shiori smile
+
+                "Shiori makes a light smile."
                 
                 shi "Well that's reassuring to hear. Good to know you are willing to help."
                 
@@ -732,6 +734,7 @@ label ch_1:
         "You walk to another shelf where she reaches for another book from the list and gives it to you."
         
         show bg libraryovercast with flash_white
+        play sound "audio/sfx/thunderstorm 1.ogg"
         
         "The abrupt crack of thunder almost made us jump. The weather was getting worse."
         
@@ -763,8 +766,10 @@ label ch_1:
         
         shi "My number's on the bookmark. Let me know when you finish it, or just find me here again. We'll meet again soon, so be sure to read it all." 
 
+        stop sound fadeout 0.5
+
         show shiori satisfied
-        play audio "audio/shiogiggles/Shio giggles 11.ogg"
+        play sound "audio/shiogiggles/Shio giggles 11.ogg"
         
         shi "If you want to survive, that is."
 
@@ -795,4 +800,5 @@ label ch_1:
     stop sound fadeout 1.0
     stop music fadeout 1.0
     stop audio fadeout 1.0
+    stop nature fadeout 1.0
     scene black with Dissolve(1.0)

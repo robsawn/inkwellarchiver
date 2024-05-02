@@ -14,7 +14,7 @@ label ch_13:
     #pulse if possible
 
     play music "audio/4 Lovecraftian/2B/1 Normal Life L.ogg" loop fadein 1.0
-    play sound "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.0
+    play ambient "audio/Ambient/1 Subtrack L.ogg" loop fadein 1.0
     
     "My head's pounding. I can't move or open my eyes, but I can feel it. My surroundings and everything around me. More than anything though, I just want to lie here, in the dark and silence of... wherever I am." 
 
@@ -24,23 +24,21 @@ label ch_13:
 
     p_i "At least I can move something. Hurts like hell, though."
 
+    scene bg bedroomnight with dissolve_slow
     "I look around and try not to move my head too much. Feels like there's an ice pick sticking in the back of my skull. Taking a deep breath, I groan as my neck seizes and creaks with each minute movement, the throbbing ache dulling my thoughts."
 
     "Taking a moment, I realize I'm actually in my apartment. Somehow."
 
-    scene bg bedroomnight with dissolve_slow
     
     p_i "How'd I get here...?"
 
-    "There's a clock staring at me from the corner of, what I'm pretty sure is, my room."
+    "There's a clock staring at me from the corner of my room."
 
     p_i "I don't remember turning it toward the bed. It was turned toward my desk before… How'd that happen?"
 
-    $ clock = show_time(1714654800)
+    "The time says 3:00 AM."
 
-    "The time says [clock]."
-
-    p_i "It's still really early.Explains why it's dark, I'm not usually up this early anymore."
+    p_i "It's still really early. Explains why it's dark, I'm not usually up this early anymore."
 
     p_i "Why does moving just a little hurt so much, though?"
 
@@ -65,7 +63,7 @@ label ch_13:
     "Gulping it down, it tastes amazing, and the cold water feels like a cooling balm for my throat. The fog in my head clears, and the ache disappears as soon as I swallow the water."
 
     show bg bedroom with dissolve_slow
-    stop sound fadeout 1.0
+    stop ambient fadeout 1.0
 
     p "That was… It's just water… Why was it so good?"
 
@@ -77,9 +75,9 @@ label ch_13:
 
     "On the other side, I see what looks like a call number for a book, a date and time, and a couple letters…" 
 
-    $ bookmark = showtime(1714701600)
+    $ bookmark = show_time(1714701600)
 
-    p_i "'FIC 65006074'? Huh. And [bookmark]? That's this evening. This writing feels familiar, too. Is someone telling me to find this book? But what's with the time?"
+    p_i "'FIC 65006074'? Huh. And [bookmark]? That's a really specific time... This writing feels familiar, too. Is someone telling me to find this book? But what's with the time?"
 
     p "'Meet me - SN'? Is that supposed to be Shiori? She's the only person I know who has a name starting with 'S'. And 'Meet me'? But why? What happened?"
 
@@ -88,24 +86,25 @@ label ch_13:
     "Slipping on my shoes, I grab my umbrella, and make sure that I have my wallet, keys, and phone." 
     
     scene bg street with slideleft
-    stop music fadeout 0.75
-    play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 0.75
+    stop music fadeout 1.5
+    play music "audio/3 Fantasy/3b Gatherer piano L.ogg" loop fadein 1.5
 
     show rainbackheavy
     show rainmidheavy
     show rainfront onlayer front
+    play nature "audio/Ambient/rain4.ogg" loop fadein 1.0
 
     "I step outside, lock my door, and turn around. The rain seems heavier somehow. Not that it's raining more, but it feels like each drop has more weight."
 
-    play sound "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5 volume 0.65
+    play ambient "audio/Ambient/1 Subtrack L.ogg" loop fadein 0.5 volume 0.65
 
     "I can feel myself being watched, but it doesn't feel like before, it feels less... creepy. Comforting almost."
 
     "I look around, trying to see if I can find who's watching me, and notice that there's a strange flower in the shadows at the end of the walk in front of the apartment. I rub my eyes and look again, and it's gone."
 
-    p "Was that an eye watching me? Must have imagined it… That feeling is still there, but I can't see anything watching me. Weird."
+    p_i "Was that an eye watching me? Must have imagined it… That feeling is still there, but I can't see anything watching me. Weird."
 
-    stop music fadeout 0.5
+    stop music fadeout 1.5
     play music "audio/4 Lovecraftian/2B/2 Getting Stalked By Hooded Figures L.ogg" loop fadein 0.5
 
     "I start walking to the library, but, on the way, I feel unease and comfort in equal measure." 
@@ -118,7 +117,12 @@ label ch_13:
 
     hide cultist
 
-    scene bg libraryovercast
+    hide rainbackheavy
+    hide rainmidheavy
+    hide rainfront onlayer front
+    stop nature fadeout 1.0
+
+    scene bg libraryovercast with fade
 
     "I finally reach the library, making sure to greet the front desk worker as I deposit my umbrella and walk by. I can't help but notice the yellow raincoat draped on the chair behind them."
 
@@ -141,11 +145,11 @@ label ch_13:
 
     p "What the heck?"
 
-    "Each bookmark looks like it has a number on it.. The first and the second each have a '2', then the third one has a '3', the fourth has a '1', and the last has a '5'." 
+    "Each bookmark looks like it has a number on it. The first and the second each have a '2', then the third one has a '3', the fourth has a '1', and the last has a '5'." 
 
     "On a whim, I open to the inside cover, and find a comment written in the same handwriting as all of the bookmarks."
 
-    p "'Follow the years'? Huh?"
+    p "'Follow the years, first is last'? Huh?"
 
     p_i "Looks like the numbers are important, too… Hm… So, I'm supposed to 'follow the years, first is last', and these bookmarked stories are important, and those numbers have to mean something."
 
@@ -216,11 +220,11 @@ label ch_13:
 
         "I grab the book, and then go back to where that Sherlock book was."
 
-        show cultist
+        show cultist with dissolve_fast
 
         "I look down the aisle, and see a person in a yellow jacket looking at the books. They don't seem to have noticed me yet. I quickly slide it off the shelf, and then return to the study room."
 
-        hide cultist
+        hide cultist with dissolve_fast
 
         "Before I close the door all the way, I sneak a peek outside. Safe. I breathe a sigh of relief and sit back down."
 
@@ -243,7 +247,7 @@ label ch_13:
     "Just as I'm getting invested in what I'm reading, I hear a soft click. The door opens, and I look up to see a golden eye peering through the crack."
 
     stop music fadeout 0.5
-    stop sound fadeout 0.5
+    stop ambient fadeout 0.5
     play music "audio/4 Lovecraftian/2B/3 Study Room Conversation With Shiori L.ogg" loop fadein 0.5
 
     "A golden eye meets my gaze. The crack is just big enough that I see a glimpse of a familiar smile. After another moment, the door opens all the way, revealing Shiori."
@@ -261,7 +265,7 @@ label ch_13:
 
         "I just nod, confirming to myself that it was Shiori that left that puzzle for me."
 
-        p "So that was what you meant by 'follow the years', good to know."
+        p "So that {b}was{/b} what you meant by 'follow the years', good to know."
 
         show shiori satisfied
 
@@ -314,7 +318,7 @@ label ch_13:
 
     show shiori neutral
 
-    shi "Alright, I mentioned before that those people are dangerous are up to no good, right?"
+    shi "Alright, I mentioned before that those people are dangerous, right?"
 
     shi "Well, they seem to follow and worship this 'thing' called the 'Void Wyrm'. I still don't know much about it, but the eye on their coats? It's supposed to be that thing's eye."
 
@@ -369,7 +373,7 @@ label ch_13:
     p "That soon? I thought you'd need a couple days at least." 
 
     show shiori happy
-    play audio "audio/shiogiggles/Shio giggles 5.ogg"
+    play sound "audio/shiogiggles/Shio giggles 5.ogg"
 
     shi "*giggle* Don't underestimate Archivers!"
 
@@ -386,15 +390,24 @@ label ch_13:
     show shiori smile
     hide shiori smile with dissolve_fast
 
-    "I nod and she turns around and opens the door slowly, looking around. She nods to herself, as if to psyching herself up, and leaves, closing the door softly behind her."
+    "I nod and she turns around and opens the door slowly, looking around. She nods to herself, as if to psych herself up, and leaves, closing the door softly behind her."
 
     "I wait a few minutes, and then head out as well. Walking past the front desk, the worker and the rain coat are gone. "
 
     p_i "It's gotta be some new fashion thing. That worker seems stylish, so it'd make sense."
 
+    show bg street with fade
+    show rainbacklight
+    show rainmidlight
+    play nature "audio/Ambient/rain1.ogg" loop fadein 1.0
+
     "On my way home, I don't see a soul. Not a single yellow jacket or those flowers from earlier."
 
     p_i "Yeah, I figured. I just needed some more time to wake up. Was definitely just imagining things."
+
+    hide rainbacklight
+    hide rainmidlight
+    stop nature fadeout 1.0
 
     scene bg librarynight with fade
     stop music fadeout 0.25
@@ -418,7 +431,7 @@ label ch_13:
 
     "I should be relieved. I'm not seeing things anymore. But what's this sense of unease? "
 
-    p "I'm probably just nervous about the test coming up. Not like I have anything bigger to worry about right now."
+    p "I'm probably just nervous about how soon that report's due. Not like I have anything bigger to worry about right now."
 
     "I end up coming back each day for about a week, but she never showed."
 
@@ -431,6 +444,7 @@ label ch_13:
     p "I'm actually a bit worried, now… She seemed to be a student, so maybe I'll ask around. Someone must've seen her. There's no way anyone can miss her with the way she stands out."
 
     stop sound fadeout 1.0
-    stop music fadeout 1.0
-    stop audio fadeout 1.0
+    #stop music fadeout 1.0
+    stop nature fadeout 1.0
+    stop ambient fadeout 1.0
     scene black with Dissolve(1.0)

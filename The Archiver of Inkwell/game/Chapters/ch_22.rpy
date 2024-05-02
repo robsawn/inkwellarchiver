@@ -27,7 +27,7 @@ label ch_22:
 
     "His journey was perilous. To get to the forest, he needed to brave the storms and lightning. Many a bolt struck close, yet he endured and pushed through the harsh weather."
 
-    "Entering the forest, he found it quieter than he imagined—too quiet, in fact. Not a single sound could be heard, not even the wind. The trees inside were malformed, with their branches clinging to him like hands. The roots were no better, snarling around his legs to obstruct his path."
+    "Entering the forest, he found it quieter than he imagined, too quiet, in fact. Not a single sound could be heard, not even the wind. The trees inside were malformed, with their branches clinging to him like hands. The roots were no better, snarling around his legs to obstruct his path."
 
     "After a long day of traveling, the man decided to take a short break. After all that he endured, he needed to rest. Yet, the forest would not give him that. While trying to find a place to sleep, a bright light suddenly flashed from the darkness, prompting him to investigate, sword in hand."
 
@@ -42,6 +42,7 @@ label ch_22:
     scene bg bedroom
 
     play sound "audio/sfx/water boiling.ogg"
+    stop sound fadeout 1.0
 
     "I am interrupted by the sudden noise of boiling water. I was so absorbed in reading that I forgot to man the stove, and now the pot boiled over... Great..."
 
@@ -275,6 +276,7 @@ label ch_22:
 
     "We enter the castle through the main gate. The imposing halls are empty yet clean. Odd, considering no maids or servants can be seen anywhere."
 
+    stop nature fadeout 0.5
     scene bg castleint with dissolve_fast
 
     "When we reach the throne room, the big doors swing openly solemnly on either side, revealing a large chamber that echoes with each step."
@@ -410,7 +412,9 @@ label ch_22:
     show knight wine at left_third
     show rook weapon at right_third
 
-    "I look at Knight drinking straight from a bottle of wine directly through her mask. It's a bit surreal to watch, but after everything that's happened today, this seems practically normal by comparison. Then I look at Rook, who had disassembled and was in the process of cleaning his blunderbuss. Lastly, I look at Shiori, who was returning my gaze without blinking, waiting for my answer."
+    "I look at Knight drinking straight from a bottle of wine directly through her mask. It's a bit surreal to watch, but after everything that's happened today, this seems practically normal by comparison." 
+    
+    "Then I look at Rook, who had disassembled and was in the process of cleaning his blunderbuss. Lastly, I look at Shiori, who was returning my gaze without blinking, waiting for my answer."
 
     hide knight wine
     hide rook weapon

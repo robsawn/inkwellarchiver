@@ -280,11 +280,6 @@ style quick_button_text:
 ## Main and Game Menu Screens
 ################################################################################
 
-## Navigation screen ###########################################################
-##
-## This screen is included in the main and game menus, and provides navigation
-## to other menus, and to start the game.
-
 screen navigation():
 
     vbox:
@@ -294,54 +289,21 @@ screen navigation():
         yalign 0.5
 
         spacing gui.navigation_spacing
-    
-        if main_menu and not renpy.get_screen("submenunavigation"):
-                imagebutton:
-                    idle "gui/mainmenu/start-idle.png"
-                    hover "gui/mainmenu/start-hover.png"
-                    xpos -65
-                    ypos 60
-                    action Start()
 
-                imagebutton:
-                    idle "gui/mainmenu/load-idle.png"
-                    hover "gui/mainmenu/load-hover.png"
-                    xpos -65
-                    ypos 40
-                    action [ShowMenu("load"), Show("submenunavigation"), Hide("navigation")]
-                
-                imagebutton:
-                    idle "gui/mainmenu/prefs-idle.png"
-                    hover "gui/mainmenu/prefs-hover.png"
-                    xpos -65
-                    ypos 40
-                    action [ShowMenu("preferences"), Show("submenunavigation"), Hide("navigation")]
-                
-                imagebutton:
-                    idle "gui/mainmenu/about-idle.png"
-                    hover "gui/mainmenu/about-hover.png"
-                    xpos -65
-                    ypos 30
-                    action [ShowMenu("about"), Show("submenunavigation"), Hide("navigation")]
-                imagebutton:
-                    idle "gui/mainmenu/extras-idle.png"
-                    hover "gui/mainmenu/extras-hover.png"
-                    xpos -65
-                    ypos 20
-                    action [ShowMenu("extras"), Show("submenunavigation"), Hide("navigation")]
-                    
-        elif not renpy.get_screen("submenunavigation"):
+        if main_menu:
+
+            textbutton _("Start") action Start()
+
+        else:
 
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")
 
-            textbutton _("Load") action ShowMenu("load")
+        textbutton _("Load") action ShowMenu("load")
 
-            textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Preferences") action ShowMenu("preferences")
 
-            textbutton _("About") action ShowMenu("about")
-            
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
@@ -350,59 +312,18 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            if main_menu and not renpy.get_screen("submenunavigation"):
-                imagebutton:
-                    idle "gui/mainmenu/help-idle.png"
-                    hover "gui/mainmenu/help-hover.png"
-                    xpos -65
-                    ypos 10
-                    action [ShowMenu("help"), Show("submenunavigation"), Hide("navigation")]
-            else:
-                #textbutton _("Help") action ShowMenu("help")
-                pass
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-
-style navigation_button_text:
-    properties gui.button_text_properties("navigation_button")
-
-## Navigation screen ###########################################################
-##
-## This screen is included in the main and game menus, and provides navigation
-## to other menus, and to start the game.
-
-screen submenunavigation():
-
-    vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
         textbutton _("About") action ShowMenu("about")
-
-        textbutton _("Extras") action ShowMenu("extras")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
+
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -436,7 +357,30 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    imagebutton auto "gui/mainmenu/start-%s.png":
+        xpos 0
+        ypos 335
+        action Start()
+
+    imagebutton auto "gui/mainmenu/load-%s.png":
+        xpos 0
+        ypos 425
+        action ShowMenu("load")
+
+    imagebutton auto "gui/mainmenu/prefs-%s.png":
+        xpos 0
+        ypos 520
+        action ShowMenu("preferences")
+
+    imagebutton auto "gui/mainmenu/about-%s.png":
+        xpos 0
+        ypos 610
+        action ShowMenu("about")
+
+    imagebutton auto "gui/mainmenu/extras-%s.png":
+        xpos 0
+        ypos 700
+        action ShowMenu("extras")
 
     if gui.show_name:
 
@@ -722,11 +666,11 @@ screen extras():
             #Firemind
             text _("Firemind\n~~~~~\n")
             text _("Happy day of birth, Shiori~n!\n\n")
-            text _("I hope you’ll eat good and do the things you want and love to do the most in your special day! I’m honestly quite bad at wishing others a happy birthday, I rarely celebrate mine as is, I think this had to do with barely having friends.. if any www. But this honestly changed recently when you joined Hololive! I’ve met amazing Novelites whom I treasure and call friends now, we celebrated my bday in discord! It was short but sweet and I couldn’t ask for more.\n\n")
-            text _("You changed my perspective on many things and there’s no words I can use to express how thankful I am to your mother for birthing you www. (and maybe also to mama Yagoo? www)\n\n")
+            text _("I hope you'll eat good and do the things you want and love to do the most in your special day! I'm honestly quite bad at wishing others a happy birthday, I rarely celebrate mine as is, I think this had to do with barely having friends.. if any www. But this honestly changed recently when you joined Hololive! I've met amazing Novelites whom I treasure and call friends now, we celebrated my bday in discord! It was short but sweet and I couldn't ask for more.\n\n")
+            text _("You changed my perspective on many things and there's no words I can use to express how thankful I am to your mother for birthing you www. (and maybe also to mama Yagoo? www)\n\n")
             text _("Thank you so much for making all of our days better, and I hope we Novelites have also helped on making your days better.\n\n")
-            text _("We love you and we are so proud of all the things you’ve achieved thus far, and I cannot wait to see you accomplish more amazing things in the future, be it small or big we will be there to celebrate it with you.\n\n")
-            text _("So uhmm I think my anxiety on wishing others a happy bday is kicking in so I’ll leave it here www, I can’t wait to see what you have prep for your bday! I’m planning on making some cheese tonkatsu and for dessert I’m debating between passion fruit cheesecake or some fruit jello with condensed milk (yeee not that healthy www).\n\n")
+            text _("We love you and we are so proud of all the things you've achieved thus far, and I cannot wait to see you accomplish more amazing things in the future, be it small or big we will be there to celebrate it with you.\n\n")
+            text _("So uhmm I think my anxiety on wishing others a happy bday is kicking in so I'll leave it here www, I can't wait to see what you have prep for your bday! I'm planning on making some cheese tonkatsu and for dessert I'm debating between passion fruit cheesecake or some fruit jello with condensed milk (yeee not that healthy www).\n\n")
             text _("Sooo yep! Happy Birthday !!! Love ya!\n\n")
             text _("-Firemind\n\n")
             text _("(Sorry for any spelling errors and whatnot, english is too hard www)\n~~~~~\n\n\n")
@@ -815,6 +759,15 @@ screen extras():
             text _("I'm very happy to be here and I couldn't have it any other way: I'm going to be a NovelKnight forever!!\n\n")
             text _("I wish you a very happy birthday and lots of happiness on your way, I'm going to eat something with lots of chocolate for this!\n")
             text _("            -Nokutaan\n~~~~~\n\n\n")
+
+            #P!ckleMan
+            text _("P!ckleMan\n~~~~~\n\n")
+            text _("Happy birthday to the best archiver in the world and our royal highness of Inkwell,\nShiori Novella!\n")
+            text _("You are the smartest, funniest, and adorkable person I have ever met. Every time I tune into your stream, your jokes, shenanigans, and tangents always give me a good laugh whether I am having a good or a bad day. Not only do your streams make me laugh, but I also get to learn new things from you like learning Unity, Japanese, how to cook a hot pot, or learn some new words like INNONCENT. What I also love about your streams is how you love to share your favorite songs, your childhood stories, otome games, and interests in clothing like lolitia dresses. All of these reasons are why I love your streams and why they are so special.\n\n")
+            text _("Not only are you the most entertaining archiver in the world, but you are the most inspiring, too. Ever since I started watching you, I always loved your design, and it made me want to draw you. Now, I want to improve my drawing skills and draw you more often. I've been an artist for some time in my life and I've been decent at it, but my passion for art has grown even more thanks to you.\n\n")
+            text _("Your community prompts and membership stories have also been very inspiring. I enjoy reading through them and writing follow up stories that come from my silly and dorky brain, hahaha. I may not be the best writer in the world, but I enjoy writing for fun. Thank you for making writing more entertaining, Shiori!\n\n")
+            text _("I want to end this fan letter by saying thank you for being part of my life and for being the best kamioshi. I'm proud to be your Novelite and Novelknight, and I'll always love and support you till the very end. I wish for you to have all of the happiness and love in the world. I can't wait to make more fun memories with you, and finally, I wish for you to have most amazing birthday ever.\n")
+            text _("From your silly Novelite and Novelknight, P!ckleMan\n~~~~~\n\n\n")
             
             #PhilLegacy
             text _("PhilLegacy\n~~~~~\n")
@@ -849,10 +802,17 @@ screen extras():
             text _("Thank you for giving me hope that I can do something to talents that I like. (Of course, it's admire-like, not love-like)\n")
             text _("Wanna say a lot in this letter, but that'll be boring and I think I enough said those on Twitter.\n")
             text _("I hope one day you and Advent visit Korea too.\n")
-            text _("I hope one day you and Advent visit Korea too.\n")
             text _("Until that miraculous day, Advent Advance!\n")
             text _("Sorry for my non organized thoughts and sayings\n\n")
             text _("From Korea, Redbrick.\n~~~~~\n\n\n")
+
+            #robsawn
+            text _("robsawn\n~~~~~\n")
+            text _("Hiya, Princess~!\nHappy birthday! I hope you have a really great day, and continue to have fun with life, and are happy and healthy! (So no eating moldy food, ok?)\n\n")
+            text _("I'm sorry that I've had to lurk so much recently to get this done, but I'm always happy to help out with game dev stuff! This was an…. Interesting project to work on, but I look forward to working with novelites again in the future! This was a nice project to semi-relax with! I haven't worked on a VN in a while, I tend to work with other kinds of 2D games and 3D games!\n\n")
+            text _("I wanted this to be a better VN for you, but we worked hard and I feel ok about where it ended up given everything that happened during development, and the really short timeline we had for writing, editing, art, and all that. So, I hope you enjoy it and get a chance to play it, on stream or off!\n\n")
+            text _("Anyway, I don't want to bore you too much, or drag on too much, so I'll just say: Happy birthday Shiorin! I hope you someday have time to go through and read the shiorin stories, since you mentioned enjoying reading them before, and I hope you continue having fun with Advent and everything else you do! I'm glad you're in a better place than you used to be!\n\n")
+            text _("Your very eepy, loyal, sometimes useful, sometimes funny Novelknight since Day 1 (despite YouTube messing with me -.-),\nrobsawn\n~~~~~\n\n\n")
 
             #Shiori's Jacket
             text _("Shiori's Jacket\n~~~~~\n")
@@ -869,12 +829,12 @@ screen extras():
             #Sine_Fine_Belli
             text _("Sine_Fine_Belli\n~~~~~\n")
             text _("Happy Birthday Shiori!\n\n")
-            text _("I remember well when you debuted. I was there watching all of Advent’s debuts, including yours.\n")
+            text _("I remember well when you debuted. I was there watching all of Advent's debuts, including yours.\n")
             text _("You're one of my favorite Vtubers and oshies. I keep watching you because of how funny, Chill, comfy, and wholesome you are, and your funny, comfy, and chill streams are great!\n")
             text _("I watch your streams, gaming streams, karaoke streams, ASMR streams, and collab streams.\n")
             text _("I might not have been able to watch every stream, I wasn't able to attend and watch as many streams as I would have liked, but I enjoyed every stream I was able to watch. I'm glad that I was able to spend some time with you. Although I haven't watched most of your streams, I do enjoy the time I got to spend with you and the streams I managed to watch.\n")
-            text _("I can’t wait to see what you do, what you are also planning to do in the future. Here’s to more fun and entertaining streams as well as your future plans!\n")
-            text _("I’ll continue to watch your streams and spend time with you\nWe are proud of what you achieved and accomplished.\nYou're such a great Oshi to have and I hope to attend more of your streams!\n")
+            text _("I can't wait to see what you do, what you are also planning to do in the future. Here's to more fun and entertaining streams as well as your future plans!\n")
+            text _("I'll continue to watch your streams and spend time with you\nWe are proud of what you achieved and accomplished.\nYou're such a great Oshi to have and I hope to attend more of your streams!\n")
             text _("Sine_Fine_Belli\n~~~~~\n\n\n")
 
             #Smilely
@@ -885,6 +845,15 @@ screen extras():
             text _("I also wanted to thank you for liking my little choreographies for both Advent's cover of Halloween Night, Tonight and your cover of Whisper Whisper Whisper. Truth be told, I have only danced seriously for a year now, but seeing your comments of encouragement gives me motivation to keep on improving. So if you ever decide to release another song in the future, I will be ready to work on a choreo for said song.\n\n")
             text _("The last thing I want to say before wrapping everything up is thank you for fostering such an amazing community. The Novelites have been so kind to me ever since I decided to get out of my comfort zone and actually interact with the community. There are so many talented artists, writers, musicians, voice actors, editors in Inkwell, and it's all thanks to you. So many people have continued their passion because of you. So no matter what, us Novelites will always support you with whatever talent we have to make you happy. Thank you for being our Archiver, and once again happy birthday Shiori!\n\n")
             text _("From Inkwell's Resident Dancer,\nSmilely\n~~~~~\n\n\n")
+
+            #SourClout
+            text _("SourClout\n~~~~~\n")
+            text _("Shiori~n!!\nHappy birthday Shiori! I hope you have a great day full of friends, good food & fun! I've been a Novelite since September, your streams & sense of humour never fails to make me laugh. I can't remember laughing harder than seeing you clown on us during the Super Smash Bros streams. It is quite rare that a Hololive talent is as much of a gamer or more skilled than me, so I hope you know you're appreciated!\n\n")
+            text _("Thanks for creating such a welcoming community & a fun unique interaction like the story prompts. Guys like me aren't as artistically inclined so it's great to have an Oshi that excels at the same skills as I do. I had given up entirely on writing 4 years ago but started again because of you, so thanks for the inspiration. I also get to enjoy a lot of games I would otherwise never have heard of without you.\n\n")
+            text _("This is a bit dumb & selfish, but I really appreciated the time you hearted one of my story prompts. It's nice to know that my work is appreciated outside the context of D&D. I don't usually feel comfortable enough sharing the world I envisioned with others so I'm glad you & some Novelites enjoy it.\n\n")
+            text _("You're truly an inspiration, both as a fellow writer & someone with a difficult past who embraces positivity, healing & growth despite it.\n\n")
+            text _("Take good care of yourself, today & always. You deserve to be proud of your accomplishments!\n\n")
+            text _("Happy birthday!!\n\n-SourClout\n~~~~~\n\n")
 
             #SynergyREEE
             text _("SynergyREEE\n~~~~~\n")
@@ -922,10 +891,17 @@ screen extras():
             text _("Wrong\n~~~~~\n")
             text _("Dear Shiori,\n\n")
             text _("I don't know how to write a proper letter, so I'll just wing it.\n\n")
-            text _("It’s your birthday today yay! (or at least that’s what the official Hololive website says, but It’s official, so I believe it). It’s been like what, 8, maybe 9 months since your debut. I still remember when you used to talk about cannibalism on stream and now, you still talk about cannibalism but not as much as before I think (I’m not willing to check every vod to do the math, way too much work).\n\n")
-            text _("I’d like to thank you for creating a pretty cool community consisting of flowers with eyes, pages with limbs, wyrms that are books, and knights that probably write novels. Seeing and reading everyone enjoy and reply to your prompts puts a smile on my face (We live in a society). The piano streams/spaces are also enjoyable to put as background music while doing other stuff (random dude comes out of nowhere and says “I’m stuff”).\n\n")
-            text _("And with that I’m out of ideas to write, so to end this letter I’d like to thank you for all you do for the community, and I’d like to thank the community itself for organizing this. I hope you enjoy today because It’s Shiori Novella's birthday!\nGet food, water, maybe some shelter while you’re at it, and again on behalf of the Novelites and even the Novelights (Gotta throw em a bone every now and then “Bau bau”) thank you for being a cool archiver Shiori Novella.\n\n")
+            text _("It's your birthday today yay! (or at least that's what the official Hololive website says, but It's official, so I believe it). It's been like what, 8, maybe 9 months since your debut. I still remember when you used to talk about cannibalism on stream and now, you still talk about cannibalism but not as much as before I think (I'm not willing to check every vod to do the math, way too much work).\n\n")
+            text _("I'd like to thank you for creating a pretty cool community consisting of flowers with eyes, pages with limbs, wyrms that are books, and knights that probably write novels. Seeing and reading everyone enjoy and reply to your prompts puts a smile on my face (We live in a society). The piano streams/spaces are also enjoyable to put as background music while doing other stuff (random dude comes out of nowhere and says “I'm stuff”).\n\n")
+            text _("And with that I'm out of ideas to write, so to end this letter I'd like to thank you for all you do for the community, and I'd like to thank the community itself for organizing this. I hope you enjoy today because It's Shiori Novella's birthday!\nGet food, water, maybe some shelter while you're at it, and again on behalf of the Novelites and even the Novelights (Gotta throw em a bone every now and then “Bau bau”) thank you for being a cool archiver Shiori Novella.\n\n")
             text _("-Bobby Wrong\nP.S. I think letters with P.S. are cool! So I added one.\n~~~~~\n\n\n")
+
+            #Yomosaka
+            text _("yomosaka\n~~~~~\n")
+            text _("Happy Birthday!\n")
+            text _("I have been fulfilled every day since I met you and Advent. Thank you for always giving me so many interesting stories, piano playing, and lots of fun.\n")
+            text _("I hope this year will be filled with many happy days for you, Shiori-san!\n")
+            text _("- yomosaka\n~~~~~\n\n\n")
 
 style extras_label is gui_label
 style extras_label_text is gui_label_text

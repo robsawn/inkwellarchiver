@@ -6,6 +6,9 @@
         
         def start(self):
             renpy.call(f"ch_{self.ch_number}")
+    
+    renpy.music.register_channel(name="nature",mixer="sfx")
+    renpy.music.register_channel(name="ambient",mixer="music")
 
 label start:
 
@@ -15,8 +18,6 @@ label start:
 
     if player_name == "":
         $ player_name = "Yorick"
-    
-    $ p.name = player_name
 
     $ Chapter(0).start()
     $ Chapter(1).start()
