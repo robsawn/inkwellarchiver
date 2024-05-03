@@ -416,7 +416,7 @@ label ch_25:
         "Have Knight distract the Lord of Nightmares." if blunder and rook_inj:
             $ fgoodend = False
             $ kchosen = True
-        "Have Rook fend off the Lord of Nightmares." if rook_inj and rook_inj:
+        "Have Rook fend off the Lord of Nightmares." if blunder and rook_inj:
             $ fgoodend = False
             $ kchosen = False
 
