@@ -1629,6 +1629,8 @@ label ch_24:
         k "Queen, you know that's not how I meant it..."
 
         hide knight weapon
+        show shiori mad at center
+        with MoveTransition(1.0)
 
     show shiori satisfied
 
@@ -1665,7 +1667,7 @@ label ch_24:
 
     shi "Nice answer. Well then, let us prepare for the night. I'll see you guys here again at the same time this evening."
 
-    hide shiori neutral with dissolve_fast
+    hide shiori satisfied with dissolve_fast
     hide rook armseyeglow with dissolve_fast
     hide knight weapon with dissolve_fast
 

@@ -487,7 +487,7 @@ label ch_25:
             "The creature staggers back out of the rubble, dazed. Rook stands up from the pile of bricks and mortar, hefts his weapon, and loads another shot down the barrel."
 
             #Rook sprite cross armed injured on the left, monster sprite on the right
-            show rook injured at left
+            show rook weapon at left
             with move
             show monster angry at right 
             with move
@@ -777,6 +777,8 @@ label ch_25:
             #show Rook weapon eyes
             show rook weaponeyeglow at left_third
             with dissolve_fast
+            show monster angry at right_third
+            with move
 
             r "Damn it all! Come here!"
 
@@ -789,6 +791,8 @@ label ch_25:
 
             shi "Come on, charge faster! Please, charge faster!"
 
+            hide shiori cry with dissolve_fast
+
             "Shiori begs her spell to converge on my artifact faster, but her tearful pleas go unanswered. I'm effectively incapacitated while Shiori channels the spell, so all I can do is watch on in horror as the monster slams Rook to the ground with its tail."
 
             r "Ugh!"
@@ -796,6 +800,8 @@ label ch_25:
             "As Rook attempts to right himself, he goes to line up another shot at the monster, and convulses. The gun clatters to the ground as the pain of his old wounds flare up at exactly the worst moment."
 
             "The monster, seeing Rook vulnerable on the ground, stalks forward as the hissing of flames down its back sound almost like malicious laughter. Rook tries to reach for his gun, but the creature sweeps its tail, almost lazily, and sends it skittering away across the floor."
+
+            show rook injuredblood with dissolve_fast
 
             "It scoops the defenseless Rook off the ground and throws him up into the ceiling, catching him with a horn on his way back to the ground and goring him through the chest."
 
@@ -807,6 +813,8 @@ label ch_25:
             shi "N- No... Not Rook, too!"
 
             "As if the gods themselves wanted us to suffer, Shiori's spell only completes as Rook's body slides off the monster's horn and drops unceremoniously back to the ground."
+
+            hide rook injuredblood with dissolve_slow
 
             "Through the dust still drifting down from the ceiling, I see the monster turn to the two of us once more."
 
@@ -825,10 +833,15 @@ label ch_25:
             #move monster to right third, rook arms crossed eyes appears left third
             show monster angry at right_third
             with move
+            show rook armseyeglow at left_third
+            with dissolve_fast
 
             "But its claws don't reach us. As it lunges forward, Rook jumps onto its back and grabs it by the horns. The monster snarls and its fiery mane flares with rage as Rook pulls its head away from us."
 
             "However, the burns compound the ache from his phantom wounds at the worst time possible, and he falls from the monster. It crashes into the wall next to us, and the magic flickers as Shiori briefly loses focus because of it."
+
+            
+            show rook injuredblood with dissolve_fast
 
             "The monster shakes its head, recovering quickly. It sees Rook still on the ground and wraps its tail around him. The flames down its tail blaze as it constricts Rook, crushing him in his armor as it roasts him alive."
 
@@ -838,8 +851,10 @@ label ch_25:
             shi "No, Rook!"
 
             #hide Shiori, show Knight weapon
+            hide rook injuredblood with dissolve_fast
             hide shiori shocked with dissolve_fast
-            show knight weapon with dissolve_fast
+            show knight weapon at left_third
+            with dissolve_fast
 
             k "Dammit you old fart! Fine, my turn!"
 
@@ -855,13 +870,20 @@ label ch_25:
 
             "Shiori begs her spell to converge on my artifact faster, but her tearful pleas go unanswered. I'm effectively incapacitated while Shiori channels the spell."
 
+            hide shiori cry with dissolve_fast
+
             "It's all I can do to watch on in horror as the monster tosses Rook to the ground with the same casual disregard as he tossed his cards to the floor earlier this evening."
+
+            show knight illusion at left_third
+            with dissolve_fast
 
             "Knight only manages to summon one faltering illusory clone, and they dash toward the monster shoulder-to-shoulder, mirroring one another. The beast does not rush forward again to meet her, and instead hunches over, tensed."
 
             "When Knight gets within striking distance, there is a gray blur as the monster throws out one arm, sweeping her legs out from under her. Before she even hits the ground, she's snatched by its other claw."
 
             "Held upside down by one leg, Knight takes her sword and stabs downward, or rather upward, into the monster's hand. She's rewarded with a pained growl and the monster throws its arm backwards, hitting her against the wall."
+
+            show knight injured with dissolve_fast
 
             "Stunned, her sword clangs onto the ground. The monster looks at her briefly and growls again before it raises its arm and slams her into the ground."
 
@@ -873,12 +895,14 @@ label ch_25:
 
             "And then it hurls her through the air. Knight bounces off the ground, and then goes tumbling across the floor. She only stops when she hits the opposite wall, knocking a few loose bricks further out of place."
 
+            hide knight injured with dissolve_slow
+
             "I move my head around, trying to see past the monster to where Knight has landed. Her armor has disappeared, her body is broken, and her face is a bloodied mess."
 
             p_i "Wait... Why can I see her face?"
 
             #show shiori mortified
-            show shiori mortified
+            show shiori mortified with dissolve_fast
 
             shi "N- no... This can't be happening!"
 
@@ -897,7 +921,7 @@ label ch_25:
 
         shi "...Right!"
 
-        show shiori serious
+        show shiori serious with dissolve_fast
 
         shi "Let's end this, [player_name]!"
 
@@ -906,6 +930,8 @@ label ch_25:
         p_i "I can't let her down now, not when I'm the last one left standing."
 
         p "On my lead!"
+
+        hide shiori serious with dissolve_fast
 
         "As soon as I say that, I rush the monster with all I have, and Shiori follows closely behind."
 
@@ -1016,7 +1042,7 @@ label ch_25:
         "Even through the pain, I look at the slain monster. Despite our losses, we have won this day."
 
         #show shiori mortified
-        show shiori mortified
+        show shiori mortified with dissolve_fast
 
         shi "[player_name]! Are you alright?! [player_name]!"
 
